@@ -11,5 +11,7 @@
 @interface CipherAppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (retain,nonatomic) NSMutableDictionary *viewControllers;
+- (void)registerViewController:(NSString *)name controller:(UIViewController *)controller;
 
 @end

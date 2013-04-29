@@ -19,6 +19,17 @@
 		FAAA36A9172E4D7A00C55968 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36A7172E4D7A00C55968 /* MainStoryboard_iPhone.storyboard */; };
 		FAAA36AC172E4D7A00C55968 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36AA172E4D7A00C55968 /* MainStoryboard_iPad.storyboard */; };
 		FAAA36AF172E4D7A00C55968 /* CipherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA36AE172E4D7A00C55968 /* CipherViewController.m */; };
+		FAAA36B7172E520400C55968 /* AVImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA36B6172E520400C55968 /* AVImageView.m */; };
+		FAAA36BA172E525D00C55968 /* CipherInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA36B9172E525D00C55968 /* CipherInfoViewController.m */; };
+		FAAA36BD172E52D400C55968 /* CipherViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA36BC172E52D400C55968 /* CipherViewCell.m */; };
+		FAAA36C4172E53D000C55968 /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36BF172E53D000C55968 /* 1.png */; };
+		FAAA36C5172E53D000C55968 /* 2.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36C0172E53D000C55968 /* 2.png */; };
+		FAAA36C6172E53D000C55968 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36C1172E53D000C55968 /* 3.png */; };
+		FAAA36C7172E53D000C55968 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36C2172E53D000C55968 /* 4.png */; };
+		FAAA36C8172E53D000C55968 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36C3172E53D000C55968 /* 5.png */; };
+		FAFD5C4C172E5A78005F47E2 /* safe.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FAFD5C4B172E5A78005F47E2 /* safe.jpg */; };
+		FAFD5C4E172E5FF7005F47E2 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAFD5C4D172E5FF7005F47E2 /* QuartzCore.framework */; };
+		FAFD5C52172E62A1005F47E2 /* GameRow.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFD5C51172E62A1005F47E2 /* GameRow.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +50,21 @@
 		FAAA36AB172E4D7A00C55968 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
 		FAAA36AD172E4D7A00C55968 /* CipherViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CipherViewController.h; sourceTree = "<group>"; };
 		FAAA36AE172E4D7A00C55968 /* CipherViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CipherViewController.m; sourceTree = "<group>"; };
+		FAAA36B5172E520400C55968 /* AVImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVImageView.h; sourceTree = "<group>"; };
+		FAAA36B6172E520400C55968 /* AVImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVImageView.m; sourceTree = "<group>"; };
+		FAAA36B8172E525D00C55968 /* CipherInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherInfoViewController.h; sourceTree = "<group>"; };
+		FAAA36B9172E525D00C55968 /* CipherInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherInfoViewController.m; sourceTree = "<group>"; };
+		FAAA36BB172E52D400C55968 /* CipherViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherViewCell.h; sourceTree = "<group>"; };
+		FAAA36BC172E52D400C55968 /* CipherViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherViewCell.m; sourceTree = "<group>"; };
+		FAAA36BF172E53D000C55968 /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
+		FAAA36C0172E53D000C55968 /* 2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 2.png; sourceTree = "<group>"; };
+		FAAA36C1172E53D000C55968 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
+		FAAA36C2172E53D000C55968 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
+		FAAA36C3172E53D000C55968 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		FAFD5C4B172E5A78005F47E2 /* safe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = safe.jpg; sourceTree = "<group>"; };
+		FAFD5C4D172E5FF7005F47E2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FAFD5C50172E62A1005F47E2 /* GameRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRow.h; sourceTree = "<group>"; };
+		FAFD5C51172E62A1005F47E2 /* GameRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAFD5C4E172E5FF7005F47E2 /* QuartzCore.framework in Frameworks */,
 				FAAA3690172E4D7A00C55968 /* UIKit.framework in Frameworks */,
 				FAAA3692172E4D7A00C55968 /* Foundation.framework in Frameworks */,
 				FAAA3694172E4D7A00C55968 /* CoreGraphics.framework in Frameworks */,
@@ -75,6 +102,7 @@
 		FAAA368E172E4D7A00C55968 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAFD5C4D172E5FF7005F47E2 /* QuartzCore.framework */,
 				FAAA368F172E4D7A00C55968 /* UIKit.framework */,
 				FAAA3691172E4D7A00C55968 /* Foundation.framework */,
 				FAAA3693172E4D7A00C55968 /* CoreGraphics.framework */,
@@ -91,6 +119,13 @@
 				FAAA36AA172E4D7A00C55968 /* MainStoryboard_iPad.storyboard */,
 				FAAA36AD172E4D7A00C55968 /* CipherViewController.h */,
 				FAAA36AE172E4D7A00C55968 /* CipherViewController.m */,
+				FAAA36BB172E52D400C55968 /* CipherViewCell.h */,
+				FAAA36BC172E52D400C55968 /* CipherViewCell.m */,
+				FAAA36B8172E525D00C55968 /* CipherInfoViewController.h */,
+				FAAA36B9172E525D00C55968 /* CipherInfoViewController.m */,
+				FAAA36B5172E520400C55968 /* AVImageView.h */,
+				FAAA36B6172E520400C55968 /* AVImageView.m */,
+				FAFD5C4F172E628F005F47E2 /* Model */,
 				FAAA3696172E4D7A00C55968 /* Supporting Files */,
 			);
 			path = KidsCipher;
@@ -99,6 +134,7 @@
 		FAAA3696172E4D7A00C55968 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FAAA36BE172E53C700C55968 /* Pics */,
 				FAAA3697172E4D7A00C55968 /* KidsCipher-Info.plist */,
 				FAAA3698172E4D7A00C55968 /* InfoPlist.strings */,
 				FAAA369B172E4D7A00C55968 /* main.m */,
@@ -108,6 +144,28 @@
 				FAAA36A5172E4D7A00C55968 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FAAA36BE172E53C700C55968 /* Pics */ = {
+			isa = PBXGroup;
+			children = (
+				FAAA36BF172E53D000C55968 /* 1.png */,
+				FAAA36C0172E53D000C55968 /* 2.png */,
+				FAAA36C1172E53D000C55968 /* 3.png */,
+				FAAA36C2172E53D000C55968 /* 4.png */,
+				FAAA36C3172E53D000C55968 /* 5.png */,
+				FAFD5C4B172E5A78005F47E2 /* safe.jpg */,
+			);
+			path = Pics;
+			sourceTree = "<group>";
+		};
+		FAFD5C4F172E628F005F47E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FAFD5C50172E62A1005F47E2 /* GameRow.h */,
+				FAFD5C51172E62A1005F47E2 /* GameRow.m */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +226,12 @@
 				FAAA36A6172E4D7A00C55968 /* Default-568h@2x.png in Resources */,
 				FAAA36A9172E4D7A00C55968 /* MainStoryboard_iPhone.storyboard in Resources */,
 				FAAA36AC172E4D7A00C55968 /* MainStoryboard_iPad.storyboard in Resources */,
+				FAAA36C4172E53D000C55968 /* 1.png in Resources */,
+				FAAA36C5172E53D000C55968 /* 2.png in Resources */,
+				FAAA36C6172E53D000C55968 /* 3.png in Resources */,
+				FAAA36C7172E53D000C55968 /* 4.png in Resources */,
+				FAAA36C8172E53D000C55968 /* 5.png in Resources */,
+				FAFD5C4C172E5A78005F47E2 /* safe.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +245,10 @@
 				FAAA369C172E4D7A00C55968 /* main.m in Sources */,
 				FAAA36A0172E4D7A00C55968 /* CipherAppDelegate.m in Sources */,
 				FAAA36AF172E4D7A00C55968 /* CipherViewController.m in Sources */,
+				FAAA36B7172E520400C55968 /* AVImageView.m in Sources */,
+				FAAA36BA172E525D00C55968 /* CipherInfoViewController.m in Sources */,
+				FAAA36BD172E52D400C55968 /* CipherViewCell.m in Sources */,
+				FAFD5C52172E62A1005F47E2 /* GameRow.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +381,7 @@
 				FAAA36B4172E4D7A00C55968 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

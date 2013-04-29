@@ -43,4 +43,15 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)registerViewController:(NSString *)name controller:(UIViewController *)controller
+{
+    if(_viewControllers == nil)
+    {
+        _viewControllers = [[NSMutableDictionary alloc] init];
+        
+    }
+    
+    [_viewControllers setObject:controller forKey:name];
+}
+
 @end

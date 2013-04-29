@@ -7,7 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AVImageView.h"
 
 @interface CipherViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITableView *gameTableView;
+@property (readwrite) CGRect frameSelectedCell;
+@property (weak, nonatomic) IBOutlet AVImageView *imageOneOutsideTableView;
+@property (strong) AVImageView *imageOneInsideTableView;
+@property (readwrite) CGRect frameOne;
+@property (readwrite) CGRect frameOneInsideCell;
+
+@property (retain) NSArray *currentCombination;
 
 @end
