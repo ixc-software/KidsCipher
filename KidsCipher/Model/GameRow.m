@@ -14,7 +14,7 @@
     self = [super init];
     if (self) {
         self.choosedColorsForEveryPoint = [NSMutableArray array];
-        for (int i=0;i<6;i++) {
+        for (int i=0;i<5;i++) {
             [self.choosedColorsForEveryPoint addObject:[NSNumber numberWithInteger:0]];
         }
     }

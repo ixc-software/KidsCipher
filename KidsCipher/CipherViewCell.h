@@ -11,11 +11,15 @@
 
 @interface CipherViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *hidingView;
-@property (weak, nonatomic) IBOutlet UIButton *chooseFirst;
-@property (weak, nonatomic) IBOutlet UIButton *chooseSecond;
-@property (weak, nonatomic) IBOutlet UIButton *chooseThird;
-@property (weak, nonatomic) IBOutlet UIButton *chooseFourth;
-@property (weak, nonatomic) IBOutlet AVImageView *chooseOne;
+@property (weak, nonatomic) IBOutlet UIButton *frame1;
+@property (weak, nonatomic) IBOutlet UIButton *frame2;
+@property (weak, nonatomic) IBOutlet UIButton *frame3;
+@property (weak, nonatomic) IBOutlet UIButton *frame4;
+@property (unsafe_unretained) IBOutlet AVImageView *image1InsideTableView;
+@property (unsafe_unretained) IBOutlet AVImageView *image2InsideTableView;
+@property (unsafe_unretained) IBOutlet AVImageView *image3InsideTableView;
+@property (unsafe_unretained) IBOutlet AVImageView *image4InsideTableView;
+@property (unsafe_unretained) IBOutlet AVImageView *image5InsideTableView;
 @property (strong) id controller;
 @property (strong) NSIndexPath *indexPath;
 

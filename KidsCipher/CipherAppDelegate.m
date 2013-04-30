@@ -12,10 +12,32 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
+    NSMutableArray *gameRow1 = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0], nil];
+    NSMutableArray *gameRow2 = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0], nil];
+    NSMutableArray *gameRow3 = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0], nil];
+    NSMutableArray *gameRow4 = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0], nil];
+    NSMutableArray *gameRow5 = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0], nil];
+    NSMutableArray *gameRow6 = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0], nil];
+    NSMutableArray *gameRow7 = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0], nil];
+    NSMutableArray *gameRow8 = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0], nil];
+    NSMutableArray *gameRow9 = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0], nil];
+    NSMutableArray *gameRow10 = [[NSMutableArray alloc] initWithObjects:[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0],[NSNumber numberWithInteger:0], nil];
+    
+    self.currentChoosesArray = [NSMutableArray arrayWithObjects:
+                                gameRow1,
+                                gameRow2,
+                                gameRow3,
+                                gameRow4,
+                                gameRow5,
+                                gameRow6,
+                                gameRow7,
+                                gameRow8,
+                                gameRow9,
+                                gameRow10,
+                                nil];
     return YES;
 }
-							
+
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

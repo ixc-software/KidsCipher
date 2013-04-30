@@ -8,15 +8,34 @@
 
 #import <UIKit/UIKit.h>
 #import "AVImageView.h"
+//#import "GameRow.h"
 
-@interface CipherViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITableView *gameTableView;
-@property (readwrite) CGRect frameSelectedCell;
-@property (weak, nonatomic) IBOutlet AVImageView *imageOneOutsideTableView;
-@property (strong) AVImageView *imageOneInsideTableView;
-@property (readwrite) CGRect frameOne;
-@property (readwrite) CGRect frameOneInsideCell;
+@interface CipherViewController : UIViewController <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+//@property (weak, nonatomic) IBOutlet UITableView *gameTableView;
+@property (readwrite) CGRect frameSelectedRow;
+
+@property (weak, nonatomic) IBOutlet AVImageView *image1OutsideTableView;
+@property (weak, nonatomic) IBOutlet AVImageView *image2OutsideTableView;
+@property (weak, nonatomic) IBOutlet AVImageView *image3OutsideTableView;
+@property (weak, nonatomic) IBOutlet AVImageView *image4OutsideTableView;
+@property (weak, nonatomic) IBOutlet AVImageView *image5OutsideTableView;
+
+@property (weak, nonatomic) IBOutlet UIButton *photoView;
+@property (retain, nonatomic) UIPopoverController *pop;
 
 @property (retain) NSArray *currentCombination;
+//@property (nonatomic, retain) NSIndexPath *nextRowToFill;
+@property (readwrite) NSUInteger selectedRowNumber;
+@property (weak, nonatomic) IBOutlet UIScrollView *gamePlayScrollView;
+@property (weak, nonatomic) IBOutlet UIView *row1view;
+@property (weak, nonatomic) IBOutlet UIButton *row1frame1;
+@property (weak, nonatomic) IBOutlet UIButton *row1frame2;
+@property (weak, nonatomic) IBOutlet UIButton *row1frame3;
+@property (weak, nonatomic) IBOutlet UIButton *row1frame4;
+@property (weak, nonatomic) IBOutlet AVImageView *row1image1;
+@property (weak, nonatomic) IBOutlet AVImageView *row1image2;
+@property (weak, nonatomic) IBOutlet AVImageView *row1image3;
+@property (weak, nonatomic) IBOutlet AVImageView *row1image4;
+@property (weak, nonatomic) IBOutlet AVImageView *row1image5;
 
 @end

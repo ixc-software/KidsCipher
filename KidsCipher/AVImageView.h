@@ -19,13 +19,15 @@
 }
 //-(CGPoint) calculatePositionForPoint:(CGPoint)location;
 
-@property (strong, nonatomic) AVAudioPlayer *theAudio;
+//@property (strong, nonatomic) AVAudioPlayer *theAudio;
 
-@property (strong, nonatomic) NSString *imageName;
+//@property (strong, nonatomic) NSString *imageName;
 
 @property (readwrite) CGPoint offset;
 @property (readwrite) CGPoint startPoint;
 @property (readwrite) BOOL isScalled;
+//@property (readwrite) BOOL isCanceledTouches;
 
+//@property NSInteger currentPointInsideTableViewCell;
 
 @end
