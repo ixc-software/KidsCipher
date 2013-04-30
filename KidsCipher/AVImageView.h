@@ -26,7 +26,7 @@
 @property (readwrite) CGPoint offset;
 @property (readwrite) CGPoint startPoint;
 @property (readwrite) BOOL isScalled;
-//@property (readwrite) BOOL isCanceledTouches;
+@property (readwrite) BOOL isCanceledTouches;
 
 //@property NSInteger currentPointInsideTableViewCell;
 

@@ -41,27 +41,34 @@
                                nil];
     self.gamePlayScrollView.contentSize =  CGSizeMake(320, 1000);
     self.frameSelectedRow = self.row1view.frame;
-    //self.nextRowToFill = [NSIndexPath indexPathForRow:0 inSection:0];
-    //NSLog(@"viewDidLoad self.image1OutsideTableView.startPointt->%@",NSStringFromCGPoint(self.image1OutsideTableView.frame.origin));
-}
--(void)viewWillAppear:(BOOL)animated
-{
-    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
-    self.image1OutsideTableView.startPoint = mainDelegate.image1OutsideTableViewStartPoint;
-    self.image2OutsideTableView.startPoint = mainDelegate.image2OutsideTableViewStartPoint;
-    self.image3OutsideTableView.startPoint = mainDelegate.image3OutsideTableViewStartPoint;
-    self.image4OutsideTableView.startPoint = mainDelegate.image4OutsideTableViewStartPoint;
-    self.image5OutsideTableView.startPoint = mainDelegate.image5OutsideTableViewStartPoint;
-}
-
--(void)viewDidDisappear:(BOOL)animated
-{
-    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     mainDelegate.image1OutsideTableViewStartPoint = self.image1OutsideTableView.startPoint;
     mainDelegate.image2OutsideTableViewStartPoint = self.image2OutsideTableView.startPoint;
     mainDelegate.image3OutsideTableViewStartPoint = self.image3OutsideTableView.startPoint;
     mainDelegate.image4OutsideTableViewStartPoint = self.image4OutsideTableView.startPoint;
     mainDelegate.image5OutsideTableViewStartPoint = self.image5OutsideTableView.startPoint;
+    NSLog(@"mainDelegate.image1OutsideTableViewStartPoint->%@",NSStringFromCGPoint(mainDelegate.image1OutsideTableViewStartPoint));
+
+    //self.nextRowToFill = [NSIndexPath indexPathForRow:0 inSection:0];
+    //NSLog(@"viewDidLoad self.image1OutsideTableView.startPointt->%@",NSStringFromCGPoint(self.image1OutsideTableView.frame.origin));
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+//    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+//    self.image1OutsideTableView.startPoint = mainDelegate.image1OutsideTableViewStartPoint;
+//    self.image2OutsideTableView.startPoint = mainDelegate.image2OutsideTableViewStartPoint;
+//    self.image3OutsideTableView.startPoint = mainDelegate.image3OutsideTableViewStartPoint;
+//    self.image4OutsideTableView.startPoint = mainDelegate.image4OutsideTableViewStartPoint;
+//    self.image5OutsideTableView.startPoint = mainDelegate.image5OutsideTableViewStartPoint;
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+//    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+//    mainDelegate.image1OutsideTableViewStartPoint = self.image1OutsideTableView.startPoint;
+//    mainDelegate.image2OutsideTableViewStartPoint = self.image2OutsideTableView.startPoint;
+//    mainDelegate.image3OutsideTableViewStartPoint = self.image3OutsideTableView.startPoint;
+//    mainDelegate.image4OutsideTableViewStartPoint = self.image4OutsideTableView.startPoint;
+//    mainDelegate.image5OutsideTableViewStartPoint = self.image5OutsideTableView.startPoint;
 }
 
 - (void)didReceiveMemoryWarning

@@ -107,24 +107,24 @@
 		FAAA36C1172E53D000C55968 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		FAAA36C2172E53D000C55968 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		FAAA36C3172E53D000C55968 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
-		FAF3435E172FB9F100C282D5 /* Ipad_logo144_144 _girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl.png"; sourceTree = "<group>"; };
-		FAF34362172FBAC500C282D5 /* Ipad_logo144_144 _girl_72x72-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl_72x72-1.png"; sourceTree = "<group>"; };
-		FAF34364172FBB0C00C282D5 /* Ipad_logo144_144 _girl_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl_114x114.png"; sourceTree = "<group>"; };
-		FAF34366172FBB0F00C282D5 /* Ipad_logo144_144 _girl_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl_57x57.png"; sourceTree = "<group>"; };
-		FAF34368172FBB9600C282D5 /* Ipad_logo144_144 _girl2_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl2_57x57.png"; sourceTree = "<group>"; };
-		FAF3436A172FBB9A00C282D5 /* Ipad_logo144_144 _girl2_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl2_114x114.png"; sourceTree = "<group>"; };
-		FAF3436C172FBFF600C282D5 /* Ipad_logo144_144 _girl_3_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl_3_114x114.png"; sourceTree = "<group>"; };
-		FAF3436E172FBFFA00C282D5 /* Ipad_logo144_144 _girl_3_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl_3_57x57.png"; sourceTree = "<group>"; };
+		FAF3435E172FB9F100C282D5 /* Ipad_logo144_144 _girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl.png"; path = "../../Ipad_logo144_144 _girl.png"; sourceTree = "<group>"; };
+		FAF34362172FBAC500C282D5 /* Ipad_logo144_144 _girl_72x72-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_72x72-1.png"; path = "../../Ipad_logo144_144 _girl_72x72-1.png"; sourceTree = "<group>"; };
+		FAF34364172FBB0C00C282D5 /* Ipad_logo144_144 _girl_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_114x114.png"; path = "../../Ipad_logo144_144 _girl_114x114.png"; sourceTree = "<group>"; };
+		FAF34366172FBB0F00C282D5 /* Ipad_logo144_144 _girl_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_57x57.png"; path = "../../Ipad_logo144_144 _girl_57x57.png"; sourceTree = "<group>"; };
+		FAF34368172FBB9600C282D5 /* Ipad_logo144_144 _girl2_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl2_57x57.png"; path = "../../Ipad_logo144_144 _girl2_57x57.png"; sourceTree = "<group>"; };
+		FAF3436A172FBB9A00C282D5 /* Ipad_logo144_144 _girl2_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl2_114x114.png"; path = "../../Ipad_logo144_144 _girl2_114x114.png"; sourceTree = "<group>"; };
+		FAF3436C172FBFF600C282D5 /* Ipad_logo144_144 _girl_3_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_3_114x114.png"; path = "../../Ipad_logo144_144 _girl_3_114x114.png"; sourceTree = "<group>"; };
+		FAF3436E172FBFFA00C282D5 /* Ipad_logo144_144 _girl_3_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_3_57x57.png"; path = "../../Ipad_logo144_144 _girl_3_57x57.png"; sourceTree = "<group>"; };
 		FAF343AE172FC3E900C282D5 /* KidsCipherB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsCipherB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF343AF172FC3E900C282D5 /* KidsCipher copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KidsCipher copy-Info.plist"; path = "/Users/alex/Desktop/KidsCipher/KidsCipher copy-Info.plist"; sourceTree = "<absolute>"; };
-		FAF343B0172FD35C00C282D5 /* Ipad_logo144_144 _girl_4_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl_4_57x57.png"; sourceTree = "<group>"; };
-		FAF343B2172FD36000C282D5 /* Ipad_logo144_144 _girl_4_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl_4_114x114.png"; sourceTree = "<group>"; };
-		FAF343B4172FD3F400C282D5 /* Ipad_logo144_144_boy_4_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo144_144_boy_4_114x114.png; sourceTree = "<group>"; };
-		FAF343B6172FD3F800C282D5 /* Ipad_logo144_144_boy_4_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo144_144_boy_4_57x57.png; sourceTree = "<group>"; };
-		FAF343D0173003C000C282D5 /* Ipad_logo144_144_boy_4_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo144_144_boy_4_144x144.png; sourceTree = "<group>"; };
-		FAF343D2173003C300C282D5 /* Ipad_logo144_144_boy_4_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo144_144_boy_4_72x72.png; sourceTree = "<group>"; };
-		FAF343D4173004CA00C282D5 /* Ipad_logo144_144 _girl_4_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl_4_72x72.png"; sourceTree = "<group>"; };
-		FAF343D6173004D100C282D5 /* Ipad_logo144_144 _girl_4_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo144_144 _girl_4_144x144.png"; sourceTree = "<group>"; };
+		FAF343B0172FD35C00C282D5 /* Ipad_logo144_144 _girl_4_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_4_57x57.png"; path = "../../Ipad_logo144_144 _girl_4_57x57.png"; sourceTree = "<group>"; };
+		FAF343B2172FD36000C282D5 /* Ipad_logo144_144 _girl_4_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_4_114x114.png"; path = "../../Ipad_logo144_144 _girl_4_114x114.png"; sourceTree = "<group>"; };
+		FAF343B4172FD3F400C282D5 /* Ipad_logo144_144_boy_4_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo144_144_boy_4_114x114.png; path = ../../Ipad_logo144_144_boy_4_114x114.png; sourceTree = "<group>"; };
+		FAF343B6172FD3F800C282D5 /* Ipad_logo144_144_boy_4_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo144_144_boy_4_57x57.png; path = ../../Ipad_logo144_144_boy_4_57x57.png; sourceTree = "<group>"; };
+		FAF343D0173003C000C282D5 /* Ipad_logo144_144_boy_4_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo144_144_boy_4_144x144.png; path = ../../Ipad_logo144_144_boy_4_144x144.png; sourceTree = "<group>"; };
+		FAF343D2173003C300C282D5 /* Ipad_logo144_144_boy_4_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo144_144_boy_4_72x72.png; path = ../../Ipad_logo144_144_boy_4_72x72.png; sourceTree = "<group>"; };
+		FAF343D4173004CA00C282D5 /* Ipad_logo144_144 _girl_4_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_4_72x72.png"; path = "../../Ipad_logo144_144 _girl_4_72x72.png"; sourceTree = "<group>"; };
+		FAF343D6173004D100C282D5 /* Ipad_logo144_144 _girl_4_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_4_144x144.png"; path = "../../Ipad_logo144_144 _girl_4_144x144.png"; sourceTree = "<group>"; };
 		FAFD5C4B172E5A78005F47E2 /* safe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = safe.jpg; sourceTree = "<group>"; };
 		FAFD5C4D172E5FF7005F47E2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		FAFD5C50172E62A1005F47E2 /* GameRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRow.h; sourceTree = "<group>"; };
@@ -160,22 +160,6 @@
 		FAAA3683172E4D7A00C55968 = {
 			isa = PBXGroup;
 			children = (
-				FAF343D6173004D100C282D5 /* Ipad_logo144_144 _girl_4_144x144.png */,
-				FAF343D4173004CA00C282D5 /* Ipad_logo144_144 _girl_4_72x72.png */,
-				FAF343D2173003C300C282D5 /* Ipad_logo144_144_boy_4_72x72.png */,
-				FAF343D0173003C000C282D5 /* Ipad_logo144_144_boy_4_144x144.png */,
-				FAF343B6172FD3F800C282D5 /* Ipad_logo144_144_boy_4_57x57.png */,
-				FAF343B4172FD3F400C282D5 /* Ipad_logo144_144_boy_4_114x114.png */,
-				FAF343B2172FD36000C282D5 /* Ipad_logo144_144 _girl_4_114x114.png */,
-				FAF343B0172FD35C00C282D5 /* Ipad_logo144_144 _girl_4_57x57.png */,
-				FAF3436E172FBFFA00C282D5 /* Ipad_logo144_144 _girl_3_57x57.png */,
-				FAF3436C172FBFF600C282D5 /* Ipad_logo144_144 _girl_3_114x114.png */,
-				FAF3436A172FBB9A00C282D5 /* Ipad_logo144_144 _girl2_114x114.png */,
-				FAF34368172FBB9600C282D5 /* Ipad_logo144_144 _girl2_57x57.png */,
-				FAF34366172FBB0F00C282D5 /* Ipad_logo144_144 _girl_57x57.png */,
-				FAF34364172FBB0C00C282D5 /* Ipad_logo144_144 _girl_114x114.png */,
-				FAF34362172FBAC500C282D5 /* Ipad_logo144_144 _girl_72x72-1.png */,
-				FAF3435E172FB9F100C282D5 /* Ipad_logo144_144 _girl.png */,
 				FAAA3695172E4D7A00C55968 /* KidsCipher */,
 				FAAA368E172E4D7A00C55968 /* Frameworks */,
 				FAAA368D172E4D7A00C55968 /* Products */,
@@ -242,6 +226,22 @@
 		FAAA36BE172E53C700C55968 /* Pics */ = {
 			isa = PBXGroup;
 			children = (
+				FAF343D6173004D100C282D5 /* Ipad_logo144_144 _girl_4_144x144.png */,
+				FAF343D4173004CA00C282D5 /* Ipad_logo144_144 _girl_4_72x72.png */,
+				FAF343D2173003C300C282D5 /* Ipad_logo144_144_boy_4_72x72.png */,
+				FAF343D0173003C000C282D5 /* Ipad_logo144_144_boy_4_144x144.png */,
+				FAF343B6172FD3F800C282D5 /* Ipad_logo144_144_boy_4_57x57.png */,
+				FAF343B4172FD3F400C282D5 /* Ipad_logo144_144_boy_4_114x114.png */,
+				FAF343B2172FD36000C282D5 /* Ipad_logo144_144 _girl_4_114x114.png */,
+				FAF343B0172FD35C00C282D5 /* Ipad_logo144_144 _girl_4_57x57.png */,
+				FAF3436E172FBFFA00C282D5 /* Ipad_logo144_144 _girl_3_57x57.png */,
+				FAF3436C172FBFF600C282D5 /* Ipad_logo144_144 _girl_3_114x114.png */,
+				FAF3436A172FBB9A00C282D5 /* Ipad_logo144_144 _girl2_114x114.png */,
+				FAF34368172FBB9600C282D5 /* Ipad_logo144_144 _girl2_57x57.png */,
+				FAF34366172FBB0F00C282D5 /* Ipad_logo144_144 _girl_57x57.png */,
+				FAF34364172FBB0C00C282D5 /* Ipad_logo144_144 _girl_114x114.png */,
+				FAF34362172FBAC500C282D5 /* Ipad_logo144_144 _girl_72x72-1.png */,
+				FAF3435E172FB9F100C282D5 /* Ipad_logo144_144 _girl.png */,
 				FA4580FA172EE41800180886 /* ava.png */,
 				FAAA36BF172E53D000C55968 /* 1.png */,
 				FAAA36C0172E53D000C55968 /* 2.png */,
