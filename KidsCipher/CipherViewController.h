@@ -22,11 +22,8 @@
 
 @property (retain, nonatomic) IBOutlet UIButton *photoView;
 @property (retain, nonatomic) UIPopoverController *pop;
-
-@property (retain) NSArray *currentCombination;
-//@property (nonatomic, retain) NSIndexPath *nextRowToFill;
-@property (readwrite) NSUInteger selectedRowNumber;
 @property (retain, nonatomic) IBOutlet UIScrollView *gamePlayScrollView;
+
 @property (retain, nonatomic) IBOutlet UIView *row1view;
 @property (retain, nonatomic) IBOutlet UIButton *row1frame1;
 @property (retain, nonatomic) IBOutlet UIButton *row1frame2;

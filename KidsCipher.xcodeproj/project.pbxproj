@@ -27,6 +27,14 @@
 		FAAA36C6172E53D000C55968 /* 3.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36C1172E53D000C55968 /* 3.png */; };
 		FAAA36C7172E53D000C55968 /* 4.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36C2172E53D000C55968 /* 4.png */; };
 		FAAA36C8172E53D000C55968 /* 5.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36C3172E53D000C55968 /* 5.png */; };
+		FADBE8F71732367500E3DA8D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADBE8F61732367500E3DA8D /* CoreData.framework */; };
+		FADBE8FA1732369F00E3DA8D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */; };
+		FADBE8FB1732369F00E3DA8D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */; };
+		FADBE90417323B5800E3DA8D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADBE8F61732367500E3DA8D /* CoreData.framework */; };
+		FADBE90B17323FA700E3DA8D /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FADBE90A17323FA700E3DA8D /* Game.m */; };
+		FADBE90C17323FA700E3DA8D /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FADBE90A17323FA700E3DA8D /* Game.m */; };
+		FADBE913173241C000E3DA8D /* Row.m in Sources */ = {isa = PBXBuildFile; fileRef = FADBE912173241C000E3DA8D /* Row.m */; };
+		FADBE914173241C000E3DA8D /* Row.m in Sources */ = {isa = PBXBuildFile; fileRef = FADBE912173241C000E3DA8D /* Row.m */; };
 		FAF3435F172FB9F100C282D5 /* Ipad_logo144_144 _girl.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3435E172FB9F100C282D5 /* Ipad_logo144_144 _girl.png */; };
 		FAF34363172FBAC500C282D5 /* Ipad_logo144_144 _girl_72x72-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF34362172FBAC500C282D5 /* Ipad_logo144_144 _girl_72x72-1.png */; };
 		FAF34365172FBB0C00C282D5 /* Ipad_logo144_144 _girl_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF34364172FBB0C00C282D5 /* Ipad_logo144_144 _girl_114x114.png */; };
@@ -107,6 +115,12 @@
 		FAAA36C1172E53D000C55968 /* 3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 3.png; sourceTree = "<group>"; };
 		FAAA36C2172E53D000C55968 /* 4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 4.png; sourceTree = "<group>"; };
 		FAAA36C3172E53D000C55968 /* 5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5.png; sourceTree = "<group>"; };
+		FADBE8F61732367500E3DA8D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		FADBE8F91732369F00E3DA8D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FADBE90917323FA700E3DA8D /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		FADBE90A17323FA700E3DA8D /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		FADBE911173241C000E3DA8D /* Row.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Row.h; sourceTree = "<group>"; };
+		FADBE912173241C000E3DA8D /* Row.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Row.m; sourceTree = "<group>"; };
 		FAF3435E172FB9F100C282D5 /* Ipad_logo144_144 _girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl.png"; path = "../../Ipad_logo144_144 _girl.png"; sourceTree = "<group>"; };
 		FAF34362172FBAC500C282D5 /* Ipad_logo144_144 _girl_72x72-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_72x72-1.png"; path = "../../Ipad_logo144_144 _girl_72x72-1.png"; sourceTree = "<group>"; };
 		FAF34364172FBB0C00C282D5 /* Ipad_logo144_144 _girl_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_114x114.png"; path = "../../Ipad_logo144_144 _girl_114x114.png"; sourceTree = "<group>"; };
@@ -127,8 +141,6 @@
 		FAF343D6173004D100C282D5 /* Ipad_logo144_144 _girl_4_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_4_144x144.png"; path = "../../Ipad_logo144_144 _girl_4_144x144.png"; sourceTree = "<group>"; };
 		FAFD5C4B172E5A78005F47E2 /* safe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = safe.jpg; sourceTree = "<group>"; };
 		FAFD5C4D172E5FF7005F47E2 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		FAFD5C50172E62A1005F47E2 /* GameRow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameRow.h; sourceTree = "<group>"; };
-		FAFD5C51172E62A1005F47E2 /* GameRow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameRow.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +148,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FADBE8F71732367500E3DA8D /* CoreData.framework in Frameworks */,
 				FAFD5C4E172E5FF7005F47E2 /* QuartzCore.framework in Frameworks */,
 				FAAA3690172E4D7A00C55968 /* UIKit.framework in Frameworks */,
 				FAAA3692172E4D7A00C55968 /* Foundation.framework in Frameworks */,
@@ -147,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FADBE90417323B5800E3DA8D /* CoreData.framework in Frameworks */,
 				FAF34391172FC3E900C282D5 /* QuartzCore.framework in Frameworks */,
 				FAF34392172FC3E900C282D5 /* UIKit.framework in Frameworks */,
 				FAF34393172FC3E900C282D5 /* Foundation.framework in Frameworks */,
@@ -178,6 +192,7 @@
 		FAAA368E172E4D7A00C55968 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FADBE8F61732367500E3DA8D /* CoreData.framework */,
 				FAFD5C4D172E5FF7005F47E2 /* QuartzCore.framework */,
 				FAAA368F172E4D7A00C55968 /* UIKit.framework */,
 				FAAA3691172E4D7A00C55968 /* Foundation.framework */,
@@ -256,8 +271,11 @@
 		FAFD5C4F172E628F005F47E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				FAFD5C50172E62A1005F47E2 /* GameRow.h */,
-				FAFD5C51172E62A1005F47E2 /* GameRow.m */,
+				FADBE90917323FA700E3DA8D /* Game.h */,
+				FADBE90A17323FA700E3DA8D /* Game.m */,
+				FADBE911173241C000E3DA8D /* Row.h */,
+				FADBE912173241C000E3DA8D /* Row.m */,
+				FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -404,6 +422,9 @@
 				FAAA36AF172E4D7A00C55968 /* CipherViewController.m in Sources */,
 				FAAA36B7172E520400C55968 /* AVImageView.m in Sources */,
 				FAAA36BA172E525D00C55968 /* CipherInfoViewController.m in Sources */,
+				FADBE8FA1732369F00E3DA8D /* Model.xcdatamodeld in Sources */,
+				FADBE90B17323FA700E3DA8D /* Game.m in Sources */,
+				FADBE913173241C000E3DA8D /* Row.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +437,9 @@
 				FAF3438C172FC3E900C282D5 /* CipherViewController.m in Sources */,
 				FAF3438D172FC3E900C282D5 /* AVImageView.m in Sources */,
 				FAF3438E172FC3E900C282D5 /* CipherInfoViewController.m in Sources */,
+				FADBE8FB1732369F00E3DA8D /* Model.xcdatamodeld in Sources */,
+				FADBE90C17323FA700E3DA8D /* Game.m in Sources */,
+				FADBE914173241C000E3DA8D /* Row.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +608,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FADBE8F91732369F00E3DA8D /* Model.xcdatamodel */,
+			);
+			currentVersion = FADBE8F91732369F00E3DA8D /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = FAAA3684172E4D7A00C55968 /* Project object */;
 }

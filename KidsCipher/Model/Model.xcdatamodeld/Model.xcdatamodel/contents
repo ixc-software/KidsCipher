@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2061" systemVersion="12D78" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Game" representedClassName="Game" syncable="YES">
+        <attribute name="activeRowNumber" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="combination1color" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="combination2color" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="combination3color" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="combination4color" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="frame1startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frame2startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frame3startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frame4startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frame5startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFrame1empty" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isFrame2empty" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isFrame3empty" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isFrame4empty" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isFrame5empty" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
+        <relationship name="rows" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Row" inverseName="game" inverseEntity="Row" syncable="YES"/>
+    </entity>
+    <entity name="Row" representedClassName="Row" syncable="YES">
+        <attribute name="frame" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frame1startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frame2startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frame3startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frame4startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFrame1Filled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isFrame2Filled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isFrame3Filled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isFrame4Filled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="numberOfMatchedColor" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="numberOfMatchedColorAndPosition" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <relationship name="game" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="rows" inverseEntity="Game" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Game" positionX="160" positionY="192" width="128" height="300"/>
+        <element name="Row" positionX="160" positionY="192" width="128" height="225"/>
+    </elements>
+</model>

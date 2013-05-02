@@ -24,9 +24,10 @@
 //@property (strong, nonatomic) NSString *imageName;
 
 @property (readwrite) CGPoint offset;
-@property (readwrite) CGPoint startPoint;
 @property (readwrite) BOOL isScalled;
-@property (readwrite) BOOL isCanceledTouches;
+
+//@property (readwrite) CGPoint startDraggedPoint;
+//@property (readwrite) BOOL isCanceledTouches;
 
 //@property NSInteger currentPointInsideTableViewCell;
 

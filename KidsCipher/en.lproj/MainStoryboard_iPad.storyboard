@@ -552,10 +552,6 @@
                 <relationship kind="outlet" name="image5OutsideTableView" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="photoView" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="row1HidingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row1frame1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row1frame2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row1frame3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row1frame4" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="row1image1" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="row1image2" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="row1image3" candidateClass="AVImageView"/>

@@ -40,7 +40,9 @@
     if (!self.hidden) {
         CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
         CipherViewController *game = [mainDelegate.viewControllers valueForKey:@"CipherViewController"];
-        self.startPoint = self.frame.origin;
+        //self.startPoint = self.frame.origin;
+        Row *activeRow = [mainDelegate getActiveRow];
+        
         AVImageView *necessaryImage = nil;
         if ([self isEqual:game.row1image1]) necessaryImage = game.image1OutsideTableView;
         if ([self isEqual:game.row1image2]) necessaryImage = game.image2OutsideTableView;
@@ -48,17 +50,17 @@
         if ([self isEqual:game.row1image4]) necessaryImage = game.image4OutsideTableView;
         if ([self isEqual:game.row1image5]) necessaryImage = game.image5OutsideTableView;
         NSUInteger isStartPointMatchedOneOfFrames = 0;
-        if (self.startPoint.x == game.row1frame1.frame.origin.x && self.startPoint.y == game.row1frame1.frame.origin.y) isStartPointMatchedOneOfFrames = 1;
-        if (self.startPoint.x == game.row1frame2.frame.origin.x && self.startPoint.y == game.row1frame2.frame.origin.y) isStartPointMatchedOneOfFrames = 2;
+        if (self.frame.origin.x == game.row1frame1.frame.origin.x && self.frame.origin.y == game.row1frame1.frame.origin.y) isStartPointMatchedOneOfFrames = 1;
+        if (self.frame.origin.x == game.row1frame2.frame.origin.x && self.frame.origin.y == game.row1frame2.frame.origin.y) isStartPointMatchedOneOfFrames = 2;
         if (self.startPoint.x == game.row1frame3.frame.origin.x && self.startPoint.y == game.row1frame3.frame.origin.y) isStartPointMatchedOneOfFrames = 3;
         if (self.startPoint.x == game.row1frame4.frame.origin.x && self.startPoint.y == game.row1frame4.frame.origin.y) isStartPointMatchedOneOfFrames = 4;
         
         if (necessaryImage && isStartPointMatchedOneOfFrames > 0) {
-            NSMutableArray *choosedColorsForEveryPoint = [mainDelegate.currentChoosesArray objectAtIndex:game.selectedRowNumber];
-            if (isStartPointMatchedOneOfFrames == 1) [choosedColorsForEveryPoint replaceObjectAtIndex:0 withObject:[NSNumber numberWithUnsignedInteger:0]];
-            if (isStartPointMatchedOneOfFrames == 2) [choosedColorsForEveryPoint replaceObjectAtIndex:1 withObject:[NSNumber numberWithUnsignedInteger:0]];
-            if (isStartPointMatchedOneOfFrames == 3) [choosedColorsForEveryPoint replaceObjectAtIndex:2 withObject:[NSNumber numberWithUnsignedInteger:0]];
-            if (isStartPointMatchedOneOfFrames == 4) [choosedColorsForEveryPoint replaceObjectAtIndex:3 withObject:[NSNumber numberWithUnsignedInteger:0]];
+//            NSMutableArray *choosedColorsForEveryPoint = [mainDelegate.currentChoosesArray objectAtIndex:game.selectedRowNumber];
+//            if (isStartPointMatchedOneOfFrames == 1) [choosedColorsForEveryPoint replaceObjectAtIndex:0 withObject:[NSNumber numberWithUnsignedInteger:0]];
+//            if (isStartPointMatchedOneOfFrames == 2) [choosedColorsForEveryPoint replaceObjectAtIndex:1 withObject:[NSNumber numberWithUnsignedInteger:0]];
+//            if (isStartPointMatchedOneOfFrames == 3) [choosedColorsForEveryPoint replaceObjectAtIndex:2 withObject:[NSNumber numberWithUnsignedInteger:0]];
+//            if (isStartPointMatchedOneOfFrames == 4) [choosedColorsForEveryPoint replaceObjectAtIndex:3 withObject:[NSNumber numberWithUnsignedInteger:0]];
 
             self.hidden = YES;
             necessaryImage.hidden = NO;
@@ -119,24 +121,24 @@
     bool result4 = CGRectContainsPoint(frame4,location);
     //NSLog(@"game.nextRowToFill.row->%ld result1->%@ frame1->%@ result2->%@ result3->%@ result4->%@",(long)game.nextRowToFill.row,[NSNumber numberWithBool:result1],NSStringFromCGRect(frame1),[NSNumber numberWithBool:result2],[NSNumber numberWithBool:result3],[NSNumber numberWithBool:result4]);
     if (result1 || result2 || result3 || result4) {
-        NSMutableArray *choosedColorsForEveryPoint = [mainDelegate.currentChoosesArray objectAtIndex:game.selectedRowNumber];
-        CGPoint pointOfFinalImagePositionInsideCell;
-        if (result1) {
-            if ([[choosedColorsForEveryPoint objectAtIndex:0] integerValue] > 0) return;
-            pointOfFinalImagePositionInsideCell = CGPointMake(game.row1frame1.frame.origin.x, game.row1frame1.frame.origin.y);
-        }
-        if (result2) {
-            if ([[choosedColorsForEveryPoint objectAtIndex:1] integerValue] > 0) return;
-            pointOfFinalImagePositionInsideCell = CGPointMake(game.row1frame2.frame.origin.x, game.row1frame2.frame.origin.y);
-        }
-        if (result3) {
-            if ([[choosedColorsForEveryPoint objectAtIndex:2] integerValue] > 0) return;
-            pointOfFinalImagePositionInsideCell = CGPointMake(game.row1frame3.frame.origin.x, game.row1frame3.frame.origin.y);
-        }
-        if (result4) {
-            if ([[choosedColorsForEveryPoint objectAtIndex:3] integerValue] > 0) return;
-            pointOfFinalImagePositionInsideCell = CGPointMake(game.row1frame4.frame.origin.x, game.row1frame4.frame.origin.y);
-        }
+//        NSMutableArray *choosedColorsForEveryPoint = [mainDelegate.currentChoosesArray objectAtIndex:game.selectedRowNumber];
+//        CGPoint pointOfFinalImagePositionInsideCell;
+//        if (result1) {
+//            if ([[choosedColorsForEveryPoint objectAtIndex:0] integerValue] > 0) return;
+//            pointOfFinalImagePositionInsideCell = CGPointMake(game.row1frame1.frame.origin.x, game.row1frame1.frame.origin.y);
+//        }
+//        if (result2) {
+//            if ([[choosedColorsForEveryPoint objectAtIndex:1] integerValue] > 0) return;
+//            pointOfFinalImagePositionInsideCell = CGPointMake(game.row1frame2.frame.origin.x, game.row1frame2.frame.origin.y);
+//        }
+//        if (result3) {
+//            if ([[choosedColorsForEveryPoint objectAtIndex:2] integerValue] > 0) return;
+//            pointOfFinalImagePositionInsideCell = CGPointMake(game.row1frame3.frame.origin.x, game.row1frame3.frame.origin.y);
+//        }
+//        if (result4) {
+//            if ([[choosedColorsForEveryPoint objectAtIndex:3] integerValue] > 0) return;
+//            pointOfFinalImagePositionInsideCell = CGPointMake(game.row1frame4.frame.origin.x, game.row1frame4.frame.origin.y);
+//        }
         
         self.hidden = YES;
         CGRect frameImageInsideCellConvertedFromOutsoidedImage = [game.view convertRect:self.frame toView:game.gamePlayScrollView];
@@ -189,8 +191,8 @@
                             options:0
                          animations:^{
                              necessaryImage.frame = frameImageInsideCellConvertedFromOutsoidedImage;
-                             necessaryImage.frame = CGRectMake(pointOfFinalImagePositionInsideCell.x, pointOfFinalImagePositionInsideCell.y,
-                                                               necessaryImage.frame.size.width, necessaryImage.frame.size.height);
+//                             necessaryImage.frame = CGRectMake(pointOfFinalImagePositionInsideCell.x, pointOfFinalImagePositionInsideCell.y,
+//                                                               necessaryImage.frame.size.width, necessaryImage.frame.size.height);
                          } completion:^(BOOL finished) {
                              CABasicAnimation *zoomNormal = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
                              zoomNormal.toValue = [NSNumber numberWithDouble:1.0];
@@ -206,13 +208,13 @@
                              zoomNormalOutside.removedOnCompletion=NO;
                              [self.layer addAnimation:zoomNormalOutside forKey:@"zoomNormal"];
                              
-                             NSMutableArray *choosedColorsForEveryPoint = [mainDelegate.currentChoosesArray objectAtIndex:game.selectedRowNumber];
-                             if (result1) [choosedColorsForEveryPoint replaceObjectAtIndex:0 withObject:number];
-                             if (result2) [choosedColorsForEveryPoint replaceObjectAtIndex:1 withObject:number];
-                             if (result3) [choosedColorsForEveryPoint replaceObjectAtIndex:2 withObject:number];
-                             if (result4) [choosedColorsForEveryPoint replaceObjectAtIndex:3 withObject:number];
+//                             NSMutableArray *choosedColorsForEveryPoint = [mainDelegate.currentChoosesArray objectAtIndex:game.selectedRowNumber];
+//                             if (result1) [choosedColorsForEveryPoint replaceObjectAtIndex:0 withObject:number];
+//                             if (result2) [choosedColorsForEveryPoint replaceObjectAtIndex:1 withObject:number];
+//                             if (result3) [choosedColorsForEveryPoint replaceObjectAtIndex:2 withObject:number];
+//                             if (result4) [choosedColorsForEveryPoint replaceObjectAtIndex:3 withObject:number];
                              NSPredicate *filter = [NSPredicate predicateWithFormat:@"SELF > %@",[NSNumber numberWithInt:0]];
-                             NSArray *filtered = [choosedColorsForEveryPoint filteredArrayUsingPredicate:filter];
+                             NSArray *filtered = nil;//[choosedColorsForEveryPoint filteredArrayUsingPredicate:filter];
                              if (filtered.count == 4) {
                                  [self touchesCancelled:touches withEvent:event];
 
