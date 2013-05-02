@@ -11,6 +11,8 @@
 #import "CipherViewCell.h"
 
 @interface CipherViewController ()
+@property (retain, nonatomic) IBOutlet UIView *row1HidingView;
+@property (retain, nonatomic) IBOutlet UIView *row2HidingView;
 
 @end
 
@@ -41,34 +43,37 @@
                                nil];
     self.gamePlayScrollView.contentSize =  CGSizeMake(320, 1000);
     self.frameSelectedRow = self.row1view.frame;
-    mainDelegate.image1OutsideTableViewStartPoint = self.image1OutsideTableView.startPoint;
-    mainDelegate.image2OutsideTableViewStartPoint = self.image2OutsideTableView.startPoint;
-    mainDelegate.image3OutsideTableViewStartPoint = self.image3OutsideTableView.startPoint;
-    mainDelegate.image4OutsideTableViewStartPoint = self.image4OutsideTableView.startPoint;
-    mainDelegate.image5OutsideTableViewStartPoint = self.image5OutsideTableView.startPoint;
-    NSLog(@"mainDelegate.image1OutsideTableViewStartPoint->%@",NSStringFromCGPoint(mainDelegate.image1OutsideTableViewStartPoint));
-
-    //self.nextRowToFill = [NSIndexPath indexPathForRow:0 inSection:0];
-    //NSLog(@"viewDidLoad self.image1OutsideTableView.startPointt->%@",NSStringFromCGPoint(self.image1OutsideTableView.frame.origin));
-}
--(void)viewWillAppear:(BOOL)animated
-{
-//    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
-//    self.image1OutsideTableView.startPoint = mainDelegate.image1OutsideTableViewStartPoint;
-//    self.image2OutsideTableView.startPoint = mainDelegate.image2OutsideTableViewStartPoint;
-//    self.image3OutsideTableView.startPoint = mainDelegate.image3OutsideTableViewStartPoint;
-//    self.image4OutsideTableView.startPoint = mainDelegate.image4OutsideTableViewStartPoint;
-//    self.image5OutsideTableView.startPoint = mainDelegate.image5OutsideTableViewStartPoint;
-}
-
--(void)viewDidDisappear:(BOOL)animated
-{
-//    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
 //    mainDelegate.image1OutsideTableViewStartPoint = self.image1OutsideTableView.startPoint;
 //    mainDelegate.image2OutsideTableViewStartPoint = self.image2OutsideTableView.startPoint;
 //    mainDelegate.image3OutsideTableViewStartPoint = self.image3OutsideTableView.startPoint;
 //    mainDelegate.image4OutsideTableViewStartPoint = self.image4OutsideTableView.startPoint;
 //    mainDelegate.image5OutsideTableViewStartPoint = self.image5OutsideTableView.startPoint;
+//    NSLog(@"mainDelegate.image1OutsideTableViewStartPoint->%@",NSStringFromCGPoint(mainDelegate.image1OutsideTableViewStartPoint));
+    self.row1HidingView.hidden = YES;
+    self.row1HidingView.userInteractionEnabled = NO;
+    //self.nextRowToFill = [NSIndexPath indexPathForRow:0 inSection:0];
+    //NSLog(@"viewDidLoad self.image1OutsideTableView.startPointt->%@",NSStringFromCGPoint(self.image1OutsideTableView.frame.origin));
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.image1OutsideTableView.startPoint = mainDelegate.image1OutsideTableViewStartPoint;
+    self.image2OutsideTableView.startPoint = mainDelegate.image2OutsideTableViewStartPoint;
+    self.image3OutsideTableView.startPoint = mainDelegate.image3OutsideTableViewStartPoint;
+    self.image4OutsideTableView.startPoint = mainDelegate.image4OutsideTableViewStartPoint;
+    self.image5OutsideTableView.startPoint = mainDelegate.image5OutsideTableViewStartPoint;
+    NSLog(@"viewWillAppear mainDelegate.image1OutsideTableViewStartPoint->%@ self.image1OutsideTableView.frame->%@",NSStringFromCGPoint(mainDelegate.image1OutsideTableViewStartPoint),NSStringFromCGRect(self.image1OutsideTableView.frame));
+}
+
+-(void)viewDidDisappear:(BOOL)animated
+{
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    mainDelegate.image1OutsideTableViewStartPoint = self.image1OutsideTableView.startPoint;
+    mainDelegate.image2OutsideTableViewStartPoint = self.image2OutsideTableView.startPoint;
+    mainDelegate.image3OutsideTableViewStartPoint = self.image3OutsideTableView.startPoint;
+    mainDelegate.image4OutsideTableViewStartPoint = self.image4OutsideTableView.startPoint;
+    mainDelegate.image5OutsideTableViewStartPoint = self.image5OutsideTableView.startPoint;
+    NSLog(@"viewDidDisappear mainDelegate.image1OutsideTableViewStartPoint->%@",NSStringFromCGPoint(mainDelegate.image1OutsideTableViewStartPoint));
 }
 
 - (void)didReceiveMemoryWarning
@@ -97,6 +102,10 @@
 
 }
 
+-(void)startCompletingCurrentRowAndOpenNext;
+{
+    
+}
 #pragma mark - UIImagePickerController delegate
 static CGRect swapWidthAndHeight(CGRect rect)
 {
@@ -238,190 +247,6 @@ static CGRect swapWidthAndHeight(CGRect rect)
 
 
 
-//- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-//{
-//    return 1;
-//}
-//
-//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-//{
-//    return 10;
-//}
-//
-//- (UITableViewCell *)tableView:(UITableView *)tableViewLocal cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
-//    static NSString *CellIdentifier = @"CipherViewCell";
-//    CipherViewCell *cell = [tableViewLocal dequeueReusableCellWithIdentifier:CellIdentifier];
-//    cell.controller = self;
-//    cell.indexPath = indexPath;
-////    NSLog(@"cell.image1InsideTableView.currentPointInsideTableViewCell->%ld cell.image1InsideTableView.hidden->%c",(long)cell.image1InsideTableView.currentPointInsideTableViewCell,cell.image1InsideTableView.hidden);
-////    NSLog(@"cell.image2InsideTableView.currentPointInsideTableViewCell->%ld cell.image2InsideTableView.hidden->%c",(long)cell.image2InsideTableView.currentPointInsideTableViewCell,cell.image2InsideTableView.hidden);
-////    NSLog(@"cell.image3InsideTableView.currentPointInsideTableViewCell->%ld cell.image3InsideTableView.hidden->%c",(long)cell.image3InsideTableView.currentPointInsideTableViewCell,cell.image3InsideTableView.hidden);
-////    NSLog(@"cell.image4InsideTableView.currentPointInsideTableViewCell->%ld cell.image4InsideTableView.hidden->%c",(long)cell.image4InsideTableView.currentPointInsideTableViewCell,cell.image4InsideTableView.hidden);
-////    NSLog(@"cell.image5InsideTableView.currentPointInsideTableViewCell->%ld cell.image5InsideTableView.hidden->%c",(long)cell.image5InsideTableView.currentPointInsideTableViewCell,cell.image5InsideTableView.hidden);
-//    if (self.nextRowToFill.row >= indexPath.row) {
-//        NSMutableArray *choosedColorsForEveryPoint = [mainDelegate.currentChoosesArray objectAtIndex:self.nextRowToFill.row];
-//        cell.image1InsideTableView.hidden = YES;
-//        cell.image2InsideTableView.hidden = YES;
-//        cell.image3InsideTableView.hidden = YES;
-//        cell.image4InsideTableView.hidden = YES;
-//        cell.image5InsideTableView.hidden = YES;
-//        [choosedColorsForEveryPoint enumerateObjectsUsingBlock:^(NSNumber *picNumber, NSUInteger idx, BOOL *stop) {
-//            NSLog(@"indexPath.row->%ld idx->%lu picNumber->%@",(long)indexPath.row,(unsigned long)idx,picNumber);
-//            switch (picNumber.unsignedIntegerValue) {
-//                case 1:
-//                    cell.image1InsideTableView.hidden = NO;
-//                    if (self.nextRowToFill.row == indexPath.row) self.image1OutsideTableView.hidden = YES;
-//                    else self.image1OutsideTableView.hidden = NO;
-//                    cell.image1InsideTableView.currentPointInsideTableViewCell = idx;
-//                    switch (idx) {
-//                        case 0:
-//                            cell.image1InsideTableView.frame = CGRectMake(cell.frame1.frame.origin.x, cell.frame1.frame.origin.y, cell.image1InsideTableView.frame.size.width, cell.image1InsideTableView.frame.size.height);
-//                            break;
-//                        case 1:
-//                            cell.image1InsideTableView.frame = CGRectMake(cell.frame2.frame.origin.x, cell.frame2.frame.origin.y, cell.image1InsideTableView.frame.size.width, cell.image1InsideTableView.frame.size.height);
-//                            break;
-//                        case 2:
-//                            cell.image1InsideTableView.frame = CGRectMake(cell.frame3.frame.origin.x, cell.frame3.frame.origin.y, cell.image1InsideTableView.frame.size.width, cell.image1InsideTableView.frame.size.height);
-//                            break;
-//                        case 3:
-//                            cell.image1InsideTableView.frame = CGRectMake(cell.frame4.frame.origin.x, cell.frame4.frame.origin.y, cell.image1InsideTableView.frame.size.width, cell.image1InsideTableView.frame.size.height);
-//                            break;
-//
-//                        default:
-//                            break;
-//                    }
-//                    break;
-//                case 2:
-//                    cell.image2InsideTableView.hidden = NO;
-//                    if (self.nextRowToFill.row == indexPath.row) self.image2OutsideTableView.hidden = YES;
-//                    else self.image2OutsideTableView.hidden = NO;
-//                    cell.image2InsideTableView.currentPointInsideTableViewCell = idx;
-//                    switch (idx) {
-//                        case 0:
-//                            cell.image2InsideTableView.frame = CGRectMake(cell.frame1.frame.origin.x, cell.frame1.frame.origin.y, cell.image2InsideTableView.frame.size.width, cell.image2InsideTableView.frame.size.height);
-//                            break;
-//                        case 1:
-//                            cell.image2InsideTableView.frame = CGRectMake(cell.frame2.frame.origin.x, cell.frame2.frame.origin.y, cell.image2InsideTableView.frame.size.width, cell.image2InsideTableView.frame.size.height);
-//                            break;
-//                        case 2:
-//                            cell.image2InsideTableView.frame = CGRectMake(cell.frame3.frame.origin.x, cell.frame3.frame.origin.y, cell.image2InsideTableView.frame.size.width, cell.image2InsideTableView.frame.size.height);
-//                            break;
-//                        case 3:
-//                            cell.image2InsideTableView.frame = CGRectMake(cell.frame4.frame.origin.x, cell.frame4.frame.origin.y, cell.image2InsideTableView.frame.size.width, cell.image2InsideTableView.frame.size.height);
-//                            break;
-//
-//                        default:
-//                            break;
-//                    }
-//                    break;
-//                case 3:
-//                    cell.image3InsideTableView.hidden = NO;
-//                    if (self.nextRowToFill.row == indexPath.row) self.image3OutsideTableView.hidden = YES;
-//                    else self.image3OutsideTableView.hidden = NO;
-//                    cell.image3InsideTableView.currentPointInsideTableViewCell = idx;
-//                    switch (idx) {
-//                        case 0:
-//                            cell.image3InsideTableView.frame = CGRectMake(cell.frame1.frame.origin.x, cell.frame1.frame.origin.y, cell.image3InsideTableView.frame.size.width, cell.image2InsideTableView.frame.size.height);
-//                            break;
-//                        case 1:
-//                            cell.image3InsideTableView.frame = CGRectMake(cell.frame2.frame.origin.x, cell.frame2.frame.origin.y, cell.image3InsideTableView.frame.size.width, cell.image2InsideTableView.frame.size.height);
-//                            break;
-//                        case 2:
-//                            cell.image3InsideTableView.frame = CGRectMake(cell.frame3.frame.origin.x, cell.frame3.frame.origin.y, cell.image3InsideTableView.frame.size.width, cell.image2InsideTableView.frame.size.height);
-//                            break;
-//                        case 3:
-//                            cell.image3InsideTableView.frame = CGRectMake(cell.frame4.frame.origin.x, cell.frame4.frame.origin.y, cell.image3InsideTableView.frame.size.width, cell.image2InsideTableView.frame.size.height);
-//                            break;
-//
-//                        default:
-//                            break;
-//                    }
-//
-//                    break;
-//                case 4:
-//                    cell.image4InsideTableView.hidden = NO;
-//                    if (self.nextRowToFill.row == indexPath.row) self.image4OutsideTableView.hidden = YES;
-//                    else self.image4OutsideTableView.hidden = NO;
-//                    cell.image4InsideTableView.currentPointInsideTableViewCell = idx;
-//                    switch (idx) {
-//                        case 0:
-//                            cell.image4InsideTableView.frame = CGRectMake(cell.frame1.frame.origin.x, cell.frame1.frame.origin.y, cell.image4InsideTableView.frame.size.width, cell.image4InsideTableView.frame.size.height);
-//                            break;
-//                        case 1:
-//                            cell.image4InsideTableView.frame = CGRectMake(cell.frame2.frame.origin.x, cell.frame2.frame.origin.y, cell.image4InsideTableView.frame.size.width, cell.image4InsideTableView.frame.size.height);
-//                            break;
-//                        case 2:
-//                            cell.image4InsideTableView.frame = CGRectMake(cell.frame3.frame.origin.x, cell.frame3.frame.origin.y, cell.image4InsideTableView.frame.size.width, cell.image4InsideTableView.frame.size.height);
-//                            break;
-//                        case 3:
-//                            cell.image4InsideTableView.frame = CGRectMake(cell.frame4.frame.origin.x, cell.frame4.frame.origin.y, cell.image4InsideTableView.frame.size.width, cell.image4InsideTableView.frame.size.height);
-//                            break;
-//
-//                        default:
-//                            break;
-//                    }
-//
-//                    break;
-//                case 5:
-//                    cell.image5InsideTableView.hidden = NO;
-//                    cell.image5InsideTableView.currentPointInsideTableViewCell = idx;
-//                    if (self.nextRowToFill.row == indexPath.row) self.image5OutsideTableView.hidden = YES;
-//                    else self.image5OutsideTableView.hidden = NO;
-//                    switch (idx) {
-//                        case 0:
-//                            cell.image5InsideTableView.frame = CGRectMake(cell.frame1.frame.origin.x, cell.frame1.frame.origin.y, cell.image5InsideTableView.frame.size.width, cell.image4InsideTableView.frame.size.height);
-//                            break;
-//                        case 1:
-//                            cell.image5InsideTableView.frame = CGRectMake(cell.frame2.frame.origin.x, cell.frame2.frame.origin.y, cell.image5InsideTableView.frame.size.width, cell.image4InsideTableView.frame.size.height);
-//                            break;
-//                        case 2:
-//                            cell.image5InsideTableView.frame = CGRectMake(cell.frame3.frame.origin.x, cell.frame3.frame.origin.y, cell.image5InsideTableView.frame.size.width, cell.image4InsideTableView.frame.size.height);
-//                            break;
-//                        case 3:
-//                            cell.image5InsideTableView.frame = CGRectMake(cell.frame4.frame.origin.x, cell.frame4.frame.origin.y, cell.image5InsideTableView.frame.size.width, cell.image4InsideTableView.frame.size.height);
-//                            break;
-//
-//                        default:
-//                            break;
-//                    }
-//
-//                    break;
-//
-//                default:
-//                    break;
-//            }
-//        }];
-//        cell.hidingView.alpha = 0.0,
-//        cell.hidingView.userInteractionEnabled = NO;
-//        if (self.nextRowToFill.row == indexPath.row) {
-//            self.frameSelectedCell = cell.frame;
-//            NSLog(@"self.frameSelectedCell->%@",NSStringFromCGRect(self.frameSelectedCell));
-//        } else {
-//            cell.image1InsideTableView.userInteractionEnabled = NO;
-//            cell.image2InsideTableView.userInteractionEnabled = NO;
-//            cell.image3InsideTableView.userInteractionEnabled = NO;
-//            cell.image4InsideTableView.userInteractionEnabled = NO;
-//            cell.image5InsideTableView.userInteractionEnabled = NO;
-//            if (self.image1OutsideTableView.isCanceledTouches) self.image1OutsideTableView.isCanceledTouches = NO;
-//            if (self.image2OutsideTableView.isCanceledTouches) self.image2OutsideTableView.isCanceledTouches = NO;
-//            if (self.image3OutsideTableView.isCanceledTouches) self.image3OutsideTableView.isCanceledTouches = NO;
-//            if (self.image4OutsideTableView.isCanceledTouches) self.image4OutsideTableView.isCanceledTouches = NO;
-//            if (self.image5OutsideTableView.isCanceledTouches) self.image5OutsideTableView.isCanceledTouches = NO;
-//        }
-//    } else {
-//        cell.hidingView.alpha = 0.5,cell.hidingView.userInteractionEnabled = YES;
-//        cell.image1InsideTableView.hidden = YES;
-//        cell.image2InsideTableView.hidden = YES;
-//        cell.image3InsideTableView.hidden = YES;
-//        cell.image4InsideTableView.hidden = YES;
-//        cell.image5InsideTableView.hidden = YES;
-//    }
-//    return cell;
-//}
-
-
-
 - (void)viewDidUnload {
     [self setRow1image2:nil];
     [self setRow1image3:nil];
@@ -430,6 +255,8 @@ static CGRect swapWidthAndHeight(CGRect rect)
     [self setRow1frame2:nil];
     [self setRow1frame3:nil];
     [self setRow1frame4:nil];
+    [self setRow1HidingView:nil];
+    [self setRow2HidingView:nil];
     [super viewDidUnload];
 }
 @end

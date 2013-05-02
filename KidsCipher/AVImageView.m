@@ -144,13 +144,46 @@
         NSNumber *number = nil;
         
         AVImageView *necessaryImage = nil;
-        if ([self isEqual:game.image1OutsideTableView]) { necessaryImage = game.row1image1,number = [[NSNumber alloc] initWithInteger:1]; }
-        if ([self isEqual:game.image2OutsideTableView]) { necessaryImage = game.row1image2,number = [[NSNumber alloc] initWithInteger:2]; }
-        if ([self isEqual:game.image3OutsideTableView]) { necessaryImage = game.row1image3,number = [[NSNumber alloc] initWithInteger:3]; }
-        if ([self isEqual:game.image4OutsideTableView]) { necessaryImage = game.row1image4,number = [[NSNumber alloc] initWithInteger:4]; }
+        if ([self isEqual:game.image1OutsideTableView]) {
+            necessaryImage = game.row1image1,
+            number = [[NSNumber alloc] initWithInteger:1];
+//            game.image1OutsideTableView.frame =
+//            CGRectMake(game.image1OutsideTableView.startPoint.x,
+//                       game.image1OutsideTableView.startPoint.y,
+//                       game.image1OutsideTableView.frame.size.width,
+//                       game.image1OutsideTableView.frame.size.height);
+        }
+        if ([self isEqual:game.image2OutsideTableView]) {
+            necessaryImage = game.row1image2,
+            number = [[NSNumber alloc] initWithInteger:2];
+//            game.image2OutsideTableView.frame =
+//            CGRectMake(game.image2OutsideTableView.startPoint.x,
+//                       game.image2OutsideTableView.startPoint.y,
+//                       game.image2OutsideTableView.frame.size.width,
+//                       game.image2OutsideTableView.frame.size.height);
+        }
+        if ([self isEqual:game.image3OutsideTableView]) {
+            necessaryImage = game.row1image3,
+            number = [[NSNumber alloc] initWithInteger:3];
+//            game.image3OutsideTableView.frame =
+//            CGRectMake(game.image3OutsideTableView.startPoint.x,
+//                       game.image3OutsideTableView.startPoint.y,
+//                       game.image3OutsideTableView.frame.size.width,
+//                       game.image3OutsideTableView.frame.size.height);
+        }
+        if ([self isEqual:game.image4OutsideTableView]) {
+            necessaryImage = game.row1image4,
+            number = [[NSNumber alloc] initWithInteger:4];
+//            game.image4OutsideTableView.frame =
+//            CGRectMake(game.image4OutsideTableView.startPoint.x,
+//                       game.image4OutsideTableView.startPoint.y,
+//                       game.image4OutsideTableView.frame.size.width,
+//                       game.image4OutsideTableView.frame.size.height);
+        }
         if ([self isEqual:game.image5OutsideTableView]) { necessaryImage = game.row1image5,number = [[NSNumber alloc] initWithInteger:5]; }
         necessaryImage.hidden = NO;
-
+        //self.frame = CGRectMake(self.startPoint.x, self.startPoint.y, self.frame.size.width, self.frame.size.height);
+        //NSLog(@"self.startPoint->%@",NSStringFromCGPoint(self.startPoint));
         [UIView animateWithDuration:0.2
                               delay:0
                             options:0
@@ -165,6 +198,14 @@
                              zoomNormal.fillMode=kCAFillModeForwards;
                              zoomNormal.removedOnCompletion=NO;
                              [necessaryImage.layer addAnimation:zoomNormal forKey:@"zoomNormal"];
+                             
+                             CABasicAnimation *zoomNormalOutside = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+                             zoomNormalOutside.toValue = [NSNumber numberWithDouble:1.0];
+                             zoomNormalOutside.duration = 0.1;
+                             zoomNormalOutside.fillMode=kCAFillModeForwards;
+                             zoomNormalOutside.removedOnCompletion=NO;
+                             [self.layer addAnimation:zoomNormalOutside forKey:@"zoomNormal"];
+                             
                              NSMutableArray *choosedColorsForEveryPoint = [mainDelegate.currentChoosesArray objectAtIndex:game.selectedRowNumber];
                              if (result1) [choosedColorsForEveryPoint replaceObjectAtIndex:0 withObject:number];
                              if (result2) [choosedColorsForEveryPoint replaceObjectAtIndex:1 withObject:number];
@@ -174,16 +215,8 @@
                              NSArray *filtered = [choosedColorsForEveryPoint filteredArrayUsingPredicate:filter];
                              if (filtered.count == 4) {
                                  [self touchesCancelled:touches withEvent:event];
-                                 [game.image1OutsideTableView touchesCancelled:touches withEvent:event];
-                                 [game.image2OutsideTableView touchesCancelled:touches withEvent:event];
-                                 [game.image3OutsideTableView touchesCancelled:touches withEvent:event];
-                                 [game.image4OutsideTableView touchesCancelled:touches withEvent:event];
-                                 [game.image5OutsideTableView touchesCancelled:touches withEvent:event];
-                                 game.image1OutsideTableView.isCanceledTouches = YES;
-                                 game.image2OutsideTableView.isCanceledTouches = YES;
-                                 game.image3OutsideTableView.isCanceledTouches = YES;
-                                 game.image4OutsideTableView.isCanceledTouches = YES;
-                                 game.image5OutsideTableView.isCanceledTouches = YES;
+
+                                 
                                  if (game.image1OutsideTableView.startPoint.x != 0)
                                  game.image1OutsideTableView.frame = CGRectMake(game.image1OutsideTableView.startPoint.x, game.image1OutsideTableView.startPoint.y,
                                                                                 game.image1OutsideTableView.frame.size.width, game.image1OutsideTableView.frame.size.height);
@@ -199,78 +232,27 @@
                                  if (game.image5OutsideTableView.startPoint.x != 0)
                                  game.image5OutsideTableView.frame = CGRectMake(game.image5OutsideTableView.startPoint.x, game.image5OutsideTableView.startPoint.y,
                                                                                 game.image5OutsideTableView.frame.size.width, game.image5OutsideTableView.frame.size.height);
-                                 NSLog(@"game.image1OutsideTableView.frame->%@",NSStringFromCGRect(game.image1OutsideTableView.frame));
-                                 NSLog(@"game.image2OutsideTableView.frame->%@",NSStringFromCGRect(game.image2OutsideTableView.frame));
-                                 NSLog(@"game.image3OutsideTableView.frame->%@",NSStringFromCGRect(game.image3OutsideTableView.frame));
-                                 NSLog(@"game.image4OutsideTableView.frame->%@",NSStringFromCGRect(game.image4OutsideTableView.frame));
-                                 NSLog(@"game.image5OutsideTableView.frame->%@",NSStringFromCGRect(game.image5OutsideTableView.frame));
-                                 
-//                                 CABasicAnimation *zoomNormal1 = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-//                                 zoomNormal1.toValue = [NSNumber numberWithDouble:1.0];
-//                                 zoomNormal1.duration = 0.1;
-//                                 zoomNormal1.fillMode=kCAFillModeForwards;
-//                                 zoomNormal1.removedOnCompletion=NO;
-//                                 CABasicAnimation *zoomNormal2 = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-//                                 zoomNormal2.toValue = [NSNumber numberWithDouble:1.0];
-//                                 zoomNormal2.duration = 0.1;
-//                                 zoomNormal2.fillMode=kCAFillModeForwards;
-//                                 zoomNormal2.removedOnCompletion=NO;
-//                                 CABasicAnimation *zoomNormal3 = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-//                                 zoomNormal3.toValue = [NSNumber numberWithDouble:1.0];
-//                                 zoomNormal3.duration = 0.1;
-//                                 zoomNormal3.fillMode=kCAFillModeForwards;
-//                                 zoomNormal3.removedOnCompletion=NO;
-//                                 CABasicAnimation *zoomNormal4 = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-//                                 zoomNormal4.toValue = [NSNumber numberWithDouble:1.0];
-//                                 zoomNormal4.duration = 0.1;
-//                                 zoomNormal4.fillMode=kCAFillModeForwards;
-//                                 zoomNormal4.removedOnCompletion=NO;
-//                                 CABasicAnimation *zoomNormal5 = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-//                                 zoomNormal5.toValue = [NSNumber numberWithDouble:1.0];
-//                                 zoomNormal5.duration = 0.1;
-//                                 zoomNormal5.fillMode=kCAFillModeForwards;
-//                                 zoomNormal5.removedOnCompletion=NO;
-//
-//                                 [game.image1OutsideTableView.layer addAnimation:zoomNormal1 forKey:@"zoomNormal"];
-//                                 [game.image2OutsideTableView.layer addAnimation:zoomNormal2 forKey:@"zoomNormal"];
-//                                 [game.image3OutsideTableView.layer addAnimation:zoomNormal3 forKey:@"zoomNormal"];
-//                                 [game.image4OutsideTableView.layer addAnimation:zoomNormal4 forKey:@"zoomNormal"];
-//                                 [game.image5OutsideTableView.layer addAnimation:zoomNormal5 forKey:@"zoomNormal"];
-
-                                 game.image1OutsideTableView.hidden = NO;
-                                 game.image2OutsideTableView.hidden = NO;
-                                 game.image3OutsideTableView.hidden = NO;
-                                 game.image4OutsideTableView.hidden = NO;
-                                 game.image5OutsideTableView.hidden = NO;
-
+                                 //NSLog(@"game.image1OutsideTableView.frame->%@",NSStringFromCGRect(game.image1OutsideTableView.frame));
+                                 //NSLog(@"game.image2OutsideTableView.frame->%@",NSStringFromCGRect(game.image2OutsideTableView.frame));
+                                 //NSLog(@"game.image3OutsideTableView.frame->%@",NSStringFromCGRect(game.image3OutsideTableView.frame));
+                                 //NSLog(@"game.image4OutsideTableView.frame->%@",NSStringFromCGRect(game.image4OutsideTableView.frame));
+                                 //NSLog(@"game.image5OutsideTableView.frame->%@",NSStringFromCGRect(game.image5OutsideTableView.frame));
+                                 //NSLog(@"self->%@ game.image4OutsideTableView->%@",self,game.image4OutsideTableView);
+                                 if (![self isEqual:game.image1OutsideTableView]) game.image1OutsideTableView.hidden = NO;
+                                 else game.image1OutsideTableView.isCanceledTouches = YES;
+                                 if (![self isEqual:game.image2OutsideTableView]) game.image2OutsideTableView.hidden = NO;
+                                 else game.image2OutsideTableView.isCanceledTouches = YES;
+                                 if (![self isEqual:game.image3OutsideTableView]) game.image3OutsideTableView.hidden = NO;
+                                 else game.image3OutsideTableView.isCanceledTouches = YES;
+                                 if (![self isEqual:game.image4OutsideTableView]) game.image4OutsideTableView.hidden = NO;
+                                 else game.image4OutsideTableView.isCanceledTouches = YES;
+                                 if (![self isEqual:game.image5OutsideTableView]) game.image5OutsideTableView.hidden = NO;
+                                 else game.image5OutsideTableView.isCanceledTouches = YES;
+                                 [game startCompletingCurrentRowAndOpenNext];
                              }
 
                          }];
 
-//        [UIView beginAnimations:@"Dragging image inside cell" context:nil];
-//
-//        necessaryImage.frame = CGRectMake(pointOfFinalImagePositionInsideCell.x, pointOfFinalImagePositionInsideCell.y,
-//                                           necessaryImage.frame.size.width, necessaryImage.frame.size.height);
-//        [UIView commitAnimations];
-//        necessaryImage.isScalled = NO;        
-//        NSMutableArray *choosedColorsForEveryPoint = [mainDelegate.currentChoosesArray objectAtIndex:game.selectedRowNumber];
-//        if (result1) [choosedColorsForEveryPoint replaceObjectAtIndex:0 withObject:number];
-//        if (result2) [choosedColorsForEveryPoint replaceObjectAtIndex:1 withObject:number];
-//        if (result3) [choosedColorsForEveryPoint replaceObjectAtIndex:2 withObject:number];
-//        if (result4) [choosedColorsForEveryPoint replaceObjectAtIndex:3 withObject:number];
-//        NSPredicate *filter = [NSPredicate predicateWithFormat:@"SELF > %@",[NSNumber numberWithInt:0]];
-//        NSArray *filtered = [choosedColorsForEveryPoint filteredArrayUsingPredicate:filter];
-//        if (filtered.count == 4) {
-        
-//            game.image1OutsideTableView.hidden = NO;
-//            game.image2OutsideTableView.hidden = NO;
-//            game.image3OutsideTableView.hidden = NO;
-//            game.image4OutsideTableView.hidden = NO;
-//            game.image5OutsideTableView.hidden = NO;
-//        }
-        //            [game.currentChoosesArray enumerateObjectsUsingBlock:^(GameRow *row, NSUInteger idx, BOOL *stop) {
-        //                //if (idx == 0) NSLog(@"START idx->%lu row.choosedColorsForEveryPoint->%@",(unsigned long)idx,row.choosedColorsForEveryPoint);
-        //            }];
     }
 }
 
@@ -295,32 +277,31 @@
 
     //NSLog(@"touchesEnded");
     if (!self.hidden) {
-        if (!self.isCanceledTouches) {
-            [UIView beginAnimations:@"Dragging A DraggableView" context:nil];
-            self.frame = CGRectMake(self.startPoint.x, self.startPoint.y,
-                                    self.frame.size.width, self.frame.size.height);
-            [UIView commitAnimations];
-            
-            //self.transform = CGAffineTransformScale(self.transform, 1.0, 1.0);
-            if (self.isScalled) {
-                
-                self.isScalled = NO;
-                CABasicAnimation *zoomNormal = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-                //zoomNormal.beginTime = CACurrentMediaTime();
-                zoomNormal.toValue = [NSNumber numberWithDouble:1.0];
-                zoomNormal.duration = 0.1;
-                zoomNormal.fillMode=kCAFillModeForwards;
-                zoomNormal.removedOnCompletion=NO;
-                [self.layer addAnimation:zoomNormal forKey:@"zoomNormal"];
-            }
-        }
-        NSLog(@"touchesEnded self.hidden->NO self.startPoint->%@",NSStringFromCGPoint(self.startPoint));
-
+        self.isCanceledTouches = NO;
+        [UIView animateWithDuration:1
+                              delay:0
+                            options:0
+                         animations:^{
+                             
+                             self.frame = CGRectMake(self.startPoint.x, self.startPoint.y,
+                                                     self.frame.size.width, self.frame.size.height);
+                         } completion:^(BOOL finished) {
+                             if (self.isScalled) {
+                                 self.isScalled = NO;
+                                 CABasicAnimation *zoomNormal = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
+                                 zoomNormal.toValue = [NSNumber numberWithDouble:1.0];
+                                 zoomNormal.duration = 0.1;
+                                 zoomNormal.fillMode=kCAFillModeForwards;
+                                 zoomNormal.removedOnCompletion=NO;
+                                 [self.layer addAnimation:zoomNormal forKey:@"zoomNormal"];
+                             }
+                             //NSLog(@"touchesEnded self.hidden->NO self.startPoint->%@ self.isCanceledTouches->%c",NSStringFromCGPoint(self.startPoint),self.isCanceledTouches);
+                         }];
+        
     } else {
-        //NSLog(@"touchesEnded self.hidden->YES self.startPoint->%@",NSStringFromCGPoint(self.startPoint));
-
+        //NSLog(@"touchesEnded self.hidden->YES self.startPoint->%@ self.isCanceledTouches->%c",NSStringFromCGPoint(self.startPoint),self.isCanceledTouches);
+        if (self.isCanceledTouches) { self.hidden = NO,self.isCanceledTouches = NO; }
     }
-
 }
 
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
@@ -328,98 +309,17 @@
     if (!self.hidden) {
         //NSLog(@"touchesCancelled");
         if (self.isScalled) {
-            //self.transform = CGAffineTransformScale(self.transform, 1.0, 1.0);
             self.isScalled = NO;
             CABasicAnimation *zoomNormal = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-            //zoomNormal.beginTime = CACurrentMediaTime();
             zoomNormal.toValue = [NSNumber numberWithDouble:1.0];
             zoomNormal.duration = 0.1;
             zoomNormal.fillMode=kCAFillModeForwards;
             zoomNormal.removedOnCompletion=NO;
             [self.layer addAnimation:zoomNormal forKey:@"zoomNormal"];
         }
+        //NSLog(@"touchesCancelled self.hidden->NO self.startPoint->%@ self.isCanceledTouches->%c",NSStringFromCGPoint(self.startPoint),self.isCanceledTouches);
+    } else    {
+        //NSLog(@"touchesCancelled self.hidden->YES self.startPoint->%@ self.isCanceledTouches->%c",NSStringFromCGPoint(self.startPoint),self.isCanceledTouches);
     }
 }
-
-
-//        bool isMovedObjectInsideCell = CGRectContainsRect(game.frameSelectedCell,self.frame);
-//        //NSLog(@"TOUCHED Moved INISDE TABLEVIEW CELL game.frameSelectedCell->%@ self.frame->%@ isMovedObjectInsideCell->%@",NSStringFromCGRect(game.frameSelectedCell),NSStringFromCGRect(self.frame),[NSNumber numberWithBool:isMovedObjectInsideCell]);
-//        if (!isMovedObjectInsideCell) {
-//            self.hidden = YES;
-//            [self setNeedsDisplay];
-//            CGRect frameImageOutsideTableViewConvertedFromInsidedImage = [game.gameTableView convertRect:self.frame toView:game.view];
-//            [self touchesCancelled:touches withEvent:event];
-//            CABasicAnimation *zoomNormal = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
-//            //zoomNormal.beginTime = CACurrentMediaTime();
-//            zoomNormal.toValue = [NSNumber numberWithDouble:1.0];
-//            zoomNormal.duration = 0.1;
-//            zoomNormal.fillMode=kCAFillModeForwards;
-//            zoomNormal.removedOnCompletion=NO;
-//            [game.gameTableView setScrollEnabled:YES];
-//            if ([self isEqual:cell.image1InsideTableView]) {
-//                game.image1OutsideTableView.frame = frameImageOutsideTableViewConvertedFromInsidedImage;
-//                game.image1OutsideTableView.hidden = NO;
-//                game.image1OutsideTableView.isScalled = NO;
-//                //NSLog(@"TOUCHED MOVED game.image1OutsideTableView->%@ \ngame.image1OutsideTableView.startPoint->%@",game.image1OutsideTableView,NSStringFromCGPoint(game.image1OutsideTableView.startPoint));
-//                [UIView beginAnimations:@"Return back 1 image outside tableview" context:nil];
-//                game.image1OutsideTableView.frame = CGRectMake(game.image1OutsideTableView.startPoint.x, game.image1OutsideTableView.startPoint.y,
-//                                                                 game.image1OutsideTableView.frame.size.width, game.image1OutsideTableView.frame.size.height);
-//                [UIView commitAnimations];
-//                [game.image1OutsideTableView.layer addAnimation:zoomNormal forKey:@"zoomNormal"];
-//            }
-//            if ([self isEqual:cell.image2InsideTableView]) {
-//                game.image2OutsideTableView.frame = frameImageOutsideTableViewConvertedFromInsidedImage;
-//                game.image2OutsideTableView.hidden = NO;
-//                game.image2OutsideTableView.isScalled = NO;
-//                //NSLog(@"TOUCHED MOVED game.imageOneOutsideTableView.startPoint->%@",NSStringFromCGPoint(game.imageOneOutsideTableView.startPoint));
-//                [UIView beginAnimations:@"Return back 2 image outside tableview" context:nil];
-//                game.image2OutsideTableView.frame = CGRectMake(game.image2OutsideTableView.startPoint.x, game.image2OutsideTableView.startPoint.y,
-//                                                               game.image2OutsideTableView.frame.size.width, game.image2OutsideTableView.frame.size.height);
-//                [UIView commitAnimations];
-//                [game.image2OutsideTableView.layer addAnimation:zoomNormal forKey:@"zoomNormal"];
-//            }
-//            if ([self isEqual:cell.image3InsideTableView]) {
-//                game.image3OutsideTableView.frame = frameImageOutsideTableViewConvertedFromInsidedImage;
-//                game.image3OutsideTableView.hidden = NO;
-//                game.image3OutsideTableView.isScalled = NO;
-//                //NSLog(@"TOUCHED MOVED game.imageOneOutsideTableView.startPoint->%@",NSStringFromCGPoint(game.imageOneOutsideTableView.startPoint));
-//                [UIView beginAnimations:@"Return back 3 image outside tableview" context:nil];
-//                game.image3OutsideTableView.frame = CGRectMake(game.image3OutsideTableView.startPoint.x, game.image3OutsideTableView.startPoint.y,
-//                                                               game.image3OutsideTableView.frame.size.width, game.image3OutsideTableView.frame.size.height);
-//                [UIView commitAnimations];
-//                [game.image3OutsideTableView.layer addAnimation:zoomNormal forKey:@"zoomNormal"];
-//            }
-//            if ([self isEqual:cell.image4InsideTableView]) {
-//                game.image4OutsideTableView.frame = frameImageOutsideTableViewConvertedFromInsidedImage;
-//                game.image4OutsideTableView.hidden = NO;
-//                game.image4OutsideTableView.isScalled = NO;
-//                //NSLog(@"TOUCHED MOVED game.imageOneOutsideTableView.startPoint->%@",NSStringFromCGPoint(game.imageOneOutsideTableView.startPoint));
-//                [UIView beginAnimations:@"Return back 4 image outside tableview" context:nil];
-//                game.image4OutsideTableView.frame = CGRectMake(game.image4OutsideTableView.startPoint.x, game.image4OutsideTableView.startPoint.y,
-//                                                               game.image4OutsideTableView.frame.size.width, game.image4OutsideTableView.frame.size.height);
-//                [UIView commitAnimations];
-//                [game.image4OutsideTableView.layer addAnimation:zoomNormal forKey:@"zoomNormal"];
-//            }
-//            if ([self isEqual:cell.image5InsideTableView]) {
-//                game.image5OutsideTableView.frame = frameImageOutsideTableViewConvertedFromInsidedImage;
-//                game.image5OutsideTableView.hidden = NO;
-//                game.image5OutsideTableView.isScalled = NO;
-//                //NSLog(@"TOUCHED MOVED game.imageOneOutsideTableView.startPoint->%@",NSStringFromCGPoint(game.imageOneOutsideTableView.startPoint));
-//                [UIView beginAnimations:@"Return back 5 image outside tableview" context:nil];
-//                game.image5OutsideTableView.frame = CGRectMake(game.image5OutsideTableView.startPoint.x, game.image5OutsideTableView.startPoint.y,
-//                                                               game.image5OutsideTableView.frame.size.width, game.image5OutsideTableView.frame.size.height);
-//                [UIView commitAnimations];
-//                [game.image5OutsideTableView.layer addAnimation:zoomNormal forKey:@"zoomNormal"];
-//            }
-//            NSMutableArray *choosedColorsForEveryPoint = [mainDelegate.currentChoosesArray objectAtIndex:game.nextRowToFill.row];
-//            NSNumber *number = [NSNumber numberWithInt:0];
-//            if (self.currentPointInsideTableViewCell == 1) [choosedColorsForEveryPoint replaceObjectAtIndex:0 withObject:number];
-//            if (self.currentPointInsideTableViewCell == 2) [choosedColorsForEveryPoint replaceObjectAtIndex:1 withObject:number];
-//            if (self.currentPointInsideTableViewCell == 3) [choosedColorsForEveryPoint replaceObjectAtIndex:2 withObject:number];
-//            if (self.currentPointInsideTableViewCell == 4) [choosedColorsForEveryPoint replaceObjectAtIndex:3 withObject:number];
-////            [game.currentChoosesArray enumerateObjectsUsingBlock:^(GameRow *row, NSUInteger idx, BOOL *stop) {
-////                //if (idx == 0) NSLog(@"FINISH idx->%lu row.choosedColorsForEveryPoint->%@",(unsigned long)idx,row.choosedColorsForEveryPoint);
-////            }];
-//        }
-
 @end

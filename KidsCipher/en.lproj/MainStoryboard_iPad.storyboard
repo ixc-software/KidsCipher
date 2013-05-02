@@ -102,8 +102,8 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view alpha="0.50000000000000011" contentMode="scaleToFill" id="jRZ-Ch-Dwq">
-                                                <rect key="frame" x="587" y="0.0" width="102" height="99"/>
+                                            <view alpha="0.50000000000000011" contentMode="scaleToFill" id="jRZ-Ch-Dwq" userLabel="hidingView">
+                                                <rect key="frame" x="0.0" y="0.0" width="689" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
@@ -367,6 +367,7 @@
                         <outlet property="image4OutsideTableView" destination="bEH-Dz-T4r" id="kMe-xX-cRs"/>
                         <outlet property="image5OutsideTableView" destination="1qU-5w-Pfy" id="NYb-6Q-BSW"/>
                         <outlet property="photoView" destination="cXO-74-nso" id="gfP-zS-KM7"/>
+                        <outlet property="row1HidingView" destination="jRZ-Ch-Dwq" id="1Sl-pT-Yl5"/>
                         <outlet property="row1frame1" destination="Rlv-ei-YuB" id="Sfr-9R-cRy"/>
                         <outlet property="row1frame2" destination="snW-BD-1BG" id="Q9m-Fx-rFB"/>
                         <outlet property="row1frame3" destination="oI7-kk-uK0" id="7rW-qQ-Guc"/>
@@ -377,6 +378,7 @@
                         <outlet property="row1image4" destination="crc-W6-hYL" id="i2j-1M-xwZ"/>
                         <outlet property="row1image5" destination="ioK-a9-4Zn" id="Ars-HD-wbT"/>
                         <outlet property="row1view" destination="0yv-5j-AzM" id="T45-ml-UVx"/>
+                        <outlet property="row2HidingView" destination="5Bn-Ov-tBF" id="e7G-px-2Q6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
@@ -549,6 +551,7 @@
                 <relationship kind="outlet" name="image4OutsideTableView" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="image5OutsideTableView" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="photoView" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row1HidingView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="row1frame1" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="row1frame2" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="row1frame3" candidateClass="UIButton"/>
@@ -559,6 +562,7 @@
                 <relationship kind="outlet" name="row1image4" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="row1image5" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="row1view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row2HidingView" candidateClass="UIView"/>
             </relationships>
         </class>
     </classes>
