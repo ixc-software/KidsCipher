@@ -18,22 +18,23 @@
 @property (nonatomic, retain) NSNumber * combination2color;
 @property (nonatomic, retain) NSNumber * combination3color;
 @property (nonatomic, retain) NSNumber * combination4color;
-@property (nonatomic, retain) NSString * mainDraggedImage1startingPoint;
-@property (nonatomic, retain) NSString * mainDraggedImage2startingPoint;
-@property (nonatomic, retain) NSString * mainDraggedImage3startingPoint;
-@property (nonatomic, retain) NSString * mainDraggedImage4startingPoint;
-@property (nonatomic, retain) NSString * mainDraggedImage5startingPoint;
 @property (nonatomic, retain) NSNumber * isFrame1empty;
 @property (nonatomic, retain) NSNumber * isFrame2empty;
 @property (nonatomic, retain) NSNumber * isFrame3empty;
 @property (nonatomic, retain) NSNumber * isFrame4empty;
 @property (nonatomic, retain) NSNumber * isFrame5empty;
-@property (nonatomic, retain) NSDate * startTime;
-@property (nonatomic, retain) NSString * mainDraggedImage5identifier;
-@property (nonatomic, retain) NSString * mainDraggedImage4identifier;
-@property (nonatomic, retain) NSString * mainDraggedImage3identifier;
-@property (nonatomic, retain) NSString * mainDraggedImage2identifier;
 @property (nonatomic, retain) NSString * mainDraggedImage1identifier;
+@property (nonatomic, retain) NSString * mainDraggedImage1startingPoint;
+@property (nonatomic, retain) NSString * mainDraggedImage2identifier;
+@property (nonatomic, retain) NSString * mainDraggedImage2startingPoint;
+@property (nonatomic, retain) NSString * mainDraggedImage3identifier;
+@property (nonatomic, retain) NSString * mainDraggedImage3startingPoint;
+@property (nonatomic, retain) NSString * mainDraggedImage4identifier;
+@property (nonatomic, retain) NSString * mainDraggedImage4startingPoint;
+@property (nonatomic, retain) NSString * mainDraggedImage5identifier;
+@property (nonatomic, retain) NSString * mainDraggedImage5startingPoint;
+@property (nonatomic, retain) NSDate * startTime;
+@property (nonatomic, retain) NSNumber * isGameStarted;
 @property (nonatomic, retain) NSOrderedSet *rows;
 @end
 

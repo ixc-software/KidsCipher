@@ -10,6 +10,7 @@
 #import "CipherAppDelegate.h"
 #import "Row.h"
 #import "Game.h"
+#import "GamesHistory.h"
 
 @interface CipherViewController ()
 @property (retain, nonatomic) IBOutlet UIView *row1HidingView;
@@ -18,87 +19,22 @@
 @end
 
 @implementation CipherViewController
-
-- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
-{
-    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
-    Row *activeRow = [mainDelegate getActiveRow];
-    activeRow.game.mainDraggedImage1startingPoint = NSStringFromCGPoint(self.image1OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage2startingPoint = NSStringFromCGPoint(self.image2OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(self.image3OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(self.image4OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
-    [mainDelegate saveContext];
-    //NSLog(@"didRotateFromInterfaceOrientation activeRow.game->%@",activeRow.game);
-}
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [mainDelegate registerViewController:@"CipherViewController" controller:self];
-    self.gamePlayScrollView.contentSize =  CGSizeMake(320, 1000);
-    //NSLog(@"viewDidLoad");
-    Row *activeRow = [mainDelegate getActiveRow];
-    //NSLog(@"activeRow->%@",activeRow);
-    //NSLog(@"game->%@",activeRow.game);
-
-    self.row1HidingView.hidden = YES;
-    self.row1HidingView.userInteractionEnabled = NO;
-    activeRow.game.mainDraggedImage1startingPoint = NSStringFromCGPoint(self.image1OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage2startingPoint = NSStringFromCGPoint(self.image2OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(self.image3OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(self.image4OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
-    [mainDelegate saveContext];
-
-    //self.nextRowToFill = [NSIndexPath indexPathForRow:0 inSection:0];
-    //NSLog(@"viewDidLoad self.image1OutsideTableView.startPointt->%@",NSStringFromCGPoint(self.image1OutsideTableView.frame.origin));
-}
--(void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
-    Row *activeRow = [mainDelegate getActiveRow];
-    activeRow.game.mainDraggedImage1identifier = self.image1OutsideTableView.uniqueIdentifier;
-    activeRow.game.mainDraggedImage2identifier = self.image2OutsideTableView.uniqueIdentifier;
-    activeRow.game.mainDraggedImage3identifier = self.image3OutsideTableView.uniqueIdentifier;
-    activeRow.game.mainDraggedImage4identifier = self.image4OutsideTableView.uniqueIdentifier;
-    activeRow.game.mainDraggedImage5identifier = self.image5OutsideTableView.uniqueIdentifier;
-    activeRow.game.mainDraggedImage1startingPoint = NSStringFromCGPoint(self.image1OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage2startingPoint = NSStringFromCGPoint(self.image2OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(self.image3OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(self.image4OutsideTableView.frame.origin);
-    activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
-    //NSLog(@"viewDidAppear activeRow.game->%@",activeRow.game);
-}
--(void)viewWillAppear:(BOOL)animated
-{
+#pragma mark - own view updated
+-(void) updateAllViews {
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     Row *activeRowToGetAllRows = [mainDelegate getActiveRow];
-//    __block AVImageView *image1InsideRow = nil;
-//    __block AVImageView *image2InsideRow = nil;
-//    __block AVImageView *image3InsideRow = nil;
-//    __block AVImageView *image4InsideRow = nil;
-//    __block AVImageView *image5InsideRow = nil;
-//    __block UIView *hidingRowView = nil;
-//    __block CGRect frame1InsideRow;
-//    __block CGRect frame2InsideRow;
-//    __block CGRect frame3InsideRow;
-//    __block CGRect frame4InsideRow;
-    
     NSOrderedSet *allRows = activeRowToGetAllRows.game.rows;
     [allRows enumerateObjectsUsingBlock:^(Row *activeRow, NSUInteger idx, BOOL *stop) {
-         AVImageView *image1InsideRow = nil;
-         AVImageView *image2InsideRow = nil;
-         AVImageView *image3InsideRow = nil;
-         AVImageView *image4InsideRow = nil;
-         AVImageView *image5InsideRow = nil;
-         UIView *hidingRowView = nil;
-         CGRect frame1InsideRow;
-         CGRect frame2InsideRow;
-         CGRect frame3InsideRow;
-         CGRect frame4InsideRow;
+        AVImageView *image1InsideRow = nil;
+        AVImageView *image2InsideRow = nil;
+        AVImageView *image3InsideRow = nil;
+        AVImageView *image4InsideRow = nil;
+        AVImageView *image5InsideRow = nil;
+        UIView *hidingRowView = nil;
+        CGRect frame1InsideRow;
+        CGRect frame2InsideRow;
+        CGRect frame3InsideRow;
+        CGRect frame4InsideRow;
         switch (idx) {
             case 0:
                 image1InsideRow = self.row1image1;
@@ -138,11 +74,11 @@
             image5InsideRow.userInteractionEnabled = NO;
             hidingRowView.hidden = NO;
             hidingRowView.alpha = 0.5;
-
+            
             //NSLog(@"activeRow.isFilled->YES, setting hidingRowView.hidden=NO hidingRowView->%@",hidingRowView);
             
         } else {
-            if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) {
+            if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue && activeRowToGetAllRows.game.isGameStarted.boolValue) {
                 image1InsideRow.userInteractionEnabled = YES;
                 image2InsideRow.userInteractionEnabled = YES;
                 image3InsideRow.userInteractionEnabled = YES;
@@ -153,7 +89,7 @@
                 //NSLog(@"activeRow.isFilled->NO, setting hidingRowView.hidden=NO hidingRowView->%@",hidingRowView);
             } //else { hidingRowView.hidden = NO; hidingRowView.alpha = 0.5; }
         }
-
+        
         if (activeRow.frame1FilledNumber.integerValue > 0) {
             switch (activeRow.frame1FilledNumber.integerValue) {
                 case 1:
@@ -284,10 +220,66 @@
                     break;
             }
         }
-
-
+        
+        
     }];
-    
+
+}
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    Row *activeRow = [mainDelegate getActiveRow];
+    activeRow.game.mainDraggedImage1startingPoint = NSStringFromCGPoint(self.image1OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage2startingPoint = NSStringFromCGPoint(self.image2OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(self.image3OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(self.image4OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
+    [mainDelegate saveContext];
+    //NSLog(@"didRotateFromInterfaceOrientation activeRow.game->%@",activeRow.game);
+}
+- (void)viewDidLoad
+{
+    [super viewDidLoad];
+	// Do any additional setup after loading the view, typically from a nib.
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [mainDelegate registerViewController:@"CipherViewController" controller:self];
+    self.gamePlayScrollView.contentSize =  CGSizeMake(320, 1000);
+    //NSLog(@"viewDidLoad");
+    Row *activeRow = [mainDelegate getActiveRow];
+    //NSLog(@"activeRow->%@",activeRow);
+    //NSLog(@"game->%@",activeRow.game);
+
+    activeRow.game.mainDraggedImage1startingPoint = NSStringFromCGPoint(self.image1OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage2startingPoint = NSStringFromCGPoint(self.image2OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(self.image3OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(self.image4OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
+    [mainDelegate saveContext];
+
+    //self.nextRowToFill = [NSIndexPath indexPathForRow:0 inSection:0];
+    //NSLog(@"viewDidLoad self.image1OutsideTableView.startPointt->%@",NSStringFromCGPoint(self.image1OutsideTableView.frame.origin));
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    Row *activeRow = [mainDelegate getActiveRow];
+    activeRow.game.mainDraggedImage1identifier = self.image1OutsideTableView.uniqueIdentifier;
+    activeRow.game.mainDraggedImage2identifier = self.image2OutsideTableView.uniqueIdentifier;
+    activeRow.game.mainDraggedImage3identifier = self.image3OutsideTableView.uniqueIdentifier;
+    activeRow.game.mainDraggedImage4identifier = self.image4OutsideTableView.uniqueIdentifier;
+    activeRow.game.mainDraggedImage5identifier = self.image5OutsideTableView.uniqueIdentifier;
+    activeRow.game.mainDraggedImage1startingPoint = NSStringFromCGPoint(self.image1OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage2startingPoint = NSStringFromCGPoint(self.image2OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(self.image3OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(self.image4OutsideTableView.frame.origin);
+    activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
+    //NSLog(@"viewDidAppear activeRow.game->%@",activeRow.game);
+}
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self updateAllViews];
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -306,7 +298,6 @@
     [super didReceiveMemoryWarning];
 }
 
-#pragma mark - UITableViewDelegates
 
 
 #pragma mark own actions
@@ -317,7 +308,6 @@
     {
         [imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
     }
-    
     // image picker needs a delegate,
     [imagePickerController setDelegate:self];
     self.pop = [[UIPopoverController alloc] initWithContentViewController:imagePickerController];
@@ -325,6 +315,15 @@
     // Place image picker on the screen
     //[self presentViewController:imagePickerController animated:YES completion:nil];
 
+}
+- (IBAction)startGame:(id)sender {
+    self.row1HidingView.hidden = YES;
+    self.row1HidingView.userInteractionEnabled = NO;
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    Row *activeRowToGetAllRows = [mainDelegate getActiveRow];
+    activeRowToGetAllRows.game.isGameStarted = [NSNumber numberWithBool:YES];
+    [mainDelegate saveContext];
+    [self updateAllViews];
 }
 
 -(void)startCompletingCurrentRowAndOpenNext;
@@ -335,7 +334,19 @@
         Row *activeRow = [mainDelegate getActiveRow];
         Row *rowBeforeActiveRow = [mainDelegate getRowBeforeActiveRow];
         if (rowBeforeActiveRow && rowBeforeActiveRow.isFilled.boolValue == YES ) { NSLog(@"previous line not filled, return");return; }
-        
+        GamesHistory *newHistory = (GamesHistory *)[NSEntityDescription insertNewObjectForEntityForName:@"GamesHistory" inManagedObjectContext:mainDelegate.managedObjectContext];
+        NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
+        NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"ava.png"]);
+
+        if (pickedData) newHistory.photo = pickedData;
+        else newHistory.photo = imageData;
+        //NSLog(@"pickedData->%@ ",[pickedData description],[imageData description]);
+        newHistory.name = @"Test";
+        newHistory.date = [NSDate date];
+        newHistory.difficultLevel = [NSNumber numberWithInt:1];
+        newHistory.gameTime = [NSNumber numberWithInt:1234];
+        newHistory.attempts = [NSNumber numberWithInt:2];
+        //NSLog(@"newHistory->%@",newHistory);
         NSUInteger findedTruePositionsAndColors = 0;
         NSUInteger findedTrueColors = 0;
         
@@ -573,16 +584,7 @@ static CGRect swapWidthAndHeight(CGRect rect)
     
 }
 
-
-
 - (void)viewDidUnload {
-//    [self setRow1image2:nil];
-//    [self setRow1image3:nil];
-//    [self setRow1image4:nil];
-//    [self setRow1image5:nil];
-//    [self setRow1frame2:nil];
-//    [self setRow1frame3:nil];
-//    [self setRow1frame4:nil];
     [self setRow1HidingView:nil];
     [self setRow2HidingView:nil];
     [self setRow1MatchedColorsAndPositions:nil];

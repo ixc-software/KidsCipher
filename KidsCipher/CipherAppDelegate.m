@@ -33,6 +33,7 @@
     self.game.combination3color = [NSNumber numberWithInt:arc4random() % 5+1];
     self.game.combination4color = [NSNumber numberWithInt:arc4random() % 5+1];
     self.game.activeRowNumber = [NSNumber numberWithInteger:0];
+    self.game.isGameStarted = [NSNumber numberWithBool:NO];
     for (int i= 0; i < 10; i++) {
         Row *newRow = (Row *)[NSEntityDescription insertNewObjectForEntityForName:@"Row" inManagedObjectContext:self.managedObjectContext];
         newRow.isFilled = [NSNumber numberWithBool:NO];

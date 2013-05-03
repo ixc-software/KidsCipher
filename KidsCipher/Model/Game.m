@@ -17,22 +17,23 @@
 @dynamic combination2color;
 @dynamic combination3color;
 @dynamic combination4color;
-@dynamic mainDraggedImage1startingPoint;
-@dynamic mainDraggedImage2startingPoint;
-@dynamic mainDraggedImage3startingPoint;
-@dynamic mainDraggedImage4startingPoint;
-@dynamic mainDraggedImage5startingPoint;
 @dynamic isFrame1empty;
 @dynamic isFrame2empty;
 @dynamic isFrame3empty;
 @dynamic isFrame4empty;
 @dynamic isFrame5empty;
-@dynamic startTime;
-@dynamic mainDraggedImage5identifier;
-@dynamic mainDraggedImage4identifier;
-@dynamic mainDraggedImage3identifier;
-@dynamic mainDraggedImage2identifier;
 @dynamic mainDraggedImage1identifier;
+@dynamic mainDraggedImage1startingPoint;
+@dynamic mainDraggedImage2identifier;
+@dynamic mainDraggedImage2startingPoint;
+@dynamic mainDraggedImage3identifier;
+@dynamic mainDraggedImage3startingPoint;
+@dynamic mainDraggedImage4identifier;
+@dynamic mainDraggedImage4startingPoint;
+@dynamic mainDraggedImage5identifier;
+@dynamic mainDraggedImage5startingPoint;
+@dynamic startTime;
+@dynamic isGameStarted;
 @dynamic rows;
 
 @end
