@@ -19,6 +19,13 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //NSLog(@"didFinishLaunchingWithOptions");
+    NSURL* file = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_phone_music_vmeste_veselo_shagat" ofType:@"mp3"]];
+    NSError *error = nil;
+    audioPlayerMainFoneMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:&error];
+    if (error) NSLog(@"audioPlayerMainFoneMusic error->%@",[error localizedDescription]);
+    audioPlayerMainFoneMusic.delegate = self;
+    [audioPlayerMainFoneMusic prepareToPlay];
+    [audioPlayerMainFoneMusic play];
 
     self.game = (Game *)[NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
     self.game.combination1color = [NSNumber numberWithInt:arc4random() % 5+1];
@@ -132,6 +139,18 @@
     }
     return _persistentStoreCoordinator;
 }
+#pragma mark - AVAudioPlayer delegate
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag;
+{
+    [player play];
+}
+
+- (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error;
+{
+    NSLog(@"audioPlayerDecodeErrorDidOccur->%@",[error localizedDescription]);
+}
+#pragma mark - own model functions
 -(Row *)getRowBeforeActiveRow;
 {
     NSNumber *activeRowNumber = self.game.activeRowNumber;

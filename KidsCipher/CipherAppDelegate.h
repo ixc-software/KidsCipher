@@ -8,8 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "Game.h"
+#import <AVFoundation/AVFoundation.h>
 
-@interface CipherAppDelegate : UIResponder <UIApplicationDelegate>
+@interface CipherAppDelegate : UIResponder <UIApplicationDelegate,AVAudioPlayerDelegate>
+{
+    AVAudioPlayer* audioPlayerMainFoneMusic;
+}
 
 @property (strong, nonatomic) UIWindow *window;
 @property (retain,nonatomic) NSMutableDictionary *viewControllers;

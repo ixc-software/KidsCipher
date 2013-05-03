@@ -37,6 +37,24 @@
 		FADBE8FA1732369F00E3DA8D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */; };
 		FADBE8FB1732369F00E3DA8D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */; };
 		FADBE90417323B5800E3DA8D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADBE8F61732367500E3DA8D /* CoreData.framework */; };
+		FAE54F261733DA7600595565 /* kidscipher_game_zero_result.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */; };
+		FAE54F271733DA7600595565 /* kidscipher_game_zero_result.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */; };
+		FAE54F281733DA7600595565 /* kidscipher_game_success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F201733DA7600595565 /* kidscipher_game_success.m4a */; };
+		FAE54F291733DA7600595565 /* kidscipher_game_success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F201733DA7600595565 /* kidscipher_game_success.m4a */; };
+		FAE54F2A1733DA7600595565 /* kidscipher_game_wrong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F211733DA7600595565 /* kidscipher_game_wrong.m4a */; };
+		FAE54F2B1733DA7600595565 /* kidscipher_game_wrong.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F211733DA7600595565 /* kidscipher_game_wrong.m4a */; };
+		FAE54F2C1733DA7600595565 /* kidscipher_gameplay_main.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F221733DA7600595565 /* kidscipher_gameplay_main.m4a */; };
+		FAE54F2D1733DA7600595565 /* kidscipher_gameplay_main.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F221733DA7600595565 /* kidscipher_gameplay_main.m4a */; };
+		FAE54F2E1733DA7600595565 /* kidscipher_return_image_outside_row_or_cancel_drag.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F231733DA7600595565 /* kidscipher_return_image_outside_row_or_cancel_drag.m4a */; };
+		FAE54F2F1733DA7600595565 /* kidscipher_return_image_outside_row_or_cancel_drag.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F231733DA7600595565 /* kidscipher_return_image_outside_row_or_cancel_drag.m4a */; };
+		FAE54F301733DA7600595565 /* kidscipher_fix_image_inside_row.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F241733DA7600595565 /* kidscipher_fix_image_inside_row.m4a */; };
+		FAE54F311733DA7600595565 /* kidscipher_fix_image_inside_row.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F241733DA7600595565 /* kidscipher_fix_image_inside_row.m4a */; };
+		FAE54F321733DA7600595565 /* kidscipher_start_drag.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F251733DA7600595565 /* kidscipher_start_drag.m4a */; };
+		FAE54F331733DA7600595565 /* kidscipher_start_drag.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F251733DA7600595565 /* kidscipher_start_drag.m4a */; };
+		FAE54F351733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F341733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 */; };
+		FAE54F361733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F341733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 */; };
+		FAE54F381733DBFD00595565 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE54F371733DBFD00595565 /* AVFoundation.framework */; };
+		FAE54F391733DC0600595565 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE54F371733DBFD00595565 /* AVFoundation.framework */; };
 		FAF3435F172FB9F100C282D5 /* Ipad_logo144_144 _girl.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF3435E172FB9F100C282D5 /* Ipad_logo144_144 _girl.png */; };
 		FAF34363172FBAC500C282D5 /* Ipad_logo144_144 _girl_72x72-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF34362172FBAC500C282D5 /* Ipad_logo144_144 _girl_72x72-1.png */; };
 		FAF34365172FBB0C00C282D5 /* Ipad_logo144_144 _girl_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FAF34364172FBB0C00C282D5 /* Ipad_logo144_144 _girl_114x114.png */; };
@@ -122,6 +140,15 @@
 		FABCB8A5173397F300907198 /* Row.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Row.m; sourceTree = "<group>"; };
 		FADBE8F61732367500E3DA8D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FADBE8F91732369F00E3DA8D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_zero_result.m4a; sourceTree = "<group>"; };
+		FAE54F201733DA7600595565 /* kidscipher_game_success.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_success.m4a; sourceTree = "<group>"; };
+		FAE54F211733DA7600595565 /* kidscipher_game_wrong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_wrong.m4a; sourceTree = "<group>"; };
+		FAE54F221733DA7600595565 /* kidscipher_gameplay_main.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_gameplay_main.m4a; sourceTree = "<group>"; };
+		FAE54F231733DA7600595565 /* kidscipher_return_image_outside_row_or_cancel_drag.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_return_image_outside_row_or_cancel_drag.m4a; sourceTree = "<group>"; };
+		FAE54F241733DA7600595565 /* kidscipher_fix_image_inside_row.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_fix_image_inside_row.m4a; sourceTree = "<group>"; };
+		FAE54F251733DA7600595565 /* kidscipher_start_drag.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_start_drag.m4a; sourceTree = "<group>"; };
+		FAE54F341733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = kidscipher_phone_music_vmeste_veselo_shagat.mp3; sourceTree = "<group>"; };
+		FAE54F371733DBFD00595565 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FAF3435E172FB9F100C282D5 /* Ipad_logo144_144 _girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl.png"; path = "../../Ipad_logo144_144 _girl.png"; sourceTree = "<group>"; };
 		FAF34362172FBAC500C282D5 /* Ipad_logo144_144 _girl_72x72-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_72x72-1.png"; path = "../../Ipad_logo144_144 _girl_72x72-1.png"; sourceTree = "<group>"; };
 		FAF34364172FBB0C00C282D5 /* Ipad_logo144_144 _girl_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo144_144 _girl_114x114.png"; path = "../../Ipad_logo144_144 _girl_114x114.png"; sourceTree = "<group>"; };
@@ -149,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE54F381733DBFD00595565 /* AVFoundation.framework in Frameworks */,
 				FADBE8F71732367500E3DA8D /* CoreData.framework in Frameworks */,
 				FAFD5C4E172E5FF7005F47E2 /* QuartzCore.framework in Frameworks */,
 				FAAA3690172E4D7A00C55968 /* UIKit.framework in Frameworks */,
@@ -161,6 +189,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE54F391733DC0600595565 /* AVFoundation.framework in Frameworks */,
 				FADBE90417323B5800E3DA8D /* CoreData.framework in Frameworks */,
 				FAF34391172FC3E900C282D5 /* QuartzCore.framework in Frameworks */,
 				FAF34392172FC3E900C282D5 /* UIKit.framework in Frameworks */,
@@ -175,6 +204,7 @@
 		FAAA3683172E4D7A00C55968 = {
 			isa = PBXGroup;
 			children = (
+				FAE54F371733DBFD00595565 /* AVFoundation.framework */,
 				FAAA3695172E4D7A00C55968 /* KidsCipher */,
 				FAAA368E172E4D7A00C55968 /* Frameworks */,
 				FAAA368D172E4D7A00C55968 /* Products */,
@@ -271,6 +301,14 @@
 		FABCB8A01733220F00907198 /* Voice */ = {
 			isa = PBXGroup;
 			children = (
+				FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */,
+				FAE54F201733DA7600595565 /* kidscipher_game_success.m4a */,
+				FAE54F211733DA7600595565 /* kidscipher_game_wrong.m4a */,
+				FAE54F221733DA7600595565 /* kidscipher_gameplay_main.m4a */,
+				FAE54F231733DA7600595565 /* kidscipher_return_image_outside_row_or_cancel_drag.m4a */,
+				FAE54F241733DA7600595565 /* kidscipher_fix_image_inside_row.m4a */,
+				FAE54F251733DA7600595565 /* kidscipher_start_drag.m4a */,
+				FAE54F341733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 */,
 				FABCB8A11733220F00907198 /* vmeste_veselo_shagat.mp3 */,
 			);
 			path = Voice;
@@ -384,6 +422,14 @@
 				FAF343D5173004CA00C282D5 /* Ipad_logo144_144 _girl_4_72x72.png in Resources */,
 				FAF343D7173004D100C282D5 /* Ipad_logo144_144 _girl_4_144x144.png in Resources */,
 				FABCB8A21733220F00907198 /* vmeste_veselo_shagat.mp3 in Resources */,
+				FAE54F261733DA7600595565 /* kidscipher_game_zero_result.m4a in Resources */,
+				FAE54F281733DA7600595565 /* kidscipher_game_success.m4a in Resources */,
+				FAE54F2A1733DA7600595565 /* kidscipher_game_wrong.m4a in Resources */,
+				FAE54F2C1733DA7600595565 /* kidscipher_gameplay_main.m4a in Resources */,
+				FAE54F2E1733DA7600595565 /* kidscipher_return_image_outside_row_or_cancel_drag.m4a in Resources */,
+				FAE54F301733DA7600595565 /* kidscipher_fix_image_inside_row.m4a in Resources */,
+				FAE54F321733DA7600595565 /* kidscipher_start_drag.m4a in Resources */,
+				FAE54F351733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +463,14 @@
 				FAF343D1173003C000C282D5 /* Ipad_logo144_144_boy_4_144x144.png in Resources */,
 				FAF343D3173003C300C282D5 /* Ipad_logo144_144_boy_4_72x72.png in Resources */,
 				FABCB8A31733220F00907198 /* vmeste_veselo_shagat.mp3 in Resources */,
+				FAE54F271733DA7600595565 /* kidscipher_game_zero_result.m4a in Resources */,
+				FAE54F291733DA7600595565 /* kidscipher_game_success.m4a in Resources */,
+				FAE54F2B1733DA7600595565 /* kidscipher_game_wrong.m4a in Resources */,
+				FAE54F2D1733DA7600595565 /* kidscipher_gameplay_main.m4a in Resources */,
+				FAE54F2F1733DA7600595565 /* kidscipher_return_image_outside_row_or_cancel_drag.m4a in Resources */,
+				FAE54F311733DA7600595565 /* kidscipher_fix_image_inside_row.m4a in Resources */,
+				FAE54F331733DA7600595565 /* kidscipher_start_drag.m4a in Resources */,
+				FAE54F361733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
