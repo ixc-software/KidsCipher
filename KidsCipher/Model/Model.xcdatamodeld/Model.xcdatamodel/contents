@@ -6,35 +6,62 @@
         <attribute name="combination2color" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="combination3color" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="combination4color" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
-        <attribute name="frame1startingPoint" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="frame2startingPoint" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="frame3startingPoint" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="frame4startingPoint" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="frame5startingPoint" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="isFrame1empty" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isFrame2empty" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isFrame3empty" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isFrame4empty" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isFrame5empty" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="mainDraggedImage1identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainDraggedImage1startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainDraggedImage2identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainDraggedImage2startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainDraggedImage3identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainDraggedImage3startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainDraggedImage4identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainDraggedImage4startingPoint" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainDraggedImage5identifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="mainDraggedImage5startingPoint" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="rows" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Row" inverseName="game" inverseEntity="Row" syncable="YES"/>
     </entity>
+    <entity name="GameScore" syncable="YES">
+        <attribute name="attempts" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="difficultLevel" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="gameTime" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
+    <entity name="GamesHistory" syncable="YES">
+        <attribute name="attempts" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
+        <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="gameTime" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
+    </entity>
     <entity name="Row" representedClassName="Row" syncable="YES">
         <attribute name="frame" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="frame1startingPoint" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="frame2startingPoint" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="frame3startingPoint" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="frame4startingPoint" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="isFrame1Filled" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="isFrame2Filled" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="isFrame3Filled" optional="YES" attributeType="Boolean" syncable="YES"/>
-        <attribute name="isFrame4Filled" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="frame1FilledNumber" optional="YES" attributeType="Integer 64" syncable="YES"/>
+        <attribute name="frame2FilledNumber" optional="YES" attributeType="Integer 64" syncable="YES"/>
+        <attribute name="frame3FilledNumber" optional="YES" attributeType="Integer 64" syncable="YES"/>
+        <attribute name="frame4FilledNumber" optional="YES" attributeType="Integer 64" syncable="YES"/>
+        <attribute name="frameToGetImage1" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frameToGetImage2" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frameToGetImage3" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="frameToGetImage4" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image1insideIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image2insideIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image3insideIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image4insideIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="image5insideIdentifier" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="isFilled" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="numberOfMatchedColor" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="numberOfMatchedColorAndPosition" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <relationship name="game" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="rows" inverseEntity="Game" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Game" positionX="160" positionY="192" width="128" height="300"/>
-        <element name="Row" positionX="160" positionY="192" width="128" height="225"/>
+        <element name="Game" positionX="160" positionY="192" width="128" height="375"/>
+        <element name="Row" positionX="160" positionY="192" width="128" height="315"/>
+        <element name="GamesHistory" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="GameScore" positionX="160" positionY="192" width="128" height="120"/>
     </elements>
 </model>

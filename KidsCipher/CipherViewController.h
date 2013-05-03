@@ -34,6 +34,22 @@
 @property (retain, nonatomic) IBOutlet AVImageView *row1image3;
 @property (retain, nonatomic) IBOutlet AVImageView *row1image4;
 @property (retain, nonatomic) IBOutlet AVImageView *row1image5;
+@property (weak, nonatomic) IBOutlet UILabel *row1MatchedColorsAndPositions;
+@property (weak, nonatomic) IBOutlet UILabel *row1MatchedColors;
+
+@property (weak, nonatomic) IBOutlet UIView *row2view;
+@property (weak, nonatomic) IBOutlet UIButton *row2frame1;
+@property (weak, nonatomic) IBOutlet UIButton *row2frame2;
+@property (weak, nonatomic) IBOutlet UIButton *row2frame3;
+@property (weak, nonatomic) IBOutlet UIButton *row2frame4;
+@property (weak, nonatomic) IBOutlet AVImageView *row2image1;
+@property (weak, nonatomic) IBOutlet AVImageView *row2image2;
+@property (weak, nonatomic) IBOutlet AVImageView *row2image3;
+@property (weak, nonatomic) IBOutlet AVImageView *row2image4;
+@property (weak, nonatomic) IBOutlet AVImageView *row2image5;
+@property (weak, nonatomic) IBOutlet UILabel *row2MatchedColorsAndPositions;
+@property (weak, nonatomic) IBOutlet UILabel *row2MatchedColors;
+
 -(void)startCompletingCurrentRowAndOpenNext;
 
 @end

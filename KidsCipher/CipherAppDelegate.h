@@ -24,5 +24,8 @@
 @property (readonly, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (retain,nonatomic) Game *game;
 -(Row *)getActiveRow;
+-(Row *)getRowBeforeActiveRow;
+
+- (void)saveContext;
 
 @end

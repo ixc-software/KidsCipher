@@ -25,8 +25,10 @@
     self.game.combination2color = [NSNumber numberWithInt:arc4random() % 5+1];
     self.game.combination3color = [NSNumber numberWithInt:arc4random() % 5+1];
     self.game.combination4color = [NSNumber numberWithInt:arc4random() % 5+1];
+    self.game.activeRowNumber = [NSNumber numberWithInteger:0];
     for (int i= 0; i < 10; i++) {
         Row *newRow = (Row *)[NSEntityDescription insertNewObjectForEntityForName:@"Row" inManagedObjectContext:self.managedObjectContext];
+        newRow.isFilled = [NSNumber numberWithBool:NO];
         newRow.game = self.game;
     }
     [self saveContext];
@@ -113,16 +115,16 @@
         NSLog(@"%@:%@ No model to generate a store from", [self class], NSStringFromSelector(_cmd));
         return nil;
     }
-    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"callsfreecalls.sqlite"];
+    NSURL *storeURL = [[self applicationDocumentsDirectory] URLByAppendingPathComponent:@"ciphper.sqlite"];
     //NSMutableDictionary *pragmaOptions = [NSMutableDictionary dictionary];
     //[pragmaOptions setObject:[NSNumber numberWithBool:YES] forKey:NSMigratePersistentStoresAutomaticallyOption];
     //[pragmaOptions setObject:[NSNumber numberWithBool:YES] forKey:NSInferMappingModelAutomaticallyOption];
     //NSDictionary *options = [NSDictionary dictionaryWithDictionary:pragmaOptions];
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSInMemoryStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
-        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSInMemoryStoreType configuration:nil URL:storeURL options:nil error:&error])
+        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
         {
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
@@ -130,23 +132,62 @@
     }
     return _persistentStoreCoordinator;
 }
-
+-(Row *)getRowBeforeActiveRow;
+{
+    NSNumber *activeRowNumber = self.game.activeRowNumber;
+    NSOrderedSet *rows = self.game.rows;
+    if (activeRowNumber.unsignedIntegerValue == 0) return nil;
+    Row *activeRow = [rows objectAtIndex:activeRowNumber.unsignedIntegerValue -1];
+    return activeRow;
+}
 -(Row *)getActiveRow;
 {
+    // Only here we must fill isuues
     NSNumber *activeRowNumber = self.game.activeRowNumber;
     NSOrderedSet *rows = self.game.rows;
     Row *activeRow = [rows objectAtIndex:activeRowNumber.unsignedIntegerValue];
     CipherViewController *vc = [self.viewControllers valueForKey:@"CipherViewController"];
-    
+    if (!activeRow.game.mainDraggedImage1startingPoint) activeRow.game.mainDraggedImage1startingPoint = NSStringFromCGPoint(vc.image1OutsideTableView.frame.origin);
+    if (!activeRow.game.mainDraggedImage2startingPoint) activeRow.game.mainDraggedImage2startingPoint = NSStringFromCGPoint(vc.image2OutsideTableView.frame.origin);
+    if (!activeRow.game.mainDraggedImage3startingPoint) activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(vc.image3OutsideTableView.frame.origin);
+    if (!activeRow.game.mainDraggedImage4startingPoint) activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(vc.image4OutsideTableView.frame.origin);
+    if (!activeRow.game.mainDraggedImage5startingPoint) activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(vc.image5OutsideTableView.frame.origin);
+    if (!activeRow.game.mainDraggedImage1identifier) activeRow.game.mainDraggedImage1identifier = vc.image1OutsideTableView.uniqueIdentifier;
+    if (!activeRow.game.mainDraggedImage2identifier) activeRow.game.mainDraggedImage2identifier = vc.image2OutsideTableView.uniqueIdentifier;
+    if (!activeRow.game.mainDraggedImage3identifier) activeRow.game.mainDraggedImage3identifier = vc.image3OutsideTableView.uniqueIdentifier;
+    if (!activeRow.game.mainDraggedImage4identifier) activeRow.game.mainDraggedImage4identifier = vc.image4OutsideTableView.uniqueIdentifier;
+    if (!activeRow.game.mainDraggedImage5identifier) activeRow.game.mainDraggedImage5identifier = vc.image5OutsideTableView.uniqueIdentifier;
+
     switch (activeRowNumber.intValue) {
         case 0:
             activeRow.frame = NSStringFromCGRect(vc.row1view.frame);
-            activeRow.frame1startingPoint = NSStringFromCGRect(vc.row1frame1.frame);
-            activeRow.frame2startingPoint = NSStringFromCGRect(vc.row1frame2.frame);
-            activeRow.frame3startingPoint = NSStringFromCGRect(vc.row1frame3.frame);
-            activeRow.frame4startingPoint = NSStringFromCGRect(vc.row1frame4.frame);
+            if (!activeRow.frameToGetImage1) activeRow.frameToGetImage1 = NSStringFromCGRect(vc.row1frame1.frame);
+            //NSLog(@"getActiveRow row1frame1 frameToGetImage1->%@",activeRow.frameToGetImage1);
+            if (!activeRow.frameToGetImage2) activeRow.frameToGetImage2 = NSStringFromCGRect(vc.row1frame2.frame);
+            if (!activeRow.frameToGetImage3) activeRow.frameToGetImage3 = NSStringFromCGRect(vc.row1frame3.frame);
+            if (!activeRow.frameToGetImage4) activeRow.frameToGetImage4 = NSStringFromCGRect(vc.row1frame4.frame);
+            activeRow.image1insideIdentifier = vc.row1image1.uniqueIdentifier;
+            activeRow.image2insideIdentifier = vc.row1image2.uniqueIdentifier;
+            activeRow.image3insideIdentifier = vc.row1image3.uniqueIdentifier;
+            activeRow.image4insideIdentifier = vc.row1image4.uniqueIdentifier;
+            activeRow.image5insideIdentifier = vc.row1image5.uniqueIdentifier;
+            activeRow.frame = NSStringFromCGRect(vc.row1view.frame);
             break;
-            
+        case 1:
+            activeRow.frame = NSStringFromCGRect(vc.row2view.frame);
+            if (!activeRow.frameToGetImage1) activeRow.frameToGetImage1 = NSStringFromCGRect(vc.row2frame1.frame);
+            //NSLog(@"getActiveRow row2frame1 frameToGetImage1->%@",activeRow.frameToGetImage1);
+            if (!activeRow.frameToGetImage2) activeRow.frameToGetImage2 = NSStringFromCGRect(vc.row2frame2.frame);
+            if (!activeRow.frameToGetImage3) activeRow.frameToGetImage3 = NSStringFromCGRect(vc.row2frame3.frame);
+            if (!activeRow.frameToGetImage4) activeRow.frameToGetImage4 = NSStringFromCGRect(vc.row2frame4.frame);
+            activeRow.image1insideIdentifier = vc.row2image1.uniqueIdentifier;
+            activeRow.image2insideIdentifier = vc.row2image2.uniqueIdentifier;
+            activeRow.image3insideIdentifier = vc.row2image3.uniqueIdentifier;
+            activeRow.image4insideIdentifier = vc.row2image4.uniqueIdentifier;
+            activeRow.image5insideIdentifier = vc.row2image5.uniqueIdentifier;
+            activeRow.frame = NSStringFromCGRect(vc.row2view.frame);
+            break;
+    
         default:
             break;
     }

@@ -25,6 +25,7 @@
 
 @property (readwrite) CGPoint offset;
 @property (readwrite) BOOL isScalled;
+@property (retain,nonatomic) NSString *uniqueIdentifier;
 
 //@property (readwrite) CGPoint startDraggedPoint;
 //@property (readwrite) BOOL isCanceledTouches;
