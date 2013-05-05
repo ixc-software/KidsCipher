@@ -2,7 +2,7 @@
 //  GameScore.h
 //  KidsCipher
 //
-//  Created by Oleksii Vynogradov on 5/3/13.
+//  Created by Oleksii Vynogradov on 5/5/13.
 //  Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 //
 
@@ -17,5 +17,6 @@
 @property (nonatomic, retain) NSNumber * gameTime;
 @property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSData * photo;
+@property (nonatomic, retain) NSDate * date;
 
 @end

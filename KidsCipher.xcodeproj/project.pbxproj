@@ -10,14 +10,14 @@
 		FA4580FB172EE41800180886 /* ava.png in Resources */ = {isa = PBXBuildFile; fileRef = FA4580FA172EE41800180886 /* ava.png */; };
 		FA803CAE173424420053C881 /* CipherInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CAD173424420053C881 /* CipherInfoViewCell.m */; };
 		FA803CAF173424420053C881 /* CipherInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CAD173424420053C881 /* CipherInfoViewCell.m */; };
-		FA803CB6173425E10053C881 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CB5173425E10053C881 /* GameScore.m */; };
-		FA803CB7173425E10053C881 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CB5173425E10053C881 /* GameScore.m */; };
-		FA803CC9173428B20053C881 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA803CCC173428B20053C881 /* Localizable.strings */; };
-		FA803CCA173428B20053C881 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA803CCC173428B20053C881 /* Localizable.strings */; };
 		FA803CDA17342F110053C881 /* GamesHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CD917342F110053C881 /* GamesHistory.m */; };
 		FA803CDB17342F110053C881 /* GamesHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CD917342F110053C881 /* GamesHistory.m */; };
 		FA803CDE17343BFB0053C881 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CDD17343BFB0053C881 /* Game.m */; };
 		FA803CDF17343BFB0053C881 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CDD17343BFB0053C881 /* Game.m */; };
+		FA9267EF17361CC60029ACB5 /* webcob.p12 in Resources */ = {isa = PBXBuildFile; fileRef = FA9267EE17361CC60029ACB5 /* webcob.p12 */; };
+		FA9267F017361CC60029ACB5 /* webcob.p12 in Resources */ = {isa = PBXBuildFile; fileRef = FA9267EE17361CC60029ACB5 /* webcob.p12 */; };
+		FA9267F61736CF600029ACB5 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9267F51736CF600029ACB5 /* GameScore.m */; };
+		FA9267F71736CF600029ACB5 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9267F51736CF600029ACB5 /* GameScore.m */; };
 		FAAA3690172E4D7A00C55968 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA368F172E4D7A00C55968 /* UIKit.framework */; };
 		FAAA3692172E4D7A00C55968 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA3691172E4D7A00C55968 /* Foundation.framework */; };
 		FAAA3694172E4D7A00C55968 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA3693172E4D7A00C55968 /* CoreGraphics.framework */; };
@@ -45,6 +45,12 @@
 		FADBE8FA1732369F00E3DA8D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */; };
 		FADBE8FB1732369F00E3DA8D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */; };
 		FADBE90417323B5800E3DA8D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADBE8F61732367500E3DA8D /* CoreData.framework */; };
+		FAE403F3173618DE002F59C6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F2173618DE002F59C6 /* AddressBook.framework */; };
+		FAE403F4173618F3002F59C6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F2173618DE002F59C6 /* AddressBook.framework */; };
+		FAE403F6173618FA002F59C6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F5173618FA002F59C6 /* Security.framework */; };
+		FAE403F717361901002F59C6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F5173618FA002F59C6 /* Security.framework */; };
+		FAE403F917361910002F59C6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F817361910002F59C6 /* AudioToolbox.framework */; };
+		FAE403FA17361918002F59C6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F817361910002F59C6 /* AudioToolbox.framework */; };
 		FAE54F261733DA7600595565 /* kidscipher_game_zero_result.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */; };
 		FAE54F271733DA7600595565 /* kidscipher_game_zero_result.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */; };
 		FAE54F281733DA7600595565 /* kidscipher_game_success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F201733DA7600595565 /* kidscipher_game_success.m4a */; };
@@ -101,8 +107,6 @@
 		FA4580FA172EE41800180886 /* ava.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ava.png; sourceTree = "<group>"; };
 		FA803CAC173424420053C881 /* CipherInfoViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CipherInfoViewCell.h; sourceTree = "<group>"; };
 		FA803CAD173424420053C881 /* CipherInfoViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CipherInfoViewCell.m; sourceTree = "<group>"; };
-		FA803CB4173425E10053C881 /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScore.h; sourceTree = "<group>"; };
-		FA803CB5173425E10053C881 /* GameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScore.m; sourceTree = "<group>"; };
 		FA803CCB173428B20053C881 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA803CCD173428BD0053C881 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		FA803CCE173428D50053C881 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -119,6 +123,9 @@
 		FA803CD917342F110053C881 /* GamesHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamesHistory.m; sourceTree = "<group>"; };
 		FA803CDC17343BFB0053C881 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		FA803CDD17343BFB0053C881 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		FA9267EE17361CC60029ACB5 /* webcob.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = webcob.p12; sourceTree = "<group>"; };
+		FA9267F41736CF600029ACB5 /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScore.h; sourceTree = "<group>"; };
+		FA9267F51736CF600029ACB5 /* GameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScore.m; sourceTree = "<group>"; };
 		FAAA368C172E4D7A00C55968 /* KidsCipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsCipher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAA368F172E4D7A00C55968 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FAAA3691172E4D7A00C55968 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -150,6 +157,9 @@
 		FABCB8A5173397F300907198 /* Row.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Row.m; sourceTree = "<group>"; };
 		FADBE8F61732367500E3DA8D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FADBE8F91732369F00E3DA8D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FAE403F2173618DE002F59C6 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		FAE403F5173618FA002F59C6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		FAE403F817361910002F59C6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_zero_result.m4a; sourceTree = "<group>"; };
 		FAE54F201733DA7600595565 /* kidscipher_game_success.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_success.m4a; sourceTree = "<group>"; };
 		FAE54F211733DA7600595565 /* kidscipher_game_wrong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_wrong.m4a; sourceTree = "<group>"; };
@@ -161,14 +171,14 @@
 		FAE54F371733DBFD00595565 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FAE54FAF1735FF6500595565 /* Ipad_logo1024_1024 _girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo1024_1024 _girl.png"; sourceTree = "<group>"; };
 		FAE54FB01735FF7100595565 /* Ipad_logo1024_1024_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo1024_1024_boy.png; sourceTree = "<group>"; };
-		FAE54FB11736018A00595565 /* Ipad_logo1024_1024 _girl_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo1024_1024 _girl_57x57.png"; sourceTree = "<group>"; };
-		FAE54FB31736019100595565 /* Ipad_logo1024_1024 _girl_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo1024_1024 _girl_114x114.png"; sourceTree = "<group>"; };
-		FAE54FB51736019700595565 /* Ipad_logo1024_1024 _girl_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo1024_1024 _girl_72x72.png"; sourceTree = "<group>"; };
-		FAE54FB71736019E00595565 /* Ipad_logo1024_1024 _girl_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo1024_1024 _girl_144x144.png"; sourceTree = "<group>"; };
-		FAE54FB9173601A800595565 /* Ipad_logo1024_1024_boy_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo1024_1024_boy_144x144.png; sourceTree = "<group>"; };
-		FAE54FBB173601AD00595565 /* Ipad_logo1024_1024_boy_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo1024_1024_boy_72x72.png; sourceTree = "<group>"; };
-		FAE54FBD173601B700595565 /* Ipad_logo1024_1024_boy_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo1024_1024_boy_114x114.png; sourceTree = "<group>"; };
-		FAE54FBF173601BB00595565 /* Ipad_logo1024_1024_boy_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo1024_1024_boy_57x57.png; sourceTree = "<group>"; };
+		FAE54FB11736018A00595565 /* Ipad_logo1024_1024 _girl_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo1024_1024 _girl_57x57.png"; path = "../../Ipad_logo1024_1024 _girl_57x57.png"; sourceTree = "<group>"; };
+		FAE54FB31736019100595565 /* Ipad_logo1024_1024 _girl_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo1024_1024 _girl_114x114.png"; path = "../../Ipad_logo1024_1024 _girl_114x114.png"; sourceTree = "<group>"; };
+		FAE54FB51736019700595565 /* Ipad_logo1024_1024 _girl_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo1024_1024 _girl_72x72.png"; path = "../../Ipad_logo1024_1024 _girl_72x72.png"; sourceTree = "<group>"; };
+		FAE54FB71736019E00595565 /* Ipad_logo1024_1024 _girl_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo1024_1024 _girl_144x144.png"; path = "../../Ipad_logo1024_1024 _girl_144x144.png"; sourceTree = "<group>"; };
+		FAE54FB9173601A800595565 /* Ipad_logo1024_1024_boy_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo1024_1024_boy_144x144.png; path = ../../Ipad_logo1024_1024_boy_144x144.png; sourceTree = "<group>"; };
+		FAE54FBB173601AD00595565 /* Ipad_logo1024_1024_boy_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo1024_1024_boy_72x72.png; path = ../../Ipad_logo1024_1024_boy_72x72.png; sourceTree = "<group>"; };
+		FAE54FBD173601B700595565 /* Ipad_logo1024_1024_boy_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo1024_1024_boy_114x114.png; path = ../../Ipad_logo1024_1024_boy_114x114.png; sourceTree = "<group>"; };
+		FAE54FBF173601BB00595565 /* Ipad_logo1024_1024_boy_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo1024_1024_boy_57x57.png; path = ../../Ipad_logo1024_1024_boy_57x57.png; sourceTree = "<group>"; };
 		FAF343AE172FC3E900C282D5 /* KidsCipherB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsCipherB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAF343AF172FC3E900C282D5 /* KidsCipher copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "KidsCipher copy-Info.plist"; path = "/Users/alex/Desktop/KidsCipher/KidsCipher copy-Info.plist"; sourceTree = "<absolute>"; };
 		FAFD5C4B172E5A78005F47E2 /* safe.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = safe.jpg; sourceTree = "<group>"; };
@@ -180,6 +190,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE403F917361910002F59C6 /* AudioToolbox.framework in Frameworks */,
+				FAE403F717361901002F59C6 /* Security.framework in Frameworks */,
+				FAE403F3173618DE002F59C6 /* AddressBook.framework in Frameworks */,
 				FAE54F381733DBFD00595565 /* AVFoundation.framework in Frameworks */,
 				FADBE8F71732367500E3DA8D /* CoreData.framework in Frameworks */,
 				FAFD5C4E172E5FF7005F47E2 /* QuartzCore.framework in Frameworks */,
@@ -193,6 +206,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAE403FA17361918002F59C6 /* AudioToolbox.framework in Frameworks */,
+				FAE403F6173618FA002F59C6 /* Security.framework in Frameworks */,
+				FAE403F4173618F3002F59C6 /* AddressBook.framework in Frameworks */,
 				FAE54F391733DC0600595565 /* AVFoundation.framework in Frameworks */,
 				FADBE90417323B5800E3DA8D /* CoreData.framework in Frameworks */,
 				FAF34391172FC3E900C282D5 /* QuartzCore.framework in Frameworks */,
@@ -208,15 +224,6 @@
 		FAAA3683172E4D7A00C55968 = {
 			isa = PBXGroup;
 			children = (
-				FAE54FBF173601BB00595565 /* Ipad_logo1024_1024_boy_57x57.png */,
-				FAE54FBD173601B700595565 /* Ipad_logo1024_1024_boy_114x114.png */,
-				FAE54FBB173601AD00595565 /* Ipad_logo1024_1024_boy_72x72.png */,
-				FAE54FB9173601A800595565 /* Ipad_logo1024_1024_boy_144x144.png */,
-				FAE54FB71736019E00595565 /* Ipad_logo1024_1024 _girl_144x144.png */,
-				FAE54FB51736019700595565 /* Ipad_logo1024_1024 _girl_72x72.png */,
-				FAE54FB31736019100595565 /* Ipad_logo1024_1024 _girl_114x114.png */,
-				FAE54FB11736018A00595565 /* Ipad_logo1024_1024 _girl_57x57.png */,
-				FAE54F371733DBFD00595565 /* AVFoundation.framework */,
 				FAAA3695172E4D7A00C55968 /* KidsCipher */,
 				FAAA368E172E4D7A00C55968 /* Frameworks */,
 				FAAA368D172E4D7A00C55968 /* Products */,
@@ -235,6 +242,10 @@
 		FAAA368E172E4D7A00C55968 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FAE403F817361910002F59C6 /* AudioToolbox.framework */,
+				FAE403F5173618FA002F59C6 /* Security.framework */,
+				FAE403F2173618DE002F59C6 /* AddressBook.framework */,
+				FAE54F371733DBFD00595565 /* AVFoundation.framework */,
 				FAE54F371733DBFD00595565 /* AVFoundation.framework */,
 				FADBE8F61732367500E3DA8D /* CoreData.framework */,
 				FAFD5C4D172E5FF7005F47E2 /* QuartzCore.framework */,
@@ -272,6 +283,7 @@
 				FABCB8A01733220F00907198 /* Voice */,
 				FAAA36BE172E53C700C55968 /* Pics */,
 				FAAA3697172E4D7A00C55968 /* KidsCipher-Info.plist */,
+				FA9267EE17361CC60029ACB5 /* webcob.p12 */,
 				FAF343AF172FC3E900C282D5 /* KidsCipher copy-Info.plist */,
 				FAAA3698172E4D7A00C55968 /* InfoPlist.strings */,
 				FAAA369B172E4D7A00C55968 /* main.m */,
@@ -287,6 +299,14 @@
 		FAAA36BE172E53C700C55968 /* Pics */ = {
 			isa = PBXGroup;
 			children = (
+				FAE54FBF173601BB00595565 /* Ipad_logo1024_1024_boy_57x57.png */,
+				FAE54FBD173601B700595565 /* Ipad_logo1024_1024_boy_114x114.png */,
+				FAE54FBB173601AD00595565 /* Ipad_logo1024_1024_boy_72x72.png */,
+				FAE54FB9173601A800595565 /* Ipad_logo1024_1024_boy_144x144.png */,
+				FAE54FB71736019E00595565 /* Ipad_logo1024_1024 _girl_144x144.png */,
+				FAE54FB51736019700595565 /* Ipad_logo1024_1024 _girl_72x72.png */,
+				FAE54FB31736019100595565 /* Ipad_logo1024_1024 _girl_114x114.png */,
+				FAE54FB11736018A00595565 /* Ipad_logo1024_1024 _girl_57x57.png */,
 				FAE54FB01735FF7100595565 /* Ipad_logo1024_1024_boy.png */,
 				FAE54FAF1735FF6500595565 /* Ipad_logo1024_1024 _girl.png */,
 				FA4580FA172EE41800180886 /* ava.png */,
@@ -320,12 +340,12 @@
 			isa = PBXGroup;
 			children = (
 				FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */,
+				FA9267F41736CF600029ACB5 /* GameScore.h */,
+				FA9267F51736CF600029ACB5 /* GameScore.m */,
 				FA803CDC17343BFB0053C881 /* Game.h */,
 				FA803CDD17343BFB0053C881 /* Game.m */,
 				FA803CD817342F110053C881 /* GamesHistory.h */,
 				FA803CD917342F110053C881 /* GamesHistory.m */,
-				FA803CB4173425E10053C881 /* GameScore.h */,
-				FA803CB5173425E10053C881 /* GameScore.m */,
 				FABCB8A4173397F300907198 /* Row.h */,
 				FABCB8A5173397F300907198 /* Row.m */,
 			);
@@ -439,6 +459,7 @@
 				FAE54FB41736019100595565 /* Ipad_logo1024_1024 _girl_114x114.png in Resources */,
 				FAE54FB61736019700595565 /* Ipad_logo1024_1024 _girl_72x72.png in Resources */,
 				FAE54FB81736019E00595565 /* Ipad_logo1024_1024 _girl_144x144.png in Resources */,
+				FA9267EF17361CC60029ACB5 /* webcob.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -472,6 +493,7 @@
 				FAE54FBC173601AD00595565 /* Ipad_logo1024_1024_boy_72x72.png in Resources */,
 				FAE54FBE173601B700595565 /* Ipad_logo1024_1024_boy_114x114.png in Resources */,
 				FAE54FC0173601BB00595565 /* Ipad_logo1024_1024_boy_57x57.png in Resources */,
+				FA9267F017361CC60029ACB5 /* webcob.p12 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,9 +512,9 @@
 				FADBE8FA1732369F00E3DA8D /* Model.xcdatamodeld in Sources */,
 				FABCB8A6173397F300907198 /* Row.m in Sources */,
 				FA803CAE173424420053C881 /* CipherInfoViewCell.m in Sources */,
-				FA803CB6173425E10053C881 /* GameScore.m in Sources */,
 				FA803CDA17342F110053C881 /* GamesHistory.m in Sources */,
 				FA803CDE17343BFB0053C881 /* Game.m in Sources */,
+				FA9267F61736CF600029ACB5 /* GameScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -508,9 +530,9 @@
 				FADBE8FB1732369F00E3DA8D /* Model.xcdatamodeld in Sources */,
 				FABCB8A7173397F300907198 /* Row.m in Sources */,
 				FA803CAF173424420053C881 /* CipherInfoViewCell.m in Sources */,
-				FA803CB7173425E10053C881 /* GameScore.m in Sources */,
 				FA803CDB17342F110053C881 /* GamesHistory.m in Sources */,
 				FA803CDF17343BFB0053C881 /* Game.m in Sources */,
+				FA9267F71736CF600029ACB5 /* GameScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,6 +648,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
 				INFOPLIST_FILE = "KidsCipher/KidsCipher-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -638,6 +661,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
 				INFOPLIST_FILE = "KidsCipher/KidsCipher-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -650,6 +674,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;
 				INFOPLIST_FILE = "KidsCipher copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = KidsCipherB;
@@ -662,6 +687,7 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;
 				INFOPLIST_FILE = "KidsCipher copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = KidsCipherB;

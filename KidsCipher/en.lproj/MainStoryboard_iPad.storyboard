@@ -283,7 +283,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Количество попыток" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cvQ-yM-68T">
-                                <rect key="frame" x="531" y="238" width="217" height="86"/>
+                                <rect key="frame" x="531" y="261" width="217" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -360,6 +360,17 @@
                                     <action selector="changePhoto:" destination="2" eventType="touchUpInside" id="cWm-JQ-wDW"/>
                                 </connections>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="nef-uw-HBP">
+                                <rect key="frame" x="531" y="238" width="79" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Музыка фона" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y82-AX-KVR">
+                                <rect key="frame" x="631" y="241" width="110" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -550,7 +561,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="changePhoto:" destination="yBL-27-2BK" eventType="touchUpInside" id="WdT-uo-Qu7"/>
+                                    <action selector="changeMyPhoto:" destination="yBL-27-2BK" eventType="touchUpInside" id="BN6-Qo-msS"/>
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="g85-rB-TYZ">
@@ -561,6 +572,9 @@
                                     <segment title="Средний"/>
                                     <segment title="Низкий"/>
                                 </segments>
+                                <connections>
+                                    <action selector="difficultLevelStart:" destination="yBL-27-2BK" eventType="valueChanged" id="NMa-HX-W8g"/>
+                                </connections>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" id="kSd-u2-4Sb">
                                 <rect key="frame" x="143" y="200" width="482" height="44"/>
@@ -569,14 +583,20 @@
                                     <segment title="Мои рекорды"/>
                                     <segment title="Общие рекорды"/>
                                 </segments>
+                                <connections>
+                                    <action selector="myScoreOrTotalScoreChangeStart:" destination="yBL-27-2BK" eventType="valueChanged" id="WUV-6r-O4p"/>
+                                </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="difficultLevelLabel" destination="4FK-6h-PJs" id="16C-jd-ePh"/>
+                        <outlet property="difficultLevelSelector" destination="g85-rB-TYZ" id="gRI-Nd-vxE"/>
                         <outlet property="myName" destination="glk-vt-Ow3" id="3ZD-qN-PgR"/>
                         <outlet property="myNameEditor" destination="sSv-Wl-HHn" id="P4r-wt-cYs"/>
                         <outlet property="myPhoto" destination="013-5n-tmJ" id="dHr-fT-yi2"/>
+                        <outlet property="myScoreOrGameScore" destination="kSd-u2-4Sb" id="MFe-tA-7ja"/>
                         <outlet property="tableView" destination="DfT-s0-PAH" id="tyZ-hB-zWM"/>
                     </connections>
                 </viewController>
@@ -612,9 +632,15 @@
         <class className="CipherInfoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewController.h"/>
             <relationships>
+                <relationship kind="action" name="changeMyPhoto:"/>
+                <relationship kind="action" name="difficultLevelStart:"/>
+                <relationship kind="action" name="myScoreOrTotalScoreChangeStart:"/>
+                <relationship kind="outlet" name="difficultLevelLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="difficultLevelSelector" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="myName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="myNameEditor" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="myPhoto" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myScoreOrGameScore" candidateClass="UISegmentedControl"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
@@ -622,6 +648,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherViewController.h"/>
             <relationships>
                 <relationship kind="action" name="changePhoto:"/>
+                <relationship kind="action" name="startGame:"/>
                 <relationship kind="outlet" name="gamePlayScrollView" candidateClass="UIScrollView"/>
                 <relationship kind="outlet" name="image1OutsideTableView" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="image2OutsideTableView" candidateClass="AVImageView"/>

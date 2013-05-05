@@ -302,19 +302,21 @@
 
 #pragma mark own actions
 - (IBAction)changePhoto:(id)sender {
+    // Place image picker on the screen
+    //[self presentViewController:imagePickerController animated:YES completion:nil];
+    //NSLog(@"changePhoto->");
     UIImagePickerController *imagePickerController = [[UIImagePickerController alloc] init];
-    
+    //NSLog(@"imagePickerController->%@",imagePickerController);
     if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera])
     {
         [imagePickerController setSourceType:UIImagePickerControllerSourceTypeCamera];
-    }
+    } else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypePhotoLibrary]) {
+        imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
+    } else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) imagePickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     // image picker needs a delegate,
     [imagePickerController setDelegate:self];
     self.pop = [[UIPopoverController alloc] initWithContentViewController:imagePickerController];
     [self.pop presentPopoverFromRect:self.photoView.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
-    // Place image picker on the screen
-    //[self presentViewController:imagePickerController animated:YES completion:nil];
-
 }
 - (IBAction)startGame:(id)sender {
     self.row1HidingView.hidden = YES;
@@ -552,36 +554,162 @@ static CGRect swapWidthAndHeight(CGRect rect)
     return copy;
 }
 
+-(UIImage*)resizedImage:(UIImage *)image toSize:(CGSize)dstSize
+{
+	CGImageRef imgRef = image.CGImage;
+	// the below values are regardless of orientation : for UIImages from Camera, width>height (landscape)
+	CGSize  srcSize = CGSizeMake(CGImageGetWidth(imgRef), CGImageGetHeight(imgRef)); // not equivalent to self.size (which is dependant on the imageOrientation)!
+    
+	CGFloat scaleRatio = dstSize.width / srcSize.width;
+	UIImageOrientation orient = image.imageOrientation;
+	CGAffineTransform transform = CGAffineTransformIdentity;
+	switch(orient) {
+            
+		case UIImageOrientationUp: //EXIF = 1
+			transform = CGAffineTransformIdentity;
+			break;
+            
+		case UIImageOrientationUpMirrored: //EXIF = 2
+			transform = CGAffineTransformMakeTranslation(srcSize.width, 0.0);
+			transform = CGAffineTransformScale(transform, -1.0, 1.0);
+			break;
+            
+		case UIImageOrientationDown: //EXIF = 3
+			transform = CGAffineTransformMakeTranslation(srcSize.width, srcSize.height);
+			transform = CGAffineTransformRotate(transform, M_PI);
+			break;
+            
+		case UIImageOrientationDownMirrored: //EXIF = 4
+			transform = CGAffineTransformMakeTranslation(0.0, srcSize.height);
+			transform = CGAffineTransformScale(transform, 1.0, -1.0);
+			break;
+            
+		case UIImageOrientationLeftMirrored: //EXIF = 5
+			dstSize = CGSizeMake(dstSize.height, dstSize.width);
+			transform = CGAffineTransformMakeTranslation(srcSize.height, srcSize.width);
+			transform = CGAffineTransformScale(transform, -1.0, 1.0);
+			transform = CGAffineTransformRotate(transform, 3.0 * M_PI_2);
+			break;
+            
+		case UIImageOrientationLeft: //EXIF = 6
+			dstSize = CGSizeMake(dstSize.height, dstSize.width);
+			transform = CGAffineTransformMakeTranslation(0.0, srcSize.width);
+			transform = CGAffineTransformRotate(transform, 3.0 * M_PI_2);
+			break;
+            
+		case UIImageOrientationRightMirrored: //EXIF = 7
+			dstSize = CGSizeMake(dstSize.height, dstSize.width);
+			transform = CGAffineTransformMakeScale(-1.0, 1.0);
+			transform = CGAffineTransformRotate(transform, M_PI_2);
+			break;
+            
+		case UIImageOrientationRight: //EXIF = 8
+			dstSize = CGSizeMake(dstSize.height, dstSize.width);
+			transform = CGAffineTransformMakeTranslation(srcSize.height, 0.0);
+			transform = CGAffineTransformRotate(transform, M_PI_2);
+			break;
+            
+		default:
+			[NSException raise:NSInternalInconsistencyException format:@"Invalid image orientation"];
+            
+	}
+    
+	/////////////////////////////////////////////////////////////////////////////
+	// The actual resize: draw the image on a new context, applying a transform matrix
+	UIGraphicsBeginImageContextWithOptions(dstSize, NO, 0.0);
+    
+	CGContextRef context = UIGraphicsGetCurrentContext();
+    
+	if (orient == UIImageOrientationRight || orient == UIImageOrientationLeft) {
+		CGContextScaleCTM(context, -scaleRatio, scaleRatio);
+		CGContextTranslateCTM(context, -srcSize.height, 0);
+	} else {
+		CGContextScaleCTM(context, scaleRatio, -scaleRatio);
+		CGContextTranslateCTM(context, 0, -srcSize.height);
+	}
+    
+	CGContextConcatCTM(context, transform);
+    
+	// we use srcSize (and not dstSize) as the size to specify is in user space (and we use the CTM to apply a scaleRatio)
+	CGContextDrawImage(UIGraphicsGetCurrentContext(), CGRectMake(0, 0, srcSize.width, srcSize.height), imgRef);
+	UIImage* resizedImage = UIGraphicsGetImageFromCurrentImageContext();
+	UIGraphicsEndImageContext();
+    
+	return resizedImage;
+}
+
+-(UIImage*)resizedImage:(UIImage *)image toFitInSize:(CGSize)boundingSize scaleIfSmaller:(BOOL)scale
+{
+	// get the image size (independant of imageOrientation)
+	CGImageRef imgRef = image.CGImage;
+	CGSize srcSize = CGSizeMake(CGImageGetWidth(imgRef), CGImageGetHeight(imgRef)); // not equivalent to self.size (which depends on the imageOrientation)!
+    
+	// adjust boundingSize to make it independant on imageOrientation too for farther computations
+	UIImageOrientation orient = image.imageOrientation;
+	switch (orient) {
+		case UIImageOrientationLeft:
+		case UIImageOrientationRight:
+		case UIImageOrientationLeftMirrored:
+		case UIImageOrientationRightMirrored:
+			boundingSize = CGSizeMake(boundingSize.height, boundingSize.width);
+			break;
+        default:
+            // NOP
+            break;
+	}
+    
+	// Compute the target CGRect in order to keep aspect-ratio
+	CGSize dstSize;
+    
+	if ( !scale && (srcSize.width < boundingSize.width) && (srcSize.height < boundingSize.height) ) {
+		//NSLog(@"Image is smaller, and we asked not to scale it in this case (scaleIfSmaller:NO)");
+		dstSize = srcSize; // no resize (we could directly return 'self' here, but we draw the image anyway to take image orientation into account)
+	} else {
+		CGFloat wRatio = boundingSize.width / srcSize.width;
+		CGFloat hRatio = boundingSize.height / srcSize.height;
+        
+		if (wRatio < hRatio) {
+			//NSLog(@"Width imposed, Height scaled ; ratio = %f",wRatio);
+			dstSize = CGSizeMake(boundingSize.width, floorf(srcSize.height * wRatio));
+		} else {
+			//NSLog(@"Height imposed, Width scaled ; ratio = %f",hRatio);
+			dstSize = CGSizeMake(floorf(srcSize.width * hRatio), boundingSize.height);
+		}
+	}
+    
+	return [self resizedImage:image toSize:dstSize];
+}
+
+
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    //NSLog(@"didFinishPickingMediaWithInfo->%@",info);
-    [picker dismissViewControllerAnimated:YES completion:^{
-        UIImage *originalImage, *editedImage, *rotatedImage;
-        editedImage = (UIImage *)[info objectForKey:UIImagePickerControllerEditedImage];
-        originalImage = (UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage];
-        if (editedImage) rotatedImage = [self rotate:UIImageOrientationRight image:editedImage];
-        else rotatedImage = [self rotate:UIImageOrientationRight image:originalImage];
-        //UIImage *picked = [info valueForKey:UIImagePickerControllerOriginalImage];
-        NSData *pickedData = UIImagePNGRepresentation(rotatedImage);
-        //NSData *imageData = [[NSData alloc] initWithData:UIImageJPEGRepresentation((picked), 0.5)];
-        //int imageSize = imageData.length;
-        //NSLog(@"SIZE OF IMAGE: %i ", imageSize);
-        if (pickedData) {
-            [[NSUserDefaults standardUserDefaults] setObject:pickedData forKey:@"clientPicture"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-            self.photoView.imageView.image = rotatedImage;
-        }
-    }];
+    NSLog(@"didFinishPickingMediaWithInfo->%@",info);
+    [self.pop dismissPopoverAnimated:YES];
+    UIImage *originalImage, *editedImage, *rotatedImage;
+    editedImage = (UIImage *)[info objectForKey:UIImagePickerControllerEditedImage];
+    originalImage = (UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage];
+    if (editedImage) rotatedImage = [self rotate:UIImageOrientationRight image:editedImage];
+    else rotatedImage = [self rotate:UIImageOrientationRight image:originalImage];
+    UIImage *resizedImage = [self resizedImage:rotatedImage toFitInSize:CGSizeMake(132, 132) scaleIfSmaller:YES];
+    NSData *resizedData = UIImagePNGRepresentation(resizedImage);
+    //UIImage *picked = [info valueForKey:UIImagePickerControllerOriginalImage];
+    //NSData *pickedData = UIImagePNGRepresentation(rotatedImage);
+    //NSData *imageData = [[NSData alloc] initWithData:UIImageJPEGRepresentation((picked), 0.5)];
+    int imageSize = resizedData.length;
+    NSLog(@"SIZE OF IMAGE: %i ", imageSize);
+    if (resizedData) {
+        [[NSUserDefaults standardUserDefaults] setObject:resizedData forKey:@"clientPicture"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        self.photoView.imageView.image = resizedImage;
+    }
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    //NSLog(@"didFinishPickingMediaWithInfo->%@",info);
-    [picker dismissViewControllerAnimated:YES completion:^{
-        NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
-        if (pickedData) self.photoView.imageView.image = [UIImage imageWithData:pickedData];
-        else self.photoView.imageView.image = [UIImage imageNamed:@"ava.png"];
-    }];
-    
+    NSLog(@"imagePickerControllerDidCancel->");
+    [self.pop dismissPopoverAnimated:YES];
+    NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
+    if (pickedData) self.photoView.imageView.image = [UIImage imageWithData:pickedData];
+    else self.photoView.imageView.image = [UIImage imageNamed:@"ava.png"];
 }
 
 - (void)viewDidUnload {

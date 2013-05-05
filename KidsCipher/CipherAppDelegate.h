@@ -27,6 +27,23 @@
 @property (readonly, strong, nonatomic) NSManagedObjectModel *managedObjectModel;
 @property (readonly, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (retain,nonatomic) Game *game;
+
+@property (retain) NSMutableString *firstServer;
+@property (retain) NSMutableString *secondServer;
+@property (retain) NSMutableString *urlChoosed;
+@property (retain) NSMutableDictionary *allURLs;
+
+@property (retain) NSMutableString *appleID;
+
+@property (readwrite) BOOL isMessageConfirmed;
+@property (readwrite) BOOL downloadCompleted;
+@property (retain, nonatomic) NSMutableData *receivedData;
+@property (retain) NSNumber *downloadSize;
+@property (retain) NSNumber *downloadedPages;
+@property (nonatomic, retain) NSData *deviceToken;
+@property (retain) NSMutableString *messageFull;
+
+
 -(Row *)getActiveRow;
 -(Row *)getRowBeforeActiveRow;
 

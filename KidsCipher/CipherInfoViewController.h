@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CipherInfoViewController : UIViewController <NSFetchedResultsControllerDelegate,UIImagePickerControllerDelegate>
+@interface CipherInfoViewController : UIViewController <NSFetchedResultsControllerDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate>
+@property (retain, nonatomic) UIPopoverController *pop;
 
 @end

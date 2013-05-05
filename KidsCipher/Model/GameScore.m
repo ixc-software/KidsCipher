@@ -2,7 +2,7 @@
 //  GameScore.m
 //  KidsCipher
 //
-//  Created by Oleksii Vynogradov on 5/3/13.
+//  Created by Oleksii Vynogradov on 5/5/13.
 //  Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 //
 
@@ -16,5 +16,6 @@
 @dynamic gameTime;
 @dynamic name;
 @dynamic photo;
+@dynamic date;
 
 @end
