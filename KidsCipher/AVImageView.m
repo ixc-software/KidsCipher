@@ -40,7 +40,16 @@
     self = [super initWithCoder:coder];
     if (self) {
         self.uniqueIdentifier = [[NSProcessInfo processInfo] globallyUniqueString];
-
+        NSError *error = nil;
+        NSURL* start = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_start_drag" ofType:@"m4a"]];
+        self.imageStartTouching = [[AVAudioPlayer alloc] initWithContentsOfURL:start error:&error];
+        [self.imageStartTouching prepareToPlay];
+        NSURL* putIntoRow = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_fix_image_inside_row" ofType:@"m4a"]];
+        self.imagePuttedIntoRow = [[AVAudioPlayer alloc] initWithContentsOfURL:putIntoRow error:&error];
+        [self.imagePuttedIntoRow prepareToPlay];
+        NSURL* cancelOrReturn = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_return_image_outside_row_or_cancel_drag" ofType:@"m4a"]];
+        self.imageCancel = [[AVAudioPlayer alloc] initWithContentsOfURL:cancelOrReturn error:&error];
+        [self.imageCancel prepareToPlay];
     }
     return self;
 }
@@ -55,6 +64,7 @@
 - (void) touchesBegan:(NSSet*)touches withEvent:(UIEvent*)event {
     //NSLog(@"touchesBegan");
     if (!self.hidden) {
+        [self.imageStartTouching play];
         CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
         CipherViewController *game = [mainDelegate.viewControllers valueForKey:@"CipherViewController"];
         Row *activeRow = [mainDelegate getActiveRow];
@@ -77,6 +87,8 @@
         if (self.frame.origin.x == frameToGetImage4.origin.x && self.frame.origin.y == frameToGetImage4.origin.y) isStartPointMatchedOneOfFrames = 4;
         
         if (necessaryImage && isStartPointMatchedOneOfFrames > 0) {
+            [self.imageCancel play];
+
             if (isStartPointMatchedOneOfFrames == 1) { activeRow.frame1FilledNumber = [NSNumber numberWithUnsignedInteger:0]; [mainDelegate saveContext]; }
             if (isStartPointMatchedOneOfFrames == 2) { activeRow.frame2FilledNumber = [NSNumber numberWithUnsignedInteger:0]; [mainDelegate saveContext]; }
             if (isStartPointMatchedOneOfFrames == 3) { activeRow.frame3FilledNumber = [NSNumber numberWithUnsignedInteger:0]; [mainDelegate saveContext]; }
@@ -165,6 +177,8 @@
     bool result4 = CGRectContainsPoint(frame4,location);
     //NSLog(@"result1->%@ frame1->%@ result2->%@ result3->%@ result4->%@",[NSNumber numberWithBool:result1],NSStringFromCGRect(frame1),[NSNumber numberWithBool:result2],[NSNumber numberWithBool:result3],[NSNumber numberWithBool:result4]);
     if (result1 || result2 || result3 || result4) {
+        [self.imagePuttedIntoRow play];
+
         CGPoint pointOfFinalImagePositionInsideCell;
         // if position is busy now, we have to return, not allow to push image to busy cell
         if (result1) {
@@ -361,6 +375,8 @@
     
     //NSLog(@"touchesEnded self.frame->%@",NSStringFromCGRect(self.frame));
     if (!self.hidden) {
+        [self.imageCancel play];
+
         CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
         Row *activeRow = [mainDelegate getActiveRow];
         CGPoint necessaryStartingPoint;
@@ -398,6 +414,8 @@
 - (void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
 {
     if (!self.hidden) {
+        [self.imageCancel play];
+
         //NSLog(@"touchesCancelled");
         if (self.isScalled) {
             self.isScalled = NO;

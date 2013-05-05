@@ -334,13 +334,16 @@
                                 <rect key="frame" x="370" y="238" width="153" height="132"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" title="играть наново">
+                                <state key="normal" title="Начать игру">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="startGame:" destination="2" eventType="touchUpInside" id="r9m-vR-Np8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cXO-74-nso">
                                 <rect key="frame" x="370" y="24" width="114" height="146"/>
@@ -465,9 +468,9 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="DfT-s0-PAH">
                                 <rect key="frame" x="20" y="251" width="728" height="568"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.90980398650000005" green="0.65882354970000001" blue="0.91372555489999996" alpha="1" colorSpace="deviceRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="CipherInfoCell" selectionStyle="blue" indentationWidth="10" reuseIdentifier="Cell" rowHeight="70" id="aAj-CL-acC">
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="CipherInfoViewCell" selectionStyle="blue" indentationWidth="10" reuseIdentifier="CipherInfoViewCell" rowHeight="70" id="aAj-CL-acC" customClass="CipherInfoViewCell">
                                         <rect key="frame" x="0.0" y="22" width="728" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -475,11 +478,18 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="R26-EC-xra">
-                                                    <rect key="frame" x="20" y="8" width="59" height="54"/>
+                                                    <rect key="frame" x="20" y="8" width="42" height="54"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Имя победителя" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="JR7-LF-vgp">
-                                                    <rect key="frame" x="87" y="24" width="134" height="21"/>
+                                                    <rect key="frame" x="70" y="8" width="183" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="дата" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3Im-Bd-KWA">
+                                                    <rect key="frame" x="70" y="37" width="183" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
@@ -509,6 +519,14 @@
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
+                                        <connections>
+                                            <outlet property="attemps" destination="brA-nF-FDO" id="KLn-u5-0uh"/>
+                                            <outlet property="date" destination="3Im-Bd-KWA" id="ySy-jp-I7o"/>
+                                            <outlet property="level" destination="lTJ-7J-oKK" id="Vwv-KU-ozQ"/>
+                                            <outlet property="name" destination="JR7-LF-vgp" id="M1H-d6-AwW"/>
+                                            <outlet property="photo" destination="R26-EC-xra" id="fEK-BI-s7W"/>
+                                            <outlet property="time" destination="00X-bO-MXZ" id="aAy-FX-tAj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -580,10 +598,20 @@
         <class className="AVImageView" superclassName="UIImageView">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/AVImageView.h"/>
         </class>
+        <class className="CipherInfoViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="attemps" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="date" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="level" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="photo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
+            </relationships>
+        </class>
         <class className="CipherInfoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewController.h"/>
             <relationships>
-                <relationship kind="action" name="changePhoto:"/>
                 <relationship kind="outlet" name="myName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="myNameEditor" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="myPhoto" candidateClass="UIButton"/>

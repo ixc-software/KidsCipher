@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CipherInfoViewController : UIViewController
+@interface CipherInfoViewController : UIViewController <NSFetchedResultsControllerDelegate,UIImagePickerControllerDelegate>
 
 @end

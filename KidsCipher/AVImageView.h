@@ -19,7 +19,9 @@
 }
 //-(CGPoint) calculatePositionForPoint:(CGPoint)location;
 
-//@property (strong, nonatomic) AVAudioPlayer *theAudio;
+@property (strong, nonatomic) AVAudioPlayer *imageStartTouching;
+@property (strong, nonatomic) AVAudioPlayer *imagePuttedIntoRow;
+@property (strong, nonatomic) AVAudioPlayer *imageCancel;
 
 //@property (strong, nonatomic) NSString *imageName;
 

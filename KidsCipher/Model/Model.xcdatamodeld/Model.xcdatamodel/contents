@@ -11,6 +11,7 @@
         <attribute name="isFrame3empty" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isFrame4empty" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="isFrame5empty" optional="YES" attributeType="Boolean" syncable="YES"/>
+        <attribute name="isGameStarted" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="mainDraggedImage1identifier" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mainDraggedImage1startingPoint" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="mainDraggedImage2identifier" optional="YES" attributeType="String" syncable="YES"/>
@@ -24,16 +25,17 @@
         <attribute name="startTime" optional="YES" attributeType="Date" syncable="YES"/>
         <relationship name="rows" optional="YES" toMany="YES" deletionRule="Cascade" ordered="YES" destinationEntity="Row" inverseName="game" inverseEntity="Row" syncable="YES"/>
     </entity>
-    <entity name="GameScore" syncable="YES">
+    <entity name="GameScore" representedClassName="GameScore" syncable="YES">
         <attribute name="attempts" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
         <attribute name="difficultLevel" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="gameTime" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
     </entity>
-    <entity name="GamesHistory" syncable="YES">
+    <entity name="GamesHistory" representedClassName="GamesHistory" syncable="YES">
         <attribute name="attempts" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="date" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="difficultLevel" optional="YES" attributeType="Integer 64" defaultValueString="0" syncable="YES"/>
         <attribute name="gameTime" optional="YES" attributeType="Integer 64" defaultValueString="0.0" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="photo" optional="YES" attributeType="Binary" syncable="YES"/>
@@ -59,9 +61,9 @@
         <relationship name="game" optional="YES" minCount="1" maxCount="1" deletionRule="Nullify" destinationEntity="Game" inverseName="rows" inverseEntity="Game" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Game" positionX="160" positionY="192" width="128" height="375"/>
-        <element name="Row" positionX="160" positionY="192" width="128" height="315"/>
-        <element name="GamesHistory" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="Game" positionX="160" positionY="192" width="128" height="390"/>
         <element name="GameScore" positionX="160" positionY="192" width="128" height="120"/>
+        <element name="GamesHistory" positionX="160" positionY="192" width="128" height="135"/>
+        <element name="Row" positionX="160" positionY="192" width="128" height="315"/>
     </elements>
 </model>
