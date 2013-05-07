@@ -142,7 +142,44 @@
     self.frame = CGRectMake(location.x-self.offset.x, location.y-self.offset.y,
                             self.frame.size.width, self.frame.size.height);
     [UIView commitAnimations];
+
     Row *activeRow = [mainDelegate getActiveRow];
+    if ([self.uniqueIdentifier isEqualToString:activeRow.game.mainDraggedImage1identifier] &&
+        (activeRow.frame1FilledNumber.unsignedIntegerValue == 1 ||
+         activeRow.frame2FilledNumber.unsignedIntegerValue == 1 ||
+         activeRow.frame3FilledNumber.unsignedIntegerValue == 1 ||
+         activeRow.frame4FilledNumber.unsignedIntegerValue == 1)) {
+            return;
+    }
+    if ([self.uniqueIdentifier isEqualToString:activeRow.game.mainDraggedImage2identifier] &&
+        (activeRow.frame1FilledNumber.unsignedIntegerValue == 2 ||
+         activeRow.frame2FilledNumber.unsignedIntegerValue == 2 ||
+         activeRow.frame3FilledNumber.unsignedIntegerValue == 2 ||
+         activeRow.frame4FilledNumber.unsignedIntegerValue == 2)) {
+            return;
+        }
+    if ([self.uniqueIdentifier isEqualToString:activeRow.game.mainDraggedImage3identifier] &&
+        (activeRow.frame1FilledNumber.unsignedIntegerValue == 3 ||
+         activeRow.frame2FilledNumber.unsignedIntegerValue == 3 ||
+         activeRow.frame3FilledNumber.unsignedIntegerValue == 3 ||
+         activeRow.frame4FilledNumber.unsignedIntegerValue == 3)) {
+            return;
+        }
+    if ([self.uniqueIdentifier isEqualToString:activeRow.game.mainDraggedImage4identifier] &&
+        (activeRow.frame1FilledNumber.unsignedIntegerValue == 4 ||
+         activeRow.frame2FilledNumber.unsignedIntegerValue == 4 ||
+         activeRow.frame3FilledNumber.unsignedIntegerValue == 4 ||
+         activeRow.frame4FilledNumber.unsignedIntegerValue == 4)) {
+            return;
+        }
+    if ([self.uniqueIdentifier isEqualToString:activeRow.game.mainDraggedImage5identifier] &&
+        (activeRow.frame1FilledNumber.unsignedIntegerValue == 5 ||
+         activeRow.frame2FilledNumber.unsignedIntegerValue == 5 ||
+         activeRow.frame3FilledNumber.unsignedIntegerValue == 5 ||
+         activeRow.frame4FilledNumber.unsignedIntegerValue == 5)) {
+            return;
+        }
+
     CGRect frameToGetImage1 = CGRectFromString(activeRow.frameToGetImage1);
     CGRect frameToGetImage2 = CGRectFromString(activeRow.frameToGetImage2);
     CGRect frameToGetImage3 = CGRectFromString(activeRow.frameToGetImage3);
@@ -197,7 +234,8 @@
             if (activeRow.frame4FilledNumber.integerValue > 0) return;
             pointOfFinalImagePositionInsideCell = CGPointMake(frameToGetImage4.origin.x, frameToGetImage4.origin.y);
         }
-        
+        [self touchesCancelled:touches withEvent:event];
+        [self touchesEnded:touches withEvent:event];
         self.hidden = YES;
         CGRect frameImageInsideCellConvertedFromOutsoidedImage = [game.view convertRect:self.frame toView:game.gamePlayScrollView];
         //NSLog(@"frameImageInsideCellConvertedFromOutsoidedImage->%@",NSStringFromCGRect(frameImageInsideCellConvertedFromOutsoidedImage));
@@ -322,6 +360,7 @@
                              necessaryImage.frame = CGRectMake(pointOfFinalImagePositionInsideCell.x, pointOfFinalImagePositionInsideCell.y,
                                                                necessaryImage.frame.size.width, necessaryImage.frame.size.height);
                          } completion:^(BOOL finished) {
+
                              CABasicAnimation *zoomNormal = [CABasicAnimation animationWithKeyPath:@"transform.scale"];
                              zoomNormal.toValue = [NSNumber numberWithDouble:1.0];
                              zoomNormal.duration = 0.1;

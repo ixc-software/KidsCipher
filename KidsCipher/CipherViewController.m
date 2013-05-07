@@ -223,6 +223,109 @@
         
         
     }];
+    NSLog(@"activeRowToGetAllRows.game.combination1color->%@",activeRowToGetAllRows.game.combination1color);
+    NSLog(@"activeRowToGetAllRows.game.combination2color->%@",activeRowToGetAllRows.game.combination2color);
+    NSLog(@"activeRowToGetAllRows.game.combination3color->%@",activeRowToGetAllRows.game.combination3color);
+    NSLog(@"activeRowToGetAllRows.game.combination4color->%@",activeRowToGetAllRows.game.combination4color);
+    switch (activeRowToGetAllRows.game.combination1color.unsignedIntegerValue) {
+        case 1:
+            self.image1combination.frame = self.frame1combination.frame;
+            self.image1combination.hidden = NO;
+            break;
+        case 2:
+            self.image2combination.frame = self.frame1combination.frame;
+            self.image2combination.hidden = NO;
+            break;
+        case 3:
+            self.image3combination.frame = self.frame1combination.frame;
+            self.image3combination.hidden = NO;
+            break;
+        case 4:
+            self.image4combination.frame = self.frame1combination.frame;
+            self.image4combination.hidden = NO;
+            break;
+        case 5:
+            self.image5combination.frame = self.frame1combination.frame;
+            self.image5combination.hidden = NO;
+            break;
+        default:
+            break;
+    }
+    switch (activeRowToGetAllRows.game.combination2color.unsignedIntegerValue) {
+        case 1:
+            self.image1combination.frame = self.frame2combination.frame;
+            self.image1combination.hidden = NO;
+            break;
+        case 2:
+            self.image2combination.frame = self.frame2combination.frame;
+            self.image2combination.hidden = NO;
+            break;
+        case 3:
+            self.image3combination.frame = self.frame2combination.frame;
+            self.image3combination.hidden = NO;
+            break;
+        case 4:
+            self.image4combination.frame = self.frame2combination.frame;
+            self.image4combination.hidden = NO;
+            break;
+        case 5:
+            self.image5combination.frame = self.frame2combination.frame;
+            self.image5combination.hidden = NO;
+            break;
+            
+        default:
+            break;
+    }
+    switch (activeRowToGetAllRows.game.combination3color.unsignedIntegerValue) {
+        case 1:
+            self.image1combination.frame = self.frame3combination.frame;
+            self.image1combination.hidden = NO;
+            break;
+        case 2:
+            self.image2combination.frame = self.frame3combination.frame;
+            self.image2combination.hidden = NO;
+            break;
+        case 3:
+            self.image3combination.frame = self.frame3combination.frame;
+            self.image3combination.hidden = NO;
+            break;
+        case 4:
+            self.image4combination.frame = self.frame3combination.frame;
+            self.image4combination.hidden = NO;
+            break;
+        case 5:
+            self.image5combination.frame = self.frame3combination.frame;
+            self.image5combination.hidden = NO;
+            break;
+            
+        default:
+            break;
+    }
+    switch (activeRowToGetAllRows.game.combination4color.unsignedIntegerValue) {
+        case 1:
+            self.image1combination.frame = self.frame4combination.frame;
+            self.image1combination.hidden = NO;
+            break;
+        case 2:
+            self.image2combination.frame = self.frame4combination.frame;
+            self.image2combination.hidden = NO;
+            break;
+        case 3:
+            self.image3combination.frame = self.frame4combination.frame;
+            self.image3combination.hidden = NO;
+            break;
+        case 4:
+            self.image4combination.frame = self.frame4combination.frame;
+            self.image4combination.hidden = NO;
+            break;
+        case 5:
+            self.image5combination.frame = self.frame4combination.frame;
+            self.image5combination.hidden = NO;
+            break;
+            
+        default:
+            break;
+    }
 
 }
 
@@ -319,6 +422,15 @@
     [self.pop presentPopoverFromRect:self.photoView.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 - (IBAction)startGame:(id)sender {
+    self.row1HidingView.hidden = YES;
+    self.row1HidingView.userInteractionEnabled = NO;
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    Row *activeRowToGetAllRows = [mainDelegate getActiveRow];
+    activeRowToGetAllRows.game.isGameStarted = [NSNumber numberWithBool:YES];
+    [mainDelegate saveContext];
+    [self updateAllViews];
+}
+- (IBAction)startTraining:(id)sender {
     self.row1HidingView.hidden = YES;
     self.row1HidingView.userInteractionEnabled = NO;
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -726,6 +838,15 @@ static CGRect swapWidthAndHeight(CGRect rect)
     [self setRow2image4:nil];
     [self setRow2image5:nil];
     [self setRow1MatchedColorsAndPositions:nil];
+    [self setImage1combination:nil];
+    [self setImage2combination:nil];
+    [self setImage3combination:nil];
+    [self setImage4combination:nil];
+    [self setImage5combination:nil];
+    [self setFrame1combination:nil];
+    [self setFrame2combination:nil];
+    [self setFrame3combination:nil];
+    [self setFrame4combination:nil];
     [super viewDidUnload];
 }
 @end

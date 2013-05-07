@@ -880,10 +880,45 @@ static unsigned char base64EncodeLookup[65] =
     [audioPlayerMainFoneMusic play];
 
     self.game = (Game *)[NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
-    self.game.combination1color = [NSNumber numberWithInt:arc4random() % 5+1];
-    self.game.combination2color = [NSNumber numberWithInt:arc4random() % 5+1];
-    self.game.combination3color = [NSNumber numberWithInt:arc4random() % 5+1];
-    self.game.combination4color = [NSNumber numberWithInt:arc4random() % 5+1];
+    NSNumber *number1 = [NSNumber numberWithInt:arc4random() % 5+1];
+
+    self.game.combination1color = number1;
+    NSNumber *number2 = [NSNumber numberWithInt:arc4random() % 5+1];
+    if (number2.unsignedIntegerValue != number1.unsignedIntegerValue) {
+        self.game.combination2color = number2;
+    } else {
+        while (number2.unsignedIntegerValue == number1.unsignedIntegerValue) {
+            number2 = [NSNumber numberWithInt:arc4random() % 5+1];
+        }
+        self.game.combination2color = number2;
+    }
+    
+    NSNumber *number3 = [NSNumber numberWithInt:arc4random() % 5+1];
+    if (number3.unsignedIntegerValue != number1.unsignedIntegerValue  &&
+        number3.unsignedIntegerValue != number2.unsignedIntegerValue) {
+        self.game.combination3color = number3;
+    } else {
+        while (number3.unsignedIntegerValue == number1.unsignedIntegerValue ||
+               number3.unsignedIntegerValue == number2.unsignedIntegerValue) {
+            number3 = [NSNumber numberWithInt:arc4random() % 5+1];
+        }
+        self.game.combination3color = number3;
+    }
+
+    NSNumber *number4 = [NSNumber numberWithInt:arc4random() % 5+1];
+    if (number4.unsignedIntegerValue != number1.unsignedIntegerValue  &&
+        number4.unsignedIntegerValue != number2.unsignedIntegerValue  &&
+        number4.unsignedIntegerValue != number3.unsignedIntegerValue) {
+        self.game.combination4color = number4;
+    } else {
+        while (number4.unsignedIntegerValue == number1.unsignedIntegerValue  ||
+               number4.unsignedIntegerValue == number2.unsignedIntegerValue  ||
+               number4.unsignedIntegerValue == number3.unsignedIntegerValue) {
+            number4 = [NSNumber numberWithInt:arc4random() % 5+1];
+        }
+        self.game.combination4color = number4;
+    }
+
     self.game.activeRowNumber = [NSNumber numberWithInteger:0];
     self.game.isGameStarted = [NSNumber numberWithBool:NO];
     for (int i= 0; i < 10; i++) {

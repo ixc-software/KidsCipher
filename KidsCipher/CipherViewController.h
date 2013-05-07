@@ -19,6 +19,15 @@
 @property (retain, nonatomic) IBOutlet AVImageView *image3OutsideTableView;
 @property (retain, nonatomic) IBOutlet AVImageView *image4OutsideTableView;
 @property (retain, nonatomic) IBOutlet AVImageView *image5OutsideTableView;
+@property (weak, nonatomic) IBOutlet AVImageView *image1combination;
+@property (weak, nonatomic) IBOutlet AVImageView *image2combination;
+@property (weak, nonatomic) IBOutlet AVImageView *image3combination;
+@property (weak, nonatomic) IBOutlet AVImageView *image4combination;
+@property (weak, nonatomic) IBOutlet AVImageView *image5combination;
+@property (weak, nonatomic) IBOutlet UIButton *frame1combination;
+@property (weak, nonatomic) IBOutlet UIButton *frame2combination;
+@property (weak, nonatomic) IBOutlet UIButton *frame3combination;
+@property (weak, nonatomic) IBOutlet UIButton *frame4combination;
 
 @property (retain, nonatomic) IBOutlet UIButton *photoView;
 @property (retain, nonatomic) UIPopoverController *pop;
