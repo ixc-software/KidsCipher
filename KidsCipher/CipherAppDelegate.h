@@ -42,11 +42,15 @@
 @property (retain) NSNumber *downloadedPages;
 @property (nonatomic, retain) NSData *deviceToken;
 @property (retain) NSMutableString *messageFull;
+@property (retain, nonatomic) NSTimer *gameTimer;
+@property (readwrite) BOOL isTraining;
+@property (readwrite) NSUInteger gameTimerSeconds;
 
 
 -(Row *)getActiveRow;
 -(Row *)getRowBeforeActiveRow;
 
 - (void)saveContext;
+-(void) setRandomCombinationForCurrentGame;
 
 @end

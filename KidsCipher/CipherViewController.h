@@ -44,7 +44,9 @@
 @property (retain, nonatomic) IBOutlet AVImageView *row1image4;
 @property (retain, nonatomic) IBOutlet AVImageView *row1image5;
 @property (weak, nonatomic) IBOutlet UILabel *row1MatchedColorsAndPositions;
+@property (weak, nonatomic) IBOutlet UILabel *row1MatchedColorsAndPositionsTitle;
 @property (weak, nonatomic) IBOutlet UILabel *row1MatchedColors;
+@property (weak, nonatomic) IBOutlet UILabel *row1MatchedColorsTitle;
 
 @property (weak, nonatomic) IBOutlet UIView *row2view;
 @property (weak, nonatomic) IBOutlet UIButton *row2frame1;
@@ -57,8 +59,29 @@
 @property (weak, nonatomic) IBOutlet AVImageView *row2image4;
 @property (weak, nonatomic) IBOutlet AVImageView *row2image5;
 @property (weak, nonatomic) IBOutlet UILabel *row2MatchedColorsAndPositions;
+@property (weak, nonatomic) IBOutlet UILabel *row2MatchedColorsAndPositionsTitle;
 @property (weak, nonatomic) IBOutlet UILabel *row2MatchedColors;
+@property (weak, nonatomic) IBOutlet UILabel *row2MatchedColorsTitle;
 
+//@property (retain, nonatomic) NSTimer *gameTimer;
+//@property (retain) NSDate *gameStartTime;
+//@property (readwrite) NSUInteger gameTimerSeconds;
+
+@property (weak, nonatomic) IBOutlet UILabel *playerName;
+@property (weak, nonatomic) IBOutlet UILabel *attemptsTitle;
+@property (weak, nonatomic) IBOutlet UILabel *attemptsNumber;
+@property (weak, nonatomic) IBOutlet UILabel *gameTimeMainTitle;
+@property (weak, nonatomic) IBOutlet UILabel *gameTimeMinutes;
+@property (weak, nonatomic) IBOutlet UILabel *gameTimeMinutesTitle;
+@property (weak, nonatomic) IBOutlet UILabel *gameTimeSeconds;
+@property (weak, nonatomic) IBOutlet UILabel *gameTimeSecondsTitle;
+
+@property (weak, nonatomic) IBOutlet UILabel *beginGameButtonTitle;
+@property (weak, nonatomic) IBOutlet UILabel *beginTrainingButtonTitle;
+@property (weak, nonatomic) IBOutlet UILabel *combinationTitle;
 -(void)startCompletingCurrentRowAndOpenNext;
+@property (weak, nonatomic) IBOutlet UIImageView *mainPageBackground;
+@property (weak, nonatomic) IBOutlet UIImageView *mainPageScrollBackground;
+@property (weak, nonatomic) IBOutlet UIImageView *safeImage;
 
 @end

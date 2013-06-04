@@ -15,5 +15,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *level;
 @property (weak, nonatomic) IBOutlet UILabel *attemps;
 @property (weak, nonatomic) IBOutlet UILabel *date;
+@property (weak, nonatomic) IBOutlet UIImageView *levelStarFirst;
+@property (weak, nonatomic) IBOutlet UIImageView *levelStarSecond;
+@property (weak, nonatomic) IBOutlet UIImageView *levelStarThird;
 
 @end

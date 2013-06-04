@@ -24,6 +24,7 @@
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     Row *activeRowToGetAllRows = [mainDelegate getActiveRow];
     NSOrderedSet *allRows = activeRowToGetAllRows.game.rows;
+    //__block NSUInteger filledLines = 0;
     [allRows enumerateObjectsUsingBlock:^(Row *activeRow, NSUInteger idx, BOOL *stop) {
         AVImageView *image1InsideRow = nil;
         AVImageView *image2InsideRow = nil;
@@ -35,6 +36,10 @@
         CGRect frame2InsideRow;
         CGRect frame3InsideRow;
         CGRect frame4InsideRow;
+        
+        UILabel *matchedColorsInsideRow;
+        UILabel *matchedColorsAndPositionsInsideRow;
+        
         switch (idx) {
             case 0:
                 image1InsideRow = self.row1image1;
@@ -47,6 +52,8 @@
                 frame3InsideRow = self.row1frame3.frame;
                 frame4InsideRow = self.row1frame4.frame;
                 hidingRowView = self.row1HidingView;
+                matchedColorsInsideRow = self.row1MatchedColors;
+                matchedColorsAndPositionsInsideRow = self.row1MatchedColorsAndPositions;
                 break;
             case 1:
                 image1InsideRow = self.row2image1;
@@ -59,6 +66,8 @@
                 frame3InsideRow = self.row2frame3.frame;
                 frame4InsideRow = self.row2frame4.frame;
                 hidingRowView = self.row2HidingView;
+                matchedColorsInsideRow = self.row2MatchedColors;
+                matchedColorsAndPositionsInsideRow = self.row2MatchedColorsAndPositions;
                 break;
                 
             default:
@@ -74,7 +83,11 @@
             image5InsideRow.userInteractionEnabled = NO;
             hidingRowView.hidden = NO;
             hidingRowView.alpha = 0.5;
-            
+            NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+            formatter.locale = [NSLocale currentLocale];
+            matchedColorsInsideRow.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColor]];
+            matchedColorsAndPositionsInsideRow.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColorAndPosition]];
+            //filledLines++;
             //NSLog(@"activeRow.isFilled->YES, setting hidingRowView.hidden=NO hidingRowView->%@",hidingRowView);
             
         } else {
@@ -87,33 +100,54 @@
                 hidingRowView.hidden = YES;
                 hidingRowView.alpha = 0.0;
                 //NSLog(@"activeRow.isFilled->NO, setting hidingRowView.hidden=NO hidingRowView->%@",hidingRowView);
-            } //else { hidingRowView.hidden = NO; hidingRowView.alpha = 0.5; }
+            } else { hidingRowView.hidden = NO; hidingRowView.alpha = 1.0; }
         }
-        
+        image1InsideRow.hidden = YES;
+        image2InsideRow.hidden = YES;
+        image3InsideRow.hidden = YES;
+        image4InsideRow.hidden = YES;
+        image5InsideRow.hidden = YES;
+       
         if (activeRow.frame1FilledNumber.integerValue > 0) {
+ 
             switch (activeRow.frame1FilledNumber.integerValue) {
                 case 1:
-                    image1InsideRow.frame = frame1InsideRow;
+                    image1InsideRow.frame = CGRectMake(frame1InsideRow.origin.x + (frame1InsideRow.size.width - image1InsideRow.frame.size.width) / 2,
+                                                       frame1InsideRow.origin.y + (frame1InsideRow.size.height - image1InsideRow.frame.size.height) / 2,
+                                                       image1InsideRow.frame.size.width,
+                                                       image1InsideRow.frame.size.height);//frame1InsideRow;
                     image1InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image1OutsideTableView.hidden = YES;
                     break;
                 case 2:
-                    image2InsideRow.frame = frame1InsideRow;
+                    image2InsideRow.frame = CGRectMake(frame1InsideRow.origin.x + (frame1InsideRow.size.width - image2InsideRow.frame.size.width) / 2,
+                                                       frame1InsideRow.origin.y + (frame1InsideRow.size.height - image2InsideRow.frame.size.height) / 2,
+                                                       image2InsideRow.frame.size.width,
+                                                       image2InsideRow.frame.size.height);//frame1InsideRow;
                     image2InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image2OutsideTableView.hidden = YES;
                     break;
                 case 3:
-                    image3InsideRow.frame = frame1InsideRow;
+                    image3InsideRow.frame = CGRectMake(frame1InsideRow.origin.x + (frame1InsideRow.size.width - image3InsideRow.frame.size.width) / 2,
+                                                       frame1InsideRow.origin.y + (frame1InsideRow.size.height - image3InsideRow.frame.size.height) / 2,
+                                                       image3InsideRow.frame.size.width,
+                                                       image3InsideRow.frame.size.height);//frame1InsideRow;
                     image3InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image3OutsideTableView.hidden = YES;
                     break;
                 case 4:
-                    image4InsideRow.frame = frame1InsideRow;
+                    image4InsideRow.frame = CGRectMake(frame1InsideRow.origin.x + (frame1InsideRow.size.width - image4InsideRow.frame.size.width) / 2,
+                                                       frame1InsideRow.origin.y + (frame1InsideRow.size.height - image4InsideRow.frame.size.height) / 2,
+                                                       image4InsideRow.frame.size.width,
+                                                       image4InsideRow.frame.size.height);//frame1InsideRow;
                     image4InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image4OutsideTableView.hidden = YES;
                     break;
                 case 5:
-                    image5InsideRow.frame = frame1InsideRow;
+                    image5InsideRow.frame = CGRectMake(frame1InsideRow.origin.x + (frame1InsideRow.size.width - image5InsideRow.frame.size.width) / 2,
+                                                       frame1InsideRow.origin.y + (frame1InsideRow.size.height - image5InsideRow.frame.size.height) / 2,
+                                                       image5InsideRow.frame.size.width,
+                                                       image5InsideRow.frame.size.height);//frame1InsideRow;
                     image5InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image5OutsideTableView.hidden = YES;
                     break;
@@ -126,27 +160,42 @@
         if (activeRow.frame2FilledNumber.integerValue > 0) {
             switch (activeRow.frame2FilledNumber.integerValue) {
                 case 1:
-                    image1InsideRow.frame = frame2InsideRow;
+                    image1InsideRow.frame = CGRectMake(frame2InsideRow.origin.x + (frame2InsideRow.size.width - image1InsideRow.frame.size.width) / 2,
+                                                       frame2InsideRow.origin.y + (frame2InsideRow.size.height - image1InsideRow.frame.size.height) / 2,
+                                                       image1InsideRow.frame.size.width,
+                                                       image1InsideRow.frame.size.height);//frame2InsideRow;
                     image1InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image1OutsideTableView.hidden = YES;
                     break;
                 case 2:
-                    image2InsideRow.frame = frame2InsideRow;
+                    image2InsideRow.frame = CGRectMake(frame2InsideRow.origin.x + (frame2InsideRow.size.width - image2InsideRow.frame.size.width) / 2,
+                                                       frame2InsideRow.origin.y + (frame2InsideRow.size.height - image2InsideRow.frame.size.height) / 2,
+                                                       image2InsideRow.frame.size.width,
+                                                       image2InsideRow.frame.size.height);//frame2InsideRow;
                     image2InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image2OutsideTableView.hidden = YES;
                     break;
                 case 3:
-                    image3InsideRow.frame = frame2InsideRow;
+                    image3InsideRow.frame = CGRectMake(frame2InsideRow.origin.x + (frame2InsideRow.size.width - image3InsideRow.frame.size.width) / 2,
+                                                       frame2InsideRow.origin.y + (frame2InsideRow.size.height - image3InsideRow.frame.size.height) / 2,
+                                                       image3InsideRow.frame.size.width,
+                                                       image3InsideRow.frame.size.height);//frame2InsideRow;
                     image3InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image3OutsideTableView.hidden = YES;
                     break;
                 case 4:
-                    image4InsideRow.frame = frame2InsideRow;
+                    image4InsideRow.frame = CGRectMake(frame2InsideRow.origin.x + (frame2InsideRow.size.width - image4InsideRow.frame.size.width) / 2,
+                                                       frame2InsideRow.origin.y + (frame2InsideRow.size.height - image4InsideRow.frame.size.height) / 2,
+                                                       image4InsideRow.frame.size.width,
+                                                       image4InsideRow.frame.size.height);//frame2InsideRow;
                     image4InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image4OutsideTableView.hidden = YES;
                     break;
                 case 5:
-                    image5InsideRow.frame = frame2InsideRow;
+                    image5InsideRow.frame = CGRectMake(frame2InsideRow.origin.x + (frame2InsideRow.size.width - image5InsideRow.frame.size.width) / 2,
+                                                       frame2InsideRow.origin.y + (frame2InsideRow.size.height - image5InsideRow.frame.size.height) / 2,
+                                                       image5InsideRow.frame.size.width,
+                                                       image5InsideRow.frame.size.height);//frame2InsideRow;
                     image5InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image5OutsideTableView.hidden = YES;
                     break;
@@ -158,27 +207,42 @@
         if (activeRow.frame3FilledNumber.integerValue > 0) {
             switch (activeRow.frame3FilledNumber.integerValue) {
                 case 1:
-                    image1InsideRow.frame = frame3InsideRow;
+                    image1InsideRow.frame = CGRectMake(frame3InsideRow.origin.x + (frame3InsideRow.size.width - image1InsideRow.frame.size.width) / 2,
+                                                       frame3InsideRow.origin.y + (frame3InsideRow.size.height - image1InsideRow.frame.size.height) / 2,
+                                                       image1InsideRow.frame.size.width,
+                                                       image1InsideRow.frame.size.height);//frame3InsideRow;
                     image1InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image1OutsideTableView.hidden = YES;
                     break;
                 case 2:
-                    image2InsideRow.frame = frame3InsideRow;
+                    image2InsideRow.frame = CGRectMake(frame3InsideRow.origin.x + (frame3InsideRow.size.width - image2InsideRow.frame.size.width) / 2,
+                                                       frame3InsideRow.origin.y + (frame3InsideRow.size.height - image2InsideRow.frame.size.height) / 2,
+                                                       image2InsideRow.frame.size.width,
+                                                       image2InsideRow.frame.size.height);//frame3InsideRow;
                     image2InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image2OutsideTableView.hidden = YES;
                     break;
                 case 3:
-                    image3InsideRow.frame = frame3InsideRow;
+                    image3InsideRow.frame = CGRectMake(frame3InsideRow.origin.x + (frame3InsideRow.size.width - image3InsideRow.frame.size.width) / 2,
+                                                       frame3InsideRow.origin.y + (frame3InsideRow.size.height - image3InsideRow.frame.size.height) / 2,
+                                                       image3InsideRow.frame.size.width,
+                                                       image3InsideRow.frame.size.height);//frame3InsideRow;
                     image3InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image3OutsideTableView.hidden = YES;
                     break;
                 case 4:
-                    image4InsideRow.frame = frame3InsideRow;
+                    image4InsideRow.frame = CGRectMake(frame3InsideRow.origin.x + (frame3InsideRow.size.width - image4InsideRow.frame.size.width) / 2,
+                                                       frame3InsideRow.origin.y + (frame3InsideRow.size.height - image4InsideRow.frame.size.height) / 2,
+                                                       image4InsideRow.frame.size.width,
+                                                       image4InsideRow.frame.size.height);//frame3InsideRow;
                     image4InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image4OutsideTableView.hidden = YES;
                     break;
                 case 5:
-                    image5InsideRow.frame = frame3InsideRow;
+                    image5InsideRow.frame = CGRectMake(frame3InsideRow.origin.x + (frame3InsideRow.size.width - image5InsideRow.frame.size.width) / 2,
+                                                       frame3InsideRow.origin.y + (frame3InsideRow.size.height - image5InsideRow.frame.size.height) / 2,
+                                                       image4InsideRow.frame.size.width,
+                                                       image4InsideRow.frame.size.height);//frame3InsideRow;
                     image5InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image5OutsideTableView.hidden = YES;
                     break;
@@ -191,27 +255,42 @@
         if (activeRow.frame4FilledNumber.integerValue > 0) {
             switch (activeRow.frame4FilledNumber.integerValue) {
                 case 1:
-                    image1InsideRow.frame = frame4InsideRow;
+                    image1InsideRow.frame = CGRectMake(frame4InsideRow.origin.x + (frame4InsideRow.size.width - image1InsideRow.frame.size.width) / 2,
+                                                       frame4InsideRow.origin.y + (frame4InsideRow.size.height - image1InsideRow.frame.size.height) / 2,
+                                                       image1InsideRow.frame.size.width,
+                                                       image1InsideRow.frame.size.height);//frame4InsideRow;
                     image1InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image1OutsideTableView.hidden = YES;
                     break;
                 case 2:
-                    image2InsideRow.frame = frame4InsideRow;
+                    image2InsideRow.frame = CGRectMake(frame4InsideRow.origin.x + (frame4InsideRow.size.width - image2InsideRow.frame.size.width) / 2,
+                                                       frame4InsideRow.origin.y + (frame4InsideRow.size.height - image2InsideRow.frame.size.height) / 2,
+                                                       image2InsideRow.frame.size.width,
+                                                       image2InsideRow.frame.size.height);//frame4InsideRow;
                     image2InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image2OutsideTableView.hidden = YES;
                     break;
                 case 3:
-                    image3InsideRow.frame = frame4InsideRow;
+                    image3InsideRow.frame = CGRectMake(frame4InsideRow.origin.x + (frame4InsideRow.size.width - image3InsideRow.frame.size.width) / 2,
+                                                       frame4InsideRow.origin.y + (frame4InsideRow.size.height - image3InsideRow.frame.size.height) / 2,
+                                                       image3InsideRow.frame.size.width,
+                                                       image3InsideRow.frame.size.height);//frame4InsideRow;
                     image3InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image3OutsideTableView.hidden = YES;
                     break;
                 case 4:
-                    image4InsideRow.frame = frame4InsideRow;
+                    image4InsideRow.frame = CGRectMake(frame4InsideRow.origin.x + (frame4InsideRow.size.width - image4InsideRow.frame.size.width) / 2,
+                                                       frame4InsideRow.origin.y + (frame4InsideRow.size.height - image4InsideRow.frame.size.height) / 2,
+                                                       image4InsideRow.frame.size.width,
+                                                       image4InsideRow.frame.size.height);//frame4InsideRow;
                     image4InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image4OutsideTableView.hidden = YES;
                     break;
                 case 5:
-                    image5InsideRow.frame = frame4InsideRow;
+                    image5InsideRow.frame = CGRectMake(frame4InsideRow.origin.x + (frame4InsideRow.size.width - image5InsideRow.frame.size.width) / 2,
+                                                       frame4InsideRow.origin.y + (frame4InsideRow.size.height - image5InsideRow.frame.size.height) / 2,
+                                                       image5InsideRow.frame.size.width,
+                                                       image5InsideRow.frame.size.height);//frame4InsideRow;
                     image5InsideRow.hidden = NO;
                     if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue) self.image5OutsideTableView.hidden = YES;
                     break;
@@ -229,23 +308,38 @@
     NSLog(@"activeRowToGetAllRows.game.combination4color->%@",activeRowToGetAllRows.game.combination4color);
     switch (activeRowToGetAllRows.game.combination1color.unsignedIntegerValue) {
         case 1:
-            self.image1combination.frame = self.frame1combination.frame;
+            self.image1combination.frame = CGRectMake(self.frame1combination.frame.origin.x + (- self.image1combination.frame.size.width + self.frame1combination.frame.size.width) /2,
+                                                      self.frame1combination.frame.origin.y + (- self.image1combination.frame.size.height + self.frame1combination.frame.size.height) /2,
+                                                      self.image1combination.frame.size.width,
+                                                      self.image1combination.frame.size.height);//
             self.image1combination.hidden = NO;
             break;
         case 2:
-            self.image2combination.frame = self.frame1combination.frame;
+            self.image2combination.frame = CGRectMake(self.frame1combination.frame.origin.x + (- self.image2combination.frame.size.width + self.frame1combination.frame.size.width) /2,
+                                                      self.frame1combination.frame.origin.y + (- self.image2combination.frame.size.height + self.frame1combination.frame.size.height) /2,
+                                                      self.image2combination.frame.size.width,
+                                                      self.image2combination.frame.size.height);//self.frame1combination.frame;
             self.image2combination.hidden = NO;
             break;
         case 3:
-            self.image3combination.frame = self.frame1combination.frame;
+            self.image3combination.frame = CGRectMake(self.frame1combination.frame.origin.x + (- self.image3combination.frame.size.width + self.frame1combination.frame.size.width) /2,
+                                                      self.frame1combination.frame.origin.y + (- self.image3combination.frame.size.height + self.frame1combination.frame.size.height) /2,
+                                                      self.image3combination.frame.size.width,
+                                                      self.image3combination.frame.size.height);//self.frame1combination.frame;
             self.image3combination.hidden = NO;
             break;
         case 4:
-            self.image4combination.frame = self.frame1combination.frame;
+            self.image4combination.frame = CGRectMake(self.frame1combination.frame.origin.x + (- self.image4combination.frame.size.width + self.frame1combination.frame.size.width) /2,
+                                                      self.frame1combination.frame.origin.y + (- self.image4combination.frame.size.height + self.frame1combination.frame.size.height) /2,
+                                                      self.image4combination.frame.size.width,
+                                                      self.image4combination.frame.size.height);//self.frame1combination.frame;
             self.image4combination.hidden = NO;
             break;
         case 5:
-            self.image5combination.frame = self.frame1combination.frame;
+            self.image5combination.frame = CGRectMake(self.frame1combination.frame.origin.x + (- self.image5combination.frame.size.width + self.frame1combination.frame.size.width) /2,
+                                                      self.frame1combination.frame.origin.y + (- self.image5combination.frame.size.height + self.frame1combination.frame.size.height) /2,
+                                                      self.image5combination.frame.size.width,
+                                                      self.image5combination.frame.size.height);//self.frame1combination.frame;
             self.image5combination.hidden = NO;
             break;
         default:
@@ -253,23 +347,38 @@
     }
     switch (activeRowToGetAllRows.game.combination2color.unsignedIntegerValue) {
         case 1:
-            self.image1combination.frame = self.frame2combination.frame;
+            self.image1combination.frame = CGRectMake(self.frame2combination.frame.origin.x + (- self.image1combination.frame.size.width + self.frame2combination.frame.size.width) /2,
+                                                      self.frame2combination.frame.origin.y + (- self.image1combination.frame.size.height + self.frame2combination.frame.size.height) /2,
+                                                      self.image1combination.frame.size.width,
+                                                      self.image1combination.frame.size.height);//self.frame2combination.frame;
             self.image1combination.hidden = NO;
             break;
         case 2:
-            self.image2combination.frame = self.frame2combination.frame;
+            self.image2combination.frame = CGRectMake(self.frame2combination.frame.origin.x + (- self.image2combination.frame.size.width + self.frame2combination.frame.size.width) /2,
+                                                      self.frame2combination.frame.origin.y + (- self.image2combination.frame.size.height + self.frame2combination.frame.size.height) /2,
+                                                      self.image2combination.frame.size.width,
+                                                      self.image2combination.frame.size.height);//self.frame2combination.frame;
             self.image2combination.hidden = NO;
             break;
         case 3:
-            self.image3combination.frame = self.frame2combination.frame;
+            self.image3combination.frame = CGRectMake(self.frame2combination.frame.origin.x + (- self.image3combination.frame.size.width + self.frame2combination.frame.size.width) /2,
+                                                      self.frame2combination.frame.origin.y + (- self.image3combination.frame.size.height + self.frame2combination.frame.size.height) /2,
+                                                      self.image3combination.frame.size.width,
+                                                      self.image3combination.frame.size.height);//self.frame2combination.frame;
             self.image3combination.hidden = NO;
             break;
         case 4:
-            self.image4combination.frame = self.frame2combination.frame;
+            self.image4combination.frame = CGRectMake(self.frame2combination.frame.origin.x + (- self.image4combination.frame.size.width + self.frame2combination.frame.size.width) /2,
+                                                      self.frame2combination.frame.origin.y + (- self.image4combination.frame.size.height + self.frame2combination.frame.size.height) /2,
+                                                      self.image4combination.frame.size.width,
+                                                      self.image4combination.frame.size.height);//self.frame2combination.frame;
             self.image4combination.hidden = NO;
             break;
         case 5:
-            self.image5combination.frame = self.frame2combination.frame;
+            self.image5combination.frame = CGRectMake(self.frame2combination.frame.origin.x + (- self.image5combination.frame.size.width + self.frame2combination.frame.size.width) /2,
+                                                      self.frame2combination.frame.origin.y + (- self.image5combination.frame.size.height + self.frame2combination.frame.size.height) /2,
+                                                      self.image5combination.frame.size.width,
+                                                      self.image5combination.frame.size.height);//self.frame2combination.frame;
             self.image5combination.hidden = NO;
             break;
             
@@ -278,23 +387,38 @@
     }
     switch (activeRowToGetAllRows.game.combination3color.unsignedIntegerValue) {
         case 1:
-            self.image1combination.frame = self.frame3combination.frame;
+            self.image1combination.frame = CGRectMake(self.frame3combination.frame.origin.x + (- self.image1combination.frame.size.width + self.frame3combination.frame.size.width) /2,
+                                                      self.frame3combination.frame.origin.y + (- self.image1combination.frame.size.height + self.frame3combination.frame.size.height) /2,
+                                                      self.image1combination.frame.size.width,
+                                                      self.image1combination.frame.size.height);//self.frame3combination.frame;
             self.image1combination.hidden = NO;
             break;
         case 2:
-            self.image2combination.frame = self.frame3combination.frame;
+            self.image2combination.frame = CGRectMake(self.frame3combination.frame.origin.x + (- self.image2combination.frame.size.width + self.frame3combination.frame.size.width) /2,
+                                                      self.frame3combination.frame.origin.y + (- self.image2combination.frame.size.height + self.frame3combination.frame.size.height) /2,
+                                                      self.image2combination.frame.size.width,
+                                                      self.image2combination.frame.size.height);//self.frame3combination.frame;
             self.image2combination.hidden = NO;
             break;
         case 3:
-            self.image3combination.frame = self.frame3combination.frame;
+            self.image3combination.frame = CGRectMake(self.frame3combination.frame.origin.x + (- self.image3combination.frame.size.width + self.frame3combination.frame.size.width) /2,
+                                                      self.frame3combination.frame.origin.y + (- self.image3combination.frame.size.height + self.frame3combination.frame.size.height) /2,
+                                                      self.image3combination.frame.size.width,
+                                                      self.image3combination.frame.size.height);//self.frame3combination.frame;
             self.image3combination.hidden = NO;
             break;
         case 4:
-            self.image4combination.frame = self.frame3combination.frame;
+            self.image4combination.frame = CGRectMake(self.frame3combination.frame.origin.x + (- self.image4combination.frame.size.width + self.frame3combination.frame.size.width) /2,
+                                                      self.frame3combination.frame.origin.y + (- self.image4combination.frame.size.height + self.frame3combination.frame.size.height) /2,
+                                                      self.image4combination.frame.size.width,
+                                                      self.image4combination.frame.size.height);//self.frame3combination.frame;
             self.image4combination.hidden = NO;
             break;
         case 5:
-            self.image5combination.frame = self.frame3combination.frame;
+            self.image5combination.frame = CGRectMake(self.frame3combination.frame.origin.x + (- self.image5combination.frame.size.width + self.frame3combination.frame.size.width) /2,
+                                                      self.frame3combination.frame.origin.y + (- self.image5combination.frame.size.height + self.frame3combination.frame.size.height) /2,
+                                                      self.image5combination.frame.size.width,
+                                                      self.image5combination.frame.size.height);//self.frame3combination.frame;
             self.image5combination.hidden = NO;
             break;
             
@@ -303,30 +427,48 @@
     }
     switch (activeRowToGetAllRows.game.combination4color.unsignedIntegerValue) {
         case 1:
-            self.image1combination.frame = self.frame4combination.frame;
+            self.image1combination.frame = CGRectMake(self.frame4combination.frame.origin.x + (- self.image1combination.frame.size.width + self.frame4combination.frame.size.width) /2,
+                                                      self.frame4combination.frame.origin.y + (- self.image1combination.frame.size.height + self.frame4combination.frame.size.height) /2,
+                                                      self.image1combination.frame.size.width,
+                                                      self.image1combination.frame.size.height);//self.frame4combination.frame;
             self.image1combination.hidden = NO;
             break;
         case 2:
-            self.image2combination.frame = self.frame4combination.frame;
+            self.image2combination.frame = CGRectMake(self.frame4combination.frame.origin.x + (- self.image2combination.frame.size.width + self.frame4combination.frame.size.width) /2,
+                                                      self.frame4combination.frame.origin.y + (- self.image2combination.frame.size.height + self.frame4combination.frame.size.height) /2,
+                                                      self.image2combination.frame.size.width,
+                                                      self.image2combination.frame.size.height);//self.frame4combination.frame;
             self.image2combination.hidden = NO;
             break;
         case 3:
-            self.image3combination.frame = self.frame4combination.frame;
+            self.image3combination.frame = CGRectMake(self.frame4combination.frame.origin.x + (- self.image3combination.frame.size.width + self.frame4combination.frame.size.width) /2,
+                                                      self.frame4combination.frame.origin.y + (- self.image3combination.frame.size.height + self.frame4combination.frame.size.height) /2,
+                                                      self.image3combination.frame.size.width,
+                                                      self.image3combination.frame.size.height);//self.frame4combination.frame;
             self.image3combination.hidden = NO;
             break;
         case 4:
-            self.image4combination.frame = self.frame4combination.frame;
+            self.image4combination.frame = CGRectMake(self.frame4combination.frame.origin.x + (- self.image4combination.frame.size.width + self.frame4combination.frame.size.width) /2,
+                                                      self.frame4combination.frame.origin.y + (- self.image4combination.frame.size.height + self.frame4combination.frame.size.height) /2,
+                                                      self.image4combination.frame.size.width,
+                                                      self.image4combination.frame.size.height);//self.frame4combination.frame;
             self.image4combination.hidden = NO;
             break;
         case 5:
-            self.image5combination.frame = self.frame4combination.frame;
+            self.image5combination.frame = CGRectMake(self.frame4combination.frame.origin.x + (- self.image5combination.frame.size.width + self.frame4combination.frame.size.width) /2,
+                                                      self.frame4combination.frame.origin.y + (- self.image5combination.frame.size.height + self.frame4combination.frame.size.height) /2,
+                                                      self.image5combination.frame.size.width,
+                                                      self.image5combination.frame.size.height);//self.frame4combination.frame;
             self.image5combination.hidden = NO;
             break;
             
         default:
             break;
     }
-
+    
+    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    formatter.locale = [NSLocale currentLocale];
+    self.attemptsNumber.text = [formatter stringFromNumber:activeRowToGetAllRows.game.activeRowNumber];
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -338,6 +480,19 @@
     activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(self.image3OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(self.image4OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    if (orientation == UIDeviceOrientationPortrait) {
+        NSLog(@"portrait");
+        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game"];
+    } else {
+        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game_gorizont"];
+        NSLog(@"portrait");
+
+    }
+    [self.gamePlayScrollView scrollRectToVisible:self.row1view.frame animated:YES];
+    
     [mainDelegate saveContext];
     //NSLog(@"didRotateFromInterfaceOrientation activeRow.game->%@",activeRow.game);
 }
@@ -347,7 +502,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     [mainDelegate registerViewController:@"CipherViewController" controller:self];
-    self.gamePlayScrollView.contentSize =  CGSizeMake(320, 1000);
+    self.gamePlayScrollView.contentSize =  CGSizeMake(self.gamePlayScrollView.contentSize.width, 1000);
     //NSLog(@"viewDidLoad");
     Row *activeRow = [mainDelegate getActiveRow];
     //NSLog(@"activeRow->%@",activeRow);
@@ -383,10 +538,16 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self updateAllViews];
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    Row *activeRow = [mainDelegate getActiveRow];
+    if (activeRow.game.isGameStarted.boolValue)  mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
+    NSLog(@"gameTimerSeconds->%lu",(unsigned long)mainDelegate.gameTimerSeconds);
 }
 
 -(void)viewDidDisappear:(BOOL)animated
 {
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [mainDelegate.gameTimer invalidate];
 //    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
 //    mainDelegate.image1OutsideTableViewStartPoint = self.image1OutsideTableView.startPoint;
 //    mainDelegate.image2OutsideTableViewStartPoint = self.image2OutsideTableView.startPoint;
@@ -404,6 +565,28 @@
 
 
 #pragma mark own actions
+-(void)updateGameTime:(id)sender
+{
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    mainDelegate.gameTimerSeconds++;
+    if (!mainDelegate.isTraining) {
+        NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:mainDelegate.gameTimerSeconds];
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.locale = [NSLocale currentLocale];
+        [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
+        [formatter setDateFormat:@"mm:ss"];
+        NSString *dateString = [formatter stringFromDate:date];
+        NSArray *minutesAndSeconds = [dateString componentsSeparatedByString:@":"];
+        NSString *minutes = [minutesAndSeconds objectAtIndex:0];
+        NSString *seconds = [minutesAndSeconds objectAtIndex:1];
+        self.gameTimeMinutes.text = minutes;
+        self.gameTimeSeconds.text = seconds;
+        NSLog(@"%@", [formatter stringFromDate:date]);
+    }
+    //self.row1MatchedColors.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColor]];
+
+}
+
 - (IBAction)changePhoto:(id)sender {
     // Place image picker on the screen
     //[self presentViewController:imagePickerController animated:YES completion:nil];
@@ -422,21 +605,68 @@
     [self.pop presentPopoverFromRect:self.photoView.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
 }
 - (IBAction)startGame:(id)sender {
+    self.frame1combination.imageView.image = [UIImage imageNamed:@"button_lock"];
+    self.frame2combination.imageView.image = [UIImage imageNamed:@"button_lock"];
+    self.frame3combination.imageView.image = [UIImage imageNamed:@"button_lock"];
+    self.frame4combination.imageView.image = [UIImage imageNamed:@"button_lock"];
+
     self.row1HidingView.hidden = YES;
     self.row1HidingView.userInteractionEnabled = NO;
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     Row *activeRowToGetAllRows = [mainDelegate getActiveRow];
     activeRowToGetAllRows.game.isGameStarted = [NSNumber numberWithBool:YES];
     [mainDelegate saveContext];
+    
+    if (mainDelegate.gameTimer != nil) {
+        [mainDelegate.gameTimer invalidate];
+        self.beginGameButtonTitle.text = @"Начать игру";
+        [mainDelegate setRandomCombinationForCurrentGame];
+        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+        formatter.locale = [NSLocale currentLocale];
+        formatter.minimumIntegerDigits = 2;
+        self.gameTimeMinutes.text = [formatter stringFromNumber:[NSNumber numberWithInt:0]];
+        self.gameTimeSeconds.text = [formatter stringFromNumber:[NSNumber numberWithInt:0]];
+        mainDelegate.gameTimer = nil;
+        mainDelegate.gameTimerSeconds = 0;
+        [self updateAllViews];
+    } else {
+        self.beginGameButtonTitle.text = @"Остановить игру";
+        mainDelegate.gameTimer = nil;
+        mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
+    }
+    mainDelegate.isTraining = NO;
+
+    self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
+
     [self updateAllViews];
 }
 - (IBAction)startTraining:(id)sender {
+    self.frame1combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
+    self.frame2combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
+    self.frame3combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
+    self.frame4combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
+    self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe_ajar"];
     self.row1HidingView.hidden = YES;
     self.row1HidingView.userInteractionEnabled = NO;
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     Row *activeRowToGetAllRows = [mainDelegate getActiveRow];
     activeRowToGetAllRows.game.isGameStarted = [NSNumber numberWithBool:YES];
     [mainDelegate saveContext];
+    if (mainDelegate.gameTimer != nil) {
+        [mainDelegate.gameTimer invalidate];
+        self.beginTrainingButtonTitle.text = @"Тренировка";
+        [mainDelegate setRandomCombinationForCurrentGame];
+        [self updateAllViews];
+        mainDelegate.gameTimer = nil;
+        mainDelegate.gameTimerSeconds = 0;
+    } else {
+        self.beginTrainingButtonTitle.text = @"Остановить тренировку";
+        mainDelegate.gameTimer = nil;
+        mainDelegate.isTraining = YES;
+        mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
+    }
+    
+
     [self updateAllViews];
 }
 
@@ -479,22 +709,24 @@
                  frame1FilledNumber.integerValue == combination3color.integerValue ||
                  frame1FilledNumber.integerValue == combination4color.integerValue ) findedTrueColors++;
         if (frame2FilledNumber.integerValue == combination2color.integerValue) findedTruePositionsAndColors++;
-        else if (frame2FilledNumber.integerValue == combination2color.integerValue ||
+        else if (frame2FilledNumber.integerValue == combination1color.integerValue ||
                  frame2FilledNumber.integerValue == combination3color.integerValue ||
                  frame2FilledNumber.integerValue == combination4color.integerValue ) findedTrueColors++;
         if (frame3FilledNumber.integerValue == combination3color.integerValue) findedTruePositionsAndColors++;
-        else if (frame3FilledNumber.integerValue == combination2color.integerValue ||
-                 frame3FilledNumber.integerValue == combination3color.integerValue ||
+        else if (frame3FilledNumber.integerValue == combination1color.integerValue ||
+                 frame3FilledNumber.integerValue == combination2color.integerValue ||
                  frame3FilledNumber.integerValue == combination4color.integerValue ) findedTrueColors++;
         if (frame4FilledNumber.integerValue == combination4color.integerValue) findedTruePositionsAndColors++;
-        else if (frame4FilledNumber.integerValue == combination2color.integerValue ||
-                 frame4FilledNumber.integerValue == combination3color.integerValue ||
-                 frame4FilledNumber.integerValue == combination4color.integerValue ) findedTrueColors++;
+        else if (frame4FilledNumber.integerValue == combination1color.integerValue ||
+                 frame4FilledNumber.integerValue == combination2color.integerValue ||
+                 frame4FilledNumber.integerValue == combination3color.integerValue ) findedTrueColors++;
         activeRow.numberOfMatchedColor = [NSNumber numberWithUnsignedInteger:findedTrueColors];
         activeRow.numberOfMatchedColorAndPosition = [NSNumber numberWithUnsignedInteger:findedTruePositionsAndColors];
         dispatch_async(dispatch_get_main_queue(), ^(void) {
-            self.row1MatchedColors.text = [NSString stringWithFormat:@"Почти угадал:%@",activeRow.numberOfMatchedColor];
-            self.row1MatchedColorsAndPositions.text = [NSString stringWithFormat:@"Угадал:%@",activeRow.numberOfMatchedColorAndPosition];
+            NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+            formatter.locale = [NSLocale currentLocale];
+            self.row1MatchedColors.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColor]];
+            self.row1MatchedColorsAndPositions.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColorAndPosition]];
         });
         activeRow.isFilled = [NSNumber numberWithBool:YES];
         activeRow.game.activeRowNumber = [NSNumber numberWithInteger:activeRow.game.activeRowNumber.integerValue + 1];
@@ -502,6 +734,8 @@
         activeRow = [mainDelegate getActiveRow];
         if (activeRow.game.activeRowNumber.integerValue > 9) {
             NSLog(@"==================game over");
+            self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe_open"];
+
         }
         //NSLog(@"activeRowNumber->%@ activeRow->%@",activeRow.game.activeRowNumber,activeRow);
         CGPoint frameToReturnMainImage1 = CGPointFromString(activeRow.game.mainDraggedImage1startingPoint);
@@ -532,7 +766,7 @@
                                                            self.image5OutsideTableView.frame.size.height);
             
             switch (activeRow.game.activeRowNumber.unsignedIntegerValue) {
-                case 1:
+                case 1: {
                     // first row finished
                     self.row1image1.userInteractionEnabled = NO;
                     self.row1image2.userInteractionEnabled = NO;
@@ -546,11 +780,15 @@
                     self.image4OutsideTableView.hidden = NO;
                     self.image5OutsideTableView.hidden = NO;
                     self.row1HidingView.hidden = NO;
-                    self.row1HidingView.alpha = 0.5;
+                    self.row1HidingView.alpha = 0.3;
                     self.row2HidingView.hidden = YES;
                     self.row2HidingView.alpha = 0.0;
+                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                    formatter.locale = [NSLocale currentLocale];
+                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:1]];
+                    [self.gamePlayScrollView scrollRectToVisible:self.row2view.frame animated:YES];
                     break;
-                    
+                }
                 default:
                     break;
             }
@@ -847,6 +1085,24 @@ static CGRect swapWidthAndHeight(CGRect rect)
     [self setFrame2combination:nil];
     [self setFrame3combination:nil];
     [self setFrame4combination:nil];
+    [self setPlayerName:nil];
+    [self setAttemptsTitle:nil];
+    [self setAttemptsNumber:nil];
+    [self setGameTimeMainTitle:nil];
+    [self setGameTimeMinutes:nil];
+    [self setGameTimeMinutesTitle:nil];
+    [self setGameTimeSeconds:nil];
+    [self setGameTimeSecondsTitle:nil];
+    [self setBeginGameButtonTitle:nil];
+    [self setBeginTrainingButtonTitle:nil];
+    [self setCombinationTitle:nil];
+    [self setRow1MatchedColorsTitle:nil];
+    [self setRow1MatchedColorsAndPositionsTitle:nil];
+    [self setRow2MatchedColorsAndPositionsTitle:nil];
+    [self setRow2MatchedColorsTitle:nil];
+    [self setMainPageBackground:nil];
+    [self setMainPageScrollBackground:nil];
+    [self setSafeImage:nil];
     [super viewDidUnload];
 }
 @end

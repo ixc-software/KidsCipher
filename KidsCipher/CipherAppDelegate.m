@@ -868,20 +868,10 @@ static unsigned char base64EncodeLookup[65] =
     }
 }
 
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+-(void) setRandomCombinationForCurrentGame;
 {
-    //NSLog(@"didFinishLaunchingWithOptions");
-    NSURL* file = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_phone_music_vmeste_veselo_shagat" ofType:@"mp3"]];
-    NSError *error = nil;
-    audioPlayerMainFoneMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:&error];
-    if (error) NSLog(@"audioPlayerMainFoneMusic error->%@",[error localizedDescription]);
-    audioPlayerMainFoneMusic.delegate = self;
-    [audioPlayerMainFoneMusic prepareToPlay];
-    [audioPlayerMainFoneMusic play];
-
-    self.game = (Game *)[NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
     NSNumber *number1 = [NSNumber numberWithInt:arc4random() % 5+1];
-
+    
     self.game.combination1color = number1;
     NSNumber *number2 = [NSNumber numberWithInt:arc4random() % 5+1];
     if (number2.unsignedIntegerValue != number1.unsignedIntegerValue) {
@@ -904,7 +894,7 @@ static unsigned char base64EncodeLookup[65] =
         }
         self.game.combination3color = number3;
     }
-
+    
     NSNumber *number4 = [NSNumber numberWithInt:arc4random() % 5+1];
     if (number4.unsignedIntegerValue != number1.unsignedIntegerValue  &&
         number4.unsignedIntegerValue != number2.unsignedIntegerValue  &&
@@ -918,15 +908,93 @@ static unsigned char base64EncodeLookup[65] =
         }
         self.game.combination4color = number4;
     }
-
+    
     self.game.activeRowNumber = [NSNumber numberWithInteger:0];
     self.game.isGameStarted = [NSNumber numberWithBool:NO];
-    for (int i= 0; i < 10; i++) {
-        Row *newRow = (Row *)[NSEntityDescription insertNewObjectForEntityForName:@"Row" inManagedObjectContext:self.managedObjectContext];
-        newRow.isFilled = [NSNumber numberWithBool:NO];
-        newRow.game = self.game;
+    NSOrderedSet *allRows = self.game.rows;
+    if (allRows.count == 0) {
+        for (int i= 0; i < 10; i++) {
+            Row *newRow = (Row *)[NSEntityDescription insertNewObjectForEntityForName:@"Row" inManagedObjectContext:self.managedObjectContext];
+            newRow.isFilled = [NSNumber numberWithBool:NO];
+            newRow.game = self.game;
+        }
+    } else {
+        [ allRows enumerateObjectsUsingBlock:^(Row *row, NSUInteger idx, BOOL *stop) {
+            row.isFilled = [NSNumber numberWithBool:NO];
+            row.frame1FilledNumber = nil;
+            row.frame2FilledNumber = nil;
+            row.frame3FilledNumber = nil;
+            row.frame4FilledNumber = nil;
+            row.numberOfMatchedColor = nil;
+            row.numberOfMatchedColorAndPosition = nil;
+
+        }];
     }
     [self saveContext];
+    
+}
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    //NSLog(@"didFinishLaunchingWithOptions");
+    NSURL* file = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_phone_music_vmeste_veselo_shagat" ofType:@"mp3"]];
+    NSError *error = nil;
+    audioPlayerMainFoneMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:&error];
+    if (error) NSLog(@"audioPlayerMainFoneMusic error->%@",[error localizedDescription]);
+    audioPlayerMainFoneMusic.delegate = self;
+    [audioPlayerMainFoneMusic prepareToPlay];
+    [audioPlayerMainFoneMusic play];
+
+    self.game = (Game *)[NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
+    [self saveContext];
+    [self setRandomCombinationForCurrentGame];
+//    NSNumber *number1 = [NSNumber numberWithInt:arc4random() % 5+1];
+//
+//    self.game.combination1color = number1;
+//    NSNumber *number2 = [NSNumber numberWithInt:arc4random() % 5+1];
+//    if (number2.unsignedIntegerValue != number1.unsignedIntegerValue) {
+//        self.game.combination2color = number2;
+//    } else {
+//        while (number2.unsignedIntegerValue == number1.unsignedIntegerValue) {
+//            number2 = [NSNumber numberWithInt:arc4random() % 5+1];
+//        }
+//        self.game.combination2color = number2;
+//    }
+//    
+//    NSNumber *number3 = [NSNumber numberWithInt:arc4random() % 5+1];
+//    if (number3.unsignedIntegerValue != number1.unsignedIntegerValue  &&
+//        number3.unsignedIntegerValue != number2.unsignedIntegerValue) {
+//        self.game.combination3color = number3;
+//    } else {
+//        while (number3.unsignedIntegerValue == number1.unsignedIntegerValue ||
+//               number3.unsignedIntegerValue == number2.unsignedIntegerValue) {
+//            number3 = [NSNumber numberWithInt:arc4random() % 5+1];
+//        }
+//        self.game.combination3color = number3;
+//    }
+//
+//    NSNumber *number4 = [NSNumber numberWithInt:arc4random() % 5+1];
+//    if (number4.unsignedIntegerValue != number1.unsignedIntegerValue  &&
+//        number4.unsignedIntegerValue != number2.unsignedIntegerValue  &&
+//        number4.unsignedIntegerValue != number3.unsignedIntegerValue) {
+//        self.game.combination4color = number4;
+//    } else {
+//        while (number4.unsignedIntegerValue == number1.unsignedIntegerValue  ||
+//               number4.unsignedIntegerValue == number2.unsignedIntegerValue  ||
+//               number4.unsignedIntegerValue == number3.unsignedIntegerValue) {
+//            number4 = [NSNumber numberWithInt:arc4random() % 5+1];
+//        }
+//        self.game.combination4color = number4;
+//    }
+//
+//    self.game.activeRowNumber = [NSNumber numberWithInteger:0];
+//    self.game.isGameStarted = [NSNumber numberWithBool:NO];
+//    for (int i= 0; i < 10; i++) {
+//        Row *newRow = (Row *)[NSEntityDescription insertNewObjectForEntityForName:@"Row" inManagedObjectContext:self.managedObjectContext];
+//        newRow.isFilled = [NSNumber numberWithBool:NO];
+//        newRow.game = self.game;
+//    }
+//    [self saveContext];
     
     _isMessageConfirmed = YES;
     self.downloadedPages = [NSNumber numberWithInt:2];

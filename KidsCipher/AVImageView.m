@@ -80,11 +80,11 @@
         CGRect frameToGetImage2 = CGRectFromString(activeRow.frameToGetImage2);
         CGRect frameToGetImage3 = CGRectFromString(activeRow.frameToGetImage3);
         CGRect frameToGetImage4 = CGRectFromString(activeRow.frameToGetImage4);
-        
-        if (self.frame.origin.x == frameToGetImage1.origin.x && self.frame.origin.y == frameToGetImage1.origin.y) isStartPointMatchedOneOfFrames = 1;
-        if (self.frame.origin.x == frameToGetImage2.origin.x && self.frame.origin.y == frameToGetImage2.origin.y) isStartPointMatchedOneOfFrames = 2;
-        if (self.frame.origin.x == frameToGetImage3.origin.x && self.frame.origin.y == frameToGetImage3.origin.y) isStartPointMatchedOneOfFrames = 3;
-        if (self.frame.origin.x == frameToGetImage4.origin.x && self.frame.origin.y == frameToGetImage4.origin.y) isStartPointMatchedOneOfFrames = 4;
+
+        if (self.frame.origin.x == (frameToGetImage1.origin.x + (- self.frame.size.width + frameToGetImage1.size.width) /2) && self.frame.origin.y == (frameToGetImage1.origin.y + (- self.frame.size.height + frameToGetImage1.size.height) /2)) isStartPointMatchedOneOfFrames = 1;
+        if (self.frame.origin.x == (frameToGetImage2.origin.x + (- self.frame.size.width + frameToGetImage2.size.width) /2) && self.frame.origin.y == (frameToGetImage2.origin.y + (- self.frame.size.height + frameToGetImage2.size.height) /2)) isStartPointMatchedOneOfFrames = 2;
+        if (self.frame.origin.x == (frameToGetImage3.origin.x + (- self.frame.size.width + frameToGetImage3.size.width) /2) && self.frame.origin.y == (frameToGetImage3.origin.y + (- self.frame.size.height + frameToGetImage3.size.height) /2)) isStartPointMatchedOneOfFrames = 3;
+        if (self.frame.origin.x == (frameToGetImage4.origin.x + (- self.frame.size.width + frameToGetImage4.size.width) /2) && self.frame.origin.y == (frameToGetImage4.origin.y + (- self.frame.size.height + frameToGetImage4.size.height) /2)) isStartPointMatchedOneOfFrames = 4;
         
         if (necessaryImage && isStartPointMatchedOneOfFrames > 0) {
             [self.imageCancel play];
@@ -220,19 +220,19 @@
         // if position is busy now, we have to return, not allow to push image to busy cell
         if (result1) {
             if (activeRow.frame1FilledNumber.integerValue > 0) return;
-            pointOfFinalImagePositionInsideCell = CGPointMake(frameToGetImage1.origin.x, frameToGetImage1.origin.y);
+            pointOfFinalImagePositionInsideCell = CGPointMake(frameToGetImage1.origin.x + (- self.frame.size.width + frame1.size.width) /2, frameToGetImage1.origin.y + (- self.frame.size.height + frame1.size.height) /2);
         }
         if (result2) {
             if (activeRow.frame2FilledNumber.integerValue > 0) return;
-            pointOfFinalImagePositionInsideCell = CGPointMake(frameToGetImage2.origin.x, frameToGetImage2.origin.y);
+            pointOfFinalImagePositionInsideCell = CGPointMake(frameToGetImage2.origin.x + (- self.frame.size.width + frame2.size.width) /2, frameToGetImage2.origin.y + (- self.frame.size.height + frame2.size.height) /2);
         }
         if (result3) {
             if (activeRow.frame3FilledNumber.integerValue > 0) return;
-            pointOfFinalImagePositionInsideCell = CGPointMake(frameToGetImage3.origin.x, frameToGetImage3.origin.y);
+            pointOfFinalImagePositionInsideCell = CGPointMake(frameToGetImage3.origin.x + (- self.frame.size.width + frame3.size.width) /2, frameToGetImage3.origin.y + (- self.frame.size.height + frame3.size.height) /2);
         }
         if (result4) {
             if (activeRow.frame4FilledNumber.integerValue > 0) return;
-            pointOfFinalImagePositionInsideCell = CGPointMake(frameToGetImage4.origin.x, frameToGetImage4.origin.y);
+            pointOfFinalImagePositionInsideCell = CGPointMake(frameToGetImage4.origin.x + (- self.frame.size.width + frame4.size.width) /2, frameToGetImage4.origin.y + (- self.frame.size.height + frame4.size.height) /2);
         }
         [self touchesCancelled:touches withEvent:event];
         [self touchesEnded:touches withEvent:event];

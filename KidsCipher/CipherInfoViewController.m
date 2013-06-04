@@ -105,38 +105,62 @@
 - (UITableViewCell *)tableView:(UITableView *)tableViewLocal cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *CellIdentifier = @"CipherInfoViewCell";
     CipherInfoViewCell *cell = [tableViewLocal dequeueReusableCellWithIdentifier:CellIdentifier];
-    if (self.myScoreOrGameScore.selectedSegmentIndex == 0) {
-        GamesHistory *row = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+    GamesHistory *row = [[self fetchedResultsController] objectAtIndexPath:indexPath];
+
+//    if (self.myScoreOrGameScore.selectedSegmentIndex == 0) {
+//        NSData *photoData = row.photo;
+//        if (photoData) {
+//            UIImage *image = [UIImage imageWithData:photoData];
+//            cell.photo.image = image;
+//        } else {
+//            UIImage *image = [UIImage imageNamed:@"button_avatar"];
+//            cell.photo.image = image;
+//        }
+//    } else {
         NSData *photoData = row.photo;
         if (photoData) {
             UIImage *image = [UIImage imageWithData:photoData];
             cell.photo.image = image;
         } else {
-            UIImage *image = [UIImage imageNamed:@"ava.png"];
+            UIImage *image = [UIImage imageNamed:@"button_avatar"];
             cell.photo.image = image;
         }
-        cell.name.text = row.name;
-        cell.date.text = row.date.description;
-        cell.level.text = [NSString stringWithFormat:@"level:%@",row.difficultLevel];
-        cell.time.text = [NSString stringWithFormat:@"time:%@",row.gameTime];
-        cell.attemps.text = [NSString stringWithFormat:@"attemps:%@",row.attempts];
-    } else {
-        GameScore *row = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-        NSData *photoData = row.photo;
-        if (photoData) {
-            UIImage *image = [UIImage imageWithData:photoData];
-            cell.photo.image = image;
-        } else {
-            UIImage *image = [UIImage imageNamed:@"ava.png"];
-            cell.photo.image = image;
-        }
-        cell.name.text = row.name;
-        cell.date.text = row.date.description;
-        cell.level.text = [NSString stringWithFormat:@"level:%@",row.difficultLevel];
-        cell.time.text = [NSString stringWithFormat:@"time:%@",row.gameTime];
-        cell.attemps.text = [NSString stringWithFormat:@"attemps:%@",row.attempts];
- 
+//    }
+    cell.name.text = row.name;
+
+    NSDateFormatter *df = [[NSDateFormatter alloc] init];
+    df.locale = [NSLocale currentLocale];
+    df.dateFormat = @"yyyy-MM-dd";
+    cell.date.text = [df stringFromDate:row.date];
+
+    switch (row.difficultLevel.unsignedIntegerValue) {
+        case 1:
+            cell.level.text = @"низкий";
+            cell.levelStarFirst.image = [UIImage imageNamed:@"button_level_star_yellow"];
+            cell.levelStarSecond.image = [UIImage imageNamed:@"button_level_star_transparent"];
+            cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_transparent"];
+            break;
+        case 2:
+            cell.level.text = @"средний";
+            cell.levelStarFirst.image = [UIImage imageNamed:@"button_level_star_yellow"];
+            cell.levelStarSecond.image = [UIImage imageNamed:@"button_level_star_yellow"];
+            cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_transparent"];
+            break;
+
+        case 3:
+            cell.level.text = @"высокий";
+            cell.levelStarFirst.image = [UIImage imageNamed:@"button_level_star_yellow"];
+            cell.levelStarSecond.image = [UIImage imageNamed:@"button_level_star_yellow"];
+            cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_yellow"];
+            break;
+
+        default:
+            break;
     }
+
+    cell.time.text = [NSString stringWithFormat:@"%@ секунд",row.gameTime];
+    cell.attemps.text = [NSString stringWithFormat:@"%@",row.attempts];
+
     return cell;
 }
 
