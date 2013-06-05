@@ -13,8 +13,6 @@
 #import "GamesHistory.h"
 
 @interface CipherViewController ()
-@property (retain, nonatomic) IBOutlet UIView *row1HidingView;
-@property (retain, nonatomic) IBOutlet UIView *row2HidingView;
 
 @end
 
@@ -69,7 +67,119 @@
                 matchedColorsInsideRow = self.row2MatchedColors;
                 matchedColorsAndPositionsInsideRow = self.row2MatchedColorsAndPositions;
                 break;
-                
+            case 2:
+                image1InsideRow = self.row3image1;
+                image2InsideRow = self.row3image2;
+                image3InsideRow = self.row3image3;
+                image4InsideRow = self.row3image4;
+                image5InsideRow = self.row3image5;
+                frame1InsideRow = self.row3frame1.frame;
+                frame2InsideRow = self.row3frame2.frame;
+                frame3InsideRow = self.row3frame3.frame;
+                frame4InsideRow = self.row3frame4.frame;
+                hidingRowView = self.row3HidingView;
+                matchedColorsInsideRow = self.row3MatchedColors;
+                matchedColorsAndPositionsInsideRow = self.row3MatchedColorsAndPositions;
+                break;
+            case 3:
+                image1InsideRow = self.row4image1;
+                image2InsideRow = self.row4image2;
+                image3InsideRow = self.row4image3;
+                image4InsideRow = self.row4image4;
+                image5InsideRow = self.row4image5;
+                frame1InsideRow = self.row4frame1.frame;
+                frame2InsideRow = self.row4frame2.frame;
+                frame3InsideRow = self.row4frame3.frame;
+                frame4InsideRow = self.row4frame4.frame;
+                hidingRowView = self.row4HidingView;
+                matchedColorsInsideRow = self.row4MatchedColors;
+                matchedColorsAndPositionsInsideRow = self.row4MatchedColorsAndPositions;
+                break;
+            case 4:
+                image1InsideRow = self.row5image1;
+                image2InsideRow = self.row5image2;
+                image3InsideRow = self.row5image3;
+                image4InsideRow = self.row5image4;
+                image5InsideRow = self.row5image5;
+                frame1InsideRow = self.row5frame1.frame;
+                frame2InsideRow = self.row5frame2.frame;
+                frame3InsideRow = self.row5frame3.frame;
+                frame4InsideRow = self.row5frame4.frame;
+                hidingRowView = self.row5HidingView;
+                matchedColorsInsideRow = self.row5MatchedColors;
+                matchedColorsAndPositionsInsideRow = self.row5MatchedColorsAndPositions;
+                break;
+            case 5:
+                image1InsideRow = self.row6image1;
+                image2InsideRow = self.row6image2;
+                image3InsideRow = self.row6image3;
+                image4InsideRow = self.row6image4;
+                image5InsideRow = self.row6image5;
+                frame1InsideRow = self.row6frame1.frame;
+                frame2InsideRow = self.row6frame2.frame;
+                frame3InsideRow = self.row6frame3.frame;
+                frame4InsideRow = self.row6frame4.frame;
+                hidingRowView = self.row6HidingView;
+                matchedColorsInsideRow = self.row6MatchedColors;
+                matchedColorsAndPositionsInsideRow = self.row6MatchedColorsAndPositions;
+                break;
+            case 6:
+                image1InsideRow = self.row7image1;
+                image2InsideRow = self.row7image2;
+                image3InsideRow = self.row7image3;
+                image4InsideRow = self.row7image4;
+                image5InsideRow = self.row7image5;
+                frame1InsideRow = self.row7frame1.frame;
+                frame2InsideRow = self.row7frame2.frame;
+                frame3InsideRow = self.row7frame3.frame;
+                frame4InsideRow = self.row7frame4.frame;
+                hidingRowView = self.row7HidingView;
+                matchedColorsInsideRow = self.row7MatchedColors;
+                matchedColorsAndPositionsInsideRow = self.row7MatchedColorsAndPositions;
+                break;
+            case 7:
+                image1InsideRow = self.row8image1;
+                image2InsideRow = self.row8image2;
+                image3InsideRow = self.row8image3;
+                image4InsideRow = self.row8image4;
+                image5InsideRow = self.row8image5;
+                frame1InsideRow = self.row8frame1.frame;
+                frame2InsideRow = self.row8frame2.frame;
+                frame3InsideRow = self.row8frame3.frame;
+                frame4InsideRow = self.row8frame4.frame;
+                hidingRowView = self.row8HidingView;
+                matchedColorsInsideRow = self.row8MatchedColors;
+                matchedColorsAndPositionsInsideRow = self.row8MatchedColorsAndPositions;
+                break;
+            case 8:
+                image1InsideRow = self.row9image1;
+                image2InsideRow = self.row9image2;
+                image3InsideRow = self.row9image3;
+                image4InsideRow = self.row9image4;
+                image5InsideRow = self.row9image5;
+                frame1InsideRow = self.row9frame1.frame;
+                frame2InsideRow = self.row9frame2.frame;
+                frame3InsideRow = self.row9frame3.frame;
+                frame4InsideRow = self.row9frame4.frame;
+                hidingRowView = self.row9HidingView;
+                matchedColorsInsideRow = self.row9MatchedColors;
+                matchedColorsAndPositionsInsideRow = self.row9MatchedColorsAndPositions;
+                break;
+            case 9:
+                image1InsideRow = self.row10image1;
+                image2InsideRow = self.row10image2;
+                image3InsideRow = self.row10image3;
+                image4InsideRow = self.row10image4;
+                image5InsideRow = self.row10image5;
+                frame1InsideRow = self.row10frame1.frame;
+                frame2InsideRow = self.row10frame2.frame;
+                frame3InsideRow = self.row10frame3.frame;
+                frame4InsideRow = self.row10frame4.frame;
+                hidingRowView = self.row10HidingView;
+                matchedColorsInsideRow = self.row10MatchedColors;
+                matchedColorsAndPositionsInsideRow = self.row10MatchedColorsAndPositions;
+                break;
+   
             default:
                 hidingRowView = nil;
                 break;
@@ -480,16 +590,15 @@
     activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(self.image3OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(self.image4OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
-    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
-    if (orientation == UIDeviceOrientationPortrait) {
-        NSLog(@"portrait");
-        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
-        self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game"];
-    } else {
+   // UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    if (fromInterfaceOrientation == UIDeviceOrientationPortrait) {
+        //NSLog(@"portrait");
         self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
         self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game_gorizont"];
-        NSLog(@"portrait");
-
+    } else {
+        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game"];
+        //NSLog(@"UIDeviceOrientationLandscapeLeft");
     }
     [self.gamePlayScrollView scrollRectToVisible:self.row1view.frame animated:YES];
     
@@ -499,23 +608,17 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     [mainDelegate registerViewController:@"CipherViewController" controller:self];
-    self.gamePlayScrollView.contentSize =  CGSizeMake(self.gamePlayScrollView.contentSize.width, 1000);
-    //NSLog(@"viewDidLoad");
+    self.gamePlayScrollView.contentSize =  CGSizeMake(self.gamePlayScrollView.contentSize.width, 1180);
     Row *activeRow = [mainDelegate getActiveRow];
-    //NSLog(@"activeRow->%@",activeRow);
-    //NSLog(@"game->%@",activeRow.game);
-
     activeRow.game.mainDraggedImage1startingPoint = NSStringFromCGPoint(self.image1OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage2startingPoint = NSStringFromCGPoint(self.image2OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(self.image3OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(self.image4OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
     [mainDelegate saveContext];
-
-    //self.nextRowToFill = [NSIndexPath indexPathForRow:0 inSection:0];
+    self.isViewDidLoadPassed = YES;
     //NSLog(@"viewDidLoad self.image1OutsideTableView.startPointt->%@",NSStringFromCGPoint(self.image1OutsideTableView.frame.origin));
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -533,7 +636,6 @@
     activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(self.image3OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(self.image4OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
-    //NSLog(@"viewDidAppear activeRow.game->%@",activeRow.game);
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -541,7 +643,21 @@
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     Row *activeRow = [mainDelegate getActiveRow];
     if (activeRow.game.isGameStarted.boolValue)  mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
-    NSLog(@"gameTimerSeconds->%lu",(unsigned long)mainDelegate.gameTimerSeconds);
+    //NSLog(@"gameTimerSeconds->%lu",(unsigned long)mainDelegate.gameTimerSeconds);
+    NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
+    self.playerName.text = name;
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIDeviceOrientationPortrait ) {
+        //NSLog(@"UIDeviceOrientationPortrait");
+        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game"];
+    } else {
+        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game_gorizont"];
+        
+        //if (orientation == UIDeviceOrientationUnknown) NSLog(@"UIDeviceOrientationUnknown");
+        //else NSLog(@"UIDeviceOrientationLandscapeLeft");
+    }
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -672,102 +788,180 @@
 
 -(void)startCompletingCurrentRowAndOpenNext;
 {
+    //@synchronized (self) {
+    //if (self.isRowCompletedProcessing && self.isRowCompletedProcessing.boolValue)  { NSLog(@"isRowCompletedProcessing, return");return; }
+    //self.isRowCompletedProcessing = [NSNumber numberWithBool:YES];
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^(void) {
-        sleep(1);
+        //sleep(1);
         CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
-        Row *activeRow = [mainDelegate getActiveRow];
-        Row *rowBeforeActiveRow = [mainDelegate getRowBeforeActiveRow];
-        if (rowBeforeActiveRow && rowBeforeActiveRow.isFilled.boolValue == YES ) { NSLog(@"previous line not filled, return");return; }
-        GamesHistory *newHistory = (GamesHistory *)[NSEntityDescription insertNewObjectForEntityForName:@"GamesHistory" inManagedObjectContext:mainDelegate.managedObjectContext];
-        NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
-        NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"ava.png"]);
-
-        if (pickedData) newHistory.photo = pickedData;
-        else newHistory.photo = imageData;
-        //NSLog(@"pickedData->%@ ",[pickedData description],[imageData description]);
-        newHistory.name = @"Test";
-        newHistory.date = [NSDate date];
-        newHistory.difficultLevel = [NSNumber numberWithInt:1];
-        newHistory.gameTime = [NSNumber numberWithInt:1234];
-        newHistory.attempts = [NSNumber numberWithInt:2];
-        //NSLog(@"newHistory->%@",newHistory);
-        NSUInteger findedTruePositionsAndColors = 0;
-        NSUInteger findedTrueColors = 0;
         
-        NSNumber *frame1FilledNumber = activeRow.frame1FilledNumber;
-        NSNumber *frame2FilledNumber = activeRow.frame2FilledNumber;
-        NSNumber *frame3FilledNumber = activeRow.frame3FilledNumber;
-        NSNumber *frame4FilledNumber = activeRow.frame4FilledNumber;
-        
-        NSNumber *combination1color = activeRow.game.combination1color;
-        NSNumber *combination2color = activeRow.game.combination2color;
-        NSNumber *combination3color = activeRow.game.combination3color;
-        NSNumber *combination4color = activeRow.game.combination4color;
-        
-        if (frame1FilledNumber.integerValue == combination1color.integerValue) findedTruePositionsAndColors++;
-        else if (frame1FilledNumber.integerValue == combination2color.integerValue ||
-                 frame1FilledNumber.integerValue == combination3color.integerValue ||
-                 frame1FilledNumber.integerValue == combination4color.integerValue ) findedTrueColors++;
-        if (frame2FilledNumber.integerValue == combination2color.integerValue) findedTruePositionsAndColors++;
-        else if (frame2FilledNumber.integerValue == combination1color.integerValue ||
-                 frame2FilledNumber.integerValue == combination3color.integerValue ||
-                 frame2FilledNumber.integerValue == combination4color.integerValue ) findedTrueColors++;
-        if (frame3FilledNumber.integerValue == combination3color.integerValue) findedTruePositionsAndColors++;
-        else if (frame3FilledNumber.integerValue == combination1color.integerValue ||
-                 frame3FilledNumber.integerValue == combination2color.integerValue ||
-                 frame3FilledNumber.integerValue == combination4color.integerValue ) findedTrueColors++;
-        if (frame4FilledNumber.integerValue == combination4color.integerValue) findedTruePositionsAndColors++;
-        else if (frame4FilledNumber.integerValue == combination1color.integerValue ||
-                 frame4FilledNumber.integerValue == combination2color.integerValue ||
-                 frame4FilledNumber.integerValue == combination3color.integerValue ) findedTrueColors++;
-        activeRow.numberOfMatchedColor = [NSNumber numberWithUnsignedInteger:findedTrueColors];
-        activeRow.numberOfMatchedColorAndPosition = [NSNumber numberWithUnsignedInteger:findedTruePositionsAndColors];
         dispatch_async(dispatch_get_main_queue(), ^(void) {
+            
+            Row *activeRow = [mainDelegate getActiveRow];
+            Row *rowBeforeActiveRow = [mainDelegate getRowBeforeActiveRow];
+            NSLog(@"==================rowBeforeActiveRow.game.activeRowNumber->%@ rowBeforeActiveRow.isFilled->%@",rowBeforeActiveRow.game.activeRowNumber,rowBeforeActiveRow.isFilled);
+            
+            //if (rowBeforeActiveRow.isFilled.boolValue) { NSLog(@"active line  filled, return");return; }
+            //NSLog(@"newHistory->%@",newHistory);
+            NSUInteger findedTruePositionsAndColors = 0;
+            NSUInteger findedTrueColors = 0;
+            
+            NSNumber *frame1FilledNumber = activeRow.frame1FilledNumber;
+            NSNumber *frame2FilledNumber = activeRow.frame2FilledNumber;
+            NSNumber *frame3FilledNumber = activeRow.frame3FilledNumber;
+            NSNumber *frame4FilledNumber = activeRow.frame4FilledNumber;
+            
+            NSNumber *combination1color = activeRow.game.combination1color;
+            NSNumber *combination2color = activeRow.game.combination2color;
+            NSNumber *combination3color = activeRow.game.combination3color;
+            NSNumber *combination4color = activeRow.game.combination4color;
+            
+            if (frame1FilledNumber.integerValue == combination1color.integerValue) findedTruePositionsAndColors++;
+            else if (frame1FilledNumber.integerValue == combination2color.integerValue ||
+                     frame1FilledNumber.integerValue == combination3color.integerValue ||
+                     frame1FilledNumber.integerValue == combination4color.integerValue ) findedTrueColors++;
+            if (frame2FilledNumber.integerValue == combination2color.integerValue) findedTruePositionsAndColors++;
+            else if (frame2FilledNumber.integerValue == combination1color.integerValue ||
+                     frame2FilledNumber.integerValue == combination3color.integerValue ||
+                     frame2FilledNumber.integerValue == combination4color.integerValue ) findedTrueColors++;
+            if (frame3FilledNumber.integerValue == combination3color.integerValue) findedTruePositionsAndColors++;
+            else if (frame3FilledNumber.integerValue == combination1color.integerValue ||
+                     frame3FilledNumber.integerValue == combination2color.integerValue ||
+                     frame3FilledNumber.integerValue == combination4color.integerValue ) findedTrueColors++;
+            if (frame4FilledNumber.integerValue == combination4color.integerValue) findedTruePositionsAndColors++;
+            else if (frame4FilledNumber.integerValue == combination1color.integerValue ||
+                     frame4FilledNumber.integerValue == combination2color.integerValue ||
+                     frame4FilledNumber.integerValue == combination3color.integerValue ) findedTrueColors++;
+            activeRow.numberOfMatchedColor = [NSNumber numberWithUnsignedInteger:findedTrueColors];
+            activeRow.numberOfMatchedColorAndPosition = [NSNumber numberWithUnsignedInteger:findedTruePositionsAndColors];
+            NSUInteger activeRowNumber = activeRow.game.activeRowNumber.unsignedIntegerValue;
+            UILabel *rowMatchedColors = nil;
+            UILabel *rowMatchedColorsAndPositions = nil;
+            switch (activeRowNumber) {
+                case 0: {
+                    rowMatchedColors = self.row1MatchedColors;
+                    rowMatchedColorsAndPositions = self.row1MatchedColorsAndPositions;
+                    break;
+                }
+                case 1: {
+                    rowMatchedColors = self.row2MatchedColors;
+                    rowMatchedColorsAndPositions = self.row2MatchedColorsAndPositions;
+                    break;
+                }
+                case 2: {
+                    rowMatchedColors = self.row3MatchedColors;
+                    rowMatchedColorsAndPositions = self.row3MatchedColorsAndPositions;
+                    break;
+                }
+                case 3: {
+                    rowMatchedColors = self.row4MatchedColors;
+                    rowMatchedColorsAndPositions = self.row4MatchedColorsAndPositions;
+                    break;
+                }
+                case 4: {
+                    rowMatchedColors = self.row5MatchedColors;
+                    rowMatchedColorsAndPositions = self.row5MatchedColorsAndPositions;
+                    break;
+                }
+                case 5: {
+                    rowMatchedColors = self.row6MatchedColors;
+                    rowMatchedColorsAndPositions = self.row6MatchedColorsAndPositions;
+                    break;
+                }
+                case 6: {
+                    rowMatchedColors = self.row7MatchedColors;
+                    rowMatchedColorsAndPositions = self.row7MatchedColorsAndPositions;
+                    break;
+                }
+                case 7: {
+                    rowMatchedColors = self.row8MatchedColors;
+                    rowMatchedColorsAndPositions = self.row8MatchedColorsAndPositions;
+                    break;
+                }
+                case 8: {
+                    rowMatchedColors = self.row9MatchedColors;
+                    rowMatchedColorsAndPositions = self.row9MatchedColorsAndPositions;
+                    break;
+                }
+                case 9: {
+                    rowMatchedColors = self.row10MatchedColors;
+                    rowMatchedColorsAndPositions = self.row10MatchedColorsAndPositions;
+                    break;
+                }
+            }
             NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
             formatter.locale = [NSLocale currentLocale];
-            self.row1MatchedColors.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColor]];
-            self.row1MatchedColorsAndPositions.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColorAndPosition]];
-        });
-        activeRow.isFilled = [NSNumber numberWithBool:YES];
-        activeRow.game.activeRowNumber = [NSNumber numberWithInteger:activeRow.game.activeRowNumber.integerValue + 1];
-        [mainDelegate saveContext];
-        activeRow = [mainDelegate getActiveRow];
-        if (activeRow.game.activeRowNumber.integerValue > 9) {
-            NSLog(@"==================game over");
-            self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe_open"];
+            rowMatchedColors.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColor]];
+            rowMatchedColorsAndPositions.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColorAndPosition]];
+            //});
+            activeRow.isFilled = [NSNumber numberWithBool:YES];
+            activeRow.game.activeRowNumber = [NSNumber numberWithInteger:activeRow.game.activeRowNumber.integerValue + 1];
+            [mainDelegate saveContext];
+            NSLog(@"==================activeRow.game.activeRowNumber->%@ activeRow.isFilled->%@",activeRow.game.activeRowNumber,activeRow.isFilled);
+            
+            activeRow = [mainDelegate getActiveRow];
+            if (activeRow.game.activeRowNumber.integerValue > 9 || findedTruePositionsAndColors == 4) {
+                NSLog(@"==================game over");
+                self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe_open"];
+                [mainDelegate.gameTimer invalidate];
+                self.beginTrainingButtonTitle.text = @"Тренировка";
+                [mainDelegate setRandomCombinationForCurrentGame];
+                [self updateAllViews];
+                mainDelegate.gameTimer = nil;
+                mainDelegate.gameTimerSeconds = 0;
+                GamesHistory *newHistory = (GamesHistory *)[NSEntityDescription insertNewObjectForEntityForName:@"GamesHistory" inManagedObjectContext:mainDelegate.managedObjectContext];
+                NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
+                NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"button_avatar"]);
+                
+                if (pickedData) newHistory.photo = pickedData;
+                else newHistory.photo = imageData;
+                //NSLog(@"pickedData->%@ ",[pickedData description],[imageData description]);
+                newHistory.name = @"Test";
+                newHistory.date = [NSDate date];
+                newHistory.difficultLevel = [NSNumber numberWithInt:1];
+                newHistory.gameTime = [NSNumber numberWithInt:1234];
+                newHistory.attempts = [NSNumber numberWithInt:2];
 
-        }
-        //NSLog(@"activeRowNumber->%@ activeRow->%@",activeRow.game.activeRowNumber,activeRow);
-        CGPoint frameToReturnMainImage1 = CGPointFromString(activeRow.game.mainDraggedImage1startingPoint);
-        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            }
+            //NSLog(@"activeRowNumber->%@ activeRow->%@",activeRow.game.activeRowNumber,activeRow);
+            CGPoint frameToReturnMainImage1 = CGPointFromString(activeRow.game.mainDraggedImage1startingPoint);
             self.image1OutsideTableView.frame = CGRectMake(frameToReturnMainImage1.x,
                                                            frameToReturnMainImage1.y,
                                                            self.image1OutsideTableView.frame.size.width,
                                                            self.image1OutsideTableView.frame.size.height);
+            self.image1OutsideTableView.alpha = 0.0;
             CGPoint frameToReturnMainImage2 = CGPointFromString(activeRow.game.mainDraggedImage2startingPoint);
             self.image2OutsideTableView.frame = CGRectMake(frameToReturnMainImage2.x,
                                                            frameToReturnMainImage2.y,
                                                            self.image2OutsideTableView.frame.size.width,
                                                            self.image2OutsideTableView.frame.size.height);
+            self.image2OutsideTableView.alpha = 0.0;
+
             CGPoint frameToReturnMainImage3 = CGPointFromString(activeRow.game.mainDraggedImage3startingPoint);
             self.image3OutsideTableView.frame = CGRectMake(frameToReturnMainImage3.x,
                                                            frameToReturnMainImage3.y,
                                                            self.image3OutsideTableView.frame.size.width,
                                                            self.image3OutsideTableView.frame.size.height);
+            self.image3OutsideTableView.alpha = 0.0;
+
             CGPoint frameToReturnMainImage4 = CGPointFromString(activeRow.game.mainDraggedImage4startingPoint);
             self.image4OutsideTableView.frame = CGRectMake(frameToReturnMainImage4.x,
                                                            frameToReturnMainImage4.y,
                                                            self.image4OutsideTableView.frame.size.width,
                                                            self.image4OutsideTableView.frame.size.height);
+            self.image4OutsideTableView.alpha = 0.0;
+
             CGPoint frameToReturnMainImage5 = CGPointFromString(activeRow.game.mainDraggedImage5startingPoint);
             self.image5OutsideTableView.frame = CGRectMake(frameToReturnMainImage5.x,
                                                            frameToReturnMainImage5.y,
                                                            self.image5OutsideTableView.frame.size.width,
                                                            self.image5OutsideTableView.frame.size.height);
+            self.image5OutsideTableView.alpha = 0.0;
+
             
             switch (activeRow.game.activeRowNumber.unsignedIntegerValue) {
                 case 1: {
-                    // first row finished
+                    // 1 row finished
                     self.row1image1.userInteractionEnabled = NO;
                     self.row1image2.userInteractionEnabled = NO;
                     self.row1image3.userInteractionEnabled = NO;
@@ -789,12 +983,215 @@
                     [self.gamePlayScrollView scrollRectToVisible:self.row2view.frame animated:YES];
                     break;
                 }
+                case 2: {
+                    self.row2image1.userInteractionEnabled = NO;
+                    self.row2image2.userInteractionEnabled = NO;
+                    self.row2image3.userInteractionEnabled = NO;
+                    self.row2image4.userInteractionEnabled = NO;
+                    self.row2image5.userInteractionEnabled = NO;
+                    
+                    self.image1OutsideTableView.hidden = NO;
+                    self.image2OutsideTableView.hidden = NO;
+                    self.image3OutsideTableView.hidden = NO;
+                    self.image4OutsideTableView.hidden = NO;
+                    self.image5OutsideTableView.hidden = NO;
+                    self.row2HidingView.hidden = NO;
+                    self.row2HidingView.alpha = 0.3;
+                    self.row3HidingView.hidden = YES;
+                    self.row3HidingView.alpha = 0.0;
+                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                    formatter.locale = [NSLocale currentLocale];
+                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:2]];
+                    [self.gamePlayScrollView scrollRectToVisible:self.row3view.frame animated:YES];
+                    break;
+                }
+                case 3: {
+                    self.row3image1.userInteractionEnabled = NO;
+                    self.row3image2.userInteractionEnabled = NO;
+                    self.row3image3.userInteractionEnabled = NO;
+                    self.row3image4.userInteractionEnabled = NO;
+                    self.row3image5.userInteractionEnabled = NO;
+                    
+                    self.image1OutsideTableView.hidden = NO;
+                    self.image2OutsideTableView.hidden = NO;
+                    self.image3OutsideTableView.hidden = NO;
+                    self.image4OutsideTableView.hidden = NO;
+                    self.image5OutsideTableView.hidden = NO;
+                    self.row3HidingView.hidden = NO;
+                    self.row3HidingView.alpha = 0.3;
+                    self.row4HidingView.hidden = YES;
+                    self.row4HidingView.alpha = 0.0;
+                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                    formatter.locale = [NSLocale currentLocale];
+                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:3]];
+                    [self.gamePlayScrollView scrollRectToVisible:self.row4view.frame animated:YES];
+                    break;
+                }
+                case 4: {
+                    self.row4image1.userInteractionEnabled = NO;
+                    self.row4image2.userInteractionEnabled = NO;
+                    self.row4image3.userInteractionEnabled = NO;
+                    self.row4image4.userInteractionEnabled = NO;
+                    self.row4image5.userInteractionEnabled = NO;
+                    
+                    self.image1OutsideTableView.hidden = NO;
+                    self.image2OutsideTableView.hidden = NO;
+                    self.image3OutsideTableView.hidden = NO;
+                    self.image4OutsideTableView.hidden = NO;
+                    self.image5OutsideTableView.hidden = NO;
+                    self.row4HidingView.hidden = NO;
+                    self.row4HidingView.alpha = 0.3;
+                    self.row5HidingView.hidden = YES;
+                    self.row5HidingView.alpha = 0.0;
+                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                    formatter.locale = [NSLocale currentLocale];
+                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:4]];
+                    [self.gamePlayScrollView scrollRectToVisible:self.row5view.frame animated:YES];
+                    break;
+                }
+                case 5: {
+                    self.row5image1.userInteractionEnabled = NO;
+                    self.row5image2.userInteractionEnabled = NO;
+                    self.row5image3.userInteractionEnabled = NO;
+                    self.row5image4.userInteractionEnabled = NO;
+                    self.row5image5.userInteractionEnabled = NO;
+                    
+                    self.image1OutsideTableView.hidden = NO;
+                    self.image2OutsideTableView.hidden = NO;
+                    self.image3OutsideTableView.hidden = NO;
+                    self.image4OutsideTableView.hidden = NO;
+                    self.image5OutsideTableView.hidden = NO;
+                    self.row5HidingView.hidden = NO;
+                    self.row5HidingView.alpha = 0.3;
+                    self.row6HidingView.hidden = YES;
+                    self.row6HidingView.alpha = 0.0;
+                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                    formatter.locale = [NSLocale currentLocale];
+                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:5]];
+                    [self.gamePlayScrollView scrollRectToVisible:self.row6view.frame animated:YES];
+                    break;
+                }
+                case 6: {
+                    self.row6image1.userInteractionEnabled = NO;
+                    self.row6image2.userInteractionEnabled = NO;
+                    self.row6image3.userInteractionEnabled = NO;
+                    self.row6image4.userInteractionEnabled = NO;
+                    self.row6image5.userInteractionEnabled = NO;
+                    
+                    self.image1OutsideTableView.hidden = NO;
+                    self.image2OutsideTableView.hidden = NO;
+                    self.image3OutsideTableView.hidden = NO;
+                    self.image4OutsideTableView.hidden = NO;
+                    self.image5OutsideTableView.hidden = NO;
+                    self.row6HidingView.hidden = NO;
+                    self.row6HidingView.alpha = 0.3;
+                    self.row7HidingView.hidden = YES;
+                    self.row7HidingView.alpha = 0.0;
+                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                    formatter.locale = [NSLocale currentLocale];
+                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:6]];
+                    [self.gamePlayScrollView scrollRectToVisible:self.row7view.frame animated:YES];
+                    break;
+                }
+                case 7: {
+                    self.row7image1.userInteractionEnabled = NO;
+                    self.row7image2.userInteractionEnabled = NO;
+                    self.row7image3.userInteractionEnabled = NO;
+                    self.row7image4.userInteractionEnabled = NO;
+                    self.row7image5.userInteractionEnabled = NO;
+                    
+                    self.image1OutsideTableView.hidden = NO;
+                    self.image2OutsideTableView.hidden = NO;
+                    self.image3OutsideTableView.hidden = NO;
+                    self.image4OutsideTableView.hidden = NO;
+                    self.image5OutsideTableView.hidden = NO;
+                    self.row7HidingView.hidden = NO;
+                    self.row7HidingView.alpha = 0.3;
+                    self.row8HidingView.hidden = YES;
+                    self.row8HidingView.alpha = 0.0;
+                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                    formatter.locale = [NSLocale currentLocale];
+                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:7]];
+                    [self.gamePlayScrollView scrollRectToVisible:self.row8view.frame animated:YES];
+                    break;
+                }
+                case 8: {
+                    self.row8image1.userInteractionEnabled = NO;
+                    self.row8image2.userInteractionEnabled = NO;
+                    self.row8image3.userInteractionEnabled = NO;
+                    self.row8image4.userInteractionEnabled = NO;
+                    self.row8image5.userInteractionEnabled = NO;
+                    
+                    self.image1OutsideTableView.hidden = NO;
+                    self.image2OutsideTableView.hidden = NO;
+                    self.image3OutsideTableView.hidden = NO;
+                    self.image4OutsideTableView.hidden = NO;
+                    self.image5OutsideTableView.hidden = NO;
+                    self.row8HidingView.hidden = NO;
+                    self.row8HidingView.alpha = 0.3;
+                    self.row9HidingView.hidden = YES;
+                    self.row9HidingView.alpha = 0.0;
+                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                    formatter.locale = [NSLocale currentLocale];
+                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:8]];
+                    [self.gamePlayScrollView scrollRectToVisible:self.row9view.frame animated:YES];
+                    break;
+                }
+                case 9: {
+                    self.row9image1.userInteractionEnabled = NO;
+                    self.row9image2.userInteractionEnabled = NO;
+                    self.row9image3.userInteractionEnabled = NO;
+                    self.row9image4.userInteractionEnabled = NO;
+                    self.row9image5.userInteractionEnabled = NO;
+                    
+                    self.image1OutsideTableView.hidden = NO;
+                    self.image2OutsideTableView.hidden = NO;
+                    self.image3OutsideTableView.hidden = NO;
+                    self.image4OutsideTableView.hidden = NO;
+                    self.image5OutsideTableView.hidden = NO;
+                    self.row9HidingView.hidden = NO;
+                    self.row9HidingView.alpha = 0.3;
+                    self.row10HidingView.hidden = YES;
+                    self.row10HidingView.alpha = 0.0;
+                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                    formatter.locale = [NSLocale currentLocale];
+                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:9]];
+                    [self.gamePlayScrollView scrollRectToVisible:self.row10view.frame animated:YES];
+                    break;
+                }
+                    
+                case 10: {
+                    NSLog(@"GAME OVER");
+                    
+                    break;
+                }
+                    
+                    
                 default:
                     break;
             }
+            
         });
+        
+        sleep(2);
+        dispatch_async(dispatch_get_main_queue(), ^(void) {
+            mainDelegate.isNewRowProcessing = NO;
+            [UIView animateWithDuration:0.5
+                                  delay:0
+                                options:0
+                             animations:^{
+                                 self.image1OutsideTableView.alpha = 1.0;
+                                 self.image2OutsideTableView.alpha = 1.0;
+                                 self.image3OutsideTableView.alpha = 1.0;
+                                 self.image4OutsideTableView.alpha = 1.0;
+                                 self.image5OutsideTableView.alpha = 1.0;
+                                 
+                             } completion:^(BOOL finished) {
+                             }];
+        });
+        //self.isRowCompletedProcessing = [NSNumber numberWithBool:NO];
     });
-    
+    //}
     
 }
 #pragma mark - UIImagePickerController delegate

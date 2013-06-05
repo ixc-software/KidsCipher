@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *levelStarFirst;
 @property (weak, nonatomic) IBOutlet UIImageView *levelStarSecond;
 @property (weak, nonatomic) IBOutlet UIImageView *levelStarThird;
+@property (weak, nonatomic) IBOutlet UIImageView *backgroundCell;
 
 @end

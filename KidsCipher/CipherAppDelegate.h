@@ -46,6 +46,7 @@
 @property (readwrite) BOOL isTraining;
 @property (readwrite) NSUInteger gameTimerSeconds;
 
+@property (readwrite) BOOL isNewRowProcessing;
 
 -(Row *)getActiveRow;
 -(Row *)getRowBeforeActiveRow;

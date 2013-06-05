@@ -1189,6 +1189,119 @@ static unsigned char base64EncodeLookup[65] =
             activeRow.image5insideIdentifier = vc.row2image5.uniqueIdentifier;
             activeRow.frame = NSStringFromCGRect(vc.row2view.frame);
             break;
+        case 2:
+            activeRow.frame = NSStringFromCGRect(vc.row3view.frame);
+            if (!activeRow.frameToGetImage1) activeRow.frameToGetImage1 = NSStringFromCGRect(vc.row3frame1.frame);
+            //NSLog(@"getActiveRow row2frame1 frameToGetImage1->%@",activeRow.frameToGetImage1);
+            if (!activeRow.frameToGetImage2) activeRow.frameToGetImage2 = NSStringFromCGRect(vc.row3frame2.frame);
+            if (!activeRow.frameToGetImage3) activeRow.frameToGetImage3 = NSStringFromCGRect(vc.row3frame3.frame);
+            if (!activeRow.frameToGetImage4) activeRow.frameToGetImage4 = NSStringFromCGRect(vc.row3frame4.frame);
+            activeRow.image1insideIdentifier = vc.row3image1.uniqueIdentifier;
+            activeRow.image2insideIdentifier = vc.row3image2.uniqueIdentifier;
+            activeRow.image3insideIdentifier = vc.row3image3.uniqueIdentifier;
+            activeRow.image4insideIdentifier = vc.row3image4.uniqueIdentifier;
+            activeRow.image5insideIdentifier = vc.row3image5.uniqueIdentifier;
+            activeRow.frame = NSStringFromCGRect(vc.row3view.frame);
+            break;
+        case 3:
+            activeRow.frame = NSStringFromCGRect(vc.row4view.frame);
+            if (!activeRow.frameToGetImage1) activeRow.frameToGetImage1 = NSStringFromCGRect(vc.row4frame1.frame);
+            //NSLog(@"getActiveRow row2frame1 frameToGetImage1->%@",activeRow.frameToGetImage1);
+            if (!activeRow.frameToGetImage2) activeRow.frameToGetImage2 = NSStringFromCGRect(vc.row4frame2.frame);
+            if (!activeRow.frameToGetImage3) activeRow.frameToGetImage3 = NSStringFromCGRect(vc.row4frame3.frame);
+            if (!activeRow.frameToGetImage4) activeRow.frameToGetImage4 = NSStringFromCGRect(vc.row4frame4.frame);
+            activeRow.image1insideIdentifier = vc.row4image1.uniqueIdentifier;
+            activeRow.image2insideIdentifier = vc.row4image2.uniqueIdentifier;
+            activeRow.image3insideIdentifier = vc.row4image3.uniqueIdentifier;
+            activeRow.image4insideIdentifier = vc.row4image4.uniqueIdentifier;
+            activeRow.image5insideIdentifier = vc.row4image5.uniqueIdentifier;
+            activeRow.frame = NSStringFromCGRect(vc.row4view.frame);
+            break;
+        case 4:
+            activeRow.frame = NSStringFromCGRect(vc.row5view.frame);
+            if (!activeRow.frameToGetImage1) activeRow.frameToGetImage1 = NSStringFromCGRect(vc.row5frame1.frame);
+            //NSLog(@"getActiveRow row2frame1 frameToGetImage1->%@",activeRow.frameToGetImage1);
+            if (!activeRow.frameToGetImage2) activeRow.frameToGetImage2 = NSStringFromCGRect(vc.row5frame2.frame);
+            if (!activeRow.frameToGetImage3) activeRow.frameToGetImage3 = NSStringFromCGRect(vc.row5frame3.frame);
+            if (!activeRow.frameToGetImage4) activeRow.frameToGetImage4 = NSStringFromCGRect(vc.row5frame4.frame);
+            activeRow.image1insideIdentifier = vc.row5image1.uniqueIdentifier;
+            activeRow.image2insideIdentifier = vc.row5image2.uniqueIdentifier;
+            activeRow.image3insideIdentifier = vc.row5image3.uniqueIdentifier;
+            activeRow.image4insideIdentifier = vc.row5image4.uniqueIdentifier;
+            activeRow.image5insideIdentifier = vc.row5image5.uniqueIdentifier;
+            activeRow.frame = NSStringFromCGRect(vc.row5view.frame);
+            break;
+        case 5:
+            activeRow.frame = NSStringFromCGRect(vc.row6view.frame);
+            if (!activeRow.frameToGetImage1) activeRow.frameToGetImage1 = NSStringFromCGRect(vc.row6frame1.frame);
+            //NSLog(@"getActiveRow row2frame1 frameToGetImage1->%@",activeRow.frameToGetImage1);
+            if (!activeRow.frameToGetImage2) activeRow.frameToGetImage2 = NSStringFromCGRect(vc.row6frame2.frame);
+            if (!activeRow.frameToGetImage3) activeRow.frameToGetImage3 = NSStringFromCGRect(vc.row6frame3.frame);
+            if (!activeRow.frameToGetImage4) activeRow.frameToGetImage4 = NSStringFromCGRect(vc.row6frame4.frame);
+            activeRow.image1insideIdentifier = vc.row6image1.uniqueIdentifier;
+            activeRow.image2insideIdentifier = vc.row6image2.uniqueIdentifier;
+            activeRow.image3insideIdentifier = vc.row6image3.uniqueIdentifier;
+            activeRow.image4insideIdentifier = vc.row6image4.uniqueIdentifier;
+            activeRow.image5insideIdentifier = vc.row6image5.uniqueIdentifier;
+            activeRow.frame = NSStringFromCGRect(vc.row6view.frame);
+            break;
+        case 6:
+            activeRow.frame = NSStringFromCGRect(vc.row7view.frame);
+            if (!activeRow.frameToGetImage1) activeRow.frameToGetImage1 = NSStringFromCGRect(vc.row7frame1.frame);
+            //NSLog(@"getActiveRow row2frame1 frameToGetImage1->%@",activeRow.frameToGetImage1);
+            if (!activeRow.frameToGetImage2) activeRow.frameToGetImage2 = NSStringFromCGRect(vc.row7frame2.frame);
+            if (!activeRow.frameToGetImage3) activeRow.frameToGetImage3 = NSStringFromCGRect(vc.row7frame3.frame);
+            if (!activeRow.frameToGetImage4) activeRow.frameToGetImage4 = NSStringFromCGRect(vc.row7frame4.frame);
+            activeRow.image1insideIdentifier = vc.row7image1.uniqueIdentifier;
+            activeRow.image2insideIdentifier = vc.row7image2.uniqueIdentifier;
+            activeRow.image3insideIdentifier = vc.row7image3.uniqueIdentifier;
+            activeRow.image4insideIdentifier = vc.row7image4.uniqueIdentifier;
+            activeRow.image5insideIdentifier = vc.row7image5.uniqueIdentifier;
+            activeRow.frame = NSStringFromCGRect(vc.row7view.frame);
+            break;
+        case 7:
+            activeRow.frame = NSStringFromCGRect(vc.row8view.frame);
+            if (!activeRow.frameToGetImage1) activeRow.frameToGetImage1 = NSStringFromCGRect(vc.row8frame1.frame);
+            //NSLog(@"getActiveRow row2frame1 frameToGetImage1->%@",activeRow.frameToGetImage1);
+            if (!activeRow.frameToGetImage2) activeRow.frameToGetImage2 = NSStringFromCGRect(vc.row8frame2.frame);
+            if (!activeRow.frameToGetImage3) activeRow.frameToGetImage3 = NSStringFromCGRect(vc.row8frame3.frame);
+            if (!activeRow.frameToGetImage4) activeRow.frameToGetImage4 = NSStringFromCGRect(vc.row8frame4.frame);
+            activeRow.image1insideIdentifier = vc.row8image1.uniqueIdentifier;
+            activeRow.image2insideIdentifier = vc.row8image2.uniqueIdentifier;
+            activeRow.image3insideIdentifier = vc.row8image3.uniqueIdentifier;
+            activeRow.image4insideIdentifier = vc.row8image4.uniqueIdentifier;
+            activeRow.image5insideIdentifier = vc.row8image5.uniqueIdentifier;
+            activeRow.frame = NSStringFromCGRect(vc.row8view.frame);
+            break;
+        case 8:
+            activeRow.frame = NSStringFromCGRect(vc.row9view.frame);
+            if (!activeRow.frameToGetImage1) activeRow.frameToGetImage1 = NSStringFromCGRect(vc.row9frame1.frame);
+            //NSLog(@"getActiveRow row2frame1 frameToGetImage1->%@",activeRow.frameToGetImage1);
+            if (!activeRow.frameToGetImage2) activeRow.frameToGetImage2 = NSStringFromCGRect(vc.row9frame2.frame);
+            if (!activeRow.frameToGetImage3) activeRow.frameToGetImage3 = NSStringFromCGRect(vc.row9frame3.frame);
+            if (!activeRow.frameToGetImage4) activeRow.frameToGetImage4 = NSStringFromCGRect(vc.row9frame4.frame);
+            activeRow.image1insideIdentifier = vc.row9image1.uniqueIdentifier;
+            activeRow.image2insideIdentifier = vc.row9image2.uniqueIdentifier;
+            activeRow.image3insideIdentifier = vc.row9image3.uniqueIdentifier;
+            activeRow.image4insideIdentifier = vc.row9image4.uniqueIdentifier;
+            activeRow.image5insideIdentifier = vc.row9image5.uniqueIdentifier;
+            activeRow.frame = NSStringFromCGRect(vc.row9view.frame);
+            break;
+        case 9:
+            activeRow.frame = NSStringFromCGRect(vc.row10view.frame);
+            if (!activeRow.frameToGetImage1) activeRow.frameToGetImage1 = NSStringFromCGRect(vc.row10frame1.frame);
+            //NSLog(@"getActiveRow row2frame1 frameToGetImage1->%@",activeRow.frameToGetImage1);
+            if (!activeRow.frameToGetImage2) activeRow.frameToGetImage2 = NSStringFromCGRect(vc.row10frame2.frame);
+            if (!activeRow.frameToGetImage3) activeRow.frameToGetImage3 = NSStringFromCGRect(vc.row10frame3.frame);
+            if (!activeRow.frameToGetImage4) activeRow.frameToGetImage4 = NSStringFromCGRect(vc.row10frame4.frame);
+            activeRow.image1insideIdentifier = vc.row10image1.uniqueIdentifier;
+            activeRow.image2insideIdentifier = vc.row10image2.uniqueIdentifier;
+            activeRow.image3insideIdentifier = vc.row10image3.uniqueIdentifier;
+            activeRow.image4insideIdentifier = vc.row10image4.uniqueIdentifier;
+            activeRow.image5insideIdentifier = vc.row10image5.uniqueIdentifier;
+            activeRow.frame = NSStringFromCGRect(vc.row10view.frame);
+            break;
+
     
         default:
             break;

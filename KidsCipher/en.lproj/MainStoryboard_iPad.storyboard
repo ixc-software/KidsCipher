@@ -349,6 +349,1174 @@
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <view contentMode="scaleToFill" id="SSE-lm-tHM" userLabel="View row3">
+                                        <rect key="frame" x="11" y="238.5" width="667" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="XcS-cr-1cC">
+                                                <rect key="frame" x="0.0" y="0.0" width="667" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Gn4-Zl-X7o" userLabel="numberBackground">
+                                                <rect key="frame" x="416.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="F9s-zg-eQn" userLabel="numberBackground">
+                                                <rect key="frame" x="556.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8fn-xa-aj6">
+                                                <rect key="frame" x="13.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="1" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="E6D-BS-8Tw">
+                                                <rect key="frame" x="104.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="2" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="MwJ-Ey-WRk">
+                                                <rect key="frame" x="194.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="3" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iHR-2m-eTb">
+                                                <rect key="frame" x="286.5" y="9.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="4" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_blue_active.png" id="Wgk-1w-Gvz" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_green_active.png" id="XQt-6R-3QE" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_red_active.png" id="vHh-5x-55p" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_violet_active.png" id="cfM-1j-weI" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_yellow_active.png" id="atN-dx-fwE" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N6o-1D-jGZ">
+                                                <rect key="frame" x="375" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jdG-gP-U1e">
+                                                <rect key="frame" x="416" y="27" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nT1-iI-NDg">
+                                                <rect key="frame" x="515" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eip-td-oUK">
+                                                <rect key="frame" x="556.5" y="26.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="WSg-3k-4WM">
+                                                <rect key="frame" x="2" y="-1" width="665" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="ZFl-h4-4mY">
+                                                        <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="IZg-Nf-6ED" userLabel="View row4">
+                                        <rect key="frame" x="11" y="348.5" width="667" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="zAb-yy-Jvb">
+                                                <rect key="frame" x="0.0" y="0.0" width="667" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e0i-6U-5gl" userLabel="numberBackground">
+                                                <rect key="frame" x="416.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oec-ov-jtX" userLabel="numberBackground">
+                                                <rect key="frame" x="556.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="iJE-hE-wET">
+                                                <rect key="frame" x="13.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="1" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Iw-KK-L1x">
+                                                <rect key="frame" x="104.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="2" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5kg-0j-liG">
+                                                <rect key="frame" x="194.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="3" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Un8-zv-F9B">
+                                                <rect key="frame" x="286.5" y="9.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="4" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_blue_active.png" id="j50-mW-fNi" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_green_active.png" id="nPR-2m-Nn7" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_red_active.png" id="d1s-Ej-BF9" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_violet_active.png" id="yvD-Bi-ST1" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_yellow_active.png" id="Cdu-kh-hN9" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PXr-Iz-8q8">
+                                                <rect key="frame" x="375" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yhF-UE-J00">
+                                                <rect key="frame" x="416" y="27" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gQf-IU-u9G">
+                                                <rect key="frame" x="515" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="u6Q-7S-dSp">
+                                                <rect key="frame" x="556.5" y="26.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="1fX-gl-cnS">
+                                                <rect key="frame" x="2" y="-1" width="665" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="AIa-Kb-jmd">
+                                                        <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="D4y-bs-md4" userLabel="View row5">
+                                        <rect key="frame" x="11" y="458.5" width="667" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="36h-NG-cYw">
+                                                <rect key="frame" x="0.0" y="0.0" width="667" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7Wd-5W-pJz" userLabel="numberBackground">
+                                                <rect key="frame" x="416.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="v4z-Hn-7Zo" userLabel="numberBackground">
+                                                <rect key="frame" x="556.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="XQ9-8H-NhN">
+                                                <rect key="frame" x="13.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="1" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="D78-v4-7UI">
+                                                <rect key="frame" x="104.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="2" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Pph-rm-imf">
+                                                <rect key="frame" x="194.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="3" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g78-b7-Y9L">
+                                                <rect key="frame" x="286.5" y="9.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="4" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_blue_active.png" id="dsj-7H-KRp" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_green_active.png" id="cc3-Xn-7yB" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_red_active.png" id="4Ur-Ek-ahL" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_violet_active.png" id="nJy-TF-fBW" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_yellow_active.png" id="ecB-fv-adn" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gsb-hP-z7j">
+                                                <rect key="frame" x="375" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Eaf-aj-dJY">
+                                                <rect key="frame" x="416" y="27" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Jo-yR-WK0">
+                                                <rect key="frame" x="515" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Z1x-BT-WIN">
+                                                <rect key="frame" x="556.5" y="26.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="cDA-lt-SWa">
+                                                <rect key="frame" x="2" y="-1" width="665" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="Xcb-s5-iWN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="uFb-Ae-Npi" userLabel="View row6">
+                                        <rect key="frame" x="11" y="568.5" width="667" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="ONY-nk-WQi">
+                                                <rect key="frame" x="0.0" y="0.0" width="667" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6bG-UJ-k0j" userLabel="numberBackground">
+                                                <rect key="frame" x="416.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="J1d-lC-aJM" userLabel="numberBackground">
+                                                <rect key="frame" x="556.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hbi-Cv-xET">
+                                                <rect key="frame" x="13.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="1" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="6y7-Bu-SAb">
+                                                <rect key="frame" x="104.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="2" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mZr-2g-MAN">
+                                                <rect key="frame" x="194.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="3" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="il8-CM-wSE">
+                                                <rect key="frame" x="286.5" y="9.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="4" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_blue_active.png" id="idh-Iy-bDc" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_green_active.png" id="hic-YL-DHW" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_red_active.png" id="Fvy-Ya-PMh" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_violet_active.png" id="ig7-Hd-wvt" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_yellow_active.png" id="F3W-1L-R1g" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZsS-p3-mvS">
+                                                <rect key="frame" x="375" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vnx-cx-b7x">
+                                                <rect key="frame" x="416" y="27" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j4o-k3-9wP">
+                                                <rect key="frame" x="515" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="biP-ZV-8tA">
+                                                <rect key="frame" x="556.5" y="26.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="JPW-DM-sBH">
+                                                <rect key="frame" x="2" y="-1" width="665" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="dxG-PK-J3T">
+                                                        <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="W6z-pA-IaX" userLabel="View row7">
+                                        <rect key="frame" x="11" y="678.5" width="667" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="qU5-hx-o0C">
+                                                <rect key="frame" x="0.0" y="0.0" width="667" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="fHj-il-Kfn" userLabel="numberBackground">
+                                                <rect key="frame" x="416.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dOg-cJ-xfI" userLabel="numberBackground">
+                                                <rect key="frame" x="556.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZuF-UT-KnR">
+                                                <rect key="frame" x="13.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="1" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ehJ-R0-Old">
+                                                <rect key="frame" x="104.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="2" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ONi-FG-ziB">
+                                                <rect key="frame" x="194.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="3" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NKo-cJ-s3G">
+                                                <rect key="frame" x="286.5" y="9.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="4" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_blue_active.png" id="exM-zr-WTq" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_green_active.png" id="xKQ-tf-dEx" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_red_active.png" id="6KK-43-FYI" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_violet_active.png" id="CI3-uS-Mxw" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_yellow_active.png" id="jMk-wk-suy" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mzt-dd-R6j">
+                                                <rect key="frame" x="375" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3fA-qK-L0X">
+                                                <rect key="frame" x="416" y="27" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tT4-br-Ghy">
+                                                <rect key="frame" x="515" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="IBr-4R-tbo">
+                                                <rect key="frame" x="556.5" y="26.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="bWO-pS-80r">
+                                                <rect key="frame" x="2" y="-1" width="665" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="LC1-eO-TvN">
+                                                        <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="TvZ-vM-lGZ" userLabel="View row8">
+                                        <rect key="frame" x="11" y="788.5" width="667" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="Mt7-7G-B6S">
+                                                <rect key="frame" x="0.0" y="0.0" width="667" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="yHz-yL-Gtw" userLabel="numberBackground">
+                                                <rect key="frame" x="416.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="SAe-Ls-uwS" userLabel="numberBackground">
+                                                <rect key="frame" x="556.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="II1-3r-dDU">
+                                                <rect key="frame" x="13.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="1" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ACl-AX-cVV">
+                                                <rect key="frame" x="104.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="2" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qR1-MZ-Sxx">
+                                                <rect key="frame" x="194.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="3" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Yxj-DY-FEm">
+                                                <rect key="frame" x="286.5" y="9.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="4" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_blue_active.png" id="ObH-Gi-zj4" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_green_active.png" id="t64-ZB-ai4" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_red_active.png" id="OwA-hU-XTy" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_violet_active.png" id="Twk-Sd-nFq" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_yellow_active.png" id="GWd-tJ-yRt" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7nx-i7-kGb">
+                                                <rect key="frame" x="375" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ovU-dN-X9W">
+                                                <rect key="frame" x="416" y="27" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dSU-Iq-qkn">
+                                                <rect key="frame" x="515" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4ca-5i-8IV">
+                                                <rect key="frame" x="556.5" y="26.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="toh-FI-pVL">
+                                                <rect key="frame" x="2" y="-1" width="665" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="7KL-zb-2jr">
+                                                        <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="haZ-tS-bqA" userLabel="View row9">
+                                        <rect key="frame" x="11" y="898.5" width="667" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="DDo-zo-7aE">
+                                                <rect key="frame" x="0.0" y="0.0" width="667" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZyF-pz-T94" userLabel="numberBackground">
+                                                <rect key="frame" x="416.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gf0-Yy-nFU" userLabel="numberBackground">
+                                                <rect key="frame" x="556.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hkI-ke-WL1">
+                                                <rect key="frame" x="13.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="1" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oKY-Qv-Z0C">
+                                                <rect key="frame" x="104.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="2" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hVr-Vt-yiX">
+                                                <rect key="frame" x="194.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="3" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dHb-0b-6pN">
+                                                <rect key="frame" x="286.5" y="9.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="4" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_blue_active.png" id="0qc-ag-DEa" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_green_active.png" id="Ybe-mS-xfd" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_red_active.png" id="XcB-Ux-9vh" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_violet_active.png" id="lPi-aN-PwH" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_yellow_active.png" id="ZCP-9L-Wdj" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BaZ-13-2Ko">
+                                                <rect key="frame" x="375" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ipW-JS-Eo0">
+                                                <rect key="frame" x="416" y="27" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rcq-UA-A0i">
+                                                <rect key="frame" x="515" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tbU-Qf-v4T">
+                                                <rect key="frame" x="556.5" y="26.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="Qmq-7G-INZ">
+                                                <rect key="frame" x="2" y="-1" width="665" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="3Rj-F1-zU5">
+                                                        <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" id="vhh-l8-pdG" userLabel="View row10">
+                                        <rect key="frame" x="11" y="1008.5" width="667" height="99"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="G2P-wV-X5n">
+                                                <rect key="frame" x="0.0" y="0.0" width="667" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            </imageView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="35E-Ew-hWI" userLabel="numberBackground">
+                                                <rect key="frame" x="416.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KGp-Ko-jAy" userLabel="numberBackground">
+                                                <rect key="frame" x="556.5" y="30.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" image="button_box_field_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="V2M-xD-4aL">
+                                                <rect key="frame" x="13.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="1" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="b8S-9E-l3i">
+                                                <rect key="frame" x="104.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="2" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zyp-3V-e9C">
+                                                <rect key="frame" x="194.5" y="8.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="3" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zlQ-aH-gRJ">
+                                                <rect key="frame" x="286.5" y="9.5" width="83" height="83"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                                <state key="normal" title="4" image="button_flower_game.png">
+                                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <state key="highlighted">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                            </button>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_blue_active.png" id="yLi-7u-3Y7" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_green_active.png" id="fs3-QO-FPf" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_red_active.png" id="xzt-8q-Erg" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_violet_active.png" id="L49-Bi-sV4" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" contentMode="scaleToFill" image="button_flower_yellow_active.png" id="pok-aS-hqE" customClass="AVImageView">
+                                                <rect key="frame" x="298" y="14" width="70" height="70"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                            </imageView>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zL7-xZ-bGQ">
+                                                <rect key="frame" x="375" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3ww-7a-Ih9">
+                                                <rect key="frame" x="416" y="27" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="unA-tj-oRa">
+                                                <rect key="frame" x="515" y="8" width="144" height="24"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                            </label>
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8bj-Yv-O86">
+                                                <rect key="frame" x="556.5" y="26.5" width="63" height="63"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                                <color key="textColor" red="0.69019609689999994" green="0.090196080509999998" blue="0.2823529541" alpha="1" colorSpace="deviceRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" id="YSF-1X-faR">
+                                                <rect key="frame" x="2" y="-1" width="665" height="99"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="u3o-sa-Ixt">
+                                                        <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
+                                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    </imageView>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </scrollView>
@@ -681,6 +1849,21 @@
                         <outlet property="mainPageScrollBackground" destination="Ata-T8-lcL" id="bKI-hV-GgN"/>
                         <outlet property="photoView" destination="cXO-74-nso" id="gfP-zS-KM7"/>
                         <outlet property="playerName" destination="s6r-kD-r4Y" id="nZc-9f-7Cw"/>
+                        <outlet property="row10HidingView" destination="YSF-1X-faR" id="3nZ-hk-BVi"/>
+                        <outlet property="row10MatchedColors" destination="3ww-7a-Ih9" id="bCu-M8-QfP"/>
+                        <outlet property="row10MatchedColorsAndPositions" destination="8bj-Yv-O86" id="dYf-c6-T8F"/>
+                        <outlet property="row10MatchedColorsAndPositionsTitle" destination="unA-tj-oRa" id="PQN-zg-bjs"/>
+                        <outlet property="row10MatchedColorsTitle" destination="zL7-xZ-bGQ" id="FBW-xR-htx"/>
+                        <outlet property="row10frame1" destination="V2M-xD-4aL" id="SAp-bW-YYy"/>
+                        <outlet property="row10frame2" destination="b8S-9E-l3i" id="Zbw-DD-K9w"/>
+                        <outlet property="row10frame3" destination="Zyp-3V-e9C" id="Seg-eo-GzW"/>
+                        <outlet property="row10frame4" destination="zlQ-aH-gRJ" id="VRb-6c-fgZ"/>
+                        <outlet property="row10image1" destination="yLi-7u-3Y7" id="Ecg-Qu-JOB"/>
+                        <outlet property="row10image2" destination="fs3-QO-FPf" id="QRW-67-dwa"/>
+                        <outlet property="row10image3" destination="xzt-8q-Erg" id="qA9-m2-NjP"/>
+                        <outlet property="row10image4" destination="L49-Bi-sV4" id="zEl-QR-ZLC"/>
+                        <outlet property="row10image5" destination="pok-aS-hqE" id="5jW-1w-s2p"/>
+                        <outlet property="row10view" destination="vhh-l8-pdG" id="hsI-nq-ITL"/>
                         <outlet property="row1HidingView" destination="jRZ-Ch-Dwq" id="1Sl-pT-Yl5"/>
                         <outlet property="row1MatchedColors" destination="NWr-aM-knl" id="UcP-Cr-hqt"/>
                         <outlet property="row1MatchedColorsAndPositions" destination="wh3-cH-RYV" id="xWe-JC-ex9"/>
@@ -711,6 +1894,111 @@
                         <outlet property="row2image4" destination="axy-KK-vDF" id="p2h-7p-5FZ"/>
                         <outlet property="row2image5" destination="W0D-0h-33F" id="GEC-2W-BHT"/>
                         <outlet property="row2view" destination="7XZ-1d-0AD" id="IJU-FF-FLd"/>
+                        <outlet property="row3HidingView" destination="WSg-3k-4WM" id="REq-xy-wXd"/>
+                        <outlet property="row3MatchedColors" destination="jdG-gP-U1e" id="tjv-1w-tm1"/>
+                        <outlet property="row3MatchedColorsAndPositions" destination="Eip-td-oUK" id="fuo-82-x2l"/>
+                        <outlet property="row3MatchedColorsAndPositionsTitle" destination="nT1-iI-NDg" id="Kk5-D0-kW6"/>
+                        <outlet property="row3MatchedColorsTitle" destination="N6o-1D-jGZ" id="xZ5-b8-HNT"/>
+                        <outlet property="row3frame1" destination="8fn-xa-aj6" id="6rB-IT-9FZ"/>
+                        <outlet property="row3frame2" destination="E6D-BS-8Tw" id="ryx-0w-IPo"/>
+                        <outlet property="row3frame3" destination="MwJ-Ey-WRk" id="g4E-rq-Ele"/>
+                        <outlet property="row3frame4" destination="iHR-2m-eTb" id="iCr-Xw-Rox"/>
+                        <outlet property="row3image1" destination="Wgk-1w-Gvz" id="Y0v-iu-7gY"/>
+                        <outlet property="row3image2" destination="XQt-6R-3QE" id="KOm-DN-A4J"/>
+                        <outlet property="row3image3" destination="vHh-5x-55p" id="s79-7y-ZFb"/>
+                        <outlet property="row3image4" destination="cfM-1j-weI" id="TA2-Va-EoC"/>
+                        <outlet property="row3image5" destination="atN-dx-fwE" id="pfr-e4-A6Q"/>
+                        <outlet property="row3view" destination="SSE-lm-tHM" id="Lf0-wd-ceT"/>
+                        <outlet property="row4HidingView" destination="1fX-gl-cnS" id="aZa-UU-GNb"/>
+                        <outlet property="row4MatchedColors" destination="yhF-UE-J00" id="L1x-lm-mXX"/>
+                        <outlet property="row4MatchedColorsAndPositions" destination="u6Q-7S-dSp" id="x8c-nu-Ut9"/>
+                        <outlet property="row4MatchedColorsAndPositionsTitle" destination="gQf-IU-u9G" id="ulR-jv-QHM"/>
+                        <outlet property="row4MatchedColorsTitle" destination="PXr-Iz-8q8" id="4KA-l4-z6l"/>
+                        <outlet property="row4frame1" destination="iJE-hE-wET" id="YBo-dI-bdT"/>
+                        <outlet property="row4frame2" destination="4Iw-KK-L1x" id="zKg-nt-VtS"/>
+                        <outlet property="row4frame3" destination="5kg-0j-liG" id="nkw-xY-Sxh"/>
+                        <outlet property="row4frame4" destination="Un8-zv-F9B" id="PYJ-8E-brq"/>
+                        <outlet property="row4image1" destination="j50-mW-fNi" id="UQn-0U-qe1"/>
+                        <outlet property="row4image2" destination="nPR-2m-Nn7" id="nYb-mP-uyp"/>
+                        <outlet property="row4image3" destination="d1s-Ej-BF9" id="gDp-mi-n6y"/>
+                        <outlet property="row4image4" destination="yvD-Bi-ST1" id="8qo-Xf-CQa"/>
+                        <outlet property="row4image5" destination="Cdu-kh-hN9" id="onZ-VG-c7N"/>
+                        <outlet property="row4view" destination="IZg-Nf-6ED" id="DIk-N7-M2e"/>
+                        <outlet property="row5HidingView" destination="cDA-lt-SWa" id="7Vg-QH-yUr"/>
+                        <outlet property="row5MatchedColors" destination="Eaf-aj-dJY" id="mms-qn-MtY"/>
+                        <outlet property="row5MatchedColorsAndPositions" destination="Z1x-BT-WIN" id="YbK-d1-jnc"/>
+                        <outlet property="row5MatchedColorsAndPositionsTitle" destination="8Jo-yR-WK0" id="HgO-53-xXR"/>
+                        <outlet property="row5MatchedColorsTitle" destination="Gsb-hP-z7j" id="rsy-xe-6EW"/>
+                        <outlet property="row5frame1" destination="XQ9-8H-NhN" id="K7p-by-KJt"/>
+                        <outlet property="row5frame2" destination="D78-v4-7UI" id="54r-gg-hTt"/>
+                        <outlet property="row5frame3" destination="Pph-rm-imf" id="hgO-SP-TLX"/>
+                        <outlet property="row5frame4" destination="g78-b7-Y9L" id="v18-sl-m8n"/>
+                        <outlet property="row5image1" destination="dsj-7H-KRp" id="n8Y-VE-Bvf"/>
+                        <outlet property="row5image2" destination="cc3-Xn-7yB" id="auO-tM-Z8p"/>
+                        <outlet property="row5image3" destination="4Ur-Ek-ahL" id="leu-KK-hcX"/>
+                        <outlet property="row5image4" destination="nJy-TF-fBW" id="L9i-tW-qia"/>
+                        <outlet property="row5image5" destination="ecB-fv-adn" id="QAU-WH-Boo"/>
+                        <outlet property="row5view" destination="D4y-bs-md4" id="VLT-WB-1qi"/>
+                        <outlet property="row6HidingView" destination="JPW-DM-sBH" id="H9A-3o-sdE"/>
+                        <outlet property="row6MatchedColors" destination="Vnx-cx-b7x" id="wsP-4c-IIK"/>
+                        <outlet property="row6MatchedColorsAndPositions" destination="biP-ZV-8tA" id="4Sn-ZF-cgx"/>
+                        <outlet property="row6MatchedColorsAndPositionsTitle" destination="j4o-k3-9wP" id="paY-a0-AEW"/>
+                        <outlet property="row6MatchedColorsTitle" destination="ZsS-p3-mvS" id="G98-yw-fRS"/>
+                        <outlet property="row6frame1" destination="hbi-Cv-xET" id="4W5-sV-biP"/>
+                        <outlet property="row6frame2" destination="6y7-Bu-SAb" id="spn-45-VXt"/>
+                        <outlet property="row6frame3" destination="mZr-2g-MAN" id="cvu-id-Xno"/>
+                        <outlet property="row6frame4" destination="il8-CM-wSE" id="4Oy-FD-uVB"/>
+                        <outlet property="row6image1" destination="idh-Iy-bDc" id="ycM-6O-Mzw"/>
+                        <outlet property="row6image2" destination="hic-YL-DHW" id="Cpz-XL-ZvI"/>
+                        <outlet property="row6image3" destination="Fvy-Ya-PMh" id="heE-uy-fYw"/>
+                        <outlet property="row6image4" destination="ig7-Hd-wvt" id="POQ-4d-n32"/>
+                        <outlet property="row6image5" destination="F3W-1L-R1g" id="NzN-hj-vrc"/>
+                        <outlet property="row6view" destination="uFb-Ae-Npi" id="2JQ-c9-Y8X"/>
+                        <outlet property="row7HidingView" destination="bWO-pS-80r" id="FJP-Rd-Z4c"/>
+                        <outlet property="row7MatchedColors" destination="3fA-qK-L0X" id="ICi-Sa-b6E"/>
+                        <outlet property="row7MatchedColorsAndPositions" destination="IBr-4R-tbo" id="pBR-Nt-J9G"/>
+                        <outlet property="row7MatchedColorsAndPositionsTitle" destination="tT4-br-Ghy" id="gMV-zM-LF2"/>
+                        <outlet property="row7MatchedColorsTitle" destination="Mzt-dd-R6j" id="9YH-o4-CH8"/>
+                        <outlet property="row7frame1" destination="ZuF-UT-KnR" id="cwq-tb-EGZ"/>
+                        <outlet property="row7frame2" destination="ehJ-R0-Old" id="ax1-lb-nVD"/>
+                        <outlet property="row7frame3" destination="ONi-FG-ziB" id="cmL-L4-Qz9"/>
+                        <outlet property="row7frame4" destination="NKo-cJ-s3G" id="BpN-bN-HFi"/>
+                        <outlet property="row7image1" destination="exM-zr-WTq" id="QlU-7h-JAh"/>
+                        <outlet property="row7image2" destination="xKQ-tf-dEx" id="EpX-kl-5ZR"/>
+                        <outlet property="row7image3" destination="6KK-43-FYI" id="lty-37-yJE"/>
+                        <outlet property="row7image4" destination="CI3-uS-Mxw" id="7qH-fS-PH7"/>
+                        <outlet property="row7image5" destination="jMk-wk-suy" id="Au0-Vv-Bzk"/>
+                        <outlet property="row7view" destination="W6z-pA-IaX" id="Rcc-1A-q4G"/>
+                        <outlet property="row8HidingView" destination="toh-FI-pVL" id="E0R-hL-X8o"/>
+                        <outlet property="row8MatchedColors" destination="ovU-dN-X9W" id="Dro-bp-19X"/>
+                        <outlet property="row8MatchedColorsAndPositions" destination="4ca-5i-8IV" id="x6w-fb-b1G"/>
+                        <outlet property="row8MatchedColorsAndPositionsTitle" destination="dSU-Iq-qkn" id="IRL-Yf-4Hr"/>
+                        <outlet property="row8MatchedColorsTitle" destination="7nx-i7-kGb" id="hcZ-0C-578"/>
+                        <outlet property="row8frame1" destination="II1-3r-dDU" id="z0s-OT-gsB"/>
+                        <outlet property="row8frame2" destination="ACl-AX-cVV" id="lPV-Cj-3Hp"/>
+                        <outlet property="row8frame3" destination="qR1-MZ-Sxx" id="PTx-8z-S5X"/>
+                        <outlet property="row8frame4" destination="Yxj-DY-FEm" id="mHr-Qi-dVw"/>
+                        <outlet property="row8image1" destination="ObH-Gi-zj4" id="SgM-ww-pid"/>
+                        <outlet property="row8image2" destination="t64-ZB-ai4" id="z9P-AU-n8E"/>
+                        <outlet property="row8image3" destination="OwA-hU-XTy" id="1ic-pM-hlM"/>
+                        <outlet property="row8image4" destination="Twk-Sd-nFq" id="JEE-4B-W3P"/>
+                        <outlet property="row8image5" destination="GWd-tJ-yRt" id="zrH-5A-cr5"/>
+                        <outlet property="row8view" destination="TvZ-vM-lGZ" id="fV4-UQ-Yww"/>
+                        <outlet property="row9HidingView" destination="Qmq-7G-INZ" id="t3N-tR-a4M"/>
+                        <outlet property="row9MatchedColors" destination="ipW-JS-Eo0" id="pua-VT-XXm"/>
+                        <outlet property="row9MatchedColorsAndPositions" destination="tbU-Qf-v4T" id="qdH-TK-PJY"/>
+                        <outlet property="row9MatchedColorsAndPositionsTitle" destination="rcq-UA-A0i" id="VYr-Qn-3ws"/>
+                        <outlet property="row9MatchedColorsTitle" destination="BaZ-13-2Ko" id="99k-w2-Sm9"/>
+                        <outlet property="row9frame1" destination="hkI-ke-WL1" id="pVZ-rz-cIh"/>
+                        <outlet property="row9frame2" destination="oKY-Qv-Z0C" id="XQS-P6-cqV"/>
+                        <outlet property="row9frame3" destination="hVr-Vt-yiX" id="Yju-RO-WLl"/>
+                        <outlet property="row9frame4" destination="dHb-0b-6pN" id="fa5-eK-uyT"/>
+                        <outlet property="row9image1" destination="0qc-ag-DEa" id="P6i-S5-2fg"/>
+                        <outlet property="row9image2" destination="Ybe-mS-xfd" id="f5f-we-BjM"/>
+                        <outlet property="row9image3" destination="XcB-Ux-9vh" id="Rwd-yc-moK"/>
+                        <outlet property="row9image4" destination="lPi-aN-PwH" id="mtR-Z9-fiM"/>
+                        <outlet property="row9image5" destination="ZCP-9L-Wdj" id="vku-xV-jaf"/>
+                        <outlet property="row9view" destination="haZ-tS-bqA" id="E2J-2w-KTu"/>
                         <outlet property="safeImage" destination="pAb-To-Z6O" id="OW2-xH-NbZ"/>
                     </connections>
                 </viewController>
@@ -729,12 +2017,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_fon_all_records_G.png" id="xMa-UM-NLh">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_fon_all_records.png" id="xMa-UM-NLh">
                                 <rect key="frame" x="37" y="249" width="698" height="577"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Время прохождения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wCa-2R-7hY">
-                                <rect key="frame" x="421" y="283" width="163" height="76"/>
+                                <rect key="frame" x="413" y="283" width="163" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="19"/>
                                 <color key="textColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -742,7 +2030,7 @@
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Количество попыток" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5St-jo-PKH">
-                                <rect key="frame" x="600" y="283" width="91" height="76"/>
+                                <rect key="frame" x="600" y="283" width="91" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
                                 <color key="textColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -750,7 +2038,7 @@
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Имя победителя" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9LM-Sw-Xsm">
-                                <rect key="frame" x="155" y="295" width="122" height="32"/>
+                                <rect key="frame" x="155" y="283" width="122" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -758,7 +2046,7 @@
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Дата" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tiu-Dl-Q3j">
-                                <rect key="frame" x="155" y="326" width="122" height="20"/>
+                                <rect key="frame" x="155" y="323" width="122" height="20"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
                                 <color key="textColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -766,7 +2054,7 @@
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Уровень" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jb0-Sy-nT7">
-                                <rect key="frame" x="285" y="283" width="120" height="76"/>
+                                <rect key="frame" x="285" y="283" width="120" height="63"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="19"/>
                                 <color key="textColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -777,6 +2065,9 @@
                                 <rect key="frame" x="348" y="856" width="79" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="onTintColor" red="0.90980398650000005" green="0.65882354970000001" blue="0.91372555489999996" alpha="1" colorSpace="deviceRGB"/>
+                                <connections>
+                                    <action selector="musicChangeStart:" destination="yBL-27-2BK" eventType="valueChanged" id="uGC-t5-fXB"/>
+                                </connections>
                             </switch>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Музыка фона" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uh1-NL-f3v">
                                 <rect key="frame" x="239" y="826" width="290" height="27"/>
@@ -790,11 +2081,26 @@
                                 <rect key="frame" x="29" y="825" width="123" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
-                                <color key="textColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="textColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Вы девочка:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SIa-Lc-3QC">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0mA-DE-svb">
+                                <rect key="frame" x="36" y="851" width="108" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="button_field_record_avatar_boy.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeMyPhoto:" destination="yBL-27-2BK" eventType="touchUpInside" id="3WQ-SY-ewa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" text="Вы девочка:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SIa-Lc-3QC">
                                 <rect key="frame" x="624" y="825" width="123" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
@@ -802,6 +2108,21 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DaY-dj-Oic">
+                                <rect key="frame" x="627" y="851" width="108" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="button_avatar.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="changeMyPhoto:" destination="yBL-27-2BK" eventType="touchUpInside" id="Kl9-Ut-7dF"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Уровень сложности" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="glw-ey-c9U">
                                 <rect key="frame" x="239" y="891" width="290" height="35"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -810,12 +2131,12 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_avatar.png" id="tu8-Ap-ihp">
-                                <rect key="frame" x="635" y="851" width="100" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_olive.png" id="cTr-FX-qdf">
+                                <rect key="frame" x="60" y="283" width="87" height="63"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_avatar.png" id="ce6-UB-ldw">
-                                <rect key="frame" x="80" y="295" width="44" height="51"/>
+                                <rect key="frame" x="82" y="283" width="44" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="введите" textAlignment="center" minimumFontSize="17" background="button_time.png" id="sSv-Wl-HHn">
@@ -860,7 +2181,7 @@
                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="DfT-s0-PAH">
-                                <rect key="frame" x="60" y="382" width="651" height="418"/>
+                                <rect key="frame" x="60" y="369" width="651" height="431"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -943,6 +2264,7 @@
                                         </view>
                                         <connections>
                                             <outlet property="attemps" destination="XXE-hh-FJB" id="tj0-LP-vRg"/>
+                                            <outlet property="backgroundCell" destination="Jdd-4i-MgT" id="wdB-Tv-8mX"/>
                                             <outlet property="date" destination="TBq-ah-ivt" id="K4x-67-55R"/>
                                             <outlet property="level" destination="yk8-3r-zf2" id="Rx5-V9-Va2"/>
                                             <outlet property="levelStarFirst" destination="2Pm-3r-DdF" id="RDY-I3-bDv"/>
@@ -959,10 +2281,6 @@
                                     <outlet property="delegate" destination="yBL-27-2BK" id="qZX-13-Z22"/>
                                 </connections>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_avatar_boy.png" id="fpG-kM-JGp">
-                                <rect key="frame" x="40" y="851" width="100" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="013-5n-tmJ">
                                 <rect key="frame" x="627" y="35" width="108" height="133"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
@@ -1007,10 +2325,23 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="changeToBoyTitle" destination="cdb-RK-ZaG" id="MFx-3x-T0g"/>
+                        <outlet property="changeToGirlTitle" destination="SIa-Lc-3QC" id="auw-Vm-NRa"/>
                         <outlet property="difficultLevelSelector" destination="g85-rB-TYZ" id="gRI-Nd-vxE"/>
+                        <outlet property="levelTitle" destination="glw-ey-c9U" id="DjJ-ed-Vc3"/>
+                        <outlet property="mainPageBackground" destination="Sqz-oz-QmK" id="e9W-Hn-b9g"/>
+                        <outlet property="mainPageScrollBackground" destination="xMa-UM-NLh" id="atQ-6W-5mv"/>
+                        <outlet property="musicSwitchTitle" destination="uh1-NL-f3v" id="ypB-oh-2cf"/>
+                        <outlet property="myName" destination="LYx-SO-myr" id="5qv-4k-mAp"/>
                         <outlet property="myNameEditor" destination="sSv-Wl-HHn" id="P4r-wt-cYs"/>
                         <outlet property="myPhoto" destination="013-5n-tmJ" id="dHr-fT-yi2"/>
                         <outlet property="myScoreOrGameScore" destination="kSd-u2-4Sb" id="MFe-tA-7ja"/>
+                        <outlet property="recordTimeTitle" destination="wCa-2R-7hY" id="nyT-Jz-NKL"/>
+                        <outlet property="recordsAttempstTitle" destination="5St-jo-PKH" id="eJ5-FS-ZWA"/>
+                        <outlet property="recordsDateTitle" destination="Tiu-Dl-Q3j" id="QYI-im-uey"/>
+                        <outlet property="recordsLevelTitle" destination="jb0-Sy-nT7" id="OfS-eL-W8u"/>
+                        <outlet property="recordsNameTitle" destination="9LM-Sw-Xsm" id="YDo-VY-rK8"/>
+                        <outlet property="returnToGameLabel" destination="FbO-T4-Uqi" id="PzE-Zy-WCA"/>
                         <outlet property="tableView" destination="DfT-s0-PAH" id="tyZ-hB-zWM"/>
                     </connections>
                 </viewController>
@@ -1026,25 +2357,26 @@
         <image name="Main_page_fon_safe.png" width="663" height="618"/>
         <image name="active_field_game.png" width="1349" height="236"/>
         <image name="button_avatar.png" width="232" height="291"/>
-        <image name="button_avatar_boy.png" width="178" height="222"/>
         <image name="button_back_in_ game.png" width="407" height="251"/>
         <image name="button_begin_game.png" width="502" height="146"/>
         <image name="button_begin_training.png" width="502" height="146"/>
         <image name="button_box_field_game.png" width="51" height="51"/>
         <image name="button_effort_cup.png" width="153" height="150"/>
         <image name="button_field_record.png" width="1332" height="222"/>
+        <image name="button_field_record_avatar_boy.png" width="107" height="133"/>
         <image name="button_flower_blue_active.png" width="154" height="150"/>
         <image name="button_flower_game.png" width="179" height="179"/>
         <image name="button_flower_green_active.png" width="156" height="149"/>
         <image name="button_flower_red_active.png" width="148" height="143"/>
         <image name="button_flower_violet_active.png" width="152" height="150"/>
         <image name="button_flower_yellow_active.png" width="155" height="149"/>
-        <image name="button_fon_all_records_G.png" width="1917" height="635"/>
+        <image name="button_fon_all_records.png" width="1414" height="1162"/>
         <image name="button_info.png" width="161" height="160"/>
         <image name="button_level_star_transparent.png" width="49" height="47"/>
         <image name="button_level_star_yellow.png" width="50" height="47"/>
         <image name="button_lock.png" width="176" height="175"/>
         <image name="button_no_flower.png" width="179" height="178"/>
+        <image name="button_olive.png" width="178" height="132"/>
         <image name="button_time.png" width="639" height="75"/>
         <image name="button_time_clock.png" width="74" height="75"/>
     </resources>
@@ -1056,6 +2388,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewCell.h"/>
             <relationships>
                 <relationship kind="outlet" name="attemps" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="backgroundCell" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="date" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="level" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="levelStarFirst" candidateClass="UIImageView"/>
@@ -1069,21 +2402,30 @@
         <class className="CipherInfoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewController.h"/>
             <relationships>
+                <relationship kind="outlet" name="changeToBoyTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="changeToGirlTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="difficultLevelLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="difficultLevelSelector" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="levelTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mainPageBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mainPageScrollBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="musicSwitchTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="myName" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="myNameEditor" candidateClass="UITextField"/>
                 <relationship kind="outlet" name="myPhoto" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="myScoreOrGameScore" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="recordTimeTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsAttempstTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsDateTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsLevelTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsNameTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="returnToGameLabel" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
             </relationships>
         </class>
         <class className="CipherViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherViewController.h"/>
             <relationships>
-                <relationship kind="action" name="changePhoto:"/>
-                <relationship kind="action" name="startGame:"/>
-                <relationship kind="action" name="startTraining:"/>
                 <relationship kind="outlet" name="attemptsNumber" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="attemptsTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="beginGameButtonTitle" candidateClass="UILabel"/>
@@ -1113,6 +2455,21 @@
                 <relationship kind="outlet" name="mainPageScrollBackground" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="photoView" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="playerName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row10MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10view" candidateClass="UIView"/>
                 <relationship kind="outlet" name="row1HidingView" candidateClass="UIView"/>
                 <relationship kind="outlet" name="row1MatchedColors" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="row1MatchedColorsAndPositions" candidateClass="UILabel"/>
@@ -1143,6 +2500,111 @@
                 <relationship kind="outlet" name="row2image4" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="row2image5" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="row2view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row3HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row3MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row4HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row4MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row5HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row5MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row6HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row6MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row7HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row7MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row8HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row8MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row9HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row9MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9view" candidateClass="UIView"/>
                 <relationship kind="outlet" name="safeImage" candidateClass="UIImageView"/>
             </relationships>
         </class>

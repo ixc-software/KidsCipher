@@ -22,6 +22,20 @@
 @property (weak, nonatomic) IBOutlet UILabel *difficultLevelLabel;
 
 @property (nonatomic) NSFetchedResultsController *fetchedResultsController;
+@property (weak, nonatomic) IBOutlet UIImageView *mainPageBackground;
+@property (weak, nonatomic) IBOutlet UIImageView *mainPageScrollBackground;
+@property (weak, nonatomic) IBOutlet UILabel *returnToGameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *recordsNameTitle;
+@property (weak, nonatomic) IBOutlet UILabel *recordsDateTitle;
+@property (weak, nonatomic) IBOutlet UILabel *recordsLevelTitle;
+@property (weak, nonatomic) IBOutlet UILabel *recordTimeTitle;
+@property (weak, nonatomic) IBOutlet UILabel *recordsAttempstTitle;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *changeToBoyTitle;
+@property (weak, nonatomic) IBOutlet UILabel *musicSwitchTitle;
+@property (weak, nonatomic) IBOutlet UILabel *levelTitle;
+@property (weak, nonatomic) IBOutlet UILabel *changeToGirlTitle;
 
 @end
 
@@ -57,12 +71,42 @@
     [self setMyScoreOrGameScore:nil];
     [self setDifficultLevelSelector:nil];
     [self setDifficultLevelLabel:nil];
+    [self setMainPageBackground:nil];
+    [self setMainPageScrollBackground:nil];
+    [self setReturnToGameLabel:nil];
+    [self setRecordsNameTitle:nil];
+    [self setRecordsDateTitle:nil];
+    [self setRecordsLevelTitle:nil];
+    [self setRecordTimeTitle:nil];
+    [self setRecordsAttempstTitle:nil];
+    [self setChangeToBoyTitle:nil];
+    [self setMusicSwitchTitle:nil];
+    [self setLevelTitle:nil];
+    [self setChangeToGirlTitle:nil];
     [super viewDidUnload];
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIDeviceOrientationPortrait) {
+        NSLog(@"UIDeviceOrientationPortrait");
+        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records"];
+    } else {
+        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records_G"];
+        if (orientation == UIDeviceOrientationUnknown) NSLog(@"UIDeviceOrientationUnknown");
+        else NSLog(@"UIDeviceOrientationLandscapeLeft");
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated
 {
     self.fetchedResultsController = [self newFetchedResultsControllerWithSearch:@""];
+    NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
+    self.myNameEditor.text = name;
 }
 #pragma mark - own actions
 - (IBAction)changeMyPhoto:(id)sender {
@@ -87,6 +131,27 @@
 }
 - (IBAction)difficultLevelStart:(id)sender {
 }
+
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+    if (orientation == UIDeviceOrientationPortrait) {
+        NSLog(@"portrait");
+        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records"];
+    } else {
+        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records_G"];
+        NSLog(@"landscape");
+        
+    }
+    [self.tableView reloadData];
+    [self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
+
+}
+- (IBAction)musicChangeStart:(id)sender {
+}
+
 #pragma mark - UITableViewDelegates
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -160,6 +225,13 @@
 
     cell.time.text = [NSString stringWithFormat:@"%@ секунд",row.gameTime];
     cell.attemps.text = [NSString stringWithFormat:@"%@",row.attempts];
+    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+    if (orientation == UIDeviceOrientationPortrait) {
+        cell.backgroundCell.image = [UIImage imageNamed:@"button_field_record"];
+    } else {
+        cell.backgroundCell.image = [UIImage imageNamed:@"button_field_record_G"];
+        
+    }
 
     return cell;
 }
@@ -267,7 +339,23 @@
     [self.tableView endUpdates];
 }
 
+#pragma mark - UITextField delegate
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [[NSUserDefaults standardUserDefaults] setValue:textField.text forKey:@"name"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self.myNameEditor resignFirstResponder];
+    return YES;
+}
+
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    [[NSUserDefaults standardUserDefaults] setValue:textField.text forKey:@"name"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    [self.myNameEditor resignFirstResponder];
+
+}
 #pragma mark - UIImagePickerController delegate
 static CGRect swapWidthAndHeight(CGRect rect)
 {

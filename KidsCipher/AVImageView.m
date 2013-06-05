@@ -194,6 +194,31 @@
         case 1:
             rowView = game.row2view;
             break;
+        case 2:
+            rowView = game.row3view;
+            break;
+        case 3:
+            rowView = game.row4view;
+            break;
+        case 4:
+            rowView = game.row5view;
+            break;
+        case 5:
+            rowView = game.row6view;
+            break;
+        case 6:
+            rowView = game.row7view;
+            break;
+        case 7:
+            rowView = game.row8view;
+            break;
+        case 8:
+            rowView = game.row9view;
+            break;
+        case 9:
+            rowView = game.row10view;
+            break;
+
         default:
             break;
     }
@@ -244,7 +269,7 @@
         AVImageView *necessaryImage = nil;
         CGPoint necessaryStartingPointForImageInsideRow;
         if ([self.uniqueIdentifier isEqualToString:activeRow.game.mainDraggedImage1identifier]) {
-#warning images must getting by ID not directly
+//#warning images must getting by ID not directly
             switch (activeRow.game.activeRowNumber.unsignedIntegerValue) {
                 case 0:
                     necessaryImage = game.row1image1;
@@ -252,7 +277,31 @@
                 case 1:
                     necessaryImage = game.row2image1;
                     break;
-                    
+                case 2:
+                    necessaryImage = game.row3image1;
+                    break;
+                case 3:
+                    necessaryImage = game.row4image1;
+                    break;
+                case 4:
+                    necessaryImage = game.row5image1;
+                    break;
+                case 5:
+                    necessaryImage = game.row6image1;
+                    break;
+                case 6:
+                    necessaryImage = game.row7image1;
+                    break;
+                case 7:
+                    necessaryImage = game.row8image1;
+                    break;
+                case 8:
+                    necessaryImage = game.row9image1;
+                    break;
+                case 9:
+                    necessaryImage = game.row10image1;
+                    break;
+
                 default:
                     break;
             }
@@ -273,6 +322,30 @@
                     break;
                 case 1:
                     necessaryImage = game.row2image2;
+                    break;
+                case 2:
+                    necessaryImage = game.row3image2;
+                    break;
+                case 3:
+                    necessaryImage = game.row4image2;
+                    break;
+                case 4:
+                    necessaryImage = game.row5image2;
+                    break;
+                case 5:
+                    necessaryImage = game.row6image2;
+                    break;
+                case 6:
+                    necessaryImage = game.row7image2;
+                    break;
+                case 7:
+                    necessaryImage = game.row8image2;
+                    break;
+                case 8:
+                    necessaryImage = game.row9image2;
+                    break;
+                case 9:
+                    necessaryImage = game.row10image2;
                     break;
                     
                 default:
@@ -295,6 +368,30 @@
                 case 1:
                     necessaryImage = game.row2image3;
                     break;
+                case 2:
+                    necessaryImage = game.row3image3;
+                    break;
+                case 3:
+                    necessaryImage = game.row4image3;
+                    break;
+                case 4:
+                    necessaryImage = game.row5image3;
+                    break;
+                case 5:
+                    necessaryImage = game.row6image3;
+                    break;
+                case 6:
+                    necessaryImage = game.row7image3;
+                    break;
+                case 7:
+                    necessaryImage = game.row8image3;
+                    break;
+                case 8:
+                    necessaryImage = game.row9image3;
+                    break;
+                case 9:
+                    necessaryImage = game.row10image3;
+                    break;
                     
                 default:
                     break;
@@ -315,6 +412,30 @@
                     break;
                 case 1:
                     necessaryImage = game.row2image4;
+                    break;
+                case 2:
+                    necessaryImage = game.row3image4;
+                    break;
+                case 3:
+                    necessaryImage = game.row4image4;
+                    break;
+                case 4:
+                    necessaryImage = game.row5image4;
+                    break;
+                case 5:
+                    necessaryImage = game.row6image4;
+                    break;
+                case 6:
+                    necessaryImage = game.row7image4;
+                    break;
+                case 7:
+                    necessaryImage = game.row8image4;
+                    break;
+                case 8:
+                    necessaryImage = game.row9image4;
+                    break;
+                case 9:
+                    necessaryImage = game.row10image4;
                     break;
                     
                 default:
@@ -337,7 +458,31 @@
                 case 1:
                     necessaryImage = game.row2image5;
                     break;
-                    
+                case 2:
+                    necessaryImage = game.row3image5;
+                    break;
+                case 3:
+                    necessaryImage = game.row4image5;
+                    break;
+                case 4:
+                    necessaryImage = game.row5image5;
+                    break;
+                case 5:
+                    necessaryImage = game.row6image5;
+                    break;
+                case 6:
+                    necessaryImage = game.row7image5;
+                    break;
+                case 7:
+                    necessaryImage = game.row8image5;
+                    break;
+                case 8:
+                    necessaryImage = game.row9image5;
+                    break;
+                case 9:
+                    necessaryImage = game.row10image5;
+                    break;
+        
                 default:
                     break;
             }
@@ -383,13 +528,22 @@
                                  activeRow.frame2FilledNumber.integerValue > 0 &&
                                  activeRow.frame3FilledNumber.integerValue > 0 &&
                                  activeRow.frame4FilledNumber.integerValue > 0) {
-                                 [self touchesCancelled:touches withEvent:event];
-                                 NSLog(@" filled all");
-                                [game startCompletingCurrentRowAndOpenNext];
+                                 //self.hidden = YES;
+                                 //[self touchesCancelled:touches withEvent:event];
+                                 //NSLog(@" filled all");
+                                 //dispatch_async(dispatch_get_main_queue(), ^(void) {
+                                     NSLog(@"1 mainDelegate.isNewRowProcessing->%c",mainDelegate.isNewRowProcessing);
+                                     if (!mainDelegate.isNewRowProcessing) {
+                                         mainDelegate.isNewRowProcessing = YES;
+                                         NSLog(@"2 mainDelegate.isNewRowProcessing->%c",mainDelegate.isNewRowProcessing);
+                                         [game startCompletingCurrentRowAndOpenNext];
+                                     }
+                                 //});
                              }
                              
                          }];
         
+
     }
 }
 
