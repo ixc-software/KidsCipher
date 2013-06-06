@@ -61,10 +61,12 @@
 		FA803CDB17342F110053C881 /* GamesHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CD917342F110053C881 /* GamesHistory.m */; };
 		FA803CDE17343BFB0053C881 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CDD17343BFB0053C881 /* Game.m */; };
 		FA803CDF17343BFB0053C881 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CDD17343BFB0053C881 /* Game.m */; };
+		FA841E3A1760728400BBEE90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA803CCC173428B20053C881 /* Localizable.strings */; };
+		FA841E3B1760728500BBEE90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA803CCC173428B20053C881 /* Localizable.strings */; };
+		FA841E561760935C00BBEE90 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA841E551760935C00BBEE90 /* GameScore.m */; };
+		FA841E571760935C00BBEE90 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA841E551760935C00BBEE90 /* GameScore.m */; };
 		FA9267EF17361CC60029ACB5 /* webcob.p12 in Resources */ = {isa = PBXBuildFile; fileRef = FA9267EE17361CC60029ACB5 /* webcob.p12 */; };
 		FA9267F017361CC60029ACB5 /* webcob.p12 in Resources */ = {isa = PBXBuildFile; fileRef = FA9267EE17361CC60029ACB5 /* webcob.p12 */; };
-		FA9267F61736CF600029ACB5 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9267F51736CF600029ACB5 /* GameScore.m */; };
-		FA9267F71736CF600029ACB5 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9267F51736CF600029ACB5 /* GameScore.m */; };
 		FAAA3690172E4D7A00C55968 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA368F172E4D7A00C55968 /* UIKit.framework */; };
 		FAAA3692172E4D7A00C55968 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA3691172E4D7A00C55968 /* Foundation.framework */; };
 		FAAA3694172E4D7A00C55968 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA3693172E4D7A00C55968 /* CoreGraphics.framework */; };
@@ -214,9 +216,9 @@
 		FA803CD917342F110053C881 /* GamesHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamesHistory.m; sourceTree = "<group>"; };
 		FA803CDC17343BFB0053C881 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		FA803CDD17343BFB0053C881 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		FA841E541760935C00BBEE90 /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScore.h; sourceTree = "<group>"; };
+		FA841E551760935C00BBEE90 /* GameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScore.m; sourceTree = "<group>"; };
 		FA9267EE17361CC60029ACB5 /* webcob.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = webcob.p12; sourceTree = "<group>"; };
-		FA9267F41736CF600029ACB5 /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScore.h; sourceTree = "<group>"; };
-		FA9267F51736CF600029ACB5 /* GameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScore.m; sourceTree = "<group>"; };
 		FAAA368C172E4D7A00C55968 /* KidsCipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsCipher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAA368F172E4D7A00C55968 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FAAA3691172E4D7A00C55968 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -476,9 +478,9 @@
 		FAFD5C4F172E628F005F47E2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FA841E541760935C00BBEE90 /* GameScore.h */,
+				FA841E551760935C00BBEE90 /* GameScore.m */,
 				FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */,
-				FA9267F41736CF600029ACB5 /* GameScore.h */,
-				FA9267F51736CF600029ACB5 /* GameScore.m */,
 				FA803CDC17343BFB0053C881 /* Game.h */,
 				FA803CDD17343BFB0053C881 /* Game.m */,
 				FA803CD817342F110053C881 /* GamesHistory.h */,
@@ -641,6 +643,7 @@
 				FA3B31CD175F58F10061AE68 /* button_fon_all_records_G.png in Resources */,
 				FA3B31CE175F58F10061AE68 /* button_fon_all_records.png in Resources */,
 				FA3B31D0175F58FD0061AE68 /* button_olive.png in Resources */,
+				FA841E3A1760728400BBEE90 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -676,6 +679,7 @@
 				FA0C255C174E77D200C942BC /* button_flower_game.png in Resources */,
 				FA3B31C4175E745E0061AE68 /* MainStoryboard_Boys_iPad.storyboard in Resources */,
 				FA3B31C6175E76160061AE68 /* MainStoryboard_Boys_iPhone.storyboard in Resources */,
+				FA841E3B1760728500BBEE90 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,7 +700,7 @@
 				FA803CAE173424420053C881 /* CipherInfoViewCell.m in Sources */,
 				FA803CDA17342F110053C881 /* GamesHistory.m in Sources */,
 				FA803CDE17343BFB0053C881 /* Game.m in Sources */,
-				FA9267F61736CF600029ACB5 /* GameScore.m in Sources */,
+				FA841E561760935C00BBEE90 /* GameScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,7 +718,7 @@
 				FA803CAF173424420053C881 /* CipherInfoViewCell.m in Sources */,
 				FA803CDB17342F110053C881 /* GamesHistory.m in Sources */,
 				FA803CDF17343BFB0053C881 /* Game.m in Sources */,
-				FA9267F71736CF600029ACB5 /* GameScore.m in Sources */,
+				FA841E571760935C00BBEE90 /* GameScore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

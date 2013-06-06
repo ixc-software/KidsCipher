@@ -1051,6 +1051,238 @@
         <image name="button_time.png" width="639" height="75"/>
         <image name="button_time_clock.png" width="74" height="75"/>
     </resources>
+    <classes>
+        <class className="AVImageView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AVImageView.h"/>
+        </class>
+        <class className="CipherInfoViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="attemps" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="backgroundCell" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="date" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="level" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="levelStarFirst" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="levelStarSecond" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="levelStarThird" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="photo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CipherInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="changeToBoyTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="changeToGirlTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="difficultLevelLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="difficultLevelSelector" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="levelTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mainPageBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mainPageScrollBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="musicSwitchTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myNameEditor" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myPhoto" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myScoreOrGameScore" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="recordTimeTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsAttempstTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsDateTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsLevelTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsNameTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="returnToGameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="CipherViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="changePhoto:"/>
+                <relationship kind="action" name="startGame:"/>
+                <relationship kind="action" name="startTraining:"/>
+                <relationship kind="outlet" name="attemptsNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="attemptsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="beginGameButtonTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="beginTrainingButtonTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="combinationTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="frame1combination" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="frame2combination" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="frame3combination" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="frame4combination" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="gamePlayScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="gameTimeMainTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameTimeMinutes" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameTimeMinutesTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameTimeSeconds" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameTimeSecondsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="image1OutsideTableView" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image1combination" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image2OutsideTableView" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image2combination" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image3OutsideTableView" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image3combination" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image4OutsideTableView" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image4combination" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image5OutsideTableView" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image5combination" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="mainPageBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mainPageScrollBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="photoView" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="playerName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row10MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row1HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row1MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row1MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row1MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row1MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row1frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row1frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row1frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row1frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row1image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row1image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row1image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row1image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row1image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row1view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row2HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row2MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row2MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row2MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row2MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row2frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row2frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row2frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row2frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row2image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row2image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row2image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row2image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row2image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row2view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row3HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row3MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row4HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row4MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row5HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row5MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row6HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row6MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row7HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row7MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row8HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row8MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row9HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row9MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="safeImage" candidateClass="UIImageView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

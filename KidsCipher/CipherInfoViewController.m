@@ -55,6 +55,29 @@
     [super viewDidLoad];
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     [mainDelegate registerViewController:@"CipherInfoViewController" controller:self];
+    
+    self.returnToGameLabel.text = NSLocalizedString(@"returnToGameLabel", @"");
+    self.myName.text = NSLocalizedString(@"myName", @"");
+    self.myNameEditor.placeholder = NSLocalizedString(@"myNameEditor", @"");
+
+    [self.myScoreOrGameScore setTitle:NSLocalizedString(@"myScoreOrGameScore0", @"") forSegmentAtIndex:0];
+    [self.myScoreOrGameScore setTitle:NSLocalizedString(@"myScoreOrGameScore1", @"") forSegmentAtIndex:1];
+
+    self.recordsNameTitle.text = NSLocalizedString(@"recordsNameTitle", @"");
+    self.recordsDateTitle.text = NSLocalizedString(@"recordsDateTitle", @"");
+    self.recordTimeTitle.text = NSLocalizedString(@"recordTimeTitle", @"");
+    self.recordsLevelTitle.text = NSLocalizedString(@"recordsLevelTitle", @"");
+    self.recordsAttempstTitle.text = NSLocalizedString(@"recordsAttempstTitle", @"");
+
+    self.changeToBoyTitle.text = NSLocalizedString(@"changeToBoyTitle", @"");
+    self.changeToGirlTitle.text = NSLocalizedString(@"changeToGirlTitle", @"");
+    self.musicSwitchTitle.text = NSLocalizedString(@"musicSwitchTitle", @"");
+    self.levelTitle.text = NSLocalizedString(@"difficultLevelLabel", @"");
+
+    [self.difficultLevelSelector setTitle:NSLocalizedString(@"difficultLevelSelector0", @"") forSegmentAtIndex:0];
+    [self.difficultLevelSelector setTitle:NSLocalizedString(@"difficultLevelSelector1", @"") forSegmentAtIndex:1];
+    [self.difficultLevelSelector setTitle:NSLocalizedString(@"difficultLevelSelector2", @"") forSegmentAtIndex:2];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,6 +130,22 @@
     self.fetchedResultsController = [self newFetchedResultsControllerWithSearch:@""];
     NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
     self.myNameEditor.text = name;
+    NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
+    switch (level.unsignedIntegerValue) {
+        case 0:
+            self.difficultLevelSelector.selectedSegmentIndex = 0;
+            break;
+        case 1:
+            self.difficultLevelSelector.selectedSegmentIndex = 1;
+            break;
+        case 2:
+            self.difficultLevelSelector.selectedSegmentIndex = 2;
+            break;
+            
+        default:
+            break;
+    }
+
 }
 #pragma mark - own actions
 - (IBAction)changeMyPhoto:(id)sender {
@@ -130,6 +169,25 @@
     [self.tableView reloadData];
 }
 - (IBAction)difficultLevelStart:(id)sender {
+//#warning finish
+    NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
+    switch ([sender selectedSegmentIndex]) {
+        case 0:
+            level = [NSNumber numberWithInt:0];
+            break;
+        case 1:
+            level = [NSNumber numberWithInt:1];
+            break;
+        case 2:
+            level = [NSNumber numberWithInt:2];
+            break;
+            
+        default:
+            break;
+    }
+    
+    [[NSUserDefaults standardUserDefaults] setValue:level forKey:@"level"];
+
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -150,8 +208,16 @@
 
 }
 - (IBAction)musicChangeStart:(id)sender {
+//#warning finish
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    if ([mainDelegate.audioPlayerMainFoneMusic isPlaying]) [mainDelegate.audioPlayerMainFoneMusic stop];
+    else [mainDelegate.audioPlayerMainFoneMusic play];
 }
 
+- (IBAction)changeToBoyStart:(id)sender {
+#warning finish
+
+}
 #pragma mark - UITableViewDelegates
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
@@ -171,26 +237,14 @@
     static NSString *CellIdentifier = @"CipherInfoViewCell";
     CipherInfoViewCell *cell = [tableViewLocal dequeueReusableCellWithIdentifier:CellIdentifier];
     GamesHistory *row = [[self fetchedResultsController] objectAtIndexPath:indexPath];
-
-//    if (self.myScoreOrGameScore.selectedSegmentIndex == 0) {
-//        NSData *photoData = row.photo;
-//        if (photoData) {
-//            UIImage *image = [UIImage imageWithData:photoData];
-//            cell.photo.image = image;
-//        } else {
-//            UIImage *image = [UIImage imageNamed:@"button_avatar"];
-//            cell.photo.image = image;
-//        }
-//    } else {
-        NSData *photoData = row.photo;
-        if (photoData) {
-            UIImage *image = [UIImage imageWithData:photoData];
-            cell.photo.image = image;
-        } else {
-            UIImage *image = [UIImage imageNamed:@"button_avatar"];
-            cell.photo.image = image;
-        }
-//    }
+    NSData *photoData = row.photo;
+    if (photoData) {
+        UIImage *image = [UIImage imageWithData:photoData];
+        cell.photo.image = image;
+    } else {
+        UIImage *image = [UIImage imageNamed:@"button_avatar"];
+        cell.photo.image = image;
+    }
     cell.name.text = row.name;
 
     NSDateFormatter *df = [[NSDateFormatter alloc] init];
@@ -199,21 +253,21 @@
     cell.date.text = [df stringFromDate:row.date];
 
     switch (row.difficultLevel.unsignedIntegerValue) {
-        case 1:
-            cell.level.text = @"низкий";
+        case 2:
+            cell.level.text = NSLocalizedString(@"difficultLevelSelector2", @"");
             cell.levelStarFirst.image = [UIImage imageNamed:@"button_level_star_yellow"];
             cell.levelStarSecond.image = [UIImage imageNamed:@"button_level_star_transparent"];
             cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_transparent"];
             break;
-        case 2:
-            cell.level.text = @"средний";
+        case 1:
+            cell.level.text = NSLocalizedString(@"difficultLevelSelector1", @"");
             cell.levelStarFirst.image = [UIImage imageNamed:@"button_level_star_yellow"];
             cell.levelStarSecond.image = [UIImage imageNamed:@"button_level_star_yellow"];
             cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_transparent"];
             break;
 
-        case 3:
-            cell.level.text = @"высокий";
+        case 0:
+            cell.level.text = NSLocalizedString(@"difficultLevelSelector0", @"");
             cell.levelStarFirst.image = [UIImage imageNamed:@"button_level_star_yellow"];
             cell.levelStarSecond.image = [UIImage imageNamed:@"button_level_star_yellow"];
             cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_yellow"];
@@ -223,7 +277,7 @@
             break;
     }
 
-    cell.time.text = [NSString stringWithFormat:@"%@ секунд",row.gameTime];
+    cell.time.text = [NSString stringWithFormat:@"%@ %@",row.gameTime,NSLocalizedString(@"gameTimeSecondsTitle", @"")];
     cell.attemps.text = [NSString stringWithFormat:@"%@",row.attempts];
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     if (orientation == UIDeviceOrientationPortrait) {
@@ -617,7 +671,15 @@ static CGRect swapWidthAndHeight(CGRect rect)
     [self.pop dismissPopoverAnimated:YES];
     NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
     if (pickedData) self.myPhoto.imageView.image = [UIImage imageWithData:pickedData];
-    else self.myPhoto.imageView.image = [UIImage imageNamed:@"ava.png"];
+    else {
+#ifdef KidsCipherBoys
+        self.myPhoto.imageView.image = [UIImage imageNamed:@"button_avatar_boy"];
+#else
+        self.myPhoto.imageView.image = [UIImage imageNamed:@"button_avatar"];
+        
+#endif
+
+    }
 }
 
 @end

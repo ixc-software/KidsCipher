@@ -237,6 +237,8 @@
 
 @property (readwrite) BOOL isViewDidLoadPassed;
 
+@property (readwrite) BOOL isAutorotate;
+
 //@property (nonatomic) NSNumber *isRowCompletedProcessing;
 
 @end

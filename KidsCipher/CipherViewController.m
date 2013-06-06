@@ -581,6 +581,12 @@
     self.attemptsNumber.text = [formatter stringFromNumber:activeRowToGetAllRows.game.activeRowNumber];
 }
 
+-(BOOL)shouldAutorotate
+{
+    return self.isAutorotate;
+}
+
+
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -603,10 +609,12 @@
     [self.gamePlayScrollView scrollRectToVisible:self.row1view.frame animated:YES];
     
     [mainDelegate saveContext];
-    //NSLog(@"didRotateFromInterfaceOrientation activeRow.game->%@",activeRow.game);
+    [self updateAllViews];
+    NSLog(@"didRotateFromInterfaceOrientation activeRow.game->%@",activeRow.game);
 }
 - (void)viewDidLoad
 {
+    self.isAutorotate = YES;
     [super viewDidLoad];
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     [mainDelegate registerViewController:@"CipherViewController" controller:self];
@@ -619,6 +627,36 @@
     activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
     [mainDelegate saveContext];
     self.isViewDidLoadPassed = YES;
+    
+    self.attemptsTitle.text = NSLocalizedString(@"attemptsTitle", @"");
+    self.gameTimeMainTitle.text = NSLocalizedString(@"gameTimeMainTitle", @"");
+    self.gameTimeMinutesTitle.text = NSLocalizedString(@"gameTimeMinutesTitle", @"");
+    self.gameTimeSecondsTitle.text = NSLocalizedString(@"gameTimeSecondsTitle", @"");
+    self.combinationTitle.text = NSLocalizedString(@"combinationTitle", @"");
+    self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
+    self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
+
+    self.row1MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
+    self.row1MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
+    self.row2MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
+    self.row2MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
+    self.row3MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
+    self.row3MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
+    self.row4MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
+    self.row4MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
+    self.row5MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
+    self.row5MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
+    self.row6MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
+    self.row6MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
+    self.row7MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
+    self.row7MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
+    self.row8MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
+    self.row8MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
+    self.row9MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
+    self.row9MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
+    self.row10MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
+    self.row10MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
+
     //NSLog(@"viewDidLoad self.image1OutsideTableView.startPointt->%@",NSStringFromCGPoint(self.image1OutsideTableView.frame.origin));
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -686,7 +724,19 @@
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     mainDelegate.gameTimerSeconds++;
     if (!mainDelegate.isTraining) {
-        NSDate *date = [NSDate dateWithTimeIntervalSinceReferenceDate:mainDelegate.gameTimerSeconds];
+        NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
+        NSDate *date = nil;
+        if (level.unsignedIntegerValue == 1) {
+            date = [NSDate dateWithTimeIntervalSinceReferenceDate:60 * 60 - mainDelegate.gameTimerSeconds];
+        }
+        if (level.unsignedIntegerValue == 0) {
+            date = [NSDate dateWithTimeIntervalSinceReferenceDate:60 * 5  - mainDelegate.gameTimerSeconds];
+        }
+        
+        if (level.unsignedIntegerValue == 2) {
+            date = [NSDate dateWithTimeIntervalSinceReferenceDate:mainDelegate.gameTimerSeconds];
+        }
+        
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.locale = [NSLocale currentLocale];
         [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
@@ -698,6 +748,9 @@
         self.gameTimeMinutes.text = minutes;
         self.gameTimeSeconds.text = seconds;
         NSLog(@"%@", [formatter stringFromDate:date]);
+        
+
+        //}
     }
     //self.row1MatchedColors.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColor]];
 
@@ -735,7 +788,8 @@
     
     if (mainDelegate.gameTimer != nil) {
         [mainDelegate.gameTimer invalidate];
-        self.beginGameButtonTitle.text = @"Начать игру";
+        //self.beginGameButtonTitle.text = @"Начать игру";
+        self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
         [mainDelegate setRandomCombinationForCurrentGame];
         NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
         formatter.locale = [NSLocale currentLocale];
@@ -746,7 +800,9 @@
         mainDelegate.gameTimerSeconds = 0;
         [self updateAllViews];
     } else {
-        self.beginGameButtonTitle.text = @"Остановить игру";
+        //self.beginGameButtonTitle.text = @"Остановить игру";
+        self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitleStop", @"");
+
         mainDelegate.gameTimer = nil;
         mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
     }
@@ -770,13 +826,17 @@
     [mainDelegate saveContext];
     if (mainDelegate.gameTimer != nil) {
         [mainDelegate.gameTimer invalidate];
-        self.beginTrainingButtonTitle.text = @"Тренировка";
+        //self.beginTrainingButtonTitle.text = @"Тренировка";
+        self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
+
         [mainDelegate setRandomCombinationForCurrentGame];
         [self updateAllViews];
         mainDelegate.gameTimer = nil;
         mainDelegate.gameTimerSeconds = 0;
     } else {
-        self.beginTrainingButtonTitle.text = @"Остановить тренировку";
+        //self.beginTrainingButtonTitle.text = @"Остановить тренировку";
+        self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitleStop", @"");
+
         mainDelegate.gameTimer = nil;
         mainDelegate.isTraining = YES;
         mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
@@ -791,10 +851,16 @@
     //@synchronized (self) {
     //if (self.isRowCompletedProcessing && self.isRowCompletedProcessing.boolValue)  { NSLog(@"isRowCompletedProcessing, return");return; }
     //self.isRowCompletedProcessing = [NSNumber numberWithBool:YES];
+    self.isAutorotate = NO;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^(void) {
         //sleep(1);
         CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
-        
+        __block CGPoint frameToReturnMainImage1;
+        __block CGPoint frameToReturnMainImage2;
+        __block CGPoint frameToReturnMainImage3;
+        __block CGPoint frameToReturnMainImage4;
+        __block CGPoint frameToReturnMainImage5;
+
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             
             Row *activeRow = [mainDelegate getActiveRow];
@@ -899,59 +965,68 @@
             [mainDelegate saveContext];
             NSLog(@"==================activeRow.game.activeRowNumber->%@ activeRow.isFilled->%@",activeRow.game.activeRowNumber,activeRow.isFilled);
             
-            activeRow = [mainDelegate getActiveRow];
             if (activeRow.game.activeRowNumber.integerValue > 9 || findedTruePositionsAndColors == 4) {
                 NSLog(@"==================game over");
-                self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe_open"];
+                if (findedTruePositionsAndColors == 4) self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe_open"];
+                else self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
                 [mainDelegate.gameTimer invalidate];
-                self.beginTrainingButtonTitle.text = @"Тренировка";
+                self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
+                self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
                 [mainDelegate setRandomCombinationForCurrentGame];
                 [self updateAllViews];
-                mainDelegate.gameTimer = nil;
-                mainDelegate.gameTimerSeconds = 0;
                 GamesHistory *newHistory = (GamesHistory *)[NSEntityDescription insertNewObjectForEntityForName:@"GamesHistory" inManagedObjectContext:mainDelegate.managedObjectContext];
                 NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
-                NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"button_avatar"]);
-                
+                //NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"button_avatar"]);
                 if (pickedData) newHistory.photo = pickedData;
-                else newHistory.photo = imageData;
+                //else newHistory.photo = imageData;
                 //NSLog(@"pickedData->%@ ",[pickedData description],[imageData description]);
-                newHistory.name = @"Test";
+                NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
+                NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
+
+                newHistory.name = name;
                 newHistory.date = [NSDate date];
-                newHistory.difficultLevel = [NSNumber numberWithInt:1];
-                newHistory.gameTime = [NSNumber numberWithInt:1234];
-                newHistory.attempts = [NSNumber numberWithInt:2];
+                newHistory.difficultLevel = level;
+                newHistory.gameTime = [NSNumber numberWithInt:mainDelegate.gameTimerSeconds];
+                newHistory.attempts = [NSNumber numberWithInt:activeRowNumber+1];
+
+                mainDelegate.gameTimer = nil;
+                mainDelegate.gameTimerSeconds = 0;
+                [mainDelegate saveContext];
+                [mainDelegate sendNewGamescore:newHistory.objectID];
+                [self.gamePlayScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
 
             }
+            activeRow = [mainDelegate getActiveRow];
+
             //NSLog(@"activeRowNumber->%@ activeRow->%@",activeRow.game.activeRowNumber,activeRow);
-            CGPoint frameToReturnMainImage1 = CGPointFromString(activeRow.game.mainDraggedImage1startingPoint);
+             frameToReturnMainImage1 = CGPointFromString(activeRow.game.mainDraggedImage1startingPoint);
             self.image1OutsideTableView.frame = CGRectMake(frameToReturnMainImage1.x,
                                                            frameToReturnMainImage1.y,
                                                            self.image1OutsideTableView.frame.size.width,
                                                            self.image1OutsideTableView.frame.size.height);
             self.image1OutsideTableView.alpha = 0.0;
-            CGPoint frameToReturnMainImage2 = CGPointFromString(activeRow.game.mainDraggedImage2startingPoint);
+             frameToReturnMainImage2 = CGPointFromString(activeRow.game.mainDraggedImage2startingPoint);
             self.image2OutsideTableView.frame = CGRectMake(frameToReturnMainImage2.x,
                                                            frameToReturnMainImage2.y,
                                                            self.image2OutsideTableView.frame.size.width,
                                                            self.image2OutsideTableView.frame.size.height);
             self.image2OutsideTableView.alpha = 0.0;
 
-            CGPoint frameToReturnMainImage3 = CGPointFromString(activeRow.game.mainDraggedImage3startingPoint);
+             frameToReturnMainImage3 = CGPointFromString(activeRow.game.mainDraggedImage3startingPoint);
             self.image3OutsideTableView.frame = CGRectMake(frameToReturnMainImage3.x,
                                                            frameToReturnMainImage3.y,
                                                            self.image3OutsideTableView.frame.size.width,
                                                            self.image3OutsideTableView.frame.size.height);
             self.image3OutsideTableView.alpha = 0.0;
 
-            CGPoint frameToReturnMainImage4 = CGPointFromString(activeRow.game.mainDraggedImage4startingPoint);
+             frameToReturnMainImage4 = CGPointFromString(activeRow.game.mainDraggedImage4startingPoint);
             self.image4OutsideTableView.frame = CGRectMake(frameToReturnMainImage4.x,
                                                            frameToReturnMainImage4.y,
                                                            self.image4OutsideTableView.frame.size.width,
                                                            self.image4OutsideTableView.frame.size.height);
             self.image4OutsideTableView.alpha = 0.0;
 
-            CGPoint frameToReturnMainImage5 = CGPointFromString(activeRow.game.mainDraggedImage5startingPoint);
+             frameToReturnMainImage5 = CGPointFromString(activeRow.game.mainDraggedImage5startingPoint);
             self.image5OutsideTableView.frame = CGRectMake(frameToReturnMainImage5.x,
                                                            frameToReturnMainImage5.y,
                                                            self.image5OutsideTableView.frame.size.width,
@@ -980,7 +1055,12 @@
                     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
                     formatter.locale = [NSLocale currentLocale];
                     self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:1]];
-                    [self.gamePlayScrollView scrollRectToVisible:self.row2view.frame animated:YES];
+                    //[self.gamePlayScrollView scrollRectToVisible:self.row2view.frame animated:YES];
+                    CGFloat delta = 0;
+                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                    CGFloat rowHeight = self.row2view.frame.size.height * 1.2;
+                    if (scrollHeight > rowHeight) delta = self.row2view.frame.size.height / 1.5;
+                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row2view.frame.origin.y - delta) animated:YES];
                     break;
                 }
                 case 2: {
@@ -1002,7 +1082,11 @@
                     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
                     formatter.locale = [NSLocale currentLocale];
                     self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:2]];
-                    [self.gamePlayScrollView scrollRectToVisible:self.row3view.frame animated:YES];
+                    CGFloat delta = 0;
+                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                    CGFloat rowHeight = self.row3view.frame.size.height * 1.2;
+                    if (scrollHeight > rowHeight) delta = self.row3view.frame.size.height / 20;
+                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row3view.frame.origin.y - delta) animated:YES];
                     break;
                 }
                 case 3: {
@@ -1024,7 +1108,11 @@
                     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
                     formatter.locale = [NSLocale currentLocale];
                     self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:3]];
-                    [self.gamePlayScrollView scrollRectToVisible:self.row4view.frame animated:YES];
+                    CGFloat delta = 0;
+                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                    CGFloat rowHeight = self.row4view.frame.size.height * 1.2;
+                    if (scrollHeight > rowHeight) delta = self.row4view.frame.size.height / 2;
+                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row4view.frame.origin.y - delta) animated:YES];
                     break;
                 }
                 case 4: {
@@ -1046,7 +1134,11 @@
                     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
                     formatter.locale = [NSLocale currentLocale];
                     self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:4]];
-                    [self.gamePlayScrollView scrollRectToVisible:self.row5view.frame animated:YES];
+                    CGFloat delta = 0;
+                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                    CGFloat rowHeight = self.row5view.frame.size.height * 1.2;
+                    if (scrollHeight > rowHeight) delta = self.row5view.frame.size.height / 2;
+                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row5view.frame.origin.y - delta) animated:YES];
                     break;
                 }
                 case 5: {
@@ -1068,7 +1160,11 @@
                     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
                     formatter.locale = [NSLocale currentLocale];
                     self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:5]];
-                    [self.gamePlayScrollView scrollRectToVisible:self.row6view.frame animated:YES];
+                    CGFloat delta = 0;
+                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                    CGFloat rowHeight = self.row6view.frame.size.height * 1.2;
+                    if (scrollHeight > rowHeight) delta = self.row6view.frame.size.height / 2;
+                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row6view.frame.origin.y - delta) animated:YES];
                     break;
                 }
                 case 6: {
@@ -1090,7 +1186,11 @@
                     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
                     formatter.locale = [NSLocale currentLocale];
                     self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:6]];
-                    [self.gamePlayScrollView scrollRectToVisible:self.row7view.frame animated:YES];
+                    CGFloat delta = 0;
+                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                    CGFloat rowHeight = self.row7view.frame.size.height * 1.2;
+                    if (scrollHeight > rowHeight) delta = self.row7view.frame.size.height / 2;
+                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row7view.frame.origin.y - delta) animated:YES];
                     break;
                 }
                 case 7: {
@@ -1112,7 +1212,11 @@
                     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
                     formatter.locale = [NSLocale currentLocale];
                     self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:7]];
-                    [self.gamePlayScrollView scrollRectToVisible:self.row8view.frame animated:YES];
+                    CGFloat delta = 0;
+                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                    CGFloat rowHeight = self.row8view.frame.size.height * 1.2;
+                    if (scrollHeight > rowHeight) delta = self.row8view.frame.size.height / 2;
+                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row8view.frame.origin.y - delta) animated:YES];
                     break;
                 }
                 case 8: {
@@ -1134,7 +1238,11 @@
                     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
                     formatter.locale = [NSLocale currentLocale];
                     self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:8]];
-                    [self.gamePlayScrollView scrollRectToVisible:self.row9view.frame animated:YES];
+                    CGFloat delta = 0;
+                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                    CGFloat rowHeight = self.row9view.frame.size.height * 1.2;
+                    if (scrollHeight > rowHeight) delta = self.row9view.frame.size.height / 2;
+                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row9view.frame.origin.y - delta) animated:YES];
                     break;
                 }
                 case 9: {
@@ -1156,13 +1264,24 @@
                     NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
                     formatter.locale = [NSLocale currentLocale];
                     self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:9]];
-                    [self.gamePlayScrollView scrollRectToVisible:self.row10view.frame animated:YES];
+                    CGFloat delta = 0;
+                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                    CGFloat rowHeight = self.row10view.frame.size.height * 1.2;
+                    if (scrollHeight > rowHeight) delta = self.row10view.frame.size.height / 2;
+                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row10view.frame.origin.y - delta) animated:YES];
                     break;
                 }
                     
                 case 10: {
                     NSLog(@"GAME OVER");
-                    
+                    self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
+                    [mainDelegate.gameTimer invalidate];
+                    self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
+                    self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
+                    [mainDelegate setRandomCombinationForCurrentGame];
+                    [self updateAllViews];
+                    mainDelegate.gameTimer = nil;
+                    mainDelegate.gameTimerSeconds = 0;
                     break;
                 }
                     
@@ -1176,6 +1295,38 @@
         sleep(2);
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             mainDelegate.isNewRowProcessing = NO;
+            self.image1OutsideTableView.frame = CGRectMake(frameToReturnMainImage1.x,
+                                                           frameToReturnMainImage1.y,
+                                                           self.image1OutsideTableView.frame.size.width,
+                                                           self.image1OutsideTableView.frame.size.height);
+            self.image1OutsideTableView.alpha = 0.0;
+            self.image2OutsideTableView.frame = CGRectMake(frameToReturnMainImage2.x,
+                                                           frameToReturnMainImage2.y,
+                                                           self.image2OutsideTableView.frame.size.width,
+                                                           self.image2OutsideTableView.frame.size.height);
+            self.image2OutsideTableView.alpha = 0.0;
+            self.image3OutsideTableView.frame = CGRectMake(frameToReturnMainImage3.x,
+                                                           frameToReturnMainImage3.y,
+                                                           self.image3OutsideTableView.frame.size.width,
+                                                           self.image3OutsideTableView.frame.size.height);
+            self.image3OutsideTableView.alpha = 0.0;
+            self.image4OutsideTableView.frame = CGRectMake(frameToReturnMainImage4.x,
+                                                           frameToReturnMainImage4.y,
+                                                           self.image4OutsideTableView.frame.size.width,
+                                                           self.image4OutsideTableView.frame.size.height);
+            self.image4OutsideTableView.alpha = 0.0;
+            self.image5OutsideTableView.frame = CGRectMake(frameToReturnMainImage5.x,
+                                                           frameToReturnMainImage5.y,
+                                                           self.image5OutsideTableView.frame.size.width,
+                                                           self.image5OutsideTableView.frame.size.height);
+            self.image5OutsideTableView.alpha = 0.0;
+
+            self.image1OutsideTableView.hidden = NO;
+            self.image2OutsideTableView.hidden = NO;
+            self.image3OutsideTableView.hidden = NO;
+            self.image4OutsideTableView.hidden = NO;
+            self.image5OutsideTableView.hidden = NO;
+
             [UIView animateWithDuration:0.5
                                   delay:0
                                 options:0
@@ -1187,6 +1338,8 @@
                                  self.image5OutsideTableView.alpha = 1.0;
                                  
                              } completion:^(BOOL finished) {
+                                 self.isAutorotate = YES;
+
                              }];
         });
         //self.isRowCompletedProcessing = [NSNumber numberWithBool:NO];
@@ -1456,7 +1609,7 @@ static CGRect swapWidthAndHeight(CGRect rect)
     [self.pop dismissPopoverAnimated:YES];
     NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
     if (pickedData) self.photoView.imageView.image = [UIImage imageWithData:pickedData];
-    else self.photoView.imageView.image = [UIImage imageNamed:@"ava.png"];
+    else self.photoView.imageView.image = [UIImage imageNamed:@"button_avatar"];
 }
 
 - (void)viewDidUnload {

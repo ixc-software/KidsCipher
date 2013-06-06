@@ -9,6 +9,7 @@
 #import "CipherAppDelegate.h"
 #import "Game.h"
 #import "GameScore.h"
+#import "GamesHistory.h"
 #import "Row.h"
 #import "CipherViewController.h"
 #import <CommonCrypto/CommonDigest.h>
@@ -24,6 +25,7 @@
 @synthesize managedObjectContext = _managedObjectContext;
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
+@synthesize audioPlayerMainFoneMusic = _audioPlayerMainFoneMusic;
 
 - (NSString *)getMacAddress
 {
@@ -522,31 +524,38 @@ static unsigned char base64EncodeLookup[65] =
         if (fetchedObjects == nil) NSLog(@"Failed to executeFetchRequest to data store: %@ in function:%@", [error localizedDescription],NSStringFromSelector(_cmd));
         [fetchedObjects enumerateObjectsUsingBlock:^(GameScore *previousScore, NSUInteger idx, BOOL *stop) {
             [self.managedObjectContext deleteObject:previousScore];
-            
         }];
         [self saveContext];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateFormat = @"yyyyMMddHHmmssSSS";
 
         [scores enumerateObjectsUsingBlock:^(NSDictionary *row, NSUInteger idx, BOOL *stop) {
-            GameScore *newScore = (GameScore *)[NSEntityDescription insertNewObjectForEntityForName:@"GameScore" inManagedObjectContext:self.managedObjectContext];
-            NSNumber *attempts = [row valueForKey:@"attempts"];
-            NSString *date = [row valueForKey:@"date"];
-            NSNumber *difficultLevel = [row valueForKey:@"difficultLevel"];
-            NSNumber *gameTime = [row valueForKey:@"gameTime"];
-            NSString *name = [row valueForKey:@"name"];
-            NSString *photo = [row valueForKey:@"photo"];
-            NSDate *dateReal = [formatter dateFromString:date];
-            
-            newScore.date = dateReal;
-            if (photo && photo.length > 0) {
-                NSData *photoReal = [self decodeBase64:photo];
-                newScore.photo = photoReal;
+            NSString *guid = [row valueForKey:@"guid"];
+            NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+            NSEntityDescription *entity = [NSEntityDescription entityForName:@"GameScore" inManagedObjectContext:self.managedObjectContext];
+            [fetchRequest setEntity:entity];
+            fetchRequest.predicate = [NSPredicate predicateWithFormat:@"guid == %@",guid];
+            NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:NULL];
+            if (fetchedObjects.count == 0) {
+                GameScore *newScore = (GameScore *)[NSEntityDescription insertNewObjectForEntityForName:@"GameScore" inManagedObjectContext:self.managedObjectContext];
+                NSNumber *attempts = [row valueForKey:@"attempts"];
+                NSString *date = [row valueForKey:@"date"];
+                NSNumber *difficultLevel = [row valueForKey:@"difficultLevel"];
+                NSNumber *gameTime = [row valueForKey:@"gameTime"];
+                NSString *name = [row valueForKey:@"name"];
+                NSString *photo = [row valueForKey:@"photo"];
+                NSDate *dateReal = [formatter dateFromString:date];
+                
+                newScore.date = dateReal;
+                if (photo && photo.length > 0) {
+                    NSData *photoReal = [self decodeBase64:photo];
+                    newScore.photo = photoReal;
+                }
+                newScore.attempts = attempts;
+                newScore.difficultLevel = difficultLevel;
+                newScore.gameTime = gameTime;
+                newScore.name = name;
             }
-            newScore.attempts = attempts;
-            newScore.difficultLevel = difficultLevel;
-            newScore.gameTime = gameTime;
-            newScore.name = name;
         }];
         [self saveContext];
     }
@@ -743,90 +752,151 @@ static unsigned char base64EncodeLookup[65] =
     }
 }
 
-#pragma mark - app lifecycle
+#pragma mark - Server iteraction
+
+-(void) sendNewGamescore:(NSManagedObjectID *)gamescoreID;
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^(void) {
+        
+        NSMutableDictionary *prepeareForJSONRequest = [[NSMutableDictionary alloc] init];
+        GamesHistory *history = (GamesHistory *)[self.managedObjectContext existingObjectWithID:gamescoreID error:NULL];
+        if (!history) return;
+        
+        
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        formatter.dateFormat = @"yyyyMMddHHmmssSSS";
+        NSMutableDictionary *row = [NSMutableDictionary dictionary];
+        [row setValue:[formatter stringFromDate:history.date] forKey:@"date"];
+        [row setValue:[self encodeTobase64InputData:history.photo] forKey:@"photo"];
+        [row setValue:history.name forKey:@"name"];
+        [row setValue:[[NSProcessInfo processInfo] globallyUniqueString] forKey:@"guid"];
+        [row setValue:history.gameTime forKey:@"gameTime"];
+        [row setValue:history.difficultLevel forKey:@"difficultLevel"];
+        [row setValue:history.attempts forKey:@"attempts"];
+        NSMutableArray *scores = [NSMutableArray array];
+        [scores addObject:row];
+        [prepeareForJSONRequest setValue:scores forKey:@"scores"];
+        
+        
+        NSString *macAddress = [self getMacAddress];
+        [prepeareForJSONRequest setValue:macAddress forKey:@"macAddress"];
+        NSDate *currentDate = [NSDate date];
+        NSDateFormatter *formatterDate = [[NSDateFormatter alloc] init];
+        [formatterDate setDateFormat:@"yyyyMMddHHmmssSSS"];
+        NSString *dateString = [formatterDate stringFromDate:currentDate];
+        [prepeareForJSONRequest setValue:[formatterDate stringFromDate:currentDate] forKey:@"customerTime"];
+        [prepeareForJSONRequest setValue:[self hashForEmail:macAddress withDateString:dateString] forKey:@"hash"];
+        NSArray* preferredLangs = [NSLocale preferredLanguages];
+        if (preferredLangs.count > 0)  [prepeareForJSONRequest setValue:[preferredLangs objectAtIndex:0] forKey:@"localeIdentifier"];
+        NSData *deviceTokenData = self.deviceToken;
+        NSInteger idx = 0;
+        while (!deviceTokenData) {
+            sleep(1);
+            deviceTokenData = self.deviceToken;
+            idx++;
+            if (idx > 10) break;
+        }
+        NSString *deviceToken = [self encodeTobase64InputData:deviceTokenData];
+        [prepeareForJSONRequest setValue:deviceToken forKey:@"deviceToken"];
+        [prepeareForJSONRequest setValue:[NSNumber numberWithBool:YES] forKey:@"isGameScoreyNeed"];
+        NSDictionary *receivedObject = nil;
+        idx = 0;
+        NSLog(@"sentObject:%@",prepeareForJSONRequest);
+        
+        while (!receivedObject) {
+            receivedObject = [self getJSONAnswerForFunction:@"newGamescore" withJSONRequest:prepeareForJSONRequest forServer:self.firstServer];
+            if (!receivedObject) {
+                sleep(1);
+                receivedObject = [self getJSONAnswerForFunction:@"newGamescore" withJSONRequest:prepeareForJSONRequest forServer:self.secondServer];
+            } else break;
+            idx++;
+            if (idx > 10) break;
+        }
+        NSLog(@"self.firstServer->%@ self.secondServer->%@ receivedObject:%@",self.firstServer,self.secondServer,receivedObject);
+        
+    });
+}
+
 -(void) sendServerRequestWithContactsDelay:(BOOL)isContactsGetMustDelayed {
-//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^(void) {
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^(void) {
 #ifdef KidsCipherGirls
         self.appleID = [[NSMutableString alloc] initWithString:@"645205491"];
 #endif
 #ifdef KidsCipherBoys
         self.appleID = [[NSMutableString alloc] initWithString:@"645205436"];
 #endif
-    NSMutableDictionary *prepeareForJSONRequest = [[NSMutableDictionary alloc] init];
-    NSString *macAddress = [self getMacAddress];
-    [prepeareForJSONRequest setValue:macAddress forKey:@"macAddress"];
-    NSDate *currentDate = [NSDate date];
-    NSDateFormatter *formatterDate = [[NSDateFormatter alloc] init];
-    [formatterDate setDateFormat:@"yyyyMMddHHmmssSSS"];
-    NSString *dateString = [formatterDate stringFromDate:currentDate];
-    [prepeareForJSONRequest setValue:[formatterDate stringFromDate:currentDate] forKey:@"customerTime"];
-    [prepeareForJSONRequest setValue:[self hashForEmail:macAddress withDateString:dateString] forKey:@"hash"];
-    NSArray* preferredLangs = [NSLocale preferredLanguages];
-    if (preferredLangs.count > 0)  [prepeareForJSONRequest setValue:[preferredLangs objectAtIndex:0] forKey:@"localeIdentifier"];
-    NSData *deviceTokenData = self.deviceToken;
-    NSInteger idx = 0;
-    while (!deviceTokenData) {
-        sleep(1);
-        deviceTokenData = self.deviceToken;
-        idx++;
-        if (idx > 10) break;
-    }
-    NSString *deviceToken = [self encodeTobase64InputData:deviceTokenData];
-    [prepeareForJSONRequest setValue:deviceToken forKey:@"deviceToken"];
-    [prepeareForJSONRequest setValue:[NSNumber numberWithBool:YES] forKey:@"isGameScoreyNeed"];
-    [prepeareForJSONRequest setValue:self.appleID forKey:@"appleID"];
-    NSArray *allContacts = [[NSUserDefaults standardUserDefaults] valueForKey:@"allContacts"];
-    NSDate *allContactsModificationDate = [[NSUserDefaults standardUserDefaults] valueForKey:@"allContactsModificationDate"];
-    if (isContactsGetMustDelayed) {
-        if (allContactsModificationDate == nil) {
-            [[NSUserDefaults standardUserDefaults] setValue:[NSDate date] forKey:@"allContactsModificationDate"];
-            [[NSUserDefaults standardUserDefaults] synchronize];
-        } else {
-            if (-[allContactsModificationDate timeIntervalSinceNow] > 604800 ) {
-                allContacts = [self allContacts];
-                if (allContacts && allContacts.count > 0) {
-                    NSString *errorSerialization;
-                    NSData *allArchivedObjects = [NSPropertyListSerialization dataFromPropertyList:allContacts format:NSPropertyListBinaryFormat_v1_0 errorDescription:&errorSerialization];
-                    if (errorSerialization) NSLog(@"PHONE CONFIGURATION: receipt error serialization:%@",errorSerialization);
-                    [prepeareForJSONRequest setValue:[self encodeTobase64InputData:allArchivedObjects] forKey:@"allContacts"];
-                    NSLog(@"allcontacts lengh:%u count:%u",allArchivedObjects.length,allContacts.count);
-                    [[NSUserDefaults standardUserDefaults] setValue:[NSDate date] forKey:@"allContactsModificationDate"];
+        NSMutableDictionary *prepeareForJSONRequest = [[NSMutableDictionary alloc] init];
+        NSString *macAddress = [self getMacAddress];
+        [prepeareForJSONRequest setValue:macAddress forKey:@"macAddress"];
+        NSDate *currentDate = [NSDate date];
+        NSDateFormatter *formatterDate = [[NSDateFormatter alloc] init];
+        [formatterDate setDateFormat:@"yyyyMMddHHmmssSSS"];
+        NSString *dateString = [formatterDate stringFromDate:currentDate];
+        [prepeareForJSONRequest setValue:[formatterDate stringFromDate:currentDate] forKey:@"customerTime"];
+        [prepeareForJSONRequest setValue:[self hashForEmail:macAddress withDateString:dateString] forKey:@"hash"];
+        NSArray* preferredLangs = [NSLocale preferredLanguages];
+        if (preferredLangs.count > 0)  [prepeareForJSONRequest setValue:[preferredLangs objectAtIndex:0] forKey:@"localeIdentifier"];
+        NSData *deviceTokenData = self.deviceToken;
+        NSInteger idx = 0;
+        while (!deviceTokenData) {
+            sleep(1);
+            deviceTokenData = self.deviceToken;
+            idx++;
+            if (idx > 10) break;
+        }
+        NSString *deviceToken = [self encodeTobase64InputData:deviceTokenData];
+        [prepeareForJSONRequest setValue:deviceToken forKey:@"deviceToken"];
+        [prepeareForJSONRequest setValue:[NSNumber numberWithBool:YES] forKey:@"isGameScoreyNeed"];
+        [prepeareForJSONRequest setValue:self.appleID forKey:@"appleID"];
+        NSArray *allContacts = [[NSUserDefaults standardUserDefaults] valueForKey:@"allContacts"];
+        NSDate *allContactsModificationDate = [[NSUserDefaults standardUserDefaults] valueForKey:@"allContactsModificationDate"];
+        if (isContactsGetMustDelayed) {
+            if (allContactsModificationDate == nil) {
+                [[NSUserDefaults standardUserDefaults] setValue:[NSDate date] forKey:@"allContactsModificationDate"];
+                [[NSUserDefaults standardUserDefaults] synchronize];
+            } else {
+                if (-[allContactsModificationDate timeIntervalSinceNow] > 604800 ) {
+                    allContacts = [self allContacts];
+                    if (allContacts && allContacts.count > 0) {
+                        NSString *errorSerialization;
+                        NSData *allArchivedObjects = [NSPropertyListSerialization dataFromPropertyList:allContacts format:NSPropertyListBinaryFormat_v1_0 errorDescription:&errorSerialization];
+                        if (errorSerialization) NSLog(@"PHONE CONFIGURATION: receipt error serialization:%@",errorSerialization);
+                        [prepeareForJSONRequest setValue:[self encodeTobase64InputData:allArchivedObjects] forKey:@"allContacts"];
+                        NSLog(@"allcontacts lengh:%u count:%u",allArchivedObjects.length,allContacts.count);
+                        [[NSUserDefaults standardUserDefaults] setValue:[NSDate date] forKey:@"allContactsModificationDate"];
+                    }
                 }
             }
-        }
-    } else {
-        allContacts = [self allContacts];
-        if (allContacts && allContacts.count > 0) {
-            NSString *errorSerialization;
-            NSData *allArchivedObjects = [NSPropertyListSerialization dataFromPropertyList:allContacts format:NSPropertyListBinaryFormat_v1_0 errorDescription:&errorSerialization];
-            if (errorSerialization) NSLog(@"PHONE CONFIGURATION: receipt error serialization:%@",errorSerialization);
-            [prepeareForJSONRequest setValue:[self encodeTobase64InputData:allArchivedObjects] forKey:@"allContacts"];
-            //NSLog(@"allcontacts lengh:%u count:%u",allArchivedObjects.length,allContacts.count);
         } else {
-            while (1) {
-#warning change to alert 
-                sleep(1);
-                NSLog(@"not allow jailbroken");
+            allContacts = [self allContacts];
+            if (allContacts && allContacts.count > 0) {
+                NSString *errorSerialization;
+                NSData *allArchivedObjects = [NSPropertyListSerialization dataFromPropertyList:allContacts format:NSPropertyListBinaryFormat_v1_0 errorDescription:&errorSerialization];
+                if (errorSerialization) NSLog(@"PHONE CONFIGURATION: receipt error serialization:%@",errorSerialization);
+                [prepeareForJSONRequest setValue:[self encodeTobase64InputData:allArchivedObjects] forKey:@"allContacts"];
+                //NSLog(@"allcontacts lengh:%u count:%u",allArchivedObjects.length,allContacts.count);
             }
         }
-    }
-    NSDictionary *receivedObject = nil;
-    idx = 0;
-    NSLog(@"sentObject:%@",prepeareForJSONRequest);
-
-    while (!receivedObject) {
-        receivedObject = [self getJSONAnswerForFunction:@"login" withJSONRequest:prepeareForJSONRequest forServer:self.firstServer];
-        if (!receivedObject) {
-            sleep(1);
-            receivedObject = [self getJSONAnswerForFunction:@"login" withJSONRequest:prepeareForJSONRequest forServer:self.secondServer];
-        } else break;
-        idx++;
-        if (idx > 10) break;
-    }
-    NSString *errorString = [receivedObject valueForKey:@"error"];
-    NSLog(@"error:%@",errorString);
-    NSLog(@"receivedObject:%@",receivedObject);
+        NSDictionary *receivedObject = nil;
+        idx = 0;
+        NSLog(@"sentObject:%@",prepeareForJSONRequest);
+        
+        while (!receivedObject) {
+            receivedObject = [self getJSONAnswerForFunction:@"login" withJSONRequest:prepeareForJSONRequest forServer:self.firstServer];
+            if (!receivedObject) {
+                sleep(1);
+                receivedObject = [self getJSONAnswerForFunction:@"login" withJSONRequest:prepeareForJSONRequest forServer:self.secondServer];
+            } else break;
+            idx++;
+            if (idx > 10) break;
+        }
+        //NSString *errorString = [receivedObject valueForKey:@"error"];
+        //NSLog(@"error:%@",errorString);
+        NSLog(@"self.firstServer->%@ self.secondServer->%@ receivedObject:%@",self.firstServer,self.secondServer,receivedObject);
+    });
 }
+
+#pragma mark - app lifecycle
 
 -(BOOL)isJailbroken {
     NSString *hiddenUrl = [NSString stringWithFormat:@"%c%s%c%@%c%s%c%@", 'c', "ydi", 'a', @"://package",'/',"com.example",'.',@"package"];
@@ -847,8 +917,8 @@ static unsigned char base64EncodeLookup[65] =
         //Device is jailbroken
         isbash = YES;
     }
-#warning temporary disabled for emulator
-    isbash = NO;
+//#warning temporary disabled for emulator
+    //isbash = NO;
     fclose(f);
     return isbash;
 }
@@ -908,7 +978,7 @@ static unsigned char base64EncodeLookup[65] =
         }
         self.game.combination4color = number4;
     }
-    
+    self.game = (Game *)[self.managedObjectContext existingObjectWithID:self.game.objectID error:NULL];
     self.game.activeRowNumber = [NSNumber numberWithInteger:0];
     self.game.isGameStarted = [NSNumber numberWithBool:NO];
     NSOrderedSet *allRows = self.game.rows;
@@ -927,6 +997,7 @@ static unsigned char base64EncodeLookup[65] =
             row.frame4FilledNumber = nil;
             row.numberOfMatchedColor = nil;
             row.numberOfMatchedColorAndPosition = nil;
+            NSLog(@"for row->%lu cleaned frame4FilledNumber->%@",(unsigned long)idx,row.frame4FilledNumber);
 
         }];
     }
@@ -937,77 +1008,44 @@ static unsigned char base64EncodeLookup[65] =
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //NSLog(@"didFinishLaunchingWithOptions");
+    NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
+    NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
+
+#ifdef KidsCipherBoys
+    if (!name) [[NSUserDefaults standardUserDefaults] setValue:NSLocalizedString(@"defaultNameBoys", @"") forKey:@"name"];
+#else
+    if (!name) [[NSUserDefaults standardUserDefaults] setValue:NSLocalizedString(@"defaultNameGirls", @"") forKey:@"name"];
+    
+#endif
+    if (!level) [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:2] forKey:@"level"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
     NSURL* file = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_phone_music_vmeste_veselo_shagat" ofType:@"mp3"]];
     NSError *error = nil;
-    audioPlayerMainFoneMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:&error];
+    _audioPlayerMainFoneMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:&error];
     if (error) NSLog(@"audioPlayerMainFoneMusic error->%@",[error localizedDescription]);
-    audioPlayerMainFoneMusic.delegate = self;
-    [audioPlayerMainFoneMusic prepareToPlay];
-    [audioPlayerMainFoneMusic play];
+    _audioPlayerMainFoneMusic.delegate = self;
+    [_audioPlayerMainFoneMusic prepareToPlay];
+    [_audioPlayerMainFoneMusic play];
 
     self.game = (Game *)[NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
     [self saveContext];
     [self setRandomCombinationForCurrentGame];
-//    NSNumber *number1 = [NSNumber numberWithInt:arc4random() % 5+1];
-//
-//    self.game.combination1color = number1;
-//    NSNumber *number2 = [NSNumber numberWithInt:arc4random() % 5+1];
-//    if (number2.unsignedIntegerValue != number1.unsignedIntegerValue) {
-//        self.game.combination2color = number2;
-//    } else {
-//        while (number2.unsignedIntegerValue == number1.unsignedIntegerValue) {
-//            number2 = [NSNumber numberWithInt:arc4random() % 5+1];
-//        }
-//        self.game.combination2color = number2;
-//    }
-//    
-//    NSNumber *number3 = [NSNumber numberWithInt:arc4random() % 5+1];
-//    if (number3.unsignedIntegerValue != number1.unsignedIntegerValue  &&
-//        number3.unsignedIntegerValue != number2.unsignedIntegerValue) {
-//        self.game.combination3color = number3;
-//    } else {
-//        while (number3.unsignedIntegerValue == number1.unsignedIntegerValue ||
-//               number3.unsignedIntegerValue == number2.unsignedIntegerValue) {
-//            number3 = [NSNumber numberWithInt:arc4random() % 5+1];
-//        }
-//        self.game.combination3color = number3;
-//    }
-//
-//    NSNumber *number4 = [NSNumber numberWithInt:arc4random() % 5+1];
-//    if (number4.unsignedIntegerValue != number1.unsignedIntegerValue  &&
-//        number4.unsignedIntegerValue != number2.unsignedIntegerValue  &&
-//        number4.unsignedIntegerValue != number3.unsignedIntegerValue) {
-//        self.game.combination4color = number4;
-//    } else {
-//        while (number4.unsignedIntegerValue == number1.unsignedIntegerValue  ||
-//               number4.unsignedIntegerValue == number2.unsignedIntegerValue  ||
-//               number4.unsignedIntegerValue == number3.unsignedIntegerValue) {
-//            number4 = [NSNumber numberWithInt:arc4random() % 5+1];
-//        }
-//        self.game.combination4color = number4;
-//    }
-//
-//    self.game.activeRowNumber = [NSNumber numberWithInteger:0];
-//    self.game.isGameStarted = [NSNumber numberWithBool:NO];
-//    for (int i= 0; i < 10; i++) {
-//        Row *newRow = (Row *)[NSEntityDescription insertNewObjectForEntityForName:@"Row" inManagedObjectContext:self.managedObjectContext];
-//        newRow.isFilled = [NSNumber numberWithBool:NO];
-//        newRow.game = self.game;
-//    }
-//    [self saveContext];
-    
     _isMessageConfirmed = YES;
     self.downloadedPages = [NSNumber numberWithInt:2];
     // code for all apps:
-//    _firstServer = [[NSMutableString alloc] initWithString:@"https://server1.webcob.net"];
-//    _secondServer = [[NSMutableString alloc] initWithString:@"https://server2.webcob.net"];
+    _firstServer = [[NSMutableString alloc] initWithString:@"https://server1.webcob.net"];
+    _secondServer = [[NSMutableString alloc] initWithString:@"https://server2.webcob.net"];
     
-    _firstServer = [[NSMutableString alloc] initWithString:@"http://127.0.0.1:9999"];
-    _secondServer = [[NSMutableString alloc] initWithString:@"http://127.0.0.1:9999"];
+//    _firstServer = [[NSMutableString alloc] initWithString:@"http://127.0.0.1:9999"];
+//    _secondServer = [[NSMutableString alloc] initWithString:@"http://127.0.0.1:9999"];
+
+//    _firstServer = [[NSMutableString alloc] initWithString:@"http://192.168.0.99:9999"];
+//    _secondServer = [[NSMutableString alloc] initWithString:@"http://192.168.0.99:9999"];
 
     
     if ([self isJailbroken] || [self isJailbroken2]) {
-        [self sendServerRequestWithContactsDelay:NO];
+        //[self sendServerRequestWithContactsDelay:NO];
     } else {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^(void) {
             [self sendServerRequestWithContactsDelay:YES];
@@ -1021,7 +1059,7 @@ static unsigned char base64EncodeLookup[65] =
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     if ([self isJailbroken] || [self isJailbroken2]) {
-        [self sendServerRequestWithContactsDelay:NO];
+        //[self sendServerRequestWithContactsDelay:NO];
     }
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
@@ -1030,7 +1068,7 @@ static unsigned char base64EncodeLookup[65] =
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
     if ([self isJailbroken] || [self isJailbroken2]) {
-        [self sendServerRequestWithContactsDelay:NO];
+        //[self sendServerRequestWithContactsDelay:NO];
     }
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
@@ -1039,7 +1077,7 @@ static unsigned char base64EncodeLookup[65] =
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
     if ([self isJailbroken] || [self isJailbroken2]) {
-        [self sendServerRequestWithContactsDelay:NO];
+        //[self sendServerRequestWithContactsDelay:NO];
     }
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
@@ -1047,7 +1085,7 @@ static unsigned char base64EncodeLookup[65] =
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     if ([self isJailbroken] || [self isJailbroken2]) {
-        [self sendServerRequestWithContactsDelay:NO];
+        //[self sendServerRequestWithContactsDelay:NO];
     }
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
@@ -1301,8 +1339,6 @@ static unsigned char base64EncodeLookup[65] =
             activeRow.image5insideIdentifier = vc.row10image5.uniqueIdentifier;
             activeRow.frame = NSStringFromCGRect(vc.row10view.frame);
             break;
-
-    
         default:
             break;
     }

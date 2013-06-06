@@ -4,4 +4,40 @@
 
   Created by Oleksii Vynogradov on 5/3/13.
   Copyright (c) 2013 IXC-USA Corp. All rights reserved.
-*/
+ */
+
+"attemptsTitle" = "Attempts:";
+ 
+"gameTimeMainTitle" = "Time:";
+"gameTimeMinutesTitle" = "minutes";
+"gameTimeSecondsTitle" = "sec";
+"combinationTitle" = "To open the safe, guess a combination of:";
+"beginTrainingButtonTitle" = "Training";
+"beginTrainingButtonTitleStop" = "Stop training";
+"beginGameButtonTitle" = "Begin game";
+"beginGameButtonTitleStop" = "Stop game";
+"returnToGameLabel" = "Return to game";
+"myName" = "Your name";
+"myNameEditor" = "enter";
+"myScoreOrGameScore0" = "My records";
+"myScoreOrGameScore1" = "Common records";
+
+"recordsNameTitle" = "Winner's name";
+"recordsDateTitle" = "Date";
+"recordTimeTitle" = "Game time";
+"recordsLevelTitle" = "Level";
+"recordsAttempstTitle" = "Attempts";
+
+"changeToBoyTitle" = "For boys:";
+"changeToGirlTitle" = "For girls:";
+"musicSwitchTitle" = "Music";
+"difficultLevelLabel" = "Difficult level";
+
+"difficultLevelSelector0" = "High";
+"difficultLevelSelector1" = "Middle";
+"difficultLevelSelector2" = "Low";
+
+"rowMatchedColorsAndPositionsTitle" = "Matched";
+"rowMatchedColors" = "Matched color only";
+"defaultNameGirls" = "Princess";
+"defaultNameBoys" = "Superman";

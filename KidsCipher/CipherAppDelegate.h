@@ -11,10 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 
 @interface CipherAppDelegate : UIResponder <UIApplicationDelegate,AVAudioPlayerDelegate>
-{
-    AVAudioPlayer* audioPlayerMainFoneMusic;
-}
-
+@property (strong, nonatomic) AVAudioPlayer* audioPlayerMainFoneMusic;
 @property (strong, nonatomic) UIWindow *window;
 @property (retain,nonatomic) NSMutableDictionary *viewControllers;
 - (void)registerViewController:(NSString *)name controller:(UIViewController *)controller;
@@ -53,5 +50,6 @@
 
 - (void)saveContext;
 -(void) setRandomCombinationForCurrentGame;
+-(void) sendNewGamescore:(NSManagedObjectID *)gamescoreID;
 
 @end

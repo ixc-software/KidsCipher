@@ -519,11 +519,21 @@
                              zoomNormalOutside.fillMode=kCAFillModeForwards;
                              zoomNormalOutside.removedOnCompletion=NO;
                              [self.layer addAnimation:zoomNormalOutside forKey:@"zoomNormal"];
+                             dispatch_async(dispatch_get_main_queue(), ^(void) {
+
+                             if (result1) {
+                                 if (activeRow.game.isGameStarted.boolValue) activeRow.frame1FilledNumber = number; [mainDelegate saveContext];
+                             }
+                             if (result2) {
+                                  if (activeRow.game.isGameStarted.boolValue)activeRow.frame2FilledNumber = number; [mainDelegate saveContext];
+                             }
+                             if (result3) {
+                                  if (activeRow.game.isGameStarted.boolValue)activeRow.frame3FilledNumber = number; [mainDelegate saveContext];
+                             }
+                             if (result4) {
+                                  if (activeRow.game.isGameStarted.boolValue)activeRow.frame4FilledNumber = number; [mainDelegate saveContext];
+                             }
                              
-                             if (result1) { activeRow.frame1FilledNumber = number; [mainDelegate saveContext]; }
-                             if (result2) { activeRow.frame2FilledNumber = number; [mainDelegate saveContext]; }
-                             if (result3) { activeRow.frame3FilledNumber = number; [mainDelegate saveContext]; }
-                             if (result4) { activeRow.frame4FilledNumber = number; [mainDelegate saveContext]; }
                              if (activeRow.frame1FilledNumber.integerValue > 0 &&
                                  activeRow.frame2FilledNumber.integerValue > 0 &&
                                  activeRow.frame3FilledNumber.integerValue > 0 &&
@@ -540,7 +550,7 @@
                                      }
                                  //});
                              }
-                             
+                             });
                          }];
         
 
