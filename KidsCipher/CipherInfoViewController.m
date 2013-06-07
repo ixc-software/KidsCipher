@@ -115,10 +115,10 @@
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     if (orientation == UIDeviceOrientationPortrait) {
         NSLog(@"UIDeviceOrientationPortrait");
-        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
+        self.mainPageBackground.image = [UIImage imageNamed:@"button_fon_V"];
         self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records"];
     } else {
-        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
+        self.mainPageBackground.image = [UIImage imageNamed:@"button_fon_G"];
         self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records_G"];
         if (orientation == UIDeviceOrientationUnknown) NSLog(@"UIDeviceOrientationUnknown");
         else NSLog(@"UIDeviceOrientationLandscapeLeft");
@@ -195,10 +195,10 @@
     UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
     if (orientation == UIDeviceOrientationPortrait) {
         NSLog(@"portrait");
-        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
+        self.mainPageBackground.image = [UIImage imageNamed:@"button_fon_V"];
         self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records"];
     } else {
-        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
+        self.mainPageBackground.image = [UIImage imageNamed:@"button_fon_G"];
         self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records_G"];
         NSLog(@"landscape");
         

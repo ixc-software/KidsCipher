@@ -657,6 +657,7 @@
     self.row10MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
     self.row10MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
 
+     
     //NSLog(@"viewDidLoad self.image1OutsideTableView.startPointt->%@",NSStringFromCGPoint(self.image1OutsideTableView.frame.origin));
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -674,6 +675,7 @@
     activeRow.game.mainDraggedImage3startingPoint = NSStringFromCGPoint(self.image3OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage4startingPoint = NSStringFromCGPoint(self.image4OutsideTableView.frame.origin);
     activeRow.game.mainDraggedImage5startingPoint = NSStringFromCGPoint(self.image5OutsideTableView.frame.origin);
+
 }
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -696,6 +698,19 @@
         //if (orientation == UIDeviceOrientationUnknown) NSLog(@"UIDeviceOrientationUnknown");
         //else NSLog(@"UIDeviceOrientationLandscapeLeft");
     }
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
+        if(IS_IPHONE5){
+            //move to your iphone5 storyboard
+            self.mainPageGameBackground.frame = CGRectMake(14, 196, 290, 230);
+            self.gamePlayScrollView.frame = CGRectMake(16, 200, 290, 217);
+        }
+        else{
+            //move to your iphone4s storyboard
+            self.mainPageGameBackground.frame = CGRectMake(14, 172, 290, 175);
+            self.gamePlayScrollView.frame = CGRectMake(16, 176, 290, 165);
+        }
+    }
+
 }
 
 -(void)viewDidDisappear:(BOOL)animated
@@ -1653,6 +1668,7 @@ static CGRect swapWidthAndHeight(CGRect rect)
     [self setMainPageBackground:nil];
     [self setMainPageScrollBackground:nil];
     [self setSafeImage:nil];
+    [self setMainPageGameBackground:nil];
     [super viewDidUnload];
 }
 @end

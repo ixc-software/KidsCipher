@@ -687,7 +687,7 @@ static unsigned char base64EncodeLookup[65] =
 }
 - (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
-    NSLog(@"error register push:%@",[error localizedDescription]);
+    //NSLog(@"error register push:%@",[error localizedDescription]);
 }
 
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo
@@ -1008,6 +1008,7 @@ static unsigned char base64EncodeLookup[65] =
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     //NSLog(@"didFinishLaunchingWithOptions");
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
     NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
     NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
 

@@ -213,6 +213,7 @@
 @property (retain, nonatomic) IBOutlet UIView *row10HidingView;
 /* --------------------------------- ROW 10 FINISH --------------------- */
 
+@property (weak, nonatomic) IBOutlet UIImageView *mainPageGameBackground;
 
 //@property (retain, nonatomic) NSTimer *gameTimer;
 //@property (retain) NSDate *gameStartTime;

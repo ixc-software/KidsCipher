@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "Game.h"
 #import <AVFoundation/AVFoundation.h>
+#define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
 
 @interface CipherAppDelegate : UIResponder <UIApplicationDelegate,AVAudioPlayerDelegate>
 @property (strong, nonatomic) AVAudioPlayer* audioPlayerMainFoneMusic;
