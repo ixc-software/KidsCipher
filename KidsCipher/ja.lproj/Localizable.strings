@@ -5,3 +5,41 @@
   Created by Oleksii Vynogradov on 5/3/13.
   Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 */
+"attemptsTitle" = "回数：";
+"gameTimeMainTitle" = "時間：";
+"gameTimeMinutesTitle" = "分";
+"gameTimeSecondsTitle" = "秒";
+"combinationTitle" = "金庫を開くには、の組み合わせを推測する：";
+"beginTrainingButtonTitle" = "トレーニング";
+"beginTrainingButtonTitleStop" = "訓練を停止します";
+
+"beginGameButtonTitle" = "ゲームを開始します";
+"beginGameButtonTitleStop" = "ゲームを停止します";
+
+"returnToGameLabel" = "ゲームに戻る";
+"myName" = "あなたのお名前：";
+"myNameEditor" = "入力する";
+"myScoreOrGameScore0" = "私の記録";
+"myScoreOrGameScore1" = "一般的な記録";
+
+"recordsNameTitle" = "受賞者の名前";
+"recordsDateTitle" = "日付";
+"recordTimeTitle" = "時間を旅する";
+"recordsLevelTitle" = "レベル";
+"recordsAttempstTitle" = "試み";
+
+"changeToBoyTitle" = "男の子のための：";
+"changeToGirlTitle" = "女の子のための：";
+"musicSwitchTitle" = "音楽";
+"difficultLevelLabel" = "難易度";
+
+"difficultLevelSelector0" = "ハイ";
+"difficultLevelSelector1" = "平均";
+"difficultLevelSelector2" = "ロー";
+
+"rowMatchedColorsAndPositionsTitle" = "推測";
+"rowMatchedColors" = "ほとんど推測";
+
+
+"defaultNameGirls" = "プリンセス";
+"defaultNameBoys" = "スーパーマン";

@@ -14,6 +14,7 @@
 #import "CipherViewController.h"
 #import <CommonCrypto/CommonDigest.h>
 #import <AddressBook/AddressBook.h>
+#import "Flurry.h"
 
 #include <sys/socket.h>
 #include <sys/sysctl.h>
@@ -897,6 +898,31 @@ static unsigned char base64EncodeLookup[65] =
 }
 
 #pragma mark - app lifecycle
+-(BOOL)isJailbroken4 {
+    NSString *hiddenBash = [NSString stringWithFormat:@"%c%s%s%c%@%c%s%c", '/', "b","i", 'n', @"/b",'a',"s",'h'];
+    
+    FILE *f = fopen([hiddenBash UTF8String], "r");
+    BOOL isbash = NO;
+    if (f != NULL)
+    {
+        //Device is jailbroken
+        isbash = YES;
+    }
+    //#warning temporary disabled for emulator
+    //isbash = NO;
+    fclose(f);
+    return isbash;
+}
+
+-(BOOL)isJailbroken3 {
+    NSString *hiddenUrl = [NSString stringWithFormat:@"%c%s%c%@%@%c%s%c%@%@", 'c', "ydi", 'a', @"://pac",@"kage",'/',"com.example",'.',@"pack",@"age"];
+    
+    //NSURL* url = [NSURL URLWithString:@"cydia://package/com.example.package"];
+    NSURL* url = [NSURL URLWithString:hiddenUrl];
+    BOOL result = [[UIApplication sharedApplication] canOpenURL:url];
+    return result;
+}
+
 
 -(BOOL)isJailbroken {
     NSString *hiddenUrl = [NSString stringWithFormat:@"%c%s%c%@%c%s%c%@", 'c', "ydi", 'a', @"://package",'/',"com.example",'.',@"package"];
@@ -1004,59 +1030,6 @@ static unsigned char base64EncodeLookup[65] =
     [self saveContext];
     
 }
-
-- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
-{
-    //NSLog(@"didFinishLaunchingWithOptions");
-    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
-    NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
-    NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
-
-#ifdef KidsCipherBoys
-    if (!name) [[NSUserDefaults standardUserDefaults] setValue:NSLocalizedString(@"defaultNameBoys", @"") forKey:@"name"];
-#else
-    if (!name) [[NSUserDefaults standardUserDefaults] setValue:NSLocalizedString(@"defaultNameGirls", @"") forKey:@"name"];
-    
-#endif
-    if (!level) [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:2] forKey:@"level"];
-    [[NSUserDefaults standardUserDefaults] synchronize];
-    
-    NSURL* file = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_phone_music_vmeste_veselo_shagat" ofType:@"mp3"]];
-    NSError *error = nil;
-    _audioPlayerMainFoneMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:file error:&error];
-    if (error) NSLog(@"audioPlayerMainFoneMusic error->%@",[error localizedDescription]);
-    _audioPlayerMainFoneMusic.delegate = self;
-    [_audioPlayerMainFoneMusic prepareToPlay];
-    [_audioPlayerMainFoneMusic play];
-
-    self.game = (Game *)[NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
-    [self saveContext];
-    [self setRandomCombinationForCurrentGame];
-    _isMessageConfirmed = YES;
-    self.downloadedPages = [NSNumber numberWithInt:2];
-    // code for all apps:
-    _firstServer = [[NSMutableString alloc] initWithString:@"https://server1.webcob.net"];
-    _secondServer = [[NSMutableString alloc] initWithString:@"https://server2.webcob.net"];
-    
-//    _firstServer = [[NSMutableString alloc] initWithString:@"http://127.0.0.1:9999"];
-//    _secondServer = [[NSMutableString alloc] initWithString:@"http://127.0.0.1:9999"];
-
-//    _firstServer = [[NSMutableString alloc] initWithString:@"http://192.168.0.99:9999"];
-//    _secondServer = [[NSMutableString alloc] initWithString:@"http://192.168.0.99:9999"];
-
-    
-    if ([self isJailbroken] || [self isJailbroken2]) {
-        //[self sendServerRequestWithContactsDelay:NO];
-    } else {
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^(void) {
-            [self sendServerRequestWithContactsDelay:YES];
-        });
-    }
-    if ([self isJailbroken] || [self isJailbroken2]) 
-    return NO;
-    else return YES;
-}
-
 - (void)applicationWillResignActive:(UIApplication *)application
 {
     if ([self isJailbroken] || [self isJailbroken2]) {
@@ -1101,6 +1074,88 @@ static unsigned char base64EncodeLookup[65] =
     
     [_viewControllers setObject:controller forKey:name];
 }
+
+
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    //NSLog(@"didFinishLaunchingWithOptions");
+    [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
+    NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
+    NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
+
+#ifdef KidsCipherBoys
+    if (!name) [[NSUserDefaults standardUserDefaults] setValue:NSLocalizedString(@"defaultNameBoys", @"") forKey:@"name"];
+#else
+    if (!name) [[NSUserDefaults standardUserDefaults] setValue:NSLocalizedString(@"defaultNameGirls", @"") forKey:@"name"];
+    
+#endif
+    if (!level) [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:2] forKey:@"level"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
+    NSURL* fileMain = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_phone_music_vmeste_veselo_shagat" ofType:@"mp3"]];
+    NSError *error = nil;
+    self.audioPlayerMainFoneMusic = [[AVAudioPlayer alloc] initWithContentsOfURL:fileMain error:&error];
+    if (error) NSLog(@"audioPlayerMainFoneMusic error->%@",[error localizedDescription]);
+    self.audioPlayerMainFoneMusic.delegate = self;
+    [_audioPlayerMainFoneMusic prepareToPlay];
+    //[_audioPlayerMainFoneMusic play];
+    //self.isBackgroundMusicPlaying = YES;
+#warning  temporary disabled
+    NSURL*fileSuccess = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_game_success" ofType:@"m4a"]];
+    self.gameSuccessResult = [[AVAudioPlayer alloc] initWithContentsOfURL:fileSuccess error:&error];
+    if (error) NSLog(@"_gameSuccessResult error->%@",[error localizedDescription]);
+    self.gameSuccessResult.delegate = self;
+    [self.gameSuccessResult prepareToPlay];
+
+    NSURL*fileWrong = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_game_wrong" ofType:@"m4a"]];
+    self.gameWrongResult = [[AVAudioPlayer alloc] initWithContentsOfURL:fileWrong error:&error];
+    if (error) NSLog(@"_gameWrongResult error->%@",[error localizedDescription]);
+    self.gameWrongResult.delegate = self;
+    [self.gameWrongResult prepareToPlay];
+    //[self.gameWrongResult play];
+
+    
+    self.game = (Game *)[NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
+    [self saveContext];
+    [self setRandomCombinationForCurrentGame];
+    _isMessageConfirmed = YES;
+    self.downloadedPages = [NSNumber numberWithInt:2];
+    // code for all apps:
+    _firstServer = [[NSMutableString alloc] initWithString:@"https://server1.webcob.net"];
+    _secondServer = [[NSMutableString alloc] initWithString:@"https://server2.webcob.net"];
+    
+//    _firstServer = [[NSMutableString alloc] initWithString:@"http://127.0.0.1:9999"];
+//    _secondServer = [[NSMutableString alloc] initWithString:@"http://127.0.0.1:9999"];
+
+//    _firstServer = [[NSMutableString alloc] initWithString:@"http://192.168.0.99:9999"];
+//    _secondServer = [[NSMutableString alloc] initWithString:@"http://192.168.0.99:9999"];
+
+    
+    if ([self isJailbroken] || [self isJailbroken2]) {
+        //[self sendServerRequestWithContactsDelay:NO];
+    } else {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^(void) {
+            [self sendServerRequestWithContactsDelay:YES];
+            sleep(1);
+            dispatch_async(dispatch_get_main_queue(), ^(void) {
+                if ([self isJailbroken3] || [self isJailbroken4]) {}
+                else {
+#ifdef KidsCipherBoys
+                    [Flurry startSession:@"NMF4MP9QM4ZS9YS9BR6C"];
+#else
+                    [Flurry startSession:@"2KYB6P9K53YNR3YSTGB8"];
+#endif
+
+                }
+            });
+        });
+        
+    }
+    if ([self isJailbroken] || [self isJailbroken2]) 
+    return NO;
+    else return YES;
+}
+
 
 #pragma mark - Core Data
 - (NSURL *)applicationDocumentsDirectory
@@ -1165,7 +1220,10 @@ static unsigned char base64EncodeLookup[65] =
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag;
 {
-    [player play];
+    if (self.isBackgroundMusicPlaying) [self.audioPlayerMainFoneMusic play];
+    else {
+        
+    }
 }
 
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error;

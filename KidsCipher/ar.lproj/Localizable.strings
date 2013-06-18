@@ -5,3 +5,41 @@
   Created by Oleksii Vynogradov on 5/3/13.
   Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 */
+"attemptsTitle" = "عدد من المحاولات:";
+"gameTimeMainTitle" = "الوقت:";
+"gameTimeMinutesTitle" = "دقيقة";
+"gameTimeSecondsTitle" = "ثواني";
+"combinationTitle" = "لفتح آمنة، تخمين مزيج من:";
+"beginTrainingButtonTitle" = "التدريب";
+"beginTrainingButtonTitleStop" = "وقف التدريب";
+
+"beginGameButtonTitle" = "بدء اللعبة";
+"beginGameButtonTitleStop" = "إيقاف اللعبة";
+
+"returnToGameLabel" = "عودة إلى اللعبة";
+"myName" = "الاسم:";
+"myNameEditor" = "دخول";
+"myScoreOrGameScore0" = "سجلاتي";
+"myScoreOrGameScore1" = "االسجلات المشتركة";
+
+"recordsNameTitle" = "اسم الفائز";
+"recordsDateTitle" = "التسجيل";
+"recordTimeTitle" = "السفر عبر الزمن";
+"recordsLevelTitle" = "المستوى";
+"recordsAttempstTitle" = "المحاولات";
+
+"changeToBoyTitle" = "بالنسبة للأولاد:";
+"changeToGirlTitle" = "للفتيات:";
+"musicSwitchTitle" = "الموسيقى";
+"difficultLevelLabel" = "صعوبة";
+
+"difficultLevelSelector0" = "ارتفاع";
+"difficultLevelSelector1" = "متوسط";
+"difficultLevelSelector2" = "منخفض";
+
+"rowMatchedColorsAndPositionsTitle" = "التخمين";
+"rowMatchedColors" = "اخمنت تقريبا";
+
+
+"defaultNameGirls" = "الأميرة";
+"defaultNameBoys" = "اسوبرمان";

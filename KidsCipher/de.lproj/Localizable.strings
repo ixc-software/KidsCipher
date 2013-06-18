@@ -5,3 +5,41 @@
   Created by Oleksii Vynogradov on 5/3/13.
   Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 */
+"attemptsTitle" = "Anzahl der Versuche:";
+"gameTimeMainTitle" = "Zeit:";
+"gameTimeMinutesTitle" = "Minute";
+"gameTimeSecondsTitle" = "sek";
+"combinationTitle" = "Um den Tresor zu öffnen, ich denke eine Kombination von:";
+"beginTrainingButtonTitle" = "Ausbildung";
+"beginTrainingButtonTitleStop" = "Unterbrechen Sie das Training";
+
+"beginGameButtonTitle" = "Starten Sie das Spiel";
+"beginGameButtonTitleStop" = "Stoppen Sie das Spiel";
+
+"returnToGameLabel" = "Zurück zum Spiel";
+"myName" = "Ihr Name:";
+"myNameEditor" = "geben";
+"myScoreOrGameScore0" = "Meine Aufzeichnungen";
+"myScoreOrGameScore1" = "Gemeinsame Datensätze";
+
+"recordsNameTitle" = "Der Name des Gewinners";
+"recordsDateTitle" = "Datum";
+"recordTimeTitle" = "Reisezeit";
+"recordsLevelTitle" = "Niveau";
+"recordsAttempstTitle" = "Versuche";
+
+"changeToBoyTitle" = "Für Jungen:";
+"changeToGirlTitle" = "Für Mädchen:";
+"musicSwitchTitle" = "Musik";
+"difficultLevelLabel" = "Der Grad der Komplexität";
+
+"difficultLevelSelector0" = "groß";
+"difficultLevelSelector1" = "Durchschnitt";
+"difficultLevelSelector2" = "niedrig";
+
+"rowMatchedColorsAndPositionsTitle" = "Erraten";
+"rowMatchedColors" = "Fast erraten";
+
+
+"defaultNameGirls" = "Prinzessin";
+"defaultNameBoys" = "Supermann";

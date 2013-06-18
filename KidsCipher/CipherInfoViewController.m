@@ -11,6 +11,7 @@
 #import "CipherInfoViewCell.h"
 #import "GameScore.h"
 #import "GamesHistory.h"
+#import "CipherViewController.h"
 
 @interface CipherInfoViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *myPhoto;
@@ -78,11 +79,20 @@
     [self.difficultLevelSelector setTitle:NSLocalizedString(@"difficultLevelSelector1", @"") forSegmentAtIndex:1];
     [self.difficultLevelSelector setTitle:NSLocalizedString(@"difficultLevelSelector2", @"") forSegmentAtIndex:2];
 
+    NSData *resizedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];//UIImagePNGRepresentation(resizedImage);
+    if (resizedData) {
+        [[self.myPhoto layer] setBorderColor:[self.myName.textColor CGColor]];
+        [[self.myPhoto layer] setBorderWidth:1.75];
+        [[self.myPhoto layer] setCornerRadius:5];
+        [[self.myPhoto layer] setMasksToBounds:YES];
+        [self.myPhoto setImage:[UIImage imageWithData:resizedData] forState:UIControlStateNormal];
+    }
+
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
+    //[super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
@@ -160,8 +170,13 @@
     } else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) imagePickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     // image picker needs a delegate,
     [imagePickerController setDelegate:self];
-    self.pop = [[UIPopoverController alloc] initWithContentViewController:imagePickerController];
-    [self.pop presentPopoverFromRect:self.myPhoto.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
+        [self presentViewController:imagePickerController animated:YES completion:nil];
+    } else {
+        
+        self.pop = [[UIPopoverController alloc] initWithContentViewController:imagePickerController];
+        [self.pop presentPopoverFromRect:self.myPhoto.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
 }
 
 - (IBAction)myScoreOrTotalScoreChangeStart:(id)sender {
@@ -187,7 +202,8 @@
     }
     
     [[NSUserDefaults standardUserDefaults] setValue:level forKey:@"level"];
-
+    [[NSUserDefaults standardUserDefaults] synchronize];
+    
 }
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
@@ -210,13 +226,27 @@
 - (IBAction)musicChangeStart:(id)sender {
 //#warning finish
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
-    if ([mainDelegate.audioPlayerMainFoneMusic isPlaying]) [mainDelegate.audioPlayerMainFoneMusic stop];
-    else [mainDelegate.audioPlayerMainFoneMusic play];
+    if ([mainDelegate.audioPlayerMainFoneMusic isPlaying]) {
+        [mainDelegate.audioPlayerMainFoneMusic stop];
+        mainDelegate.isBackgroundMusicPlaying = NO;
+    }
+    else {
+        [mainDelegate.audioPlayerMainFoneMusic play];
+        mainDelegate.isBackgroundMusicPlaying = YES;
+
+    }
 }
 
 - (IBAction)changeToBoyStart:(id)sender {
 #warning finish
 
+}
+- (IBAction)returnToGameStart:(id)sender {
+//    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+//    CipherViewController *vc = [mainDelegate.viewControllers valueForKey:@"CipherViewController"];
+//    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+//    [self presentModalViewController:vc animated:YES];
+    [self dismissModalViewControllerAnimated:YES];
 }
 #pragma mark - UITableViewDelegates
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -664,11 +694,14 @@ static CGRect swapWidthAndHeight(CGRect rect)
         [[NSUserDefaults standardUserDefaults] synchronize];
         self.myPhoto.imageView.image = resizedImage;
     }
+    [picker dismissModalViewControllerAnimated:YES];
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     NSLog(@"imagePickerControllerDidCancel->");
     [self.pop dismissPopoverAnimated:YES];
+    [picker dismissModalViewControllerAnimated:YES];
+
     NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
     if (pickedData) self.myPhoto.imageView.image = [UIImage imageWithData:pickedData];
     else {

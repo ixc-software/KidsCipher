@@ -11,6 +11,7 @@
 #import "Row.h"
 #import "Game.h"
 #import "GamesHistory.h"
+#import "CipherInfoViewController.h"
 
 @interface CipherViewController ()
 
@@ -22,7 +23,8 @@
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     Row *activeRowToGetAllRows = [mainDelegate getActiveRow];
     NSOrderedSet *allRows = activeRowToGetAllRows.game.rows;
-    //__block NSUInteger filledLines = 0;
+    self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
+
     [allRows enumerateObjectsUsingBlock:^(Row *activeRow, NSUInteger idx, BOOL *stop) {
         AVImageView *image1InsideRow = nil;
         AVImageView *image2InsideRow = nil;
@@ -211,6 +213,8 @@
                 hidingRowView.alpha = 0.0;
                 //NSLog(@"activeRow.isFilled->NO, setting hidingRowView.hidden=NO hidingRowView->%@",hidingRowView);
             } else { hidingRowView.hidden = NO; hidingRowView.alpha = 1.0; }
+            matchedColorsInsideRow.text = [NSString stringWithFormat:@"%@",@""];
+            matchedColorsAndPositionsInsideRow.text = [NSString stringWithFormat:@"%@",@""];
         }
         image1InsideRow.hidden = YES;
         image2InsideRow.hidden = YES;
@@ -589,6 +593,7 @@
 
 - (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
 {
+    //[super didRotateFromInterfaceOrientation:fromInterfaceOrientation];
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     Row *activeRow = [mainDelegate getActiveRow];
     activeRow.game.mainDraggedImage1startingPoint = NSStringFromCGPoint(self.image1OutsideTableView.frame.origin);
@@ -657,7 +662,16 @@
     self.row10MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
     self.row10MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
 
-     
+    NSData *resizedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];//UIImagePNGRepresentation(resizedImage);
+    if (resizedData) {
+        [[self.photoView layer] setBorderColor:[[UIColor purpleColor] CGColor]];
+        [[self.photoView layer] setBorderWidth:1.75];
+        [[self.photoView layer] setCornerRadius:5];
+        [[self.photoView layer] setMasksToBounds:YES];
+        [self.photoView setImage:[UIImage imageWithData:resizedData] forState:UIControlStateNormal];
+    }
+
+    
     //NSLog(@"viewDidLoad self.image1OutsideTableView.startPointt->%@",NSStringFromCGPoint(self.image1OutsideTableView.frame.origin));
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -679,42 +693,47 @@
 }
 -(void)viewWillAppear:(BOOL)animated
 {
-    [self updateAllViews];
-    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
-    Row *activeRow = [mainDelegate getActiveRow];
-    if (activeRow.game.isGameStarted.boolValue)  mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
-    //NSLog(@"gameTimerSeconds->%lu",(unsigned long)mainDelegate.gameTimerSeconds);
-    NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
-    self.playerName.text = name;
-    UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
-    if (orientation == UIDeviceOrientationPortrait ) {
-        //NSLog(@"UIDeviceOrientationPortrait");
-        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
-        self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game"];
-    } else {
-        self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
-        self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game_gorizont"];
+    //[super viewWillAppear:animated];
+    @autoreleasepool {
         
-        //if (orientation == UIDeviceOrientationUnknown) NSLog(@"UIDeviceOrientationUnknown");
-        //else NSLog(@"UIDeviceOrientationLandscapeLeft");
-    }
-    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
-        if(IS_IPHONE5){
-            //move to your iphone5 storyboard
-            self.mainPageGameBackground.frame = CGRectMake(14, 196, 290, 230);
-            self.gamePlayScrollView.frame = CGRectMake(16, 200, 290, 217);
+        
+        [self updateAllViews];
+        CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+        Row *activeRow = [mainDelegate getActiveRow];
+        if (activeRow.game.isGameStarted.boolValue)  mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
+        //NSLog(@"gameTimerSeconds->%lu",(unsigned long)mainDelegate.gameTimerSeconds);
+        NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
+        self.playerName.text = name;
+        UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
+        if (orientation == UIDeviceOrientationPortrait ) {
+            //NSLog(@"UIDeviceOrientationPortrait");
+            self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
+            self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game"];
+        } else {
+            self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
+            self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game_gorizont"];
+            
+            //if (orientation == UIDeviceOrientationUnknown) NSLog(@"UIDeviceOrientationUnknown");
+            //else NSLog(@"UIDeviceOrientationLandscapeLeft");
         }
-        else{
-            //move to your iphone4s storyboard
-            self.mainPageGameBackground.frame = CGRectMake(14, 172, 290, 175);
-            self.gamePlayScrollView.frame = CGRectMake(16, 176, 290, 165);
+        if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
+            if(IS_IPHONE5){
+                //move to your iphone5 storyboard
+                self.mainPageGameBackground.frame = CGRectMake(14, 196, 290, 230);
+                self.gamePlayScrollView.frame = CGRectMake(16, 200, 290, 217);
+            }
+            else{
+                //move to your iphone4s storyboard
+                self.mainPageGameBackground.frame = CGRectMake(14, 172, 290, 175);
+                self.gamePlayScrollView.frame = CGRectMake(16, 176, 290, 165);
+            }
         }
     }
-
 }
 
 -(void)viewDidDisappear:(BOOL)animated
 {
+    [super viewDidDisappear:animated];
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
     [mainDelegate.gameTimer invalidate];
 //    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -728,7 +747,7 @@
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
+    //[super didReceiveMemoryWarning];
 }
 
 
@@ -741,29 +760,47 @@
     if (!mainDelegate.isTraining) {
         NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
         NSDate *date = nil;
-        if (level.unsignedIntegerValue == 1) {
-            date = [NSDate dateWithTimeIntervalSinceReferenceDate:60 * 60 - mainDelegate.gameTimerSeconds];
+        double maximumTime = 0;
+        
+        if (level.unsignedIntegerValue == 1) { maximumTime = 60 * 60;
+            //date = [NSDate dateWithTimeIntervalSinceReferenceDate:60 * 60 - mainDelegate.gameTimerSeconds];
         }
         if (level.unsignedIntegerValue == 0) {
-            date = [NSDate dateWithTimeIntervalSinceReferenceDate:60 * 5  - mainDelegate.gameTimerSeconds];
+//#warning temporrary not 60 * 5
+            maximumTime = 60 * 5;
+            //date = [NSDate dateWithTimeIntervalSinceReferenceDate:60 * 5  - mainDelegate.gameTimerSeconds];
         }
         
         if (level.unsignedIntegerValue == 2) {
-            date = [NSDate dateWithTimeIntervalSinceReferenceDate:mainDelegate.gameTimerSeconds];
+            //date = [NSDate dateWithTimeIntervalSinceReferenceDate:mainDelegate.gameTimerSeconds];
         }
-        
-        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
-        formatter.locale = [NSLocale currentLocale];
-        [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
-        [formatter setDateFormat:@"mm:ss"];
-        NSString *dateString = [formatter stringFromDate:date];
-        NSArray *minutesAndSeconds = [dateString componentsSeparatedByString:@":"];
-        NSString *minutes = [minutesAndSeconds objectAtIndex:0];
-        NSString *seconds = [minutesAndSeconds objectAtIndex:1];
-        self.gameTimeMinutes.text = minutes;
-        self.gameTimeSeconds.text = seconds;
-        NSLog(@"%@", [formatter stringFromDate:date]);
-        
+        NSTimeInterval intervalToCheck = maximumTime - mainDelegate.gameTimerSeconds;
+        if (intervalToCheck < 0) {
+            // game over
+            NSLog(@"==================game over timer");
+            self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
+            [mainDelegate.audioPlayerMainFoneMusic stop];
+            [mainDelegate.gameWrongResult play];
+            [mainDelegate.gameTimer invalidate];
+            self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
+            self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
+            [mainDelegate setRandomCombinationForCurrentGame];
+            [self updateAllViews];
+            [self.gamePlayScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+        } else {
+            date = [NSDate dateWithTimeIntervalSinceReferenceDate:intervalToCheck];
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            formatter.locale = [NSLocale currentLocale];
+            [formatter setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0.0]];
+            [formatter setDateFormat:@"mm:ss"];
+            NSString *dateString = [formatter stringFromDate:date];
+            NSArray *minutesAndSeconds = [dateString componentsSeparatedByString:@":"];
+            NSString *minutes = [minutesAndSeconds objectAtIndex:0];
+            NSString *seconds = [minutesAndSeconds objectAtIndex:1];
+            self.gameTimeMinutes.text = minutes;
+            self.gameTimeSeconds.text = seconds;
+            //NSLog(@"%@", [formatter stringFromDate:date]);
+        }
 
         //}
     }
@@ -785,8 +822,14 @@
     } else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) imagePickerController.sourceType = UIImagePickerControllerSourceTypeSavedPhotosAlbum;
     // image picker needs a delegate,
     [imagePickerController setDelegate:self];
-    self.pop = [[UIPopoverController alloc] initWithContentViewController:imagePickerController];
-    [self.pop presentPopoverFromRect:self.photoView.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
+        
+        [self presentModalViewController:imagePickerController animated:YES];
+        //[self dismissModalViewControllerAnimated:NO];
+    } else {
+        self.pop = [[UIPopoverController alloc] initWithContentViewController:imagePickerController];
+        [self.pop presentPopoverFromRect:self.photoView.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    }
 }
 - (IBAction)startGame:(id)sender {
     self.frame1combination.imageView.image = [UIImage imageNamed:@"button_lock"];
@@ -817,14 +860,11 @@
     } else {
         //self.beginGameButtonTitle.text = @"Остановить игру";
         self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitleStop", @"");
-
         mainDelegate.gameTimer = nil;
         mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
     }
     mainDelegate.isTraining = NO;
-
     self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
-
     [self updateAllViews];
 }
 - (IBAction)startTraining:(id)sender {
@@ -859,6 +899,24 @@
     
 
     [self updateAllViews];
+}
+- (IBAction)showInformationView:(id)sender {
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    CipherInfoViewController *vc = [mainDelegate.viewControllers valueForKey:@"CipherInfoViewController"];
+    if (!vc) {
+        UIStoryboard *mainStoryboard = nil;
+#ifdef KidsCipherGirls
+        if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPhone" bundle: nil];
+        else mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle: nil];
+#endif
+#ifdef KidsCipherBoys
+        if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_Boys_iPhone" bundle: nil];
+        else mainStoryboard = [UIStoryboard storyboardWithName:@"MainStoryboard_Boys_iPad" bundle: nil];
+#endif
+        vc = (CipherInfoViewController*)[mainStoryboard instantiateViewControllerWithIdentifier: @"CipherInfoViewController"];
+    }
+    vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    [self presentModalViewController:vc animated:YES];
 }
 
 -(void)startCompletingCurrentRowAndOpenNext;
@@ -979,37 +1037,65 @@
             activeRow.game.activeRowNumber = [NSNumber numberWithInteger:activeRow.game.activeRowNumber.integerValue + 1];
             [mainDelegate saveContext];
             NSLog(@"==================activeRow.game.activeRowNumber->%@ activeRow.isFilled->%@",activeRow.game.activeRowNumber,activeRow.isFilled);
-            
+
             if (activeRow.game.activeRowNumber.integerValue > 9 || findedTruePositionsAndColors == 4) {
                 NSLog(@"==================game over");
-                if (findedTruePositionsAndColors == 4) self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe_open"];
-                else self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
+                
+                if (findedTruePositionsAndColors == 4) {
+                    [mainDelegate.audioPlayerMainFoneMusic stop];
+                    CGRect safeMain = self.safeImage.frame;
+                    CGPoint safeCenter = self.safeImage.center;
+                    [UIView animateWithDuration:.2
+                                          delay:0
+                                        options:0
+                                     animations:^{
+                                         self.safeImage.frame = CGRectMake(safeCenter.x, safeCenter.y, 0, 0);
+                                     } completion:^(BOOL finished) {
+                                         self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe_open"];
+                                         [UIView animateWithDuration:.5
+                                                               delay:0
+                                                             options:0
+                                                          animations:^{
+                                                              self.safeImage.frame = safeMain;
+                                                          } completion:^(BOOL finished) {
+                                                          }];
+                                     }];
+
+                    [mainDelegate.gameSuccessResult play];
+                }
+                else {
+                    self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
+                    [mainDelegate.audioPlayerMainFoneMusic stop];
+                    [mainDelegate.gameWrongResult play];
+                    
+                }
                 [mainDelegate.gameTimer invalidate];
                 self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
                 self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
                 [mainDelegate setRandomCombinationForCurrentGame];
                 [self updateAllViews];
-                GamesHistory *newHistory = (GamesHistory *)[NSEntityDescription insertNewObjectForEntityForName:@"GamesHistory" inManagedObjectContext:mainDelegate.managedObjectContext];
-                NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
-                //NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"button_avatar"]);
-                if (pickedData) newHistory.photo = pickedData;
-                //else newHistory.photo = imageData;
-                //NSLog(@"pickedData->%@ ",[pickedData description],[imageData description]);
-                NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
-                NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
-
-                newHistory.name = name;
-                newHistory.date = [NSDate date];
-                newHistory.difficultLevel = level;
-                newHistory.gameTime = [NSNumber numberWithInt:mainDelegate.gameTimerSeconds];
-                newHistory.attempts = [NSNumber numberWithInt:activeRowNumber+1];
-
-                mainDelegate.gameTimer = nil;
-                mainDelegate.gameTimerSeconds = 0;
-                [mainDelegate saveContext];
-                [mainDelegate sendNewGamescore:newHistory.objectID];
-                [self.gamePlayScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
-
+                if (!mainDelegate.isTraining) {
+                    GamesHistory *newHistory = (GamesHistory *)[NSEntityDescription insertNewObjectForEntityForName:@"GamesHistory" inManagedObjectContext:mainDelegate.managedObjectContext];
+                    NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
+                    //NSData *imageData = UIImagePNGRepresentation([UIImage imageNamed:@"button_avatar"]);
+                    if (pickedData) newHistory.photo = pickedData;
+                    //else newHistory.photo = imageData;
+                    //NSLog(@"pickedData->%@ ",[pickedData description],[imageData description]);
+                    NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
+                    NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
+                    
+                    newHistory.name = name;
+                    newHistory.date = [NSDate date];
+                    newHistory.difficultLevel = level;
+                    newHistory.gameTime = [NSNumber numberWithInt:mainDelegate.gameTimerSeconds];
+                    newHistory.attempts = [NSNumber numberWithInt:activeRowNumber+1];
+                    
+                    mainDelegate.gameTimer = nil;
+                    mainDelegate.gameTimerSeconds = 0;
+                    [mainDelegate saveContext];
+                    [mainDelegate sendNewGamescore:newHistory.objectID];
+                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+                }
             }
             activeRow = [mainDelegate getActiveRow];
 
@@ -1289,7 +1375,15 @@
                     
                 case 10: {
                     NSLog(@"GAME OVER");
-                    self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
+                    [UIView animateWithDuration:0.5
+                                          delay:0
+                                        options:0
+                                     animations:^{
+                                         self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
+                                     } completion:^(BOOL finished) {
+                                         [mainDelegate.gameWrongResult play];
+                                     }];
+
                     [mainDelegate.gameTimer invalidate];
                     self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
                     self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
@@ -1599,7 +1693,6 @@ static CGRect swapWidthAndHeight(CGRect rect)
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     NSLog(@"didFinishPickingMediaWithInfo->%@",info);
-    [self.pop dismissPopoverAnimated:YES];
     UIImage *originalImage, *editedImage, *rotatedImage;
     editedImage = (UIImage *)[info objectForKey:UIImagePickerControllerEditedImage];
     originalImage = (UIImage *)[info objectForKey:UIImagePickerControllerOriginalImage];
@@ -1610,21 +1703,41 @@ static CGRect swapWidthAndHeight(CGRect rect)
     //UIImage *picked = [info valueForKey:UIImagePickerControllerOriginalImage];
     //NSData *pickedData = UIImagePNGRepresentation(rotatedImage);
     //NSData *imageData = [[NSData alloc] initWithData:UIImageJPEGRepresentation((picked), 0.5)];
-    int imageSize = resizedData.length;
-    NSLog(@"SIZE OF IMAGE: %i ", imageSize);
+    //int imageSize = resizedData.length;
+    //NSLog(@"SIZE OF IMAGE: %i ", imageSize);
     if (resizedData) {
         [[NSUserDefaults standardUserDefaults] setObject:resizedData forKey:@"clientPicture"];
         [[NSUserDefaults standardUserDefaults] synchronize];
-        self.photoView.imageView.image = resizedImage;
+        [[self.photoView layer] setBorderColor:[self.playerName.textColor CGColor]];
+        [[self.photoView layer] setBorderWidth:1.75];
+        [[self.photoView layer] setCornerRadius:5];
+        [[self.photoView layer] setMasksToBounds:YES];
+        [self.photoView setImage:[UIImage imageWithData:resizedData] forState:UIControlStateNormal];
+
     }
+    [picker dismissModalViewControllerAnimated:YES];
+    if (self.pop) [self.pop dismissPopoverAnimated:YES];
+
 }
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
-    NSLog(@"imagePickerControllerDidCancel->");
-    [self.pop dismissPopoverAnimated:YES];
+    //NSLog(@"imagePickerControllerDidCancel->");
     NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
-    if (pickedData) self.photoView.imageView.image = [UIImage imageWithData:pickedData];
-    else self.photoView.imageView.image = [UIImage imageNamed:@"button_avatar"];
+    if (pickedData) {
+        [[self.photoView layer] setBorderColor:[[UIColor purpleColor] CGColor]];
+        [[self.photoView layer] setBorderWidth:1.75];
+        [[self.photoView layer] setCornerRadius:5];
+        [[self.photoView layer] setMasksToBounds:YES];
+        [self.photoView setImage:[UIImage imageWithData:pickedData] forState:UIControlStateNormal];
+    }
+    else {
+        self.photoView.imageView.image = [UIImage imageNamed:@"button_avatar"];
+        [[self.photoView layer] setBorderWidth:0];
+        [[self.photoView layer] setCornerRadius:0];
+    }
+    [picker dismissModalViewControllerAnimated:YES];
+    if (self.pop) [self.pop dismissPopoverAnimated:YES];
+
 }
 
 - (void)viewDidUnload {

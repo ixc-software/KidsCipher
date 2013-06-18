@@ -5,3 +5,41 @@
   Created by Oleksii Vynogradov on 5/3/13.
   Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 */
+"attemptsTitle" = "尝试次数：";
+"gameTimeMainTitle" = "时间：";
+"gameTimeMinutesTitle" = "分钟";
+"gameTimeSecondsTitle" = "秒";
+"combinationTitle" = "要打开保险柜，猜的组合：";
+"beginTrainingButtonTitle" = "训练";
+"beginTrainingButtonTitleStop" = "停止训练";
+
+"beginGameButtonTitle" = "开始游戏";
+"beginGameButtonTitleStop" = "停止游戏";
+
+"returnToGameLabel" = "回到游戏中";
+"myName" = "您的名字：";
+"myNameEditor" = "进入";
+"myScoreOrGameScore0" = "我的记录";
+"myScoreOrGameScore1" = "公共记录";
+
+"recordsNameTitle" = "获奖者的姓名";
+"recordsDateTitle" = "日期";
+"recordTimeTitle" = "旅游时间";
+"recordsLevelTitle" = "水平";
+"recordsAttempstTitle" = "企图";
+
+"changeToBoyTitle" = "对于男孩：";
+"changeToGirlTitle" = "对于女孩：";
+"musicSwitchTitle" = "音乐";
+"difficultLevelLabel" = "遇到困难";
+
+"difficultLevelSelector0" = "高";
+"difficultLevelSelector1" = "平均";
+"difficultLevelSelector2" = "低";
+
+"rowMatchedColorsAndPositionsTitle" = "的猜测";
+"rowMatchedColors" = "几乎猜到";
+
+
+"defaultNameGirls" = "公主";
+"defaultNameBoys" = "超人";

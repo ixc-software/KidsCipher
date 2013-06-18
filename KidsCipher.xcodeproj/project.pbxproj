@@ -27,6 +27,11 @@
 		FA14023E1757526500AA6500 /* Main_page_fon_safe_ajar.png in Resources */ = {isa = PBXBuildFile; fileRef = FA14023D1757526500AA6500 /* Main_page_fon_safe_ajar.png */; };
 		FA1402401757526C00AA6500 /* Main_page_fon_safe_open.png in Resources */ = {isa = PBXBuildFile; fileRef = FA14023F1757526C00AA6500 /* Main_page_fon_safe_open.png */; };
 		FA1402421757E29C00AA6500 /* Main_page_fon_game_gorizont.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1402411757E29C00AA6500 /* Main_page_fon_game_gorizont.png */; };
+		FA145A37176F443A005ACA7F /* kidscipher_promo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA145A36176F443A005ACA7F /* kidscipher_promo.rtf */; };
+		FA145A38176F443A005ACA7F /* kidscipher_promo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA145A36176F443A005ACA7F /* kidscipher_promo.rtf */; };
+		FA145A3C176F488D005ACA7F /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA145A3B176F488D005ACA7F /* libFlurry.a */; };
+		FA145A3D176F488D005ACA7F /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA145A3B176F488D005ACA7F /* libFlurry.a */; };
+		FA145A3F176F4A8E005ACA7F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA145A3E176F4A8E005ACA7F /* SystemConfiguration.framework */; };
 		FA3B31A4175E41F50061AE68 /* button_back_in_ game.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3B31A3175E41F50061AE68 /* button_back_in_ game.png */; };
 		FA3B31A6175E426E0061AE68 /* button_your_name.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3B31A5175E426E0061AE68 /* button_your_name.png */; };
 		FA3B31A9175E44150061AE68 /* button_records_my.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3B31A7175E44150061AE68 /* button_records_my.png */; };
@@ -79,9 +84,6 @@
 		FAAA369A172E4D7A00C55968 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FAAA3698172E4D7A00C55968 /* InfoPlist.strings */; };
 		FAAA369C172E4D7A00C55968 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA369B172E4D7A00C55968 /* main.m */; };
 		FAAA36A0172E4D7A00C55968 /* CipherAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA369F172E4D7A00C55968 /* CipherAppDelegate.m */; };
-		FAAA36A2172E4D7A00C55968 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36A1172E4D7A00C55968 /* Default.png */; };
-		FAAA36A4172E4D7A00C55968 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36A3172E4D7A00C55968 /* Default@2x.png */; };
-		FAAA36A6172E4D7A00C55968 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36A5172E4D7A00C55968 /* Default-568h@2x.png */; };
 		FAAA36A9172E4D7A00C55968 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36A7172E4D7A00C55968 /* MainStoryboard_iPhone.storyboard */; };
 		FAAA36AC172E4D7A00C55968 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAA36AA172E4D7A00C55968 /* MainStoryboard_iPad.storyboard */; };
 		FAAA36AF172E4D7A00C55968 /* CipherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA36AE172E4D7A00C55968 /* CipherViewController.m */; };
@@ -176,6 +178,10 @@
 		FA14023D1757526500AA6500 /* Main_page_fon_safe_ajar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main_page_fon_safe_ajar.png; sourceTree = "<group>"; };
 		FA14023F1757526C00AA6500 /* Main_page_fon_safe_open.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main_page_fon_safe_open.png; sourceTree = "<group>"; };
 		FA1402411757E29C00AA6500 /* Main_page_fon_game_gorizont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main_page_fon_game_gorizont.png; sourceTree = "<group>"; };
+		FA145A36176F443A005ACA7F /* kidscipher_promo.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = kidscipher_promo.rtf; sourceTree = "<group>"; };
+		FA145A3A176F488D005ACA7F /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		FA145A3B176F488D005ACA7F /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
+		FA145A3E176F4A8E005ACA7F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FA3B31A3175E41F50061AE68 /* button_back_in_ game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_back_in_ game.png"; sourceTree = "<group>"; };
 		FA3B31A5175E426E0061AE68 /* button_your_name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_your_name.png; sourceTree = "<group>"; };
 		FA3B31A7175E44150061AE68 /* button_records_my.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_records_my.png; sourceTree = "<group>"; };
@@ -295,6 +301,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA145A3F176F4A8E005ACA7F /* SystemConfiguration.framework in Frameworks */,
 				FAE403F917361910002F59C6 /* AudioToolbox.framework in Frameworks */,
 				FAE403F717361901002F59C6 /* Security.framework in Frameworks */,
 				FAE403F3173618DE002F59C6 /* AddressBook.framework in Frameworks */,
@@ -304,6 +311,7 @@
 				FAAA3690172E4D7A00C55968 /* UIKit.framework in Frameworks */,
 				FAAA3692172E4D7A00C55968 /* Foundation.framework in Frameworks */,
 				FAAA3694172E4D7A00C55968 /* CoreGraphics.framework in Frameworks */,
+				FA145A3C176F488D005ACA7F /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,12 +328,22 @@
 				FAF34392172FC3E900C282D5 /* UIKit.framework in Frameworks */,
 				FAF34393172FC3E900C282D5 /* Foundation.framework in Frameworks */,
 				FAF34394172FC3E900C282D5 /* CoreGraphics.framework in Frameworks */,
+				FA145A3D176F488D005ACA7F /* libFlurry.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA145A39176F488D005ACA7F /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				FA145A3A176F488D005ACA7F /* Flurry.h */,
+				FA145A3B176F488D005ACA7F /* libFlurry.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
 		FAAA3683172E4D7A00C55968 = {
 			isa = PBXGroup;
 			children = (
@@ -347,6 +365,8 @@
 		FAAA368E172E4D7A00C55968 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA145A3E176F4A8E005ACA7F /* SystemConfiguration.framework */,
+				FA145A39176F488D005ACA7F /* Flurry */,
 				FAE403F817361910002F59C6 /* AudioToolbox.framework */,
 				FAE403F5173618FA002F59C6 /* Security.framework */,
 				FAE403F2173618DE002F59C6 /* AddressBook.framework */,
@@ -364,6 +384,7 @@
 		FAAA3695172E4D7A00C55968 /* KidsCipher */ = {
 			isa = PBXGroup;
 			children = (
+				FA145A36176F443A005ACA7F /* kidscipher_promo.rtf */,
 				FAAA369E172E4D7A00C55968 /* CipherAppDelegate.h */,
 				FAAA369F172E4D7A00C55968 /* CipherAppDelegate.m */,
 				FAAA36A7172E4D7A00C55968 /* MainStoryboard_iPhone.storyboard */,
@@ -591,9 +612,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAA369A172E4D7A00C55968 /* InfoPlist.strings in Resources */,
-				FAAA36A2172E4D7A00C55968 /* Default.png in Resources */,
-				FAAA36A4172E4D7A00C55968 /* Default@2x.png in Resources */,
-				FAAA36A6172E4D7A00C55968 /* Default-568h@2x.png in Resources */,
 				FAAA36A9172E4D7A00C55968 /* MainStoryboard_iPhone.storyboard in Resources */,
 				FAAA36AC172E4D7A00C55968 /* MainStoryboard_iPad.storyboard in Resources */,
 				FAAA36C4172E53D000C55968 /* 1.png in Resources */,
@@ -668,6 +686,7 @@
 				FA841EAC1761234800BBEE90 /* button_fon_all_records_G_02.png in Resources */,
 				FA841EAE1761235F00BBEE90 /* button_fon_all_records_V_02.png in Resources */,
 				FA841EB01761242F00BBEE90 /* button_cup_fon.png in Resources */,
+				FA145A37176F443A005ACA7F /* kidscipher_promo.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -704,6 +723,7 @@
 				FA3B31C4175E745E0061AE68 /* MainStoryboard_Boys_iPad.storyboard in Resources */,
 				FA3B31C6175E76160061AE68 /* MainStoryboard_Boys_iPhone.storyboard in Resources */,
 				FA841E3B1760728500BBEE90 /* Localizable.strings in Resources */,
+				FA145A38176F443A005ACA7F /* kidscipher_promo.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -861,6 +881,10 @@
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
 				INFOPLIST_FILE = "KidsCipher/KidsCipher-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Flurry\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -874,6 +898,10 @@
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
 				INFOPLIST_FILE = "KidsCipher/KidsCipher-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Flurry\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -887,6 +915,10 @@
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;
 				INFOPLIST_FILE = "KidsCipher copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Flurry\"",
+				);
 				PRODUCT_NAME = KidsCipherB;
 				WRAPPER_EXTENSION = app;
 			};
@@ -900,6 +932,10 @@
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;
 				INFOPLIST_FILE = "KidsCipher copy-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/Flurry\"",
+				);
 				PRODUCT_NAME = KidsCipherB;
 				WRAPPER_EXTENSION = app;
 			};

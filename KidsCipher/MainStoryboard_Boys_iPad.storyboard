@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="M4v-c1-eBf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="M4v-c1-eBf">
     <dependencies>
         <deployment version="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
@@ -363,9 +363,6 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="7fw-lL-PKc" kind="modal" modalTransitionStyle="flipHorizontal" id="AYu-dS-UC8"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aBc-Co-Tjs">
                                 <rect key="frame" x="33" y="892" width="83" height="83"/>
@@ -839,9 +836,6 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <connections>
-                                    <segue destination="M4v-c1-eBf" kind="modal" modalTransitionStyle="flipHorizontal" id="lWJ-tB-bRg"/>
-                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Вернуться в игру" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qIa-iZ-0j7">
                                 <rect key="frame" x="60" y="49" width="104" height="97"/>
@@ -1073,6 +1067,12 @@
         <class className="CipherInfoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewController.h"/>
             <relationships>
+                <relationship kind="action" name="changeMyPhoto:"/>
+                <relationship kind="action" name="changeToBoyStart:"/>
+                <relationship kind="action" name="difficultLevelStart:"/>
+                <relationship kind="action" name="musicChangeStart:"/>
+                <relationship kind="action" name="myScoreOrTotalScoreChangeStart:"/>
+                <relationship kind="action" name="returnToGameStart:"/>
                 <relationship kind="outlet" name="changeToBoyTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="changeToGirlTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="difficultLevelLabel" candidateClass="UILabel"/>
@@ -1098,6 +1098,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherViewController.h"/>
             <relationships>
                 <relationship kind="action" name="changePhoto:"/>
+                <relationship kind="action" name="showInformationView:"/>
                 <relationship kind="action" name="startGame:"/>
                 <relationship kind="action" name="startTraining:"/>
                 <relationship kind="outlet" name="attemptsNumber" candidateClass="UILabel"/>
@@ -1126,6 +1127,7 @@
                 <relationship kind="outlet" name="image5OutsideTableView" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="image5combination" candidateClass="AVImageView"/>
                 <relationship kind="outlet" name="mainPageBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mainPageGameBackground" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="mainPageScrollBackground" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="photoView" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="playerName" candidateClass="UILabel"/>

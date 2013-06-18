@@ -5,3 +5,41 @@
   Created by Oleksii Vynogradov on 5/3/13.
   Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 */
+"attemptsTitle" = "Denemesi sayısı:";
+"gameTimeMainTitle" = "zaman:";
+"gameTimeMinutesTitle" = "dakika";
+"gameTimeSecondsTitle" = "saniye";
+"combinationTitle" = "Kasayı açmak için, bir arada sanırım:";
+"beginTrainingButtonTitle" = "Eğitim";
+"beginTrainingButtonTitleStop" = "Eğitim durdurun";
+
+"beginGameButtonTitle" = "Oyunu başlatın.";
+"beginGameButtonTitleStop" = "Oyun durdurun";
+
+"returnToGameLabel" = "Oyuna yedekleyin";
+"myName" = "Adınız:";
+"myNameEditor" = "girin";
+"myScoreOrGameScore0" = "Benim kayıtları";
+"myScoreOrGameScore1" = "Ortak kayıtları";
+
+"recordsNameTitle" = "Kazanan adı";
+"recordsDateTitle" = "Tarihi";
+"recordTimeTitle" = "Seyahat süresi";
+"recordsLevelTitle" = "Seviye";
+"recordsAttempstTitle" = "Girişimleri";
+
+"changeToBoyTitle" = "Erkekler için:";
+"changeToGirlTitle" = "Kızlar için:";
+"musicSwitchTitle" = "müzik";
+"difficultLevelLabel" = "Zorluk";
+
+"difficultLevelSelector0" = "yüksek";
+"difficultLevelSelector1" = "ortalama";
+"difficultLevelSelector2" = "düşük";
+
+"rowMatchedColorsAndPositionsTitle" = "Tahmin";
+"rowMatchedColors" = "hemen hemen tahmin";
+
+
+"defaultNameGirls" = "prenses";
+"defaultNameBoys" = "süpermen";

@@ -5,3 +5,41 @@
   Created by Oleksii Vynogradov on 5/3/13.
   Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 */
+"attemptsTitle" = "Nombre de tentatives:";
+"gameTimeMainTitle" = "temps:";
+"gameTimeMinutesTitle" = "minute";
+"gameTimeSecondsTitle" = "sec";
+"combinationTitle" = "Pour ouvrir le coffre, deviner une combinaison de:";
+"beginTrainingButtonTitle" = "Formation";
+"beginTrainingButtonTitleStop" = "Arrêtez de formation";
+
+"beginGameButtonTitle" = "Lancez le jeu";
+"beginGameButtonTitleStop" = "Arrêter le match";
+
+"returnToGameLabel" = "Retour à la partie";
+"myName" = "Votre nom:";
+"myNameEditor" = "entrer";
+"myScoreOrGameScore0" = "Mes dossiers";
+"myScoreOrGameScore1" = "Dossiers communs";
+
+"recordsNameTitle" = "Le nom du gagnant";
+"recordsDateTitle" = "Date d'";
+"recordTimeTitle" = "Temps Voyage";
+"recordsLevelTitle" = "Niveau";
+"recordsAttempstTitle" = "Les tentatives";
+
+"changeToBoyTitle" = "Pour les garçons:";
+"changeToGirlTitle" = "Pour les filles:";
+"musicSwitchTitle" = "Musique";
+"difficultLevelLabel" = "difficulté";
+
+"difficultLevelSelector0" = "élevé";
+"difficultLevelSelector1" = "moyenne";
+"difficultLevelSelector2" = "faible";
+
+"rowMatchedColorsAndPositionsTitle" = "Devinettes";
+"rowMatchedColors" = "Presque deviné";
+
+
+"defaultNameGirls" = "Princesse";
+"defaultNameBoys" = "Superman";

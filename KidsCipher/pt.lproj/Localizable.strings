@@ -5,3 +5,41 @@
   Created by Oleksii Vynogradov on 5/3/13.
   Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 */
+"attemptsTitle" = "Número de tentativas:";
+"gameTimeMainTitle" = "Time:";
+"gameTimeMinutesTitle" = "minuto";
+"gameTimeSecondsTitle" = "segundos";
+"combinationTitle" = "Para abrir o cofre, acho uma combinação de:";
+"beginTrainingButtonTitle" = "Treinamento";
+"beginTrainingButtonTitleStop" = "Parar de treinar";
+
+"beginGameButtonTitle" = "Inicie o jogo";
+"beginGameButtonTitleStop" = "Parar o jogo";
+
+"returnToGameLabel" = "De volta ao jogo";
+"myName" = "Seu nome:";
+"myNameEditor" = "entrar";
+"myScoreOrGameScore0" = "Meus registros";
+"myScoreOrGameScore1" = "Registros comuns";
+
+"recordsNameTitle" = "O nome do vencedor";
+"recordsDateTitle" = "data de";
+"recordTimeTitle" = "Viagem no tempo";
+"recordsLevelTitle" = "Nível";
+"recordsAttempstTitle" = "As tentativas";
+
+"changeToBoyTitle" = "Para os meninos:";
+"changeToGirlTitle" = "Para as meninas:";
+"musicSwitchTitle" = "Music";
+"difficultLevelLabel" = "dificuldade";
+
+"difficultLevelSelector0" = "alto";
+"difficultLevelSelector1" = "média";
+"difficultLevelSelector2" = "baixo";
+
+"rowMatchedColorsAndPositionsTitle" = "Adivinhação";
+"rowMatchedColors" = "Quase adivinhado";
+
+
+"defaultNameGirls" = "Princess";
+"defaultNameBoys" = "Superman";

@@ -5,3 +5,41 @@
   Created by Oleksii Vynogradov on 5/3/13.
   Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 */
+"attemptsTitle" = "시도 수 :";
+"gameTimeMainTitle" = "시간 :";
+"gameTimeMinutesTitle" = "분";
+"gameTimeSecondsTitle" = "초";
+"combinationTitle" = "금고를 열려면,의 조합을 추측 :";
+"beginTrainingButtonTitle" = "교육";
+"beginTrainingButtonTitleStop" = "훈련을 중지합니다";
+
+"beginGameButtonTitle" = "게임을 시작합니다";
+"beginGameButtonTitleStop" = "게임을 중지합니다";
+
+"returnToGameLabel" = "게임에 백업합니다";
+"myName" = "귀하의 이름 :";
+"myNameEditor" = "입력합니다";
+"myScoreOrGameScore0" = "나의 기록";
+"myScoreOrGameScore1" = "일반적인 기록";
+
+"recordsNameTitle" = "우승자의 이름입니다";
+"recordsDateTitle" = "날짜";
+"recordTimeTitle" = "시간 여행";
+"recordsLevelTitle" = "수준";
+"recordsAttempstTitle" = "하려고합니다";
+
+"changeToBoyTitle" = "소년:";
+"changeToGirlTitle" = "여자를위한:";
+"musicSwitchTitle" = "음악";
+"difficultLevelLabel" = "난이도";
+
+"difficultLevelSelector0" = "높은";
+"difficultLevelSelector1" = "평균";
+"difficultLevelSelector2" = "낮은";
+
+"rowMatchedColorsAndPositionsTitle" = "추측";
+"rowMatchedColors" = "거의 추측";
+
+
+"defaultNameGirls" = "공주";
+"defaultNameBoys" = "슈퍼맨";

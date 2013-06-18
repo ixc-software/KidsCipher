@@ -12,7 +12,11 @@
 #define IS_IPHONE5 (([[UIScreen mainScreen] bounds].size.height-568)?NO:YES)
 
 @interface CipherAppDelegate : UIResponder <UIApplicationDelegate,AVAudioPlayerDelegate>
-@property (strong, nonatomic) AVAudioPlayer* audioPlayerMainFoneMusic;
+@property (retain, nonatomic) AVAudioPlayer* audioPlayerMainFoneMusic;
+//@property (strong, nonatomic) AVAudioPlayer *gameZeroResult;
+@property (retain, nonatomic) AVAudioPlayer *gameWrongResult;
+@property (retain, nonatomic) AVAudioPlayer *gameSuccessResult;
+
 @property (strong, nonatomic) UIWindow *window;
 @property (retain,nonatomic) NSMutableDictionary *viewControllers;
 - (void)registerViewController:(NSString *)name controller:(UIViewController *)controller;
@@ -45,6 +49,9 @@
 @property (readwrite) NSUInteger gameTimerSeconds;
 
 @property (readwrite) BOOL isNewRowProcessing;
+
+
+@property (readwrite) BOOL isBackgroundMusicPlaying;
 
 -(Row *)getActiveRow;
 -(Row *)getRowBeforeActiveRow;
