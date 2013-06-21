@@ -121,15 +121,43 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+    NSData *resizedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];//UIImagePNGRepresentation(resizedImage);
+    if (resizedData) {
+        [[self.myPhoto layer] setBorderColor:[self.myName.textColor CGColor]];
+        [[self.myPhoto layer] setBorderWidth:1.75];
+        [[self.myPhoto layer] setCornerRadius:5];
+        [[self.myPhoto layer] setMasksToBounds:YES];
+        [self.myPhoto setImage:[UIImage imageWithData:resizedData] forState:UIControlStateNormal];
+    }
 
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     if (orientation == UIDeviceOrientationPortrait) {
-        NSLog(@"UIDeviceOrientationPortrait");
-        self.mainPageBackground.image = [UIImage imageNamed:@"button_fon_V"];
-        self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records"];
+        //NSLog(@"UIDeviceOrientationPortrait");
+          
+#ifdef KidsCipherBoys
+        if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) self.mainPageBackground.image = [UIImage imageNamed:@"Boy_button_fon_V_iphone"];
+        else self.mainPageBackground.image = [UIImage imageNamed:@"Boy_button_fon_V"];
+         if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) self.mainPageScrollBackground.image = [UIImage imageNamed:@"Boy_button_fon_all_records_iphone_no_cup"];
+         else self.mainPageScrollBackground.image = [UIImage imageNamed:@"Boy_button_fon_all_records"];
+#else
+        if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) self.mainPageBackground.image = [UIImage imageNamed:@"button_fon_V_iphone"];
+        else self.mainPageBackground.image = [UIImage imageNamed:@"button_fon_V"];
+
+        if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records_V_01"];
+        else self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records"];
+
+#endif
     } else {
+#ifdef KidsCipherBoys
+
+        self.mainPageBackground.image = [UIImage imageNamed:@"Boy_button_fon_G"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records_G"];
+#else
         self.mainPageBackground.image = [UIImage imageNamed:@"button_fon_G"];
         self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records_G"];
+
+#endif
+
         if (orientation == UIDeviceOrientationUnknown) NSLog(@"UIDeviceOrientationUnknown");
         else NSLog(@"UIDeviceOrientationLandscapeLeft");
     }
@@ -210,14 +238,25 @@
 {
     UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
     if (orientation == UIDeviceOrientationPortrait) {
-        NSLog(@"portrait");
+        //NSLog(@"portrait");
+#ifdef KidsCipherBoys
+        self.mainPageBackground.image = [UIImage imageNamed:@"Boy_button_fon_V"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"Boy_button_fon_all_records"];
+#else
         self.mainPageBackground.image = [UIImage imageNamed:@"button_fon_V"];
         self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records"];
+#endif
+
     } else {
+        //NSLog(@"landscape");
+#ifdef KidsCipherBoys
+        self.mainPageBackground.image = [UIImage imageNamed:@"Boy_button_fon_G"];
+        self.mainPageScrollBackground.image = [UIImage imageNamed:@"Boy_button_fon_all_records_G"];
+#else
         self.mainPageBackground.image = [UIImage imageNamed:@"button_fon_G"];
         self.mainPageScrollBackground.image = [UIImage imageNamed:@"button_fon_all_records_G"];
-        NSLog(@"landscape");
-        
+#endif
+
     }
     [self.tableView reloadData];
     [self.tableView scrollRectToVisible:CGRectMake(0, 0, 1, 1) animated:YES];
@@ -238,7 +277,7 @@
 }
 
 - (IBAction)changeToBoyStart:(id)sender {
-#warning finish
+//#warning finish
 
 }
 - (IBAction)returnToGameStart:(id)sender {
@@ -272,7 +311,13 @@
         UIImage *image = [UIImage imageWithData:photoData];
         cell.photo.image = image;
     } else {
-        UIImage *image = [UIImage imageNamed:@"button_avatar"];
+        UIImage *image = nil;
+#ifdef KidsCipherBoys
+        image = [UIImage imageNamed:@"button_avatar_boy"];
+#else
+        image = [UIImage imageNamed:@"button_avatar"];
+#endif
+
         cell.photo.image = image;
     }
     cell.name.text = row.name;
@@ -285,22 +330,44 @@
     switch (row.difficultLevel.unsignedIntegerValue) {
         case 2:
             cell.level.text = NSLocalizedString(@"difficultLevelSelector2", @"");
+#ifdef KidsCipherBoys
+            cell.levelStarFirst.image = [UIImage imageNamed:@"Boy_button_level_star_blue"];
+            cell.levelStarSecond.image = [UIImage imageNamed:@"button_level_star_transparent"];
+            cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_transparent"];
+#else
             cell.levelStarFirst.image = [UIImage imageNamed:@"button_level_star_yellow"];
             cell.levelStarSecond.image = [UIImage imageNamed:@"button_level_star_transparent"];
             cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_transparent"];
+#endif
+
             break;
         case 1:
             cell.level.text = NSLocalizedString(@"difficultLevelSelector1", @"");
+#ifdef KidsCipherBoys
+            cell.levelStarFirst.image = [UIImage imageNamed:@"Boy_button_level_star_blue"];
+            cell.levelStarSecond.image = [UIImage imageNamed:@"Boy_button_level_star_blue"];
+            cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_transparent"];
+#else
             cell.levelStarFirst.image = [UIImage imageNamed:@"button_level_star_yellow"];
             cell.levelStarSecond.image = [UIImage imageNamed:@"button_level_star_yellow"];
             cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_transparent"];
+#endif
+
             break;
 
         case 0:
             cell.level.text = NSLocalizedString(@"difficultLevelSelector0", @"");
+#ifdef KidsCipherBoys
+
+            cell.levelStarFirst.image = [UIImage imageNamed:@"Boy_button_level_star_blue"];
+            cell.levelStarSecond.image = [UIImage imageNamed:@"Boy_button_level_star_blue"];
+            cell.levelStarThird.image = [UIImage imageNamed:@"Boy_button_level_star_blue"];
+#else
             cell.levelStarFirst.image = [UIImage imageNamed:@"button_level_star_yellow"];
             cell.levelStarSecond.image = [UIImage imageNamed:@"button_level_star_yellow"];
-            cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_yellow"];
+            cell.levelStarThird.image = [UIImage imageNamed:@"button_level_star_transparent"];
+#endif
+
             break;
 
         default:
@@ -311,9 +378,20 @@
     cell.attemps.text = [NSString stringWithFormat:@"%@",row.attempts];
     UIInterfaceOrientation orientation = [[UIApplication sharedApplication] statusBarOrientation];
     if (orientation == UIDeviceOrientationPortrait) {
-        cell.backgroundCell.image = [UIImage imageNamed:@"button_field_record"];
+#ifdef KidsCipherBoys
+        if([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone) cell.backgroundCell.image = [UIImage imageNamed:@"Boy_button_field_record"];
+#else
+        if([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone) cell.backgroundCell.image = [UIImage imageNamed:@"button_field_record"];
+#endif
+
     } else {
-        cell.backgroundCell.image = [UIImage imageNamed:@"button_field_record_G"];
+        //if([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone) cell.backgroundCell.image = [UIImage imageNamed:@"button_field_record_G"];
+#ifdef KidsCipherBoys
+        if([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone) cell.backgroundCell.image = [UIImage imageNamed:@"Boy_button_field_record_G"];
+#else
+        if([[UIDevice currentDevice] userInterfaceIdiom] != UIUserInterfaceIdiomPhone) cell.backgroundCell.image = [UIImage imageNamed:@"button_field_record_G"];
+#endif
+
         
     }
 
@@ -709,7 +787,6 @@ static CGRect swapWidthAndHeight(CGRect rect)
         self.myPhoto.imageView.image = [UIImage imageNamed:@"button_avatar_boy"];
 #else
         self.myPhoto.imageView.image = [UIImage imageNamed:@"button_avatar"];
-        
 #endif
 
     }

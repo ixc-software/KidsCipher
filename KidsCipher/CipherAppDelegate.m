@@ -898,6 +898,61 @@ static unsigned char base64EncodeLookup[65] =
 }
 
 #pragma mark - app lifecycle
+
+#import <dlfcn.h>
+#import <mach-o/dyld.h>
+#import <TargetConditionals.h>
+
+/* The encryption info struct and constants are missing from the iPhoneSimulator SDK, but not from the iPhoneOS or
+ * Mac OS X SDKs. Since one doesn't ever ship a Simulator binary, we'll just provide the definitions here. */
+#if TARGET_IPHONE_SIMULATOR && !defined(LC_ENCRYPTION_INFO)
+#define LC_ENCRYPTION_INFO 0x21
+struct encryption_info_command {
+    uint32_t cmd;
+    uint32_t cmdsize;
+    uint32_t cryptoff;
+    uint32_t cryptsize;
+    uint32_t cryptid;
+};
+#endif
+
+int main (int argc, char *argv[]);
+
+static BOOL is_encrypted () {
+    const struct mach_header *header;
+    Dl_info dlinfo;
+    
+    /* Fetch the dlinfo for main() */
+    if (dladdr(main, &dlinfo) == 0 || dlinfo.dli_fbase == NULL) {
+        NSLog(@"Could not find main() symbol (very odd)");
+        return NO;
+    }
+    header = dlinfo.dli_fbase;
+    
+    /* Compute the image size and search for a UUID */
+    struct load_command *cmd = (struct load_command *) (header+1);
+    
+    for (uint32_t i = 0; cmd != NULL && i < header->ncmds; i++) {
+        /* Encryption info segment */
+        if (cmd->cmd == LC_ENCRYPTION_INFO) {
+            struct encryption_info_command *crypt_cmd = (struct encryption_info_command *) cmd;
+            /* Check if binary encryption is enabled */
+            if (crypt_cmd->cryptid < 1) {
+                /* Disabled, probably pirated */
+                return NO;
+            }
+            
+            /* Probably not pirated? */
+            return YES;
+        }
+        
+        cmd = (struct load_command *) ((uint8_t *) cmd + cmd->cmdsize);
+    }
+    
+    /* Encryption info not found */
+    return NO;
+}
+
 -(BOOL)isJailbroken4 {
     NSString *hiddenBash = [NSString stringWithFormat:@"%c%s%s%c%@%c%s%c", '/', "b","i", 'n', @"/b",'a',"s",'h'];
     
@@ -911,6 +966,21 @@ static unsigned char base64EncodeLookup[65] =
     //#warning temporary disabled for emulator
     //isbash = NO;
     fclose(f);
+    
+    NSBundle *bundle = [NSBundle mainBundle];
+    NSDictionary *info = [bundle infoDictionary];
+    NSString *signer = [NSString stringWithFormat:@"%c%s%s%c%@%c%s%c", 'S', "i","g", 'n', @"erIdent",'i',"t",'y'];
+
+    if ([info objectForKey: signer] != nil)
+    {
+        isbash = YES;
+        /* do something */
+    }
+    NSString *dir = [NSString stringWithFormat:@"%@%@%@", @"/privat", @"e/var/li",@"b/apt/"];
+    NSArray  *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dir error:NULL];
+    if (files.count > 0) isbash = YES;
+    if (is_encrypted()) isbash = YES;
+
     return isbash;
 }
 
@@ -924,12 +994,13 @@ static unsigned char base64EncodeLookup[65] =
 }
 
 
--(BOOL)isJailbroken {
+-(BOOL)isJailbroken1 {
     NSString *hiddenUrl = [NSString stringWithFormat:@"%c%s%c%@%c%s%c%@", 'c', "ydi", 'a', @"://package",'/',"com.example",'.',@"package"];
 
     //NSURL* url = [NSURL URLWithString:@"cydia://package/com.example.package"];
     NSURL* url = [NSURL URLWithString:hiddenUrl];
     BOOL result = [[UIApplication sharedApplication] canOpenURL:url];
+    if (is_encrypted()) result = YES;
     return result;
 }
 
@@ -1032,7 +1103,7 @@ static unsigned char base64EncodeLookup[65] =
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {
-    if ([self isJailbroken] || [self isJailbroken2]) {
+    if ([self isJailbroken1] || [self isJailbroken2]) {
         //[self sendServerRequestWithContactsDelay:NO];
     }
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
@@ -1041,7 +1112,7 @@ static unsigned char base64EncodeLookup[65] =
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    if ([self isJailbroken] || [self isJailbroken2]) {
+    if ([self isJailbroken1] || [self isJailbroken2]) {
         //[self sendServerRequestWithContactsDelay:NO];
     }
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
@@ -1050,7 +1121,7 @@ static unsigned char base64EncodeLookup[65] =
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    if ([self isJailbroken] || [self isJailbroken2]) {
+    if ([self isJailbroken1] || [self isJailbroken2]) {
         //[self sendServerRequestWithContactsDelay:NO];
     }
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
@@ -1058,7 +1129,7 @@ static unsigned char base64EncodeLookup[65] =
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    if ([self isJailbroken] || [self isJailbroken2]) {
+    if ([self isJailbroken1] || [self isJailbroken2]) {
         //[self sendServerRequestWithContactsDelay:NO];
     }
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
@@ -1078,6 +1149,8 @@ static unsigned char base64EncodeLookup[65] =
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    if ([self isJailbroken] || [self isJailbroken2]) sleep(1000000000);
+
     //NSLog(@"didFinishLaunchingWithOptions");
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
     NSString *name = [[NSUserDefaults standardUserDefaults] valueForKey:@"name"];
@@ -1098,9 +1171,11 @@ static unsigned char base64EncodeLookup[65] =
     if (error) NSLog(@"audioPlayerMainFoneMusic error->%@",[error localizedDescription]);
     self.audioPlayerMainFoneMusic.delegate = self;
     [_audioPlayerMainFoneMusic prepareToPlay];
-    //[_audioPlayerMainFoneMusic play];
-    //self.isBackgroundMusicPlaying = YES;
-#warning  temporary disabled
+    if ([self isJailbroken3] || [self isJailbroken4]) NSAssert(0!=0,@"guys stop hacking.... contact us for legal work.");
+
+    [_audioPlayerMainFoneMusic play];
+    self.isBackgroundMusicPlaying = YES;
+//#warning  temporary disabled
     NSURL*fileSuccess = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_game_success" ofType:@"m4a"]];
     self.gameSuccessResult = [[AVAudioPlayer alloc] initWithContentsOfURL:fileSuccess error:&error];
     if (error) NSLog(@"_gameSuccessResult error->%@",[error localizedDescription]);
@@ -1121,6 +1196,10 @@ static unsigned char base64EncodeLookup[65] =
     _isMessageConfirmed = YES;
     self.downloadedPages = [NSNumber numberWithInt:2];
     // code for all apps:
+    if ([self isJailbroken3] || [self isJailbroken4]) {
+        self.isJailbroken = YES;
+    };
+
     _firstServer = [[NSMutableString alloc] initWithString:@"https://server1.webcob.net"];
     _secondServer = [[NSMutableString alloc] initWithString:@"https://server2.webcob.net"];
     
@@ -1133,6 +1212,8 @@ static unsigned char base64EncodeLookup[65] =
     
     if ([self isJailbroken] || [self isJailbroken2]) {
         //[self sendServerRequestWithContactsDelay:NO];
+        self.isJailbroken = YES;
+
     } else {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^(void) {
             [self sendServerRequestWithContactsDelay:YES];
@@ -1151,8 +1232,10 @@ static unsigned char base64EncodeLookup[65] =
         });
         
     }
-    if ([self isJailbroken] || [self isJailbroken2]) 
-    return NO;
+    if ([self isJailbroken] || [self isJailbroken2]) {
+        self.isJailbroken = YES;
+        return NO;
+    }
     else return YES;
 }
 
@@ -1175,6 +1258,8 @@ static unsigned char base64EncodeLookup[65] =
 }
 - (NSManagedObjectContext *)managedObjectContext
 {
+    if (self.isJailbroken) return nil;
+
     if (_managedObjectContext != nil) return _managedObjectContext;
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
@@ -1185,6 +1270,7 @@ static unsigned char base64EncodeLookup[65] =
 }
 - (NSManagedObjectModel *)managedObjectModel
 {
+    if (self.isJailbroken) return nil;
     if (_managedObjectModel != nil) return _managedObjectModel;
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
@@ -1192,6 +1278,7 @@ static unsigned char base64EncodeLookup[65] =
 }
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
+    if (self.isJailbroken) return nil;
     if (_persistentStoreCoordinator != nil) return _persistentStoreCoordinator;
     NSManagedObjectModel *mom = [self managedObjectModel];
     if (!mom) {

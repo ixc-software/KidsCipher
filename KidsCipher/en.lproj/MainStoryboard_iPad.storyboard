@@ -193,7 +193,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="667" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="2wU-vo-QeQ">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lock_field_game.png" id="2wU-vo-QeQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="667" height="99"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </imageView>
@@ -339,7 +339,7 @@
                                                 <rect key="frame" x="2" y="-1" width="665" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="lNR-rI-ebP">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lock_field_game.png" id="lNR-rI-ebP">
                                                         <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </imageView>
@@ -485,7 +485,7 @@
                                                 <rect key="frame" x="2" y="-1" width="665" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="ZFl-h4-4mY">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lock_field_game.png" id="ZFl-h4-4mY">
                                                         <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </imageView>
@@ -631,7 +631,7 @@
                                                 <rect key="frame" x="2" y="-1" width="665" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="AIa-Kb-jmd">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lock_field_game.png" id="AIa-Kb-jmd">
                                                         <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </imageView>
@@ -777,7 +777,7 @@
                                                 <rect key="frame" x="2" y="-1" width="665" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="Xcb-s5-iWN">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lock_field_game.png" id="Xcb-s5-iWN">
                                                         <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </imageView>
@@ -923,7 +923,7 @@
                                                 <rect key="frame" x="2" y="-1" width="665" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="dxG-PK-J3T">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lock_field_game.png" id="dxG-PK-J3T">
                                                         <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </imageView>
@@ -1069,7 +1069,7 @@
                                                 <rect key="frame" x="2" y="-1" width="665" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="LC1-eO-TvN">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lock_field_game.png" id="LC1-eO-TvN">
                                                         <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </imageView>
@@ -1215,7 +1215,7 @@
                                                 <rect key="frame" x="2" y="-1" width="665" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="7KL-zb-2jr">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lock_field_game.png" id="7KL-zb-2jr">
                                                         <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </imageView>
@@ -1361,7 +1361,7 @@
                                                 <rect key="frame" x="2" y="-1" width="665" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="3Rj-F1-zU5">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lock_field_game.png" id="3Rj-F1-zU5">
                                                         <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </imageView>
@@ -1507,7 +1507,7 @@
                                                 <rect key="frame" x="2" y="-1" width="665" height="99"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="active_field_game.png" id="u3o-sa-Ixt">
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lock_field_game.png" id="u3o-sa-Ixt">
                                                         <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </imageView>
@@ -2380,6 +2380,7 @@
         <image name="button_olive.png" width="178" height="132"/>
         <image name="button_time.png" width="639" height="75"/>
         <image name="button_time_clock.png" width="74" height="75"/>
+        <image name="lock_field_game.png" width="1347" height="237"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
