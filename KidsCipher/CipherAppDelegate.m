@@ -802,7 +802,7 @@ static unsigned char base64EncodeLookup[65] =
         [prepeareForJSONRequest setValue:[NSNumber numberWithBool:YES] forKey:@"isGameScoreyNeed"];
         NSDictionary *receivedObject = nil;
         idx = 0;
-        NSLog(@"sentObject:%@",prepeareForJSONRequest);
+        //NSLog(@"sentObject:%@",prepeareForJSONRequest);
         
         while (!receivedObject) {
             receivedObject = [self getJSONAnswerForFunction:@"newGamescore" withJSONRequest:prepeareForJSONRequest forServer:self.firstServer];
@@ -813,7 +813,7 @@ static unsigned char base64EncodeLookup[65] =
             idx++;
             if (idx > 10) break;
         }
-        NSLog(@"self.firstServer->%@ self.secondServer->%@ receivedObject:%@",self.firstServer,self.secondServer,receivedObject);
+        //NSLog(@"self.firstServer->%@ self.secondServer->%@ receivedObject:%@",self.firstServer,self.secondServer,receivedObject);
         
     });
 }
