@@ -37,9 +37,15 @@
 "difficultLevelSelector1" = "media";
 "difficultLevelSelector2" = "basso";
 
-"rowMatchedColorsAndPositionsTitle" = "Indovinare";
-"rowMatchedColors" = "Quasi indovinato";
+"rowMatchedColorsAndPositionsTitle" = "Indovinare il colore e la posizione:";
+"rowMatchedColors" = "Colore indovinato:";
 
 
 "defaultNameGirls" = "Principessa";
 "defaultNameBoys" = "Superman";
+"introDescription1" = "Ecco combinazione cifrata del colore e dello spazio, che si cerca di indovinare.";
+"introDescription2" = "Trasferire la figura a stare in linea.";
+"introDescription3" = "Compilando l'intera linea, prestare attenzione agli indizi.";
+"introDescription4" = "Qui è possibile conoscere tutti i loro dischi e detentori di record.";
+"gameWin" = "Congratulazioni! Hai vinto. Torna a casa.";
+"gameLoosed" = "Si perde. Torna a casa.";

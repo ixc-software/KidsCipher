@@ -37,9 +37,15 @@
 "difficultLevelSelector1" = "média";
 "difficultLevelSelector2" = "baixo";
 
-"rowMatchedColorsAndPositionsTitle" = "Adivinhação";
-"rowMatchedColors" = "Quase adivinhado";
+"rowMatchedColorsAndPositionsTitle" = "Adivinhar a cor ea localização:";
+"rowMatchedColors" = "Cor adivinhou:";
 
 
 "defaultNameGirls" = "Princess";
 "defaultNameBoys" = "Superman";
+"introDescription1" = "Aqui é uma combinação criptografada de cor e espaço, que você tente adivinhar.";
+"introDescription2" = "Transferir o valor para ficar na fila.";
+"introDescription3" = "Ao preencher toda a linha, preste atenção para as pistas.";
+"introDescription4" = "Aqui você pode aprender sobre todos os seus registros e recordistas.";
+"gameWin" = "Parabéns! Você ganhou. Voltar para casa.";
+"gameLoosed" = "Você perde. Voltar para casa.";

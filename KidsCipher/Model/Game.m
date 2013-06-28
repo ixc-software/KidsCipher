@@ -2,7 +2,7 @@
 //  Game.m
 //  KidsCipher
 //
-//  Created by Oleksii Vynogradov on 5/3/13.
+//  Created by Oleksii Vynogradov on 6/26/13.
 //  Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 //
 
@@ -22,6 +22,7 @@
 @dynamic isFrame3empty;
 @dynamic isFrame4empty;
 @dynamic isFrame5empty;
+@dynamic isGameStarted;
 @dynamic mainDraggedImage1identifier;
 @dynamic mainDraggedImage1startingPoint;
 @dynamic mainDraggedImage2identifier;
@@ -33,7 +34,10 @@
 @dynamic mainDraggedImage5identifier;
 @dynamic mainDraggedImage5startingPoint;
 @dynamic startTime;
-@dynamic isGameStarted;
+@dynamic beginGameButtonFrame;
+@dynamic beginGameButtonTitleFrame;
+@dynamic beginTragingButtonFrame;
+@dynamic beginTrainingButtonTitleFrame;
 @dynamic rows;
 
 @end

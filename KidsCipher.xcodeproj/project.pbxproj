@@ -111,6 +111,20 @@
 		FA1CB79717747B3C004C0F45 /* button_lock_training.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB79617747B3C004C0F45 /* button_lock_training.png */; };
 		FA1CB799177486EB004C0F45 /* Boy_button_fon_all_records.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB798177486EA004C0F45 /* Boy_button_fon_all_records.png */; };
 		FA1CB79B1774871D004C0F45 /* Boy_button_fon_all_records_G.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB79A1774871C004C0F45 /* Boy_button_fon_all_records_G.png */; };
+		FA1CB79D17782226004C0F45 /* check.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB79C17782226004C0F45 /* check.png */; };
+		FA1CB79F177823CB004C0F45 /* checkGirl.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB79E177823CB004C0F45 /* checkGirl.png */; };
+		FA1CB7A11778245D004C0F45 /* check_sign_icon_purple.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7A01778245D004C0F45 /* check_sign_icon_purple.png */; };
+		FA1CB7A317782B24004C0F45 /* checkGirlsLast.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7A217782B24004C0F45 /* checkGirlsLast.png */; };
+		FA1CB7A5177915C0004C0F45 /* tapFinger.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7A4177915C0004C0F45 /* tapFinger.png */; };
+		FA1CB7A6177915C0004C0F45 /* tapFinger.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7A4177915C0004C0F45 /* tapFinger.png */; };
+		FA1CB7A817791804004C0F45 /* Close_Box_Red.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7A717791804004C0F45 /* Close_Box_Red.png */; };
+		FA1CB7A917791804004C0F45 /* Close_Box_Red.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7A717791804004C0F45 /* Close_Box_Red.png */; };
+		FA1CB7AC17792288004C0F45 /* AVLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CB7AB17792288004C0F45 /* AVLabel.m */; };
+		FA1CB7AD17792288004C0F45 /* AVLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CB7AB17792288004C0F45 /* AVLabel.m */; };
+		FA1CB7AF17798DD0004C0F45 /* pointer-finger-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7AE17798DD0004C0F45 /* pointer-finger-hi.png */; };
+		FA1CB7B017798DD0004C0F45 /* pointer-finger-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7AE17798DD0004C0F45 /* pointer-finger-hi.png */; };
+		FA1CB7B3177B78F6004C0F45 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CB7B2177B78F6004C0F45 /* Game.m */; };
+		FA1CB7B4177B78F6004C0F45 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CB7B2177B78F6004C0F45 /* Game.m */; };
 		FA3B31A4175E41F50061AE68 /* button_back_in_ game.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3B31A3175E41F50061AE68 /* button_back_in_ game.png */; };
 		FA3B31A6175E426E0061AE68 /* button_your_name.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3B31A5175E426E0061AE68 /* button_your_name.png */; };
 		FA3B31A9175E44150061AE68 /* button_records_my.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3B31A7175E44150061AE68 /* button_records_my.png */; };
@@ -142,8 +156,6 @@
 		FA803CAF173424420053C881 /* CipherInfoViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CAD173424420053C881 /* CipherInfoViewCell.m */; };
 		FA803CDA17342F110053C881 /* GamesHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CD917342F110053C881 /* GamesHistory.m */; };
 		FA803CDB17342F110053C881 /* GamesHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CD917342F110053C881 /* GamesHistory.m */; };
-		FA803CDE17343BFB0053C881 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CDD17343BFB0053C881 /* Game.m */; };
-		FA803CDF17343BFB0053C881 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FA803CDD17343BFB0053C881 /* Game.m */; };
 		FA841E3A1760728400BBEE90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA803CCC173428B20053C881 /* Localizable.strings */; };
 		FA841E3B1760728500BBEE90 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA803CCC173428B20053C881 /* Localizable.strings */; };
 		FA841E561760935C00BBEE90 /* GameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = FA841E551760935C00BBEE90 /* GameScore.m */; };
@@ -339,6 +351,17 @@
 		FA1CB79617747B3C004C0F45 /* button_lock_training.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_lock_training.png; sourceTree = "<group>"; };
 		FA1CB798177486EA004C0F45 /* Boy_button_fon_all_records.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_fon_all_records.png; sourceTree = "<group>"; };
 		FA1CB79A1774871C004C0F45 /* Boy_button_fon_all_records_G.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_fon_all_records_G.png; sourceTree = "<group>"; };
+		FA1CB79C17782226004C0F45 /* check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check.png; sourceTree = "<group>"; };
+		FA1CB79E177823CB004C0F45 /* checkGirl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkGirl.png; sourceTree = "<group>"; };
+		FA1CB7A01778245D004C0F45 /* check_sign_icon_purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = check_sign_icon_purple.png; sourceTree = "<group>"; };
+		FA1CB7A217782B24004C0F45 /* checkGirlsLast.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkGirlsLast.png; sourceTree = "<group>"; };
+		FA1CB7A4177915C0004C0F45 /* tapFinger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tapFinger.png; sourceTree = "<group>"; };
+		FA1CB7A717791804004C0F45 /* Close_Box_Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Close_Box_Red.png; sourceTree = "<group>"; };
+		FA1CB7AA17792288004C0F45 /* AVLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVLabel.h; sourceTree = "<group>"; };
+		FA1CB7AB17792288004C0F45 /* AVLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVLabel.m; sourceTree = "<group>"; };
+		FA1CB7AE17798DD0004C0F45 /* pointer-finger-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pointer-finger-hi.png"; path = "PicsBoys/pointer-finger-hi.png"; sourceTree = "<group>"; };
+		FA1CB7B1177B78F6004C0F45 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
+		FA1CB7B2177B78F6004C0F45 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		FA3B31A3175E41F50061AE68 /* button_back_in_ game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_back_in_ game.png"; sourceTree = "<group>"; };
 		FA3B31A5175E426E0061AE68 /* button_your_name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_your_name.png; sourceTree = "<group>"; };
 		FA3B31A7175E44150061AE68 /* button_records_my.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_records_my.png; sourceTree = "<group>"; };
@@ -382,8 +405,6 @@
 		FA803CD717342A530053C881 /* it-IT */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "it-IT"; path = "it-IT.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		FA803CD817342F110053C881 /* GamesHistory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GamesHistory.h; sourceTree = "<group>"; };
 		FA803CD917342F110053C881 /* GamesHistory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GamesHistory.m; sourceTree = "<group>"; };
-		FA803CDC17343BFB0053C881 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
-		FA803CDD17343BFB0053C881 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
 		FA841E541760935C00BBEE90 /* GameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScore.h; sourceTree = "<group>"; };
 		FA841E551760935C00BBEE90 /* GameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameScore.m; sourceTree = "<group>"; };
 		FA841EA5176120E800BBEE90 /* button_fon_G.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_fon_G.png; sourceTree = "<group>"; };
@@ -506,6 +527,7 @@
 		FA145A6017707093005ACA7F /* PicsBoys */ = {
 			isa = PBXGroup;
 			children = (
+				FA1CB79C17782226004C0F45 /* check.png */,
 				FA1CB78717746045004C0F45 /* Boy_button_fon_V_iphone.png */,
 				FA1CB78517745E41004C0F45 /* Boy_Main_page_fon_notebook_iphone.png */,
 				FA1CB78317745A4C004C0F45 /* Boy_Main_page_fon_iphone.png */,
@@ -533,6 +555,7 @@
 				FA145A8E17707093005ACA7F /* Boy_active_field_game.png */,
 				FA145A8F17707093005ACA7F /* Boy_button_avatar-frame.png */,
 				FA145A9017707093005ACA7F /* Boy_button_avatar.png */,
+				FA1CB7A717791804004C0F45 /* Close_Box_Red.png */,
 				FA145A9117707093005ACA7F /* Boy_button_avatar_frame_photo.png */,
 				FA145A9217707093005ACA7F /* Boy_button_avatar_no_photo.png */,
 				FA145A9317707093005ACA7F /* Boy_button_begin_game.png */,
@@ -635,6 +658,8 @@
 				FAAA36B9172E525D00C55968 /* CipherInfoViewController.m */,
 				FAAA36B5172E520400C55968 /* AVImageView.h */,
 				FAAA36B6172E520400C55968 /* AVImageView.m */,
+				FA1CB7AA17792288004C0F45 /* AVLabel.h */,
+				FA1CB7AB17792288004C0F45 /* AVLabel.m */,
 				FAFD5C4F172E628F005F47E2 /* Model */,
 				FAAA3696172E4D7A00C55968 /* Supporting Files */,
 			);
@@ -665,6 +690,11 @@
 			children = (
 				FA145A6017707093005ACA7F /* PicsBoys */,
 				FA145A5C17706D1C005ACA7F /* Main_page_fon_notebook_iphone.png */,
+				FA1CB7A217782B24004C0F45 /* checkGirlsLast.png */,
+				FA1CB7A4177915C0004C0F45 /* tapFinger.png */,
+				FA1CB7AE17798DD0004C0F45 /* pointer-finger-hi.png */,
+				FA1CB7A01778245D004C0F45 /* check_sign_icon_purple.png */,
+				FA1CB79E177823CB004C0F45 /* checkGirl.png */,
 				FA1CB79617747B3C004C0F45 /* button_lock_training.png */,
 				FA1CB798177486EA004C0F45 /* Boy_button_fon_all_records.png */,
 				FA1CB79A1774871C004C0F45 /* Boy_button_fon_all_records_G.png */,
@@ -764,9 +794,9 @@
 			children = (
 				FA841E541760935C00BBEE90 /* GameScore.h */,
 				FA841E551760935C00BBEE90 /* GameScore.m */,
+				FA1CB7B1177B78F6004C0F45 /* Game.h */,
+				FA1CB7B2177B78F6004C0F45 /* Game.m */,
 				FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */,
-				FA803CDC17343BFB0053C881 /* Game.h */,
-				FA803CDD17343BFB0053C881 /* Game.m */,
 				FA803CD817342F110053C881 /* GamesHistory.h */,
 				FA803CD917342F110053C881 /* GamesHistory.m */,
 				FABCB8A4173397F300907198 /* Row.h */,
@@ -939,6 +969,12 @@
 				FA1CB7931774781F004C0F45 /* Main_page_fon_safe_ajar.png in Resources */,
 				FA1CB7941774781F004C0F45 /* Main_page_fon_safe_open.png in Resources */,
 				FA1CB79717747B3C004C0F45 /* button_lock_training.png in Resources */,
+				FA1CB79F177823CB004C0F45 /* checkGirl.png in Resources */,
+				FA1CB7A11778245D004C0F45 /* check_sign_icon_purple.png in Resources */,
+				FA1CB7A317782B24004C0F45 /* checkGirlsLast.png in Resources */,
+				FA1CB7A5177915C0004C0F45 /* tapFinger.png in Resources */,
+				FA1CB7A817791804004C0F45 /* Close_Box_Red.png in Resources */,
+				FA1CB7AF17798DD0004C0F45 /* pointer-finger-hi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1048,6 +1084,10 @@
 				FA1CB78817746046004C0F45 /* Boy_button_fon_V_iphone.png in Resources */,
 				FA1CB799177486EB004C0F45 /* Boy_button_fon_all_records.png in Resources */,
 				FA1CB79B1774871D004C0F45 /* Boy_button_fon_all_records_G.png in Resources */,
+				FA1CB79D17782226004C0F45 /* check.png in Resources */,
+				FA1CB7A6177915C0004C0F45 /* tapFinger.png in Resources */,
+				FA1CB7A917791804004C0F45 /* Close_Box_Red.png in Resources */,
+				FA1CB7B017798DD0004C0F45 /* pointer-finger-hi.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1067,8 +1107,9 @@
 				FABCB8A6173397F300907198 /* Row.m in Sources */,
 				FA803CAE173424420053C881 /* CipherInfoViewCell.m in Sources */,
 				FA803CDA17342F110053C881 /* GamesHistory.m in Sources */,
-				FA803CDE17343BFB0053C881 /* Game.m in Sources */,
 				FA841E561760935C00BBEE90 /* GameScore.m in Sources */,
+				FA1CB7AC17792288004C0F45 /* AVLabel.m in Sources */,
+				FA1CB7B3177B78F6004C0F45 /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1085,8 +1126,9 @@
 				FABCB8A7173397F300907198 /* Row.m in Sources */,
 				FA803CAF173424420053C881 /* CipherInfoViewCell.m in Sources */,
 				FA803CDB17342F110053C881 /* GamesHistory.m in Sources */,
-				FA803CDF17343BFB0053C881 /* Game.m in Sources */,
 				FA841E571760935C00BBEE90 /* GameScore.m in Sources */,
+				FA1CB7AD17792288004C0F45 /* AVLabel.m in Sources */,
+				FA1CB7B4177B78F6004C0F45 /* Game.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1200,6 +1242,8 @@
 		FAAA36B3172E4D7A00C55968 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
@@ -1210,6 +1254,8 @@
 					"\"$(SRCROOT)/Flurry\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1217,6 +1263,8 @@
 		FAAA36B4172E4D7A00C55968 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
@@ -1227,6 +1275,8 @@
 					"\"$(SRCROOT)/Flurry\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1234,6 +1284,8 @@
 		FAF343AC172FC3E900C282D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;
@@ -1244,6 +1296,8 @@
 					"\"$(SRCROOT)/Flurry\"",
 				);
 				PRODUCT_NAME = KidsCipherB;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1251,6 +1305,8 @@
 		FAF343AD172FC3E900C282D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;
@@ -1261,6 +1317,8 @@
 					"\"$(SRCROOT)/Flurry\"",
 				);
 				PRODUCT_NAME = KidsCipherB;
+				PROVISIONING_PROFILE = "";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

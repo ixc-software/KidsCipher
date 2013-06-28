@@ -2,7 +2,7 @@
 //  Game.h
 //  KidsCipher
 //
-//  Created by Oleksii Vynogradov on 5/3/13.
+//  Created by Oleksii Vynogradov on 6/26/13.
 //  Copyright (c) 2013 IXC-USA Corp. All rights reserved.
 //
 
@@ -23,6 +23,7 @@
 @property (nonatomic, retain) NSNumber * isFrame3empty;
 @property (nonatomic, retain) NSNumber * isFrame4empty;
 @property (nonatomic, retain) NSNumber * isFrame5empty;
+@property (nonatomic, retain) NSNumber * isGameStarted;
 @property (nonatomic, retain) NSString * mainDraggedImage1identifier;
 @property (nonatomic, retain) NSString * mainDraggedImage1startingPoint;
 @property (nonatomic, retain) NSString * mainDraggedImage2identifier;
@@ -34,7 +35,10 @@
 @property (nonatomic, retain) NSString * mainDraggedImage5identifier;
 @property (nonatomic, retain) NSString * mainDraggedImage5startingPoint;
 @property (nonatomic, retain) NSDate * startTime;
-@property (nonatomic, retain) NSNumber * isGameStarted;
+@property (nonatomic, retain) NSString * beginGameButtonFrame;
+@property (nonatomic, retain) NSString * beginGameButtonTitleFrame;
+@property (nonatomic, retain) NSString * beginTragingButtonFrame;
+@property (nonatomic, retain) NSString * beginTrainingButtonTitleFrame;
 @property (nonatomic, retain) NSOrderedSet *rows;
 @end
 

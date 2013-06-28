@@ -53,7 +53,7 @@
                                 <rect key="frame" x="39" y="486" width="689" height="388"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1lz-rt-fb7">
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1lz-rt-fb7">
                                 <rect key="frame" x="45" y="497" width="677" height="365"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
@@ -157,10 +157,10 @@
                                                 <rect key="frame" x="309" y="14" width="70" height="70"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             </imageView>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DeD-cj-NVm">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал цвет:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DeD-cj-NVm">
                                                 <rect key="frame" x="375" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -173,10 +173,10 @@
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </label>
-                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xvA-BN-ijE">
+                                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал цвет и место:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xvA-BN-ijE">
                                                 <rect key="frame" x="527" y="8" width="120" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -194,12 +194,28 @@
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="lock_field_game.png" id="2wU-vo-QeQ">
-                                                        <rect key="frame" x="0.0" y="0.0" width="667" height="99"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="665" height="99"/>
                                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="acK-37-ofN" userLabel="check image 1">
+                                                <rect key="frame" x="59" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="k2z-CP-9aN" userLabel="check image 2">
+                                                <rect key="frame" x="151" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="oJ3-0l-XWk" userLabel="check image 3">
+                                                <rect key="frame" x="240" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="dfW-53-kWe" userLabel="check image 4">
+                                                <rect key="frame" x="330" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -306,7 +322,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EI8-JQ-dwc">
                                                 <rect key="frame" x="375" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -322,7 +338,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oUr-rt-HOx">
                                                 <rect key="frame" x="515" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -346,6 +362,22 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="ILx-ZZ-dvd" userLabel="check image 1">
+                                                <rect key="frame" x="59" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="8cM-01-nDE" userLabel="check image 2">
+                                                <rect key="frame" x="151" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="Ul1-iw-arn" userLabel="check image 3">
+                                                <rect key="frame" x="240" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="W21-E1-yxO" userLabel="check image 4">
+                                                <rect key="frame" x="330" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -452,7 +484,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="N6o-1D-jGZ">
                                                 <rect key="frame" x="375" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -468,7 +500,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nT1-iI-NDg">
                                                 <rect key="frame" x="515" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -492,6 +524,22 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="OFL-1y-diM" userLabel="check image 1">
+                                                <rect key="frame" x="59" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="Ed7-G0-Jg0" userLabel="check image 2">
+                                                <rect key="frame" x="151" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="0UG-jl-gGS" userLabel="check image 3">
+                                                <rect key="frame" x="240" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="Ljg-NC-5gb" userLabel="check image 4">
+                                                <rect key="frame" x="330" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -598,7 +646,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PXr-Iz-8q8">
                                                 <rect key="frame" x="375" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -614,7 +662,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gQf-IU-u9G">
                                                 <rect key="frame" x="515" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -638,6 +686,22 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="dA3-au-Vus" userLabel="check image 1">
+                                                <rect key="frame" x="59" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="YOo-DK-dpf" userLabel="check image 2">
+                                                <rect key="frame" x="151" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="noe-b3-cuV" userLabel="check image 3">
+                                                <rect key="frame" x="240" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="vFa-88-mdL" userLabel="check image 4">
+                                                <rect key="frame" x="330" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -744,7 +808,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Gsb-hP-z7j">
                                                 <rect key="frame" x="375" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -760,7 +824,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8Jo-yR-WK0">
                                                 <rect key="frame" x="515" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -784,6 +848,22 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="o9m-8w-zAc" userLabel="check image 1">
+                                                <rect key="frame" x="59" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="Ffw-Wr-Nlv" userLabel="check image 2">
+                                                <rect key="frame" x="151" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="WvD-HC-04S" userLabel="check image 3">
+                                                <rect key="frame" x="240" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="pi9-PF-hfe" userLabel="check image 4">
+                                                <rect key="frame" x="330" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -890,7 +970,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ZsS-p3-mvS">
                                                 <rect key="frame" x="375" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -906,7 +986,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="j4o-k3-9wP">
                                                 <rect key="frame" x="515" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -930,6 +1010,22 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="1Zg-jq-VAs" userLabel="check image 1">
+                                                <rect key="frame" x="59" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="4O7-um-RVh" userLabel="check image 2">
+                                                <rect key="frame" x="151" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="cl4-Qj-JkO" userLabel="check image 3">
+                                                <rect key="frame" x="240" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="I1Z-PO-Esj" userLabel="check image 4">
+                                                <rect key="frame" x="330" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -1036,7 +1132,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Mzt-dd-R6j">
                                                 <rect key="frame" x="375" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -1052,7 +1148,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tT4-br-Ghy">
                                                 <rect key="frame" x="515" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -1076,6 +1172,22 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="ybw-6l-Ln0" userLabel="check image 1">
+                                                <rect key="frame" x="59" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="OQ2-hv-dUR" userLabel="check image 2">
+                                                <rect key="frame" x="151" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="9zM-yu-OH6" userLabel="check image 3">
+                                                <rect key="frame" x="240" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="0x4-b5-1Mh" userLabel="check image 4">
+                                                <rect key="frame" x="330" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -1182,7 +1294,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7nx-i7-kGb">
                                                 <rect key="frame" x="375" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -1198,7 +1310,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dSU-Iq-qkn">
                                                 <rect key="frame" x="515" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -1222,6 +1334,22 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="Htx-hQ-rI5" userLabel="check image 1">
+                                                <rect key="frame" x="59" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="p4U-eW-7ms" userLabel="check image 2">
+                                                <rect key="frame" x="151" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="Ues-cn-oT3" userLabel="check image 3">
+                                                <rect key="frame" x="240" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="dOm-zu-4gV" userLabel="check image 4">
+                                                <rect key="frame" x="330" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -1328,7 +1456,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="BaZ-13-2Ko">
                                                 <rect key="frame" x="375" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -1344,7 +1472,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rcq-UA-A0i">
                                                 <rect key="frame" x="515" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -1368,6 +1496,22 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="FAC-y0-gtY" userLabel="check image 1">
+                                                <rect key="frame" x="59" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="0yK-Ds-LUG" userLabel="check image 2">
+                                                <rect key="frame" x="151" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="ct4-g7-GJ1" userLabel="check image 3">
+                                                <rect key="frame" x="240" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="Atf-sF-A5R" userLabel="check image 4">
+                                                <rect key="frame" x="330" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
@@ -1474,7 +1618,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Почти угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zL7-xZ-bGQ">
                                                 <rect key="frame" x="375" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -1490,7 +1634,7 @@
                                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Угадал:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="unA-tj-oRa">
                                                 <rect key="frame" x="515" y="8" width="144" height="24"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -1514,27 +1658,28 @@
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="mHj-8T-EYB" userLabel="check image 1">
+                                                <rect key="frame" x="59" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="V4x-NQ-LPm" userLabel="check image 2">
+                                                <rect key="frame" x="151" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="4uM-QW-yq8" userLabel="check image 3">
+                                                <rect key="frame" x="240" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" image="checkGirlsLast.png" id="2UL-vq-hXu" userLabel="check image 4">
+                                                <rect key="frame" x="330" y="5" width="40" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </scrollView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R2C-L0-O5v">
-                                <rect key="frame" x="631" y="882" width="97" height="93"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="button_info.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="showInformationView:" destination="2" eventType="touchUpInside" id="nsd-3m-upo"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bwx-PU-gLg">
                                 <rect key="frame" x="33" y="892" width="83" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1636,7 +1781,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ka5-6K-fcw" userLabel="hideCombination1">
-                                <rect key="frame" x="63" y="382" width="83" height="83"/>
+                                <rect key="frame" x="206" y="393" width="83" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="button_lock.png">
@@ -1648,7 +1793,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="qZU-CX-tyW" userLabel="hideCombination2">
-                                <rect key="frame" x="154" y="382" width="83" height="83"/>
+                                <rect key="frame" x="297" y="393" width="83" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="button_lock.png">
@@ -1660,7 +1805,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Btw-b9-yJh" userLabel="hideCombination3">
-                                <rect key="frame" x="245" y="382" width="83" height="83"/>
+                                <rect key="frame" x="388" y="393" width="83" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="button_lock.png">
@@ -1672,7 +1817,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="1IF-Ga-snl" userLabel="hideCombination4">
-                                <rect key="frame" x="336" y="382" width="83" height="83"/>
+                                <rect key="frame" x="479" y="393" width="83" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="X" image="button_lock.png">
@@ -1747,36 +1892,6 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dNa-Vv-uJV">
-                                <rect key="frame" x="492" y="327" width="236" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="button_begin_game.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startGame:" destination="2" eventType="touchUpInside" id="r9m-vR-Np8"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ud9-9c-J6r">
-                                <rect key="frame" x="492" y="400" width="236" height="65"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="button_begin_training.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="startTraining:" destination="2" eventType="touchUpInside" id="Yjn-I9-h62"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cXO-74-nso">
                                 <rect key="frame" x="390" y="63" width="86" height="99"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
@@ -1792,29 +1907,109 @@
                                     <action selector="changePhoto:" destination="2" eventType="touchUpInside" id="cWm-JQ-wDW"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Начать игру" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PY9-qy-j7a">
-                                <rect key="frame" x="504" y="334" width="210" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Чтобы открыть сейф, угадай комбинацию:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yzL-wL-orQ">
-                                <rect key="frame" x="63" y="350" width="356" height="35"/>
+                                <rect key="frame" x="39" y="341" width="689" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Тренировка" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="80b-CD-n3Y">
-                                <rect key="frame" x="504" y="412" width="210" height="41"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="dNa-Vv-uJV" userLabel="ButtonStartGame">
+                                <rect key="frame" x="195" y="545" width="400" height="110"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="button_begin_game.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startGame:" destination="2" eventType="touchUpInside" id="r9m-vR-Np8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Начать игру" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PY9-qy-j7a">
+                                <rect key="frame" x="195" y="545" width="400" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="39"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ud9-9c-J6r" userLabel="ButtonStartTraning">
+                                <rect key="frame" x="195" y="695" width="400" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="button_begin_training.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTraining:" destination="2" eventType="touchUpInside" id="Yjn-I9-h62"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Тренировка" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="80b-CD-n3Y">
+                                <rect key="frame" x="195" y="695" width="400" height="110"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="39"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                            </label>
+                            <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7dU-88-7Hd" userLabel="ButtonReturnMenu">
+                                <rect key="frame" x="464" y="760" width="240" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="button_begin_training.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnToMenu:" destination="2" eventType="touchUpInside" id="9dT-u2-gXa"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" text="Тренировка" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" id="Fvg-Mc-U24" userLabel="LabelReturnMenu">
+                                <rect key="frame" x="484.5" y="760" width="199" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R2C-L0-O5v" userLabel="informationButton">
+                                <rect key="frame" x="631" y="882" width="97" height="93"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" image="button_info.png">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showInformationView:" destination="2" eventType="touchUpInside" id="nsd-3m-upo"/>
+                                </connections>
+                            </button>
+                            <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="pointer-finger-hi.png" id="pez-1c-uGQ" userLabel="introImageFinger">
+                                <rect key="frame" x="353" y="460" width="61" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" text="Схватите фигурку и обратите внимание на результат" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" id="CA4-Fb-XOf" userLabel="introDescription" customClass="AVLabel">
+                                <rect key="frame" x="314" y="460" width="140" height="85"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -1822,7 +2017,9 @@
                     <connections>
                         <outlet property="attemptsNumber" destination="SJx-zz-uD7" id="C0f-8M-Ujg"/>
                         <outlet property="attemptsTitle" destination="wmb-ku-co0" id="sBL-0v-DJ8"/>
+                        <outlet property="beginGameButton" destination="dNa-Vv-uJV" id="xAv-We-HBc"/>
                         <outlet property="beginGameButtonTitle" destination="PY9-qy-j7a" id="OVv-Jb-Cxv"/>
+                        <outlet property="beginTragingButton" destination="Ud9-9c-J6r" id="dfl-Xm-aYH"/>
                         <outlet property="beginTrainingButtonTitle" destination="80b-CD-n3Y" id="qw1-Gw-wdu"/>
                         <outlet property="combinationTitle" destination="yzL-wL-orQ" id="ZhX-fG-yyh"/>
                         <outlet property="frame1combination" destination="ka5-6K-fcw" id="72Z-z1-dTc"/>
@@ -1845,10 +2042,17 @@
                         <outlet property="image4combination" destination="0HY-s4-AAh" id="eYU-oa-sZW"/>
                         <outlet property="image5OutsideTableView" destination="1qU-5w-Pfy" id="NYb-6Q-BSW"/>
                         <outlet property="image5combination" destination="PXo-EE-621" id="B9r-Ha-mis"/>
+                        <outlet property="informationButton" destination="R2C-L0-O5v" id="YDc-TU-ctL"/>
+                        <outlet property="introDescription" destination="CA4-Fb-XOf" id="DM9-n6-Z9t"/>
+                        <outlet property="introFinger" destination="pez-1c-uGQ" id="8no-bt-crp"/>
                         <outlet property="mainPageBackground" destination="AhZ-GU-GLM" id="8Gy-Ve-Gew"/>
                         <outlet property="mainPageScrollBackground" destination="Ata-T8-lcL" id="bKI-hV-GgN"/>
                         <outlet property="photoView" destination="cXO-74-nso" id="gfP-zS-KM7"/>
                         <outlet property="playerName" destination="s6r-kD-r4Y" id="nZc-9f-7Cw"/>
+                        <outlet property="row10CheckImage1" destination="mHj-8T-EYB" id="1EX-wH-CHO"/>
+                        <outlet property="row10CheckImage2" destination="V4x-NQ-LPm" id="iRN-7s-kaR"/>
+                        <outlet property="row10CheckImage3" destination="4uM-QW-yq8" id="j6q-Sy-3cs"/>
+                        <outlet property="row10CheckImage4" destination="2UL-vq-hXu" id="oRH-e9-Yux"/>
                         <outlet property="row10HidingView" destination="YSF-1X-faR" id="3nZ-hk-BVi"/>
                         <outlet property="row10MatchedColors" destination="3ww-7a-Ih9" id="bCu-M8-QfP"/>
                         <outlet property="row10MatchedColorsAndPositions" destination="8bj-Yv-O86" id="dYf-c6-T8F"/>
@@ -1864,6 +2068,10 @@
                         <outlet property="row10image4" destination="L49-Bi-sV4" id="zEl-QR-ZLC"/>
                         <outlet property="row10image5" destination="pok-aS-hqE" id="5jW-1w-s2p"/>
                         <outlet property="row10view" destination="vhh-l8-pdG" id="hsI-nq-ITL"/>
+                        <outlet property="row1CheckImage1" destination="acK-37-ofN" id="Itz-BM-UEb"/>
+                        <outlet property="row1CheckImage2" destination="k2z-CP-9aN" id="yqU-58-WVQ"/>
+                        <outlet property="row1CheckImage3" destination="oJ3-0l-XWk" id="hOw-3o-fsh"/>
+                        <outlet property="row1CheckImage4" destination="dfW-53-kWe" id="O4p-Wf-bo8"/>
                         <outlet property="row1HidingView" destination="jRZ-Ch-Dwq" id="1Sl-pT-Yl5"/>
                         <outlet property="row1MatchedColors" destination="NWr-aM-knl" id="UcP-Cr-hqt"/>
                         <outlet property="row1MatchedColorsAndPositions" destination="wh3-cH-RYV" id="xWe-JC-ex9"/>
@@ -1879,6 +2087,10 @@
                         <outlet property="row1image4" destination="crc-W6-hYL" id="i2j-1M-xwZ"/>
                         <outlet property="row1image5" destination="ioK-a9-4Zn" id="Ars-HD-wbT"/>
                         <outlet property="row1view" destination="0yv-5j-AzM" id="T45-ml-UVx"/>
+                        <outlet property="row2CheckImage1" destination="ILx-ZZ-dvd" id="H82-XO-KbJ"/>
+                        <outlet property="row2CheckImage2" destination="8cM-01-nDE" id="K1w-Za-h1X"/>
+                        <outlet property="row2CheckImage3" destination="Ul1-iw-arn" id="4Mw-8l-EGH"/>
+                        <outlet property="row2CheckImage4" destination="W21-E1-yxO" id="beF-7A-RWY"/>
                         <outlet property="row2HidingView" destination="5Bn-Ov-tBF" id="e7G-px-2Q6"/>
                         <outlet property="row2MatchedColors" destination="pre-xo-Pa7" id="9EN-qA-7FE"/>
                         <outlet property="row2MatchedColorsAndPositions" destination="4n4-8Z-rFq" id="yR2-0P-n4u"/>
@@ -1894,6 +2106,10 @@
                         <outlet property="row2image4" destination="axy-KK-vDF" id="p2h-7p-5FZ"/>
                         <outlet property="row2image5" destination="W0D-0h-33F" id="GEC-2W-BHT"/>
                         <outlet property="row2view" destination="7XZ-1d-0AD" id="IJU-FF-FLd"/>
+                        <outlet property="row3CheckImage1" destination="OFL-1y-diM" id="UFK-ky-2jg"/>
+                        <outlet property="row3CheckImage2" destination="Ed7-G0-Jg0" id="GeP-4h-mpY"/>
+                        <outlet property="row3CheckImage3" destination="0UG-jl-gGS" id="WFv-sA-0Qd"/>
+                        <outlet property="row3CheckImage4" destination="Ljg-NC-5gb" id="hWo-fb-zgN"/>
                         <outlet property="row3HidingView" destination="WSg-3k-4WM" id="REq-xy-wXd"/>
                         <outlet property="row3MatchedColors" destination="jdG-gP-U1e" id="tjv-1w-tm1"/>
                         <outlet property="row3MatchedColorsAndPositions" destination="Eip-td-oUK" id="fuo-82-x2l"/>
@@ -1909,6 +2125,10 @@
                         <outlet property="row3image4" destination="cfM-1j-weI" id="TA2-Va-EoC"/>
                         <outlet property="row3image5" destination="atN-dx-fwE" id="pfr-e4-A6Q"/>
                         <outlet property="row3view" destination="SSE-lm-tHM" id="Lf0-wd-ceT"/>
+                        <outlet property="row4CheckImage1" destination="dA3-au-Vus" id="1zz-dq-czR"/>
+                        <outlet property="row4CheckImage2" destination="YOo-DK-dpf" id="o9t-jB-k8c"/>
+                        <outlet property="row4CheckImage3" destination="noe-b3-cuV" id="UcH-CN-sbf"/>
+                        <outlet property="row4CheckImage4" destination="vFa-88-mdL" id="Jx5-9e-jF9"/>
                         <outlet property="row4HidingView" destination="1fX-gl-cnS" id="aZa-UU-GNb"/>
                         <outlet property="row4MatchedColors" destination="yhF-UE-J00" id="L1x-lm-mXX"/>
                         <outlet property="row4MatchedColorsAndPositions" destination="u6Q-7S-dSp" id="x8c-nu-Ut9"/>
@@ -1924,6 +2144,10 @@
                         <outlet property="row4image4" destination="yvD-Bi-ST1" id="8qo-Xf-CQa"/>
                         <outlet property="row4image5" destination="Cdu-kh-hN9" id="onZ-VG-c7N"/>
                         <outlet property="row4view" destination="IZg-Nf-6ED" id="DIk-N7-M2e"/>
+                        <outlet property="row5CheckImage1" destination="o9m-8w-zAc" id="ZTQ-8O-Iws"/>
+                        <outlet property="row5CheckImage2" destination="Ffw-Wr-Nlv" id="bbt-Ca-MEz"/>
+                        <outlet property="row5CheckImage3" destination="WvD-HC-04S" id="i70-tg-hNO"/>
+                        <outlet property="row5CheckImage4" destination="pi9-PF-hfe" id="xrP-OP-jdo"/>
                         <outlet property="row5HidingView" destination="cDA-lt-SWa" id="7Vg-QH-yUr"/>
                         <outlet property="row5MatchedColors" destination="Eaf-aj-dJY" id="mms-qn-MtY"/>
                         <outlet property="row5MatchedColorsAndPositions" destination="Z1x-BT-WIN" id="YbK-d1-jnc"/>
@@ -1939,6 +2163,10 @@
                         <outlet property="row5image4" destination="nJy-TF-fBW" id="L9i-tW-qia"/>
                         <outlet property="row5image5" destination="ecB-fv-adn" id="QAU-WH-Boo"/>
                         <outlet property="row5view" destination="D4y-bs-md4" id="VLT-WB-1qi"/>
+                        <outlet property="row6CheckImage1" destination="1Zg-jq-VAs" id="4xv-Ij-qle"/>
+                        <outlet property="row6CheckImage2" destination="4O7-um-RVh" id="kLo-E7-dsL"/>
+                        <outlet property="row6CheckImage3" destination="cl4-Qj-JkO" id="WxK-YO-Bn0"/>
+                        <outlet property="row6CheckImage4" destination="I1Z-PO-Esj" id="ZOc-NR-y4l"/>
                         <outlet property="row6HidingView" destination="JPW-DM-sBH" id="H9A-3o-sdE"/>
                         <outlet property="row6MatchedColors" destination="Vnx-cx-b7x" id="wsP-4c-IIK"/>
                         <outlet property="row6MatchedColorsAndPositions" destination="biP-ZV-8tA" id="4Sn-ZF-cgx"/>
@@ -1954,6 +2182,10 @@
                         <outlet property="row6image4" destination="ig7-Hd-wvt" id="POQ-4d-n32"/>
                         <outlet property="row6image5" destination="F3W-1L-R1g" id="NzN-hj-vrc"/>
                         <outlet property="row6view" destination="uFb-Ae-Npi" id="2JQ-c9-Y8X"/>
+                        <outlet property="row7CheckImage1" destination="ybw-6l-Ln0" id="L4J-NC-eud"/>
+                        <outlet property="row7CheckImage2" destination="OQ2-hv-dUR" id="a48-qc-DpZ"/>
+                        <outlet property="row7CheckImage3" destination="9zM-yu-OH6" id="Cq5-vY-bgb"/>
+                        <outlet property="row7CheckImage4" destination="0x4-b5-1Mh" id="Tdi-LN-aqq"/>
                         <outlet property="row7HidingView" destination="bWO-pS-80r" id="FJP-Rd-Z4c"/>
                         <outlet property="row7MatchedColors" destination="3fA-qK-L0X" id="ICi-Sa-b6E"/>
                         <outlet property="row7MatchedColorsAndPositions" destination="IBr-4R-tbo" id="pBR-Nt-J9G"/>
@@ -1969,6 +2201,10 @@
                         <outlet property="row7image4" destination="CI3-uS-Mxw" id="7qH-fS-PH7"/>
                         <outlet property="row7image5" destination="jMk-wk-suy" id="Au0-Vv-Bzk"/>
                         <outlet property="row7view" destination="W6z-pA-IaX" id="Rcc-1A-q4G"/>
+                        <outlet property="row8CheckImage1" destination="Htx-hQ-rI5" id="ldd-xB-tYb"/>
+                        <outlet property="row8CheckImage2" destination="p4U-eW-7ms" id="5Yi-C7-HUM"/>
+                        <outlet property="row8CheckImage3" destination="Ues-cn-oT3" id="AGh-wK-lTv"/>
+                        <outlet property="row8CheckImage4" destination="dOm-zu-4gV" id="QAp-r2-s2S"/>
                         <outlet property="row8HidingView" destination="toh-FI-pVL" id="E0R-hL-X8o"/>
                         <outlet property="row8MatchedColors" destination="ovU-dN-X9W" id="Dro-bp-19X"/>
                         <outlet property="row8MatchedColorsAndPositions" destination="4ca-5i-8IV" id="x6w-fb-b1G"/>
@@ -1984,6 +2220,10 @@
                         <outlet property="row8image4" destination="Twk-Sd-nFq" id="JEE-4B-W3P"/>
                         <outlet property="row8image5" destination="GWd-tJ-yRt" id="zrH-5A-cr5"/>
                         <outlet property="row8view" destination="TvZ-vM-lGZ" id="fV4-UQ-Yww"/>
+                        <outlet property="row9CheckImage1" destination="FAC-y0-gtY" id="Dtx-S7-UHi"/>
+                        <outlet property="row9CheckImage2" destination="0yK-Ds-LUG" id="zgO-9X-jMR"/>
+                        <outlet property="row9CheckImage3" destination="ct4-g7-GJ1" id="vFj-De-h3x"/>
+                        <outlet property="row9CheckImage4" destination="Atf-sF-A5R" id="c3S-Kl-o7N"/>
                         <outlet property="row9HidingView" destination="Qmq-7G-INZ" id="t3N-tR-a4M"/>
                         <outlet property="row9MatchedColors" destination="ipW-JS-Eo0" id="pua-VT-XXm"/>
                         <outlet property="row9MatchedColorsAndPositions" destination="tbU-Qf-v4T" id="qdH-TK-PJY"/>
@@ -2000,6 +2240,8 @@
                         <outlet property="row9image5" destination="ZCP-9L-Wdj" id="vku-xV-jaf"/>
                         <outlet property="row9view" destination="haZ-tS-bqA" id="E2J-2w-KTu"/>
                         <outlet property="safeImage" destination="pAb-To-Z6O" id="OW2-xH-NbZ"/>
+                        <outlet property="startAgainButton" destination="7dU-88-7Hd" id="gs6-EA-6Yg"/>
+                        <outlet property="startAgainButtonTitle" destination="Fvg-Mc-U24" id="xyR-fe-kfc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3" sceneMemberID="firstResponder"/>
@@ -2342,6 +2584,7 @@
                         <outlet property="recordsLevelTitle" destination="jb0-Sy-nT7" id="OfS-eL-W8u"/>
                         <outlet property="recordsNameTitle" destination="9LM-Sw-Xsm" id="YDo-VY-rK8"/>
                         <outlet property="returnToGameLabel" destination="FbO-T4-Uqi" id="PzE-Zy-WCA"/>
+                        <outlet property="switchMusic" destination="8bq-66-iw3" id="K8Y-Du-2x8"/>
                         <outlet property="tableView" destination="DfT-s0-PAH" id="tyZ-hB-zWM"/>
                     </connections>
                 </viewController>
@@ -2380,8 +2623,292 @@
         <image name="button_olive.png" width="178" height="132"/>
         <image name="button_time.png" width="639" height="75"/>
         <image name="button_time_clock.png" width="74" height="75"/>
+        <image name="checkGirlsLast.png" width="279" height="279"/>
         <image name="lock_field_game.png" width="1347" height="237"/>
+        <image name="pointer-finger-hi.png" width="420" height="594"/>
     </resources>
+    <classes>
+        <class className="AVImageView" superclassName="UIImageView">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AVImageView.h"/>
+        </class>
+        <class className="AVLabel" superclassName="UILabel">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AVLabel.h"/>
+        </class>
+        <class className="CipherInfoViewCell" superclassName="UITableViewCell">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewCell.h"/>
+            <relationships>
+                <relationship kind="outlet" name="attemps" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="backgroundCell" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="date" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="level" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="levelStarFirst" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="levelStarSecond" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="levelStarThird" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="photo" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="CipherInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="changeToBoyTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="changeToGirlTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="difficultLevelLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="difficultLevelSelector" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="levelTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="mainPageBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mainPageScrollBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="musicSwitchTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="myNameEditor" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="myPhoto" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="myScoreOrGameScore" candidateClass="UISegmentedControl"/>
+                <relationship kind="outlet" name="recordTimeTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsAttempstTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsDateTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsLevelTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="recordsNameTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="returnToGameLabel" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="switchMusic" candidateClass="UISwitch"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="CipherViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="attemptsNumber" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="attemptsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="beginGameButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="beginGameButtonTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="beginTragingButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="beginTrainingButtonTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="combinationTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="frame1combination" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="frame2combination" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="frame3combination" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="frame4combination" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="gamePlayScrollView" candidateClass="UIScrollView"/>
+                <relationship kind="outlet" name="gameTimeMainTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameTimeMinutes" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameTimeMinutesTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameTimeSeconds" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="gameTimeSecondsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="image1OutsideTableView" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image1combination" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image2OutsideTableView" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image2combination" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image3OutsideTableView" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image3combination" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image4OutsideTableView" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image4combination" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image5OutsideTableView" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="image5combination" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="informationButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="introCloseButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="introDescription" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="introFinger" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mainPageBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mainPageGameBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="mainPageScrollBackground" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="photoView" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="playerName" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10CheckImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row10CheckImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row10CheckImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row10CheckImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row10HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row10MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row10frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row10image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row10view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row1CheckImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row1CheckImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row1CheckImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row1CheckImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row1HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row1MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row1MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row1MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row1MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row1frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row1frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row1frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row1frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row1image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row1image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row1image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row1image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row1image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row1view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row2CheckImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row2CheckImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row2CheckImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row2CheckImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row2HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row2MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row2MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row2MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row2MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row2frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row2frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row2frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row2frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row2image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row2image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row2image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row2image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row2image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row2view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row3CheckImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row3CheckImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row3CheckImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row3CheckImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row3HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row3MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row3frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row3image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row3view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row4CheckImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row4CheckImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row4CheckImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row4CheckImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row4HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row4MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row4frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row4image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row4view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row5CheckImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row5CheckImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row5CheckImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row5CheckImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row5HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row5MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row5frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row5image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row5view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row6CheckImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row6CheckImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row6CheckImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row6CheckImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row6HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row6MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row6frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row6image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row6view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row7CheckImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row7CheckImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row7CheckImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row7CheckImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row7HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row7MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row7frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row7image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row7view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row8CheckImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row8CheckImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row8CheckImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row8CheckImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row8HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row8MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row8frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row8image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row8view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row9CheckImage1" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row9CheckImage2" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row9CheckImage3" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row9CheckImage4" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="row9HidingView" candidateClass="UIView"/>
+                <relationship kind="outlet" name="row9MatchedColors" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9MatchedColorsAndPositions" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9MatchedColorsTitle" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="row9frame1" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9frame2" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9frame3" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9frame4" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="row9image1" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image2" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image3" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image4" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9image5" candidateClass="AVImageView"/>
+                <relationship kind="outlet" name="row9view" candidateClass="UIView"/>
+                <relationship kind="outlet" name="safeImage" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="startAgainButton" candidateClass="UIButton"/>
+                <relationship kind="outlet" name="startAgainButtonTitle" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
         <simulatedOrientationMetrics key="orientation"/>

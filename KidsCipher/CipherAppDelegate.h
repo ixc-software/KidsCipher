@@ -50,6 +50,7 @@
 
 @property (readwrite) BOOL isNewRowProcessing;
 
+-(void)setAllRowFilledForGameSuccess;
 
 @property (readwrite) BOOL isBackgroundMusicPlaying;
 

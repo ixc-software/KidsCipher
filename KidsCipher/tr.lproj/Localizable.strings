@@ -37,9 +37,15 @@
 "difficultLevelSelector1" = "ortalama";
 "difficultLevelSelector2" = "düşük";
 
-"rowMatchedColorsAndPositionsTitle" = "Tahmin";
-"rowMatchedColors" = "hemen hemen tahmin";
+"rowMatchedColorsAndPositionsTitle" = "Rengini ve konumunu tahmin:";
+"rowMatchedColors" = "Tahmin renk:";
 
 
 "defaultNameGirls" = "prenses";
 "defaultNameBoys" = "süpermen";
+"introDescription1" = "Burada tahmin etmeye çalışın renk ve mekan şifreli birleşimidir.";
+"introDescription2" = "Kuyruğuna rakam aktarın.";
+"introDescription3" = "Tüm çizgi doldurarak, ipuçları dikkat edin.";
+"introDescription4" = "Burada kayıtları ve kayıt sahiplerinin tüm hakkında bilgi edinebilirsiniz.";
+"gameWin" = "Tebrikler! Sen kazandı. Geri eve.";
+"gameLoosed" = "Kaybedersiniz. Geri eve.";

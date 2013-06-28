@@ -37,9 +37,15 @@
 "difficultLevelSelector1" = "moyenne";
 "difficultLevelSelector2" = "faible";
 
-"rowMatchedColorsAndPositionsTitle" = "Devinettes";
-"rowMatchedColors" = "Presque deviné";
+"rowMatchedColorsAndPositionsTitle" = "Deviner la couleur et l'emplacement:";
+"rowMatchedColors" = "Couleur deviné:";
 
 
 "defaultNameGirls" = "Princesse";
 "defaultNameBoys" = "Superman";
+"introDescription1" = "Voici combinaison chiffrée de la couleur et de l'espace, que vous essayez de deviner.";
+"introDescription2" = "Transférer le chiffre à attendre en ligne.";
+"introDescription3" = "En remplissant toute la ligne, faites attention aux indices.";
+"introDescription4" = "Ici vous pouvez en apprendre davantage sur l'ensemble de leurs dossiers et détenteurs de records.";
+"gameWin" = "Félicitations! Vous avez gagné. Retour à l'accueil.";
+"gameLoosed" = "Vous perdez. Retour à l'accueil.";

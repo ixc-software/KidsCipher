@@ -37,9 +37,15 @@
 "difficultLevelSelector1" = "Durchschnitt";
 "difficultLevelSelector2" = "niedrig";
 
-"rowMatchedColorsAndPositionsTitle" = "Erraten";
-"rowMatchedColors" = "Fast erraten";
+"rowMatchedColorsAndPositionsTitle" = "Erraten Sie die Farbe und Ort:";
+"rowMatchedColors" = "Erraten Farbe:";
 
 
 "defaultNameGirls" = "Prinzessin";
 "defaultNameBoys" = "Supermann";
+"introDescription1" = "Hier ist verschlüsselt Kombination von Farbe und Raum, die Sie versuchen zu erraten.";
+"introDescription2" = "Übertragen Sie die Figur in der Schlange stehen.";
+"introDescription3" = "Durch das Ausfüllen der gesamten Linie, achten Sie auf die Hinweise.";
+"introDescription4" = "Hier können Sie sich über alle ihre Aufzeichnungen und Rekordhalter lernen.";
+"gameWin" = "Herzlichen Glückwunsch! Sie gewann. Zurück zur Startseite.";
+"gameLoosed" = "Sie verlieren. Zurück zur Startseite.";

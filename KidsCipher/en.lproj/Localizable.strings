@@ -37,7 +37,15 @@
 "difficultLevelSelector1" = "Middle";
 "difficultLevelSelector2" = "Low";
 
-"rowMatchedColorsAndPositionsTitle" = "Matched";
-"rowMatchedColors" = "Matched color only";
+"rowMatchedColorsAndPositionsTitle" = "Guessing color and location:";
+"rowMatchedColors" = "Guessed color:";
 "defaultNameGirls" = "Princess";
 "defaultNameBoys" = "Superman";
+
+"introDescription1" = "Here is encrypted combination of color and space, which you try to guess.";
+"introDescription2" = "Transfer the figure to stand in line.";
+"introDescription3" = "By filling the entire line, pay attention to the clues.";
+"introDescription4" = "Here you can learn about all of their records and record holders.";
+
+"gameWin" = "Congratulations! You won. Back to home.";
+"gameLoosed" = "You lose. Back to home.";

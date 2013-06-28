@@ -13,6 +13,14 @@
 @interface CipherViewController : UIViewController <UIImagePickerControllerDelegate,UINavigationControllerDelegate>
 //@property (weak, nonatomic) IBOutlet UITableView *gameTableView;
 @property (readwrite) CGRect frameSelectedRow;
+@property (weak, nonatomic) IBOutlet UIImageView *introFinger;
+@property (weak, nonatomic) IBOutlet UILabel *introDescription;
+@property (weak, nonatomic) IBOutlet UIButton *introCloseButton;
+@property (weak, nonatomic) IBOutlet UIButton *beginGameButton;
+@property (weak, nonatomic) IBOutlet UIButton *beginTragingButton;
+@property (weak, nonatomic) IBOutlet UIButton *informationButton;
+@property (weak, nonatomic) IBOutlet UIButton *startAgainButton;
+@property (weak, nonatomic) IBOutlet UILabel *startAgainButtonTitle;
 
 @property (retain, nonatomic) IBOutlet AVImageView *image1OutsideTableView;
 @property (retain, nonatomic) IBOutlet AVImageView *image2OutsideTableView;
@@ -48,6 +56,10 @@
 @property (weak, nonatomic) IBOutlet UILabel *row1MatchedColors;
 @property (weak, nonatomic) IBOutlet UILabel *row1MatchedColorsTitle;
 @property (retain, nonatomic) IBOutlet UIView *row1HidingView;
+@property (weak, nonatomic) IBOutlet UIImageView *row1CheckImage1;
+@property (weak, nonatomic) IBOutlet UIImageView *row1CheckImage2;
+@property (weak, nonatomic) IBOutlet UIImageView *row1CheckImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *row1CheckImage4;
 
 /* --------------------------------- ROW 1 FINISH --------------------- */
 
@@ -67,6 +79,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *row2MatchedColors;
 @property (weak, nonatomic) IBOutlet UILabel *row2MatchedColorsTitle;
 @property (retain, nonatomic) IBOutlet UIView *row2HidingView;
+@property (weak, nonatomic) IBOutlet UIImageView *row2CheckImage1;
+@property (weak, nonatomic) IBOutlet UIImageView *row2CheckImage2;
+@property (weak, nonatomic) IBOutlet UIImageView *row2CheckImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *row2CheckImage4;
+
 /* --------------------------------- ROW 2 FINISH --------------------- */
 
 /* --------------------------------- ROW 3 START --------------------- */
@@ -85,6 +102,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *row3MatchedColors;
 @property (weak, nonatomic) IBOutlet UILabel *row3MatchedColorsTitle;
 @property (retain, nonatomic) IBOutlet UIView *row3HidingView;
+@property (weak, nonatomic) IBOutlet UIImageView *row3CheckImage1;
+@property (weak, nonatomic) IBOutlet UIImageView *row3CheckImage2;
+@property (weak, nonatomic) IBOutlet UIImageView *row3CheckImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *row3CheckImage4;
+
 /* --------------------------------- ROW 3 FINISH --------------------- */
 
 /* --------------------------------- ROW 4 START --------------------- */
@@ -103,6 +125,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *row4MatchedColors;
 @property (weak, nonatomic) IBOutlet UILabel *row4MatchedColorsTitle;
 @property (retain, nonatomic) IBOutlet UIView *row4HidingView;
+@property (weak, nonatomic) IBOutlet UIImageView *row4CheckImage1;
+@property (weak, nonatomic) IBOutlet UIImageView *row4CheckImage2;
+@property (weak, nonatomic) IBOutlet UIImageView *row4CheckImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *row4CheckImage4;
+
 /* --------------------------------- ROW 4 FINISH --------------------- */
 
 /* --------------------------------- ROW 5 START --------------------- */
@@ -121,6 +148,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *row5MatchedColors;
 @property (weak, nonatomic) IBOutlet UILabel *row5MatchedColorsTitle;
 @property (retain, nonatomic) IBOutlet UIView *row5HidingView;
+@property (weak, nonatomic) IBOutlet UIImageView *row5CheckImage1;
+@property (weak, nonatomic) IBOutlet UIImageView *row5CheckImage2;
+@property (weak, nonatomic) IBOutlet UIImageView *row5CheckImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *row5CheckImage4;
+
 /* --------------------------------- ROW 5 FINISH --------------------- */
 
 /* --------------------------------- ROW 6 START --------------------- */
@@ -139,6 +171,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *row6MatchedColors;
 @property (weak, nonatomic) IBOutlet UILabel *row6MatchedColorsTitle;
 @property (retain, nonatomic) IBOutlet UIView *row6HidingView;
+@property (weak, nonatomic) IBOutlet UIImageView *row6CheckImage1;
+@property (weak, nonatomic) IBOutlet UIImageView *row6CheckImage2;
+@property (weak, nonatomic) IBOutlet UIImageView *row6CheckImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *row6CheckImage4;
+
 /* --------------------------------- ROW 6 FINISH --------------------- */
 
 /* --------------------------------- ROW 7 START --------------------- */
@@ -157,6 +194,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *row7MatchedColors;
 @property (weak, nonatomic) IBOutlet UILabel *row7MatchedColorsTitle;
 @property (retain, nonatomic) IBOutlet UIView *row7HidingView;
+@property (weak, nonatomic) IBOutlet UIImageView *row7CheckImage1;
+@property (weak, nonatomic) IBOutlet UIImageView *row7CheckImage2;
+@property (weak, nonatomic) IBOutlet UIImageView *row7CheckImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *row7CheckImage4;
+
 /* --------------------------------- ROW 7 FINISH --------------------- */
 
 /* --------------------------------- ROW 8 START --------------------- */
@@ -175,6 +217,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *row8MatchedColors;
 @property (weak, nonatomic) IBOutlet UILabel *row8MatchedColorsTitle;
 @property (retain, nonatomic) IBOutlet UIView *row8HidingView;
+@property (weak, nonatomic) IBOutlet UIImageView *row8CheckImage1;
+@property (weak, nonatomic) IBOutlet UIImageView *row8CheckImage2;
+@property (weak, nonatomic) IBOutlet UIImageView *row8CheckImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *row8CheckImage4;
+
 /* --------------------------------- ROW 8 FINISH --------------------- */
 
 /* --------------------------------- ROW 9 START --------------------- */
@@ -193,6 +240,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *row9MatchedColors;
 @property (weak, nonatomic) IBOutlet UILabel *row9MatchedColorsTitle;
 @property (retain, nonatomic) IBOutlet UIView *row9HidingView;
+@property (weak, nonatomic) IBOutlet UIImageView *row9CheckImage1;
+@property (weak, nonatomic) IBOutlet UIImageView *row9CheckImage2;
+@property (weak, nonatomic) IBOutlet UIImageView *row9CheckImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *row9CheckImage4;
+
 /* --------------------------------- ROW 9 FINISH --------------------- */
 
 /* --------------------------------- ROW 10 START --------------------- */
@@ -211,6 +263,11 @@
 @property (weak, nonatomic) IBOutlet UILabel *row10MatchedColors;
 @property (weak, nonatomic) IBOutlet UILabel *row10MatchedColorsTitle;
 @property (retain, nonatomic) IBOutlet UIView *row10HidingView;
+@property (weak, nonatomic) IBOutlet UIImageView *row10CheckImage1;
+@property (weak, nonatomic) IBOutlet UIImageView *row10CheckImage2;
+@property (weak, nonatomic) IBOutlet UIImageView *row10CheckImage3;
+@property (weak, nonatomic) IBOutlet UIImageView *row10CheckImage4;
+
 /* --------------------------------- ROW 10 FINISH --------------------- */
 
 @property (weak, nonatomic) IBOutlet UIImageView *mainPageGameBackground;

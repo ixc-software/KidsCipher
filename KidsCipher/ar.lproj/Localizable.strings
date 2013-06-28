@@ -37,9 +37,15 @@
 "difficultLevelSelector1" = "متوسط";
 "difficultLevelSelector2" = "منخفض";
 
-"rowMatchedColorsAndPositionsTitle" = "التخمين";
-"rowMatchedColors" = "اخمنت تقريبا";
+"rowMatchedColorsAndPositionsTitle" = "االتخمين اللون والمكان:";
+"rowMatchedColors" = "خمنت اللون:";
 
 
 "defaultNameGirls" = "الأميرة";
 "defaultNameBoys" = "اسوبرمان";
+"introDescription1" = "هنا هو مزيج من لون مشفرة والفضاء، التي حاولت تخمين.";
+"introDescription2" = "نقل الرقم للوقوف في طابور.";
+"introDescription3" = "عن طريق ملء خط كامل، والانتباه إلى القرائن.";
+"introDescription4" = "هنا يمكنك التعرف على جميع تسجيلاتها وحامل الرقم القياسي.";
+"gameWin" = "تهانينا! فزت بها. عودة إلى الصفحة الرئيسية.";
+"gameLoosed" = "تخسر. عودة إلى الصفحة الرئيسية.";

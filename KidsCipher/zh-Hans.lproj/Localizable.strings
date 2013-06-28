@@ -37,9 +37,15 @@
 "difficultLevelSelector1" = "平均";
 "difficultLevelSelector2" = "低";
 
-"rowMatchedColorsAndPositionsTitle" = "的猜测";
-"rowMatchedColors" = "几乎猜到";
+"rowMatchedColorsAndPositionsTitle" = "猜测的颜色和位置：";
+"rowMatchedColors" = "孰料颜色：";
 
 
 "defaultNameGirls" = "公主";
 "defaultNameBoys" = "超人";
+"introDescription1" = "这里是加密的色彩和空间的组合，你尝试去猜测。";
+"introDescription2" = "传输数字去排队。";
+"introDescription3" = "填补了整条生产线，要注意的线索。";
+"introDescription4" = "在这里，你可以了解所有他们的记录和纪录保持者。";
+"gameWin" = "恭喜！你赢了。回到家里。";
+"gameLoosed" = "你输了。回到家里。";

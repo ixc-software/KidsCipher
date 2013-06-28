@@ -38,9 +38,18 @@
 "difficultLevelSelector1" = "Средний";
 "difficultLevelSelector2" = "Низкий";
 
-"rowMatchedColorsAndPositionsTitle" = "Угадал";
-"rowMatchedColors" = "Почти угадал";
+"rowMatchedColorsAndPositionsTitle" = "Угадал цвет и место:";
+"rowMatchedColors" = "Угадал цвет:";
 
 
 "defaultNameGirls" = "Принцесса";
 "defaultNameBoys" = "Супермен";
+
+"introDescription1" = "Здесь зашифрована комбинация из цвета и места, которую вы попробуете разгадать.";
+"introDescription2" = "Перенесите фигурку на позицию в строке.";
+"introDescription3" = "Заполнив всю строку, обратите внимание на подсказки.";
+"introDescription4" = "Здесь можно узнать про свои рекорды и всех рекордсменов.";
+
+"gameWin" = "Поздравляем! Вы выиграли. Вернуться на главную.";
+"gameLoosed" = "Вы проиграли. Вернуться на главную.";
+

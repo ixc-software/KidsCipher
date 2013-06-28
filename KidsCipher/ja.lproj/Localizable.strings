@@ -37,9 +37,16 @@
 "difficultLevelSelector1" = "平均";
 "difficultLevelSelector2" = "ロー";
 
-"rowMatchedColorsAndPositionsTitle" = "推測";
-"rowMatchedColors" = "ほとんど推測";
+"rowMatchedColorsAndPositionsTitle" = "色と場所を推測する：";
+"rowMatchedColors" = "推測色：";
 
 
 "defaultNameGirls" = "プリンセス";
 "defaultNameBoys" = "スーパーマン";
+"introDescription1" = "ここでは、推測しようと色と空間の暗号化された組み合わせは、ある。";
+"introDescription2" = "ラインに立つ姿を移す。";
+"introDescription3" = "行全体を充填して、手がかりに注意を払う。";
+"introDescription4" = "ここでは、彼らのレコードとレコードの所有者のすべてについて学ぶことができます。";
+
+"gameWin" = "おめでとう！あなたが勝った。ホームに戻る。";
+"gameLoosed" = "あなたを失う。ホームに戻る。";

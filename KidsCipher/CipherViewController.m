@@ -28,6 +28,7 @@
 #else
     self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
 #endif
+    NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
 
     [allRows enumerateObjectsUsingBlock:^(Row *activeRow, NSUInteger idx, BOOL *stop) {
         AVImageView *image1InsideRow = nil;
@@ -44,6 +45,11 @@
         UILabel *matchedColorsInsideRow;
         UILabel *matchedColorsAndPositionsInsideRow;
         
+        UIImageView *rowCheckImage1 = nil;
+        UIImageView *rowCheckImage2 = nil;
+        UIImageView *rowCheckImage3 = nil;
+        UIImageView *rowCheckImage4 = nil;
+        
         switch (idx) {
             case 0:
                 image1InsideRow = self.row1image1;
@@ -58,6 +64,10 @@
                 hidingRowView = self.row1HidingView;
                 matchedColorsInsideRow = self.row1MatchedColors;
                 matchedColorsAndPositionsInsideRow = self.row1MatchedColorsAndPositions;
+                rowCheckImage1 = self.row1CheckImage1;
+                rowCheckImage2 = self.row1CheckImage2;
+                rowCheckImage3 = self.row1CheckImage3;
+                rowCheckImage4 = self.row1CheckImage4;
                 break;
             case 1:
                 image1InsideRow = self.row2image1;
@@ -72,6 +82,10 @@
                 hidingRowView = self.row2HidingView;
                 matchedColorsInsideRow = self.row2MatchedColors;
                 matchedColorsAndPositionsInsideRow = self.row2MatchedColorsAndPositions;
+                rowCheckImage1 = self.row2CheckImage1;
+                rowCheckImage2 = self.row2CheckImage2;
+                rowCheckImage3 = self.row2CheckImage3;
+                rowCheckImage4 = self.row2CheckImage4;
                 break;
             case 2:
                 image1InsideRow = self.row3image1;
@@ -86,6 +100,11 @@
                 hidingRowView = self.row3HidingView;
                 matchedColorsInsideRow = self.row3MatchedColors;
                 matchedColorsAndPositionsInsideRow = self.row3MatchedColorsAndPositions;
+                rowCheckImage1 = self.row3CheckImage1;
+                rowCheckImage2 = self.row3CheckImage2;
+                rowCheckImage3 = self.row3CheckImage3;
+                rowCheckImage4 = self.row3CheckImage4;
+
                 break;
             case 3:
                 image1InsideRow = self.row4image1;
@@ -100,6 +119,11 @@
                 hidingRowView = self.row4HidingView;
                 matchedColorsInsideRow = self.row4MatchedColors;
                 matchedColorsAndPositionsInsideRow = self.row4MatchedColorsAndPositions;
+                rowCheckImage1 = self.row4CheckImage1;
+                rowCheckImage2 = self.row4CheckImage2;
+                rowCheckImage3 = self.row4CheckImage3;
+                rowCheckImage4 = self.row4CheckImage4;
+
                 break;
             case 4:
                 image1InsideRow = self.row5image1;
@@ -114,6 +138,11 @@
                 hidingRowView = self.row5HidingView;
                 matchedColorsInsideRow = self.row5MatchedColors;
                 matchedColorsAndPositionsInsideRow = self.row5MatchedColorsAndPositions;
+                rowCheckImage1 = self.row5CheckImage1;
+                rowCheckImage2 = self.row5CheckImage2;
+                rowCheckImage3 = self.row5CheckImage3;
+                rowCheckImage4 = self.row5CheckImage4;
+
                 break;
             case 5:
                 image1InsideRow = self.row6image1;
@@ -128,6 +157,11 @@
                 hidingRowView = self.row6HidingView;
                 matchedColorsInsideRow = self.row6MatchedColors;
                 matchedColorsAndPositionsInsideRow = self.row6MatchedColorsAndPositions;
+                rowCheckImage1 = self.row6CheckImage1;
+                rowCheckImage2 = self.row6CheckImage2;
+                rowCheckImage3 = self.row6CheckImage3;
+                rowCheckImage4 = self.row6CheckImage4;
+
                 break;
             case 6:
                 image1InsideRow = self.row7image1;
@@ -142,6 +176,11 @@
                 hidingRowView = self.row7HidingView;
                 matchedColorsInsideRow = self.row7MatchedColors;
                 matchedColorsAndPositionsInsideRow = self.row7MatchedColorsAndPositions;
+                rowCheckImage1 = self.row7CheckImage1;
+                rowCheckImage2 = self.row7CheckImage2;
+                rowCheckImage3 = self.row7CheckImage3;
+                rowCheckImage4 = self.row7CheckImage4;
+
                 break;
             case 7:
                 image1InsideRow = self.row8image1;
@@ -156,6 +195,11 @@
                 hidingRowView = self.row8HidingView;
                 matchedColorsInsideRow = self.row8MatchedColors;
                 matchedColorsAndPositionsInsideRow = self.row8MatchedColorsAndPositions;
+                rowCheckImage1 = self.row8CheckImage1;
+                rowCheckImage2 = self.row8CheckImage2;
+                rowCheckImage3 = self.row8CheckImage3;
+                rowCheckImage4 = self.row8CheckImage4;
+
                 break;
             case 8:
                 image1InsideRow = self.row9image1;
@@ -170,6 +214,11 @@
                 hidingRowView = self.row9HidingView;
                 matchedColorsInsideRow = self.row9MatchedColors;
                 matchedColorsAndPositionsInsideRow = self.row9MatchedColorsAndPositions;
+                rowCheckImage1 = self.row9CheckImage1;
+                rowCheckImage2 = self.row9CheckImage2;
+                rowCheckImage3 = self.row9CheckImage3;
+                rowCheckImage4 = self.row9CheckImage4;
+
                 break;
             case 9:
                 image1InsideRow = self.row10image1;
@@ -184,6 +233,11 @@
                 hidingRowView = self.row10HidingView;
                 matchedColorsInsideRow = self.row10MatchedColors;
                 matchedColorsAndPositionsInsideRow = self.row10MatchedColorsAndPositions;
+                rowCheckImage1 = self.row10CheckImage1;
+                rowCheckImage2 = self.row10CheckImage2;
+                rowCheckImage3 = self.row10CheckImage3;
+                rowCheckImage4 = self.row10CheckImage4;
+
                 break;
    
             default:
@@ -201,11 +255,32 @@
             hidingRowView.alpha = 0.5;
             NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
             formatter.locale = [NSLocale currentLocale];
-            matchedColorsInsideRow.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColor]];
-            matchedColorsAndPositionsInsideRow.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRow.numberOfMatchedColorAndPosition]];
-            //filledLines++;
-            //NSLog(@"activeRow.isFilled->YES, setting hidingRowView.hidden=NO hidingRowView->%@",hidingRowView);
+            NSNumber *activeRowNumberOfMatchedColor = activeRow.numberOfMatchedColor;
+            if (!activeRowNumberOfMatchedColor) activeRowNumberOfMatchedColor= [NSNumber numberWithInt:0];
+            NSNumber *activeRowNumberOfMatchedColorAndPosition = activeRow.numberOfMatchedColorAndPosition;
+            if (!activeRowNumberOfMatchedColorAndPosition) activeRowNumberOfMatchedColorAndPosition= [NSNumber numberWithInt:0];
+
+            matchedColorsInsideRow.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRowNumberOfMatchedColor]];
+            matchedColorsAndPositionsInsideRow.text = [NSString stringWithFormat:@"%@",[formatter stringFromNumber:activeRowNumberOfMatchedColorAndPosition]];
+            NSLog(@"activeRow idx-%lu isFilled->YES",(unsigned long)idx);
+            if (level.unsignedIntegerValue == 2 || mainDelegate.isTraining) {
+                NSNumber *frame1FilledNumber = activeRow.frame1FilledNumber;
+                NSNumber *frame2FilledNumber = activeRow.frame2FilledNumber;
+                NSNumber *frame3FilledNumber = activeRow.frame3FilledNumber;
+                NSNumber *frame4FilledNumber = activeRow.frame4FilledNumber;
+                
+                NSNumber *combination1color = activeRow.game.combination1color;
+                NSNumber *combination2color = activeRow.game.combination2color;
+                NSNumber *combination3color = activeRow.game.combination3color;
+                NSNumber *combination4color = activeRow.game.combination4color;
+                
+                if (frame1FilledNumber.integerValue == combination1color.integerValue) rowCheckImage1.hidden = NO;
+                if (frame2FilledNumber.integerValue == combination2color.integerValue) rowCheckImage2.hidden = NO;
+                if (frame3FilledNumber.integerValue == combination3color.integerValue) rowCheckImage3.hidden = NO;
+                if (frame4FilledNumber.integerValue == combination4color.integerValue) rowCheckImage4.hidden = NO;
+            }
             
+
         } else {
             if (idx == activeRowToGetAllRows.game.activeRowNumber.unsignedIntegerValue && activeRowToGetAllRows.game.isGameStarted.boolValue) {
                 image1InsideRow.userInteractionEnabled = YES;
@@ -219,7 +294,13 @@
             } else { hidingRowView.hidden = NO; hidingRowView.alpha = 1.0; }
             matchedColorsInsideRow.text = [NSString stringWithFormat:@"%@",@""];
             matchedColorsAndPositionsInsideRow.text = [NSString stringWithFormat:@"%@",@""];
+            rowCheckImage1.hidden = YES;
+            rowCheckImage2.hidden = YES;
+            rowCheckImage3.hidden = YES;
+            rowCheckImage4.hidden = YES;
         }
+        
+        
         image1InsideRow.hidden = YES;
         image2InsideRow.hidden = YES;
         image3InsideRow.hidden = YES;
@@ -658,6 +739,8 @@
     self.combinationTitle.text = NSLocalizedString(@"combinationTitle", @"");
     self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
     self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
+    self.startAgainButtonTitle.text = NSLocalizedString(@"gameWin", @"");
+    self.startAgainButtonTitle.text = NSLocalizedString(@"gameLoosed", @"");
 
     self.row1MatchedColorsAndPositionsTitle.text = NSLocalizedString(@"rowMatchedColorsAndPositionsTitle", @"");
     self.row1MatchedColorsTitle.text = NSLocalizedString(@"rowMatchedColors", @"");
@@ -689,7 +772,11 @@
 //        [self.photoView setImage:[UIImage imageWithData:resizedData] forState:UIControlStateNormal];
 //    }
 
-    
+    [[self.introDescription layer] setBorderColor:[[UIColor redColor]CGColor]];
+    [[self.introDescription layer] setBorderWidth:1.75];
+    [[self.introDescription layer] setCornerRadius:5];
+    [[self.introDescription layer] setMasksToBounds:YES];
+
     //NSLog(@"viewDidLoad self.image1OutsideTableView.startPointt->%@",NSStringFromCGPoint(self.image1OutsideTableView.frame.origin));
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -740,10 +827,10 @@
             else self.mainPageScrollBackground.image = [UIImage imageNamed:@"Boy_Main_page_fon_game"];
 #else
             if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
-            else self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
+            else self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
                 
             if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game_gorizont"];
-            else self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game_gorizont"];
+            else self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game"];
 #endif
             
         } else {
@@ -755,9 +842,9 @@
             else  self.mainPageScrollBackground.image = [UIImage imageNamed:@"Boy_Main_page_fon_game_gorizont"];
 #else
             if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
-            else self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon"];
+            else self.mainPageBackground.image = [UIImage imageNamed:@"Main_page_fon_gorizont"];
             if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game"];
-            else self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game"];
+            else self.mainPageScrollBackground.image = [UIImage imageNamed:@"Main_page_fon_game_gorizont"];
 #endif
             
             //if (orientation == UIDeviceOrientationUnknown) NSLog(@"UIDeviceOrientationUnknown");
@@ -766,13 +853,13 @@
         if([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone){
             if(IS_IPHONE5){
                 //move to your iphone5 storyboard
-                self.mainPageGameBackground.frame = CGRectMake(14, 196, 290, 230);
-                self.gamePlayScrollView.frame = CGRectMake(16, 200, 290, 217);
+                self.mainPageGameBackground.frame = CGRectMake(14, 196, 290, 267);
+                self.gamePlayScrollView.frame = CGRectMake(16, 200, 290, 251);
             }
             else{
                 //move to your iphone4s storyboard
-                self.mainPageGameBackground.frame = CGRectMake(14, 172, 290, 175);
-                self.gamePlayScrollView.frame = CGRectMake(16, 176, 290, 165);
+                self.mainPageGameBackground.frame = CGRectMake(14, 172, 290, 210);
+                self.gamePlayScrollView.frame = CGRectMake(16, 176, 290, 200);
             }
         }
     }
@@ -798,8 +885,11 @@
 }
 
 
-
 #pragma mark own actions
+
+- (IBAction)closeIntro:(id)sender {
+    
+}
 -(void)updateGameTime:(id)sender
 {
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -827,20 +917,48 @@
             if (intervalToCheck < 0) {
                 // game over
                 NSLog(@"==================game over timer");
+                self.startAgainButtonTitle.text = NSLocalizedString(@"gameLoosed", @"");
+
+                [UIView animateWithDuration:0.5
+                                      delay:0
+                                    options:0
+                                 animations:^{
 #ifdef KidsCipherBoys
-                self.safeImage.image = [UIImage imageNamed:@"Boy_Main_page_safe_close"];
+                                     self.safeImage.image = [UIImage imageNamed:@"Boy_Main_page_safe_close"];
 #else
-                self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
+                                     self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
 #endif
+                                 } completion:^(BOOL finished) {
+                                     [mainDelegate.gameWrongResult play];
+                                     
+                                     [UIView animateWithDuration:.5
+                                                           delay:0
+                                                         options:0
+                                                      animations:^{
+                                                          self.startAgainButton.alpha = 1.0;
+                                                          self.startAgainButtonTitle.alpha = 1.0;
+                                                          
+                                                          
+                                                      } completion:^(BOOL finished) {
+                                                          
+                                                          
+                                                      }];
+                                     
+                                 }];
                 
                 [mainDelegate.audioPlayerMainFoneMusic stop];
                 [mainDelegate.gameWrongResult play];
                 [mainDelegate.gameTimer invalidate];
-                self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
-                self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
-                [mainDelegate setRandomCombinationForCurrentGame];
+                [mainDelegate setAllRowFilledForGameSuccess];
+
                 [self updateAllViews];
                 [self.gamePlayScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+                mainDelegate.gameTimerSeconds = 0;
+                self.frame1combination.hidden = YES;
+                self.frame2combination.hidden = YES;
+                self.frame3combination.hidden = YES;
+                self.frame4combination.hidden = YES;
+
             } else {
                 date = [NSDate dateWithTimeIntervalSinceReferenceDate:intervalToCheck];
                 NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
@@ -898,7 +1016,217 @@
         [self.pop presentPopoverFromRect:self.photoView.frame inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
     }
 }
+
+-(void)showIntro;
+{
+    NSNumber *intro = [[NSUserDefaults standardUserDefaults] valueForKey:@"intro"];
+//#warning tepmorary disabled
+//    intro = nil;
+//    if (intro && intro.boolValue) return;
+    CGRect introFingerFrame = self.introFinger.frame;
+    CGRect introDescriptionFrame = self.introDescription.frame;
+    
+    self.introFinger.frame = CGRectMake( 0 ,
+                                        0 ,
+                                        self.view.frame.size.width,
+                                        self.view.frame.size.height);
+    self.introDescription.frame = CGRectMake(0,
+                                             0,
+                                             self.view.frame.size.width,
+                                             self.view.frame.size.height);
+    if (intro && intro.boolValue) {
+        self.introFinger.hidden = YES;
+        self.introDescription.hidden = YES;
+        
+    } else {
+        self.introFinger.hidden = NO;
+        self.introDescription.hidden = NO;
+    }
+    self.introDescription.text = NSLocalizedString(@"introDescription1",@"");//@"Здесь зашифрована комбинация из цвета и места, которую вы попробуете разгадать.";
+
+    [UIView animateWithDuration:.5
+                          delay:0
+                        options:0
+                     animations:^{
+                         self.beginGameButton.frame = self.informationButton.frame;
+                         self.beginGameButtonTitle.frame = self.informationButton.frame;
+                         self.beginTragingButton.frame = self.informationButton.frame;
+                         self.beginTrainingButtonTitle.frame = self.informationButton.frame;
+                         self.introFinger.frame = CGRectMake( (self.frame1combination.frame.origin.x + self.frame1combination.frame.size.width / 2) ,
+                                                             (self.frame1combination.frame.origin.y + self.frame1combination.frame.size.height ) ,
+                                                             introFingerFrame.size.width,
+                                                             introFingerFrame.size.height);
+                         self.introDescription.frame = CGRectMake((self.frame1combination.frame.origin.x + self.frame1combination.frame.size.width / 2 + self.introFinger.frame.size.width) ,
+                                                                  (self.frame1combination.frame.origin.y + self.frame1combination.frame.size.height ),
+                                                                  introDescriptionFrame.size.width,
+                                                                  introDescriptionFrame.size.height);
+                         self.introFinger.alpha = 1.0;
+                         self.introDescription.alpha = 1.0;
+                         
+                     } completion:^(BOOL finished) {
+                         self.beginGameButton.hidden = YES;
+                         self.beginGameButtonTitle.hidden = YES;
+                         self.beginTragingButton.hidden = YES;
+                         self.beginTrainingButtonTitle.hidden = YES;
+                         self.gamePlayScrollView.hidden = NO;
+                         [self.beginGameButton setNeedsDisplay];
+                         [self.beginGameButtonTitle setNeedsDisplay];
+                         [self.beginTragingButton setNeedsDisplay];
+                         [self.beginTrainingButtonTitle setNeedsDisplay];
+                         [self.gamePlayScrollView setNeedsDisplay];
+                         // place finger under combination
+//#warning temporary removed
+
+                         if (intro && intro.boolValue) {
+                             return;
+                         }
+                         sleep(2);
+                         
+                         [UIView animateWithDuration:2
+                                               delay:0
+                                             options:0
+                                          animations:^{
+                                              // moving finger near combination
+                                              self.introFinger.frame = CGRectMake(self.introFinger.frame.origin.x + (self.frame3combination.frame.origin.x - self.frame1combination.frame.origin.x - self.frame3combination.frame.size.width / 2) , self.introFinger.frame.origin.y, self.introFinger.frame.size.width, self.introFinger.frame.size.height);
+                                              self.introDescription.frame = CGRectMake(self.introDescription.frame.origin.x + (self.frame3combination.frame.origin.x - self.frame1combination.frame.origin.x  - self.frame3combination.frame.size.width / 2),
+                                                                                       self.introDescription.frame.origin.y,
+                                                                                       self.introDescription.frame.size.width,
+                                                                                       self.introDescription.frame.size.height);
+                                          } completion:^(BOOL finished) {
+                                              sleep(2);
+                                               self.introDescription.text = @"";
+                                              [UIView animateWithDuration:2
+                                                                    delay:0
+                                                                  options:0
+                                                               animations:^{
+                                                                   // moving to car
+                                                                   CGFloat deltaSize = -(self.row1frame1.frame.size.width - self.image1OutsideTableView.frame.size.width)  /2 ;
+                                                                   
+                                                                   CGRect frame1 = self.image1OutsideTableView.frame;
+                                                                   self.introFinger.frame = CGRectMake(frame1.origin.x - deltaSize, frame1.origin.y - deltaSize, self.introFinger.frame.size.width, self.introFinger.frame.size.height);
+                                                                   self.introDescription.frame = CGRectMake(frame1.origin.x + self.introFinger.frame.size.width- deltaSize, frame1.origin.y- deltaSize, self.introDescription.frame.size.width, self.introDescription.frame.size.height);
+                                                                   self.introCloseButton.frame = CGRectMake(frame1.origin.x + self.introFinger.frame.size.width +  self.introDescription.frame.size.width- deltaSize, frame1.origin.y- deltaSize, self.introCloseButton.frame.size.width, self.introCloseButton.frame.size.height);
+                                                                   
+                                                                   
+                                                               } completion:^(BOOL finished) {
+                                                                   self.introFinger.image = [UIImage imageNamed:@"tapFinger"];
+                                                                   self.introDescription.text = NSLocalizedString(@"introDescription2",@"");//@"Перенесите фигурку на позицию в строке.";
+
+                                                                   sleep(2);
+                                                                   
+                                                                   [UIView animateWithDuration:2
+                                                                                         delay:0
+                                                                                       options:0
+                                                                                    animations:^{
+                                                                                        // move car inside row;
+                                                                                        CGFloat deltaSize = -(self.row1frame1.frame.size.width - self.image1OutsideTableView.frame.size.width)  /2 ;
+                                                                                        
+                                                                                        CGRect frame1 = [self.gamePlayScrollView convertRect:self.row1frame1.frame toView:self.view];
+                                                                                        self.introFinger.frame = CGRectMake(frame1.origin.x - deltaSize, frame1.origin.y - deltaSize, self.introFinger.frame.size.width, self.introFinger.frame.size.height);
+                                                                                        self.image1OutsideTableView.frame = CGRectMake(frame1.origin.x - deltaSize, frame1.origin.y - deltaSize, self.image1OutsideTableView.frame.size.width, self.image1OutsideTableView.frame.size.height);
+                                                                                        self.introDescription.frame = CGRectMake(frame1.origin.x + self.introFinger.frame.size.width- deltaSize, frame1.origin.y- deltaSize, self.introDescription.frame.size.width, self.introDescription.frame.size.height);
+                                                                                        self.introCloseButton.frame = CGRectMake(frame1.origin.x + self.introFinger.frame.size.width +  self.introDescription.frame.size.width- deltaSize, frame1.origin.y- deltaSize, self.introCloseButton.frame.size.width, self.introCloseButton.frame.size.height);
+                                                                                    } completion:^(BOOL finished) {
+                                                                                        self.introDescription.text = NSLocalizedString(@"introDescription3",@"");//@"Заполнив всю строку, обратите внимание на подсказки.";
+                                                                                        self.introFinger.image = [UIImage imageNamed:@"pointer-finger-hi"];
+                                                                                        sleep(2);
+                                                                                        
+                                                                                        
+                                                                                        [UIView animateWithDuration:2
+                                                                                                              delay:0
+                                                                                                            options:0
+                                                                                                         animations:^{
+                                                                                                             // move to matched coloes
+                                                                                                             CGFloat deltaSize = -30 ;
+                                                                                                             
+                                                                                                             CGRect frame1 = [self.gamePlayScrollView convertRect:self.row1MatchedColorsAndPositions.frame toView:self.view];
+                                                                                                             self.introFinger.frame = CGRectMake(frame1.origin.x ,
+                                                                                                                                                 frame1.origin.y - deltaSize,
+                                                                                                                                                 self.introFinger.frame.size.width,
+                                                                                                                                                 self.introFinger.frame.size.height);
+                                                                                                             self.introDescription.frame = CGRectMake(frame1.origin.x + self.introFinger.frame.size.width,
+                                                                                                                                                      frame1.origin.y- deltaSize,
+                                                                                                                                                      self.introDescription.frame.size.width,
+                                                                                                                                                      self.introDescription.frame.size.height);
+                                                                                                             self.introCloseButton.frame = CGRectMake(frame1.origin.x + self.introFinger.frame.size.width +  self.introDescription.frame.size.width,
+                                                                                                                                                      frame1.origin.y- deltaSize,
+                                                                                                                                                      self.introCloseButton.frame.size.width,
+                                                                                                                                                      self.introCloseButton.frame.size.height);
+                                                                                                             
+                                                                                                         } completion:^(BOOL finished) {
+                                                                                                             sleep(2);
+                                                                                                             CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+                                                                                                             Row *activeRow = [mainDelegate getActiveRow];
+                                                                                                             
+                                                                                                             CGPoint frameToReturnMainImage1 = CGPointFromString(activeRow.game.mainDraggedImage1startingPoint);
+                                                                                                             self.introDescription.text = NSLocalizedString(@"introDescription4",@"");//@"Здесь можно узнать про свои рекорды и всех рекордсменов.";
+
+                                                                                                             [UIView animateWithDuration:0.5
+                                                                                                                                   delay:0
+                                                                                                                                 options:0
+                                                                                                                              animations:^{
+                                                                                                                                  
+                                                                                                                                  self.image1OutsideTableView.frame = CGRectMake(frameToReturnMainImage1.x,
+                                                                                                                                                                                 frameToReturnMainImage1.y,
+                                                                                                                                                                                 self.image1OutsideTableView.frame.size.width,
+                                                                                                                                                                                 self.image1OutsideTableView.frame.size.height);
+                                                                                                                                  
+                                                                                                                                  CGFloat deltaSize = -30 ;
+
+                                                                                                                                  CGRect frame1 = self.informationButton.frame;
+                                                                                                                                  self.introFinger.frame = CGRectMake(frame1.origin.x + frame1.size.width / 2 ,
+                                                                                                                                                                      frame1.origin.y + frame1.size.width / 2,
+                                                                                                                                                                      self.introFinger.frame.size.width,
+                                                                                                                                                                      self.introFinger.frame.size.height);
+                                                                                                                                  self.introDescription.frame = CGRectMake(frame1.origin.x - self.introFinger.frame.size.width - self.introDescription.frame.size.width - deltaSize,
+                                                                                                                                                                           frame1.origin.y- deltaSize,
+                                                                                                                                                                           self.introDescription.frame.size.width,
+                                                                                                                                                                           self.introDescription.frame.size.height);
+
+                                                                                                                                  
+                                                                                                                              } completion:^(BOOL finished) {
+                                                                                                                                  sleep(4);
+                                                                                                                                  
+                                                                                                                                  [UIView animateWithDuration:0.5
+                                                                                                                                                        delay:0
+                                                                                                                                                      options:0
+                                                                                                                                                   animations:^{
+                                                                                                                                                       self.introFinger.frame = CGRectMake( 0 ,
+                                                                                                                                                                                           0 ,
+                                                                                                                                                                                           self.view.frame.size.width,
+                                                                                                                                                                                           self.view.frame.size.height);
+                                                                                                                                                       self.introDescription.frame = CGRectMake(0,
+                                                                                                                                                                                                0,
+                                                                                                                                                                                                self.view.frame.size.width,
+                                                                                                                                                                                                self.view.frame.size.height);
+                                                                                                                                                       self.introFinger.alpha = 0.0;
+                                                                                                                                                       self.introDescription.alpha = 0.0;
+                                                                                                                                                   } completion:^(BOOL finished) {
+                                                                                                                                                       
+                                                                                                                                                       self.introFinger.hidden = NO;
+                                                                                                                                                       self.introDescription.hidden = NO;
+                                                                                                                                                       self.introFinger.frame = introFingerFrame;
+                                                                                                                                                       self.introDescription.frame = introDescriptionFrame;
+                                                                                                                                                       [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:YES] forKey:@"intro"];
+                                                                                                                                                       [[NSUserDefaults standardUserDefaults] synchronize];
+                                                                                                                                                   }];
+                                                                                                                              }];
+                                                                                                         }];
+                                                                                        
+                                                                                    }];
+                                                                   
+                                                               }];
+                                          }];
+                     }];
+
+}
+
 - (IBAction)startGame:(id)sender {
+    self.frame1combination.hidden = NO;
+    self.frame2combination.hidden = NO;
+    self.frame3combination.hidden = NO;
+    self.frame4combination.hidden = NO;
+
 #ifdef KidsCipherBoys
     self.frame1combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
     self.frame2combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
@@ -910,6 +1238,11 @@
     self.frame3combination.imageView.image = [UIImage imageNamed:@"button_lock"];
     self.frame4combination.imageView.image = [UIImage imageNamed:@"button_lock"];
 #endif
+    self.image1OutsideTableView.alpha = 1.0;
+    self.image2OutsideTableView.alpha = 1.0;
+    self.image3OutsideTableView.alpha = 1.0;
+    self.image4OutsideTableView.alpha = 1.0;
+    self.image5OutsideTableView.alpha = 1.0;
 
 
     self.row1HidingView.hidden = YES;
@@ -919,47 +1252,53 @@
     activeRowToGetAllRows.game.isGameStarted = [NSNumber numberWithBool:YES];
     [mainDelegate saveContext];
     
-    if (mainDelegate.gameTimer != nil) {
-        [mainDelegate.gameTimer invalidate];
-        //self.beginGameButtonTitle.text = @"Начать игру";
-        self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
-        [mainDelegate setRandomCombinationForCurrentGame];
-        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-        formatter.locale = [NSLocale currentLocale];
-        formatter.minimumIntegerDigits = 2;
-        self.gameTimeMinutes.text = [formatter stringFromNumber:[NSNumber numberWithInt:0]];
-        self.gameTimeSeconds.text = [formatter stringFromNumber:[NSNumber numberWithInt:0]];
-        mainDelegate.gameTimer = nil;
-        mainDelegate.gameTimerSeconds = 0;
-        [self updateAllViews];
-    } else {
-        //self.beginGameButtonTitle.text = @"Остановить игру";
-        self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitleStop", @"");
-        mainDelegate.gameTimer = nil;
-        mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
-    }
+    //    if (mainDelegate.gameTimer != nil) {
+    //        [mainDelegate.gameTimer invalidate];
+    //        //self.beginGameButtonTitle.text = @"Начать игру";
+    //        //self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
+    //        [mainDelegate setRandomCombinationForCurrentGame];
+    //        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+    //        formatter.locale = [NSLocale currentLocale];
+    //        formatter.minimumIntegerDigits = 2;
+    //        self.gameTimeMinutes.text = [formatter stringFromNumber:[NSNumber numberWithInt:0]];
+    //        self.gameTimeSeconds.text = [formatter stringFromNumber:[NSNumber numberWithInt:0]];
+    //        mainDelegate.gameTimer = nil;
+    //        mainDelegate.gameTimerSeconds = 0;
+    //
+    //    } else {
+    mainDelegate.gameTimerSeconds = 0;
+    //[mainDelegate setRandomCombinationForCurrentGame];
+    
+    //self.beginGameButtonTitle.text = @"Остановить игру";
+    //self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitleStop", @"");
+    mainDelegate.gameTimer = nil;
+    mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
+    [self.gamePlayScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+    
+//    }
+
     mainDelegate.isTraining = NO;
 #ifdef KidsCipherBoys
     self.safeImage.image = [UIImage imageNamed:@"Boy_Main_page_safe_close"];
 #else
     self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
 #endif
+
     [self updateAllViews];
+    [self showIntro];
+
 }
 - (IBAction)startTraining:(id)sender {
-#ifdef KidsCipherBoys
-    self.frame1combination.imageView.image = [UIImage imageNamed:@"Boy_button_training_lock_car"];
-    self.frame2combination.imageView.image = [UIImage imageNamed:@"Boy_button_training_lock_car"];
-    self.frame3combination.imageView.image = [UIImage imageNamed:@"Boy_button_training_lock_car"];
-    self.frame4combination.imageView.image = [UIImage imageNamed:@"Boy_button_training_lock_car"];
-    self.safeImage.image = [UIImage imageNamed:@"Boy_main_page_safe_ajar"];
-#else
-    self.frame1combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
-    self.frame2combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
-    self.frame3combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
-    self.frame4combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
-    self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe_ajar"];
-#endif
+    self.frame1combination.hidden = NO;
+    self.frame2combination.hidden = NO;
+    self.frame3combination.hidden = NO;
+    self.frame4combination.hidden = NO;
+
+    self.image1OutsideTableView.alpha = 1.0;
+    self.image2OutsideTableView.alpha = 1.0;
+    self.image3OutsideTableView.alpha = 1.0;
+    self.image4OutsideTableView.alpha = 1.0;
+    self.image5OutsideTableView.alpha = 1.0;
 
     self.row1HidingView.hidden = YES;
     self.row1HidingView.userInteractionEnabled = NO;
@@ -967,14 +1306,14 @@
     Row *activeRowToGetAllRows = [mainDelegate getActiveRow];
     activeRowToGetAllRows.game.isGameStarted = [NSNumber numberWithBool:YES];
     [mainDelegate saveContext];
-    if (mainDelegate.gameTimer != nil) {
-        [mainDelegate.gameTimer invalidate];
-        //self.beginTrainingButtonTitle.text = @"Тренировка";
-        self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
-
-        [mainDelegate setRandomCombinationForCurrentGame];
-        [self updateAllViews];
-        mainDelegate.gameTimer = nil;
+//    if (mainDelegate.gameTimer != nil) {
+//        [mainDelegate.gameTimer invalidate];
+//        //self.beginTrainingButtonTitle.text = @"Тренировка";
+//        //self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
+//
+//        [mainDelegate setRandomCombinationForCurrentGame];
+//        [self updateAllViews];
+//        mainDelegate.gameTimer = nil;
         mainDelegate.gameTimerSeconds = 0;
 #ifdef KidsCipherBoys
         self.frame1combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
@@ -989,17 +1328,70 @@
 #endif
         
 
-    } else {
+//    } else {
         //self.beginTrainingButtonTitle.text = @"Остановить тренировку";
-        self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitleStop", @"");
+        //self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitleStop", @"");
 
         mainDelegate.gameTimer = nil;
         mainDelegate.isTraining = YES;
         mainDelegate.gameTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(updateGameTime:) userInfo:nil repeats:YES];
-    }
-    
+        [self.gamePlayScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+//    }
 
     [self updateAllViews];
+#ifdef KidsCipherBoys
+    self.frame1combination.imageView.image = [UIImage imageNamed:@"Boy_button_training_lock_car"];
+    self.frame2combination.imageView.image = [UIImage imageNamed:@"Boy_button_training_lock_car"];
+    self.frame3combination.imageView.image = [UIImage imageNamed:@"Boy_button_training_lock_car"];
+    self.frame4combination.imageView.image = [UIImage imageNamed:@"Boy_button_training_lock_car"];
+    self.safeImage.image = [UIImage imageNamed:@"Boy_main_page_safe_ajar"];
+#else
+    self.frame1combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
+    self.frame2combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
+    self.frame3combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
+    self.frame4combination.imageView.image = [UIImage imageNamed:@"button_lock_training"];
+    self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe_ajar"];
+#endif
+
+    [self showIntro];
+
+}
+- (IBAction)returnToMenu:(id)sender {
+    CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+    [mainDelegate setRandomCombinationForCurrentGame];
+    
+    self.beginGameButton.hidden = NO;
+    self.beginGameButtonTitle.hidden = NO;
+    self.beginTragingButton.hidden = NO;
+    self.beginTrainingButtonTitle.hidden = NO;
+    self.frame1combination.hidden = NO;
+    self.frame2combination.hidden = NO;
+    self.frame3combination.hidden = NO;
+    self.frame4combination.hidden = NO;
+
+    Row *activeRow = [mainDelegate getActiveRow];
+    
+    [UIView animateWithDuration:.5
+                          delay:0
+                        options:0
+                     animations:^{
+                         self.startAgainButton.alpha = 0.0;
+                         self.startAgainButtonTitle.alpha = 0.0;
+                         
+                         NSString *beginGameButtonFrame = activeRow.game.beginGameButtonFrame;
+                         NSString *beginGameButtonTitleFrame = activeRow.game.beginGameButtonTitleFrame;
+                         NSString *beginTragingButtonFrame = activeRow.game.beginTragingButtonFrame;
+                         NSString *beginTrainingButtonTitleFrame = activeRow.game.beginTrainingButtonTitleFrame;
+                         self.beginGameButton.frame = CGRectFromString(beginGameButtonFrame);
+                         self.beginGameButtonTitle.frame = CGRectFromString(beginGameButtonTitleFrame);
+                         self.beginTragingButton.frame = CGRectFromString(beginTragingButtonFrame);
+                         self.beginTrainingButtonTitle.frame = CGRectFromString(beginTrainingButtonTitleFrame);
+                         
+                     } completion:^(BOOL finished) {
+                         
+                         
+                     }];
 }
 - (IBAction)showInformationView:(id)sender {
     CipherAppDelegate *mainDelegate = (CipherAppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -1077,57 +1469,119 @@
             NSUInteger activeRowNumber = activeRow.game.activeRowNumber.unsignedIntegerValue;
             UILabel *rowMatchedColors = nil;
             UILabel *rowMatchedColorsAndPositions = nil;
+            NSNumber *level = [[NSUserDefaults standardUserDefaults] valueForKey:@"level"];
+
+            UIImageView *rowCheckImage1 = nil;
+            UIImageView *rowCheckImage2 = nil;
+            UIImageView *rowCheckImage3 = nil;
+            UIImageView *rowCheckImage4 = nil;
+
             switch (activeRowNumber) {
                 case 0: {
                     rowMatchedColors = self.row1MatchedColors;
                     rowMatchedColorsAndPositions = self.row1MatchedColorsAndPositions;
+                    rowCheckImage1 = self.row1CheckImage1;
+                    rowCheckImage2 = self.row1CheckImage2;
+                    rowCheckImage3 = self.row1CheckImage3;
+                    rowCheckImage4 = self.row1CheckImage4;
                     break;
                 }
                 case 1: {
                     rowMatchedColors = self.row2MatchedColors;
                     rowMatchedColorsAndPositions = self.row2MatchedColorsAndPositions;
+                    rowCheckImage1 = self.row2CheckImage1;
+                    rowCheckImage2 = self.row2CheckImage2;
+                    rowCheckImage3 = self.row2CheckImage3;
+                    rowCheckImage4 = self.row2CheckImage4;
+
                     break;
                 }
                 case 2: {
                     rowMatchedColors = self.row3MatchedColors;
                     rowMatchedColorsAndPositions = self.row3MatchedColorsAndPositions;
+                    rowCheckImage1 = self.row3CheckImage1;
+                    rowCheckImage2 = self.row3CheckImage2;
+                    rowCheckImage3 = self.row3CheckImage3;
+                    rowCheckImage4 = self.row3CheckImage4;
+
                     break;
                 }
                 case 3: {
                     rowMatchedColors = self.row4MatchedColors;
                     rowMatchedColorsAndPositions = self.row4MatchedColorsAndPositions;
+                    rowCheckImage1 = self.row4CheckImage1;
+                    rowCheckImage2 = self.row4CheckImage2;
+                    rowCheckImage3 = self.row4CheckImage3;
+                    rowCheckImage4 = self.row4CheckImage4;
+
                     break;
                 }
                 case 4: {
                     rowMatchedColors = self.row5MatchedColors;
                     rowMatchedColorsAndPositions = self.row5MatchedColorsAndPositions;
+                    rowCheckImage1 = self.row5CheckImage1;
+                    rowCheckImage2 = self.row5CheckImage2;
+                    rowCheckImage3 = self.row5CheckImage3;
+                    rowCheckImage4 = self.row5CheckImage4;
+
                     break;
                 }
                 case 5: {
                     rowMatchedColors = self.row6MatchedColors;
                     rowMatchedColorsAndPositions = self.row6MatchedColorsAndPositions;
+                    rowCheckImage1 = self.row6CheckImage1;
+                    rowCheckImage2 = self.row6CheckImage2;
+                    rowCheckImage3 = self.row6CheckImage3;
+                    rowCheckImage4 = self.row6CheckImage4;
+
                     break;
                 }
                 case 6: {
                     rowMatchedColors = self.row7MatchedColors;
                     rowMatchedColorsAndPositions = self.row7MatchedColorsAndPositions;
+                    rowCheckImage1 = self.row7CheckImage1;
+                    rowCheckImage2 = self.row7CheckImage2;
+                    rowCheckImage3 = self.row7CheckImage3;
+                    rowCheckImage4 = self.row7CheckImage4;
+
                     break;
                 }
                 case 7: {
                     rowMatchedColors = self.row8MatchedColors;
                     rowMatchedColorsAndPositions = self.row8MatchedColorsAndPositions;
+                    rowCheckImage1 = self.row8CheckImage1;
+                    rowCheckImage2 = self.row8CheckImage2;
+                    rowCheckImage3 = self.row8CheckImage3;
+                    rowCheckImage4 = self.row8CheckImage4;
+
                     break;
                 }
                 case 8: {
                     rowMatchedColors = self.row9MatchedColors;
                     rowMatchedColorsAndPositions = self.row9MatchedColorsAndPositions;
+                    rowCheckImage1 = self.row9CheckImage1;
+                    rowCheckImage2 = self.row9CheckImage2;
+                    rowCheckImage3 = self.row9CheckImage3;
+                    rowCheckImage4 = self.row9CheckImage4;
+
                     break;
                 }
                 case 9: {
                     rowMatchedColors = self.row10MatchedColors;
                     rowMatchedColorsAndPositions = self.row10MatchedColorsAndPositions;
+                    rowCheckImage1 = self.row10CheckImage1;
+                    rowCheckImage2 = self.row10CheckImage2;
+                    rowCheckImage3 = self.row10CheckImage3;
+                    rowCheckImage4 = self.row10CheckImage4;
+
                     break;
                 }
+            }
+            if (level.unsignedIntegerValue == 2 || mainDelegate.isTraining) {
+                if (frame1FilledNumber.integerValue == combination1color.integerValue) rowCheckImage1.hidden = NO;
+                if (frame2FilledNumber.integerValue == combination2color.integerValue) rowCheckImage2.hidden = NO;
+                if (frame3FilledNumber.integerValue == combination3color.integerValue) rowCheckImage3.hidden = NO;
+                if (frame4FilledNumber.integerValue == combination4color.integerValue) rowCheckImage4.hidden = NO;
             }
             NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
             formatter.locale = [NSLocale currentLocale];
@@ -1138,8 +1592,9 @@
             activeRow.game.activeRowNumber = [NSNumber numberWithInteger:activeRow.game.activeRowNumber.integerValue + 1];
             [mainDelegate saveContext];
             NSLog(@"==================activeRow.game.activeRowNumber->%@ activeRow.isFilled->%@",activeRow.game.activeRowNumber,activeRow.isFilled);
-
-            if (activeRow.game.activeRowNumber.integerValue > 9 || findedTruePositionsAndColors == 4) {
+//#warning temporary fix
+//            findedTruePositionsAndColors = 4;
+            if (findedTruePositionsAndColors == 4) {
                 NSLog(@"==================game over");
                 
                 if (findedTruePositionsAndColors == 4) {
@@ -1158,6 +1613,7 @@
 #else
                                          self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe_open"];
 #endif
+                                         self.startAgainButtonTitle.text = NSLocalizedString(@"gameWin", @"");
 
                                          [UIView animateWithDuration:.5
                                                                delay:0
@@ -1165,23 +1621,30 @@
                                                           animations:^{
                                                               self.safeImage.frame = safeMain;
                                                           } completion:^(BOOL finished) {
-#ifdef KidsCipherBoys
-                                                              self.frame1combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
-                                                              self.frame2combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
-                                                              self.frame3combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
-                                                              self.frame4combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
-#else
-                                                              self.frame1combination.imageView.image = [UIImage imageNamed:@"button_lock"];
-                                                              self.frame2combination.imageView.image = [UIImage imageNamed:@"button_lock"];
-                                                              self.frame3combination.imageView.image = [UIImage imageNamed:@"button_lock"];
-                                                              self.frame4combination.imageView.image = [UIImage imageNamed:@"button_lock"];
-#endif
+                                                              
+                                                              [UIView animateWithDuration:.5
+                                                                                    delay:0
+                                                                                  options:0
+                                                                               animations:^{
+                                                                                   self.startAgainButton.alpha = 1.0;
+                                                                                   self.startAgainButtonTitle.alpha = 1.0;
+                                                                                   
+                                                                                   
+                                                                               } completion:^(BOOL finished) {
+                                                                                   
+                                                                                   
+                                                                               }];
+                                                              
                                                           }];
                                      }];
 
                     [mainDelegate.gameSuccessResult play];
-                }
-                else {
+                    self.frame1combination.hidden = YES;
+                    self.frame2combination.hidden = YES;
+                    self.frame3combination.hidden = YES;
+                    self.frame4combination.hidden = YES;
+
+                } else {
 #ifdef KidsCipherBoys
                     self.safeImage.image = [UIImage imageNamed:@"Boy_Main_page_safe_close"];
 #else
@@ -1200,14 +1663,28 @@
                     self.frame3combination.imageView.image = [UIImage imageNamed:@"button_lock"];
                     self.frame4combination.imageView.image = [UIImage imageNamed:@"button_lock"];
 #endif
+                    self.frame1combination.hidden = YES;
+                    self.frame2combination.hidden = YES;
+                    self.frame3combination.hidden = YES;
+                    self.frame4combination.hidden = YES;
+
 
                 }
                 [mainDelegate.gameTimer invalidate];
-                self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
-                self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
-                [mainDelegate setRandomCombinationForCurrentGame];
+                //self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
+                //self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
+                //[mainDelegate setRandomCombinationForCurrentGame];
+                
+                [mainDelegate setAllRowFilledForGameSuccess];
+                //if (activeRow.game.activeRowNumber.unsignedIntegerValue > 9) activeRow.game.activeRowNumber = [NSNumber numberWithInteger:9];
+                //[mainDelegate saveContext];
+
                 [self updateAllViews];
                 if (!mainDelegate.isTraining) {
+                    //NSManagedObjectContext *child = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+                    //child.parentContext = mainDelegate.managedObjectContext;
+                    //child.undoManager = nil;
+
                     GamesHistory *newHistory = (GamesHistory *)[NSEntityDescription insertNewObjectForEntityForName:@"GamesHistory" inManagedObjectContext:mainDelegate.managedObjectContext];
                     NSData *pickedData = [[NSUserDefaults standardUserDefaults] objectForKey:@"clientPicture"];
                     if (pickedData) newHistory.photo = pickedData;
@@ -1221,18 +1698,367 @@
                     newHistory.difficultLevel = level;
                     newHistory.gameTime = [NSNumber numberWithInt:mainDelegate.gameTimerSeconds];
                     newHistory.attempts = [NSNumber numberWithInt:activeRowNumber+1];
-                    
+//                    [child performBlockAndWait:^{
+//                        NSError *childError = nil;
+//                        [child save:&childError];
+//                        if (childError)  NSLog(@"%@:%@ Child Error Received: %@", [self class], NSStringFromSelector(_cmd),
+//                                               [childError localizedDescription]);
+//                        childError = nil;
+//
+//                        [child obtainPermanentIDsForObjects:child.insertedObjects.allObjects error:&childError];
+//                        if (childError)  NSLog(@"%@:%@ Child Error obtainPermanentIDsForObjects Received: %@", [self class], NSStringFromSelector(_cmd),
+//                                               [childError localizedDescription]);
+//                        [mainDelegate.managedObjectContext performBlockAndWait:^{
+//                            NSError *parentError = nil;
+//                            [mainDelegate.managedObjectContext save:&parentError];
+//                            if (parentError)  NSLog(@"%@:%@ Parent Error Received: %@", [self class], NSStringFromSelector(_cmd),
+//                                                    [childError localizedDescription]);
+//                        }];
+//                    }];
+
                     mainDelegate.gameTimer = nil;
                     mainDelegate.gameTimerSeconds = 0;
                     [mainDelegate saveContext];
                     [mainDelegate sendNewGamescore:newHistory.objectID];
                     [self.gamePlayScrollView setContentOffset:CGPointMake(0, 0) animated:YES];
+                    self.frame1combination.hidden = YES;
+                    self.frame2combination.hidden = YES;
+                    self.frame3combination.hidden = YES;
+                    self.frame4combination.hidden = YES;
+
+                }
+            } else {
+                switch (activeRow.game.activeRowNumber.unsignedIntegerValue) {
+                    case 1: {
+                        // 1 row finished
+                        self.row1image1.userInteractionEnabled = NO;
+                        self.row1image2.userInteractionEnabled = NO;
+                        self.row1image3.userInteractionEnabled = NO;
+                        self.row1image4.userInteractionEnabled = NO;
+                        self.row1image5.userInteractionEnabled = NO;
+                        
+                        self.image1OutsideTableView.hidden = NO;
+                        self.image2OutsideTableView.hidden = NO;
+                        self.image3OutsideTableView.hidden = NO;
+                        self.image4OutsideTableView.hidden = NO;
+                        self.image5OutsideTableView.hidden = NO;
+                        self.row1HidingView.hidden = NO;
+                        self.row1HidingView.alpha = 0.3;
+                        self.row2HidingView.hidden = YES;
+                        self.row2HidingView.alpha = 0.0;
+                        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                        formatter.locale = [NSLocale currentLocale];
+                        self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:1]];
+                        //[self.gamePlayScrollView scrollRectToVisible:self.row2view.frame animated:YES];
+                        CGFloat delta = 0;
+                        CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                        CGFloat rowHeight = self.row2view.frame.size.height * 1.2;
+                        if (scrollHeight > rowHeight) delta = self.row2view.frame.size.height / 1.5;
+                        [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row2view.frame.origin.y - delta) animated:YES];
+                        break;
+                    }
+                    case 2: {
+                        self.row2image1.userInteractionEnabled = NO;
+                        self.row2image2.userInteractionEnabled = NO;
+                        self.row2image3.userInteractionEnabled = NO;
+                        self.row2image4.userInteractionEnabled = NO;
+                        self.row2image5.userInteractionEnabled = NO;
+                        
+                        self.image1OutsideTableView.hidden = NO;
+                        self.image2OutsideTableView.hidden = NO;
+                        self.image3OutsideTableView.hidden = NO;
+                        self.image4OutsideTableView.hidden = NO;
+                        self.image5OutsideTableView.hidden = NO;
+                        self.row2HidingView.hidden = NO;
+                        self.row2HidingView.alpha = 0.3;
+                        self.row3HidingView.hidden = YES;
+                        self.row3HidingView.alpha = 0.0;
+                        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                        formatter.locale = [NSLocale currentLocale];
+                        self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:2]];
+                        CGFloat delta = 0;
+                        CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                        CGFloat rowHeight = self.row3view.frame.size.height * 1.2;
+                        if (scrollHeight > rowHeight) delta = self.row3view.frame.size.height / 20;
+                        [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row3view.frame.origin.y - delta) animated:YES];
+                        break;
+                    }
+                    case 3: {
+                        self.row3image1.userInteractionEnabled = NO;
+                        self.row3image2.userInteractionEnabled = NO;
+                        self.row3image3.userInteractionEnabled = NO;
+                        self.row3image4.userInteractionEnabled = NO;
+                        self.row3image5.userInteractionEnabled = NO;
+                        
+                        self.image1OutsideTableView.hidden = NO;
+                        self.image2OutsideTableView.hidden = NO;
+                        self.image3OutsideTableView.hidden = NO;
+                        self.image4OutsideTableView.hidden = NO;
+                        self.image5OutsideTableView.hidden = NO;
+                        self.row3HidingView.hidden = NO;
+                        self.row3HidingView.alpha = 0.3;
+                        self.row4HidingView.hidden = YES;
+                        self.row4HidingView.alpha = 0.0;
+                        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                        formatter.locale = [NSLocale currentLocale];
+                        self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:3]];
+                        CGFloat delta = 0;
+                        CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                        CGFloat rowHeight = self.row4view.frame.size.height * 1.2;
+                        if (scrollHeight > rowHeight) delta = self.row4view.frame.size.height / 2;
+                        [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row4view.frame.origin.y - delta) animated:YES];
+                        break;
+                    }
+                    case 4: {
+                        self.row4image1.userInteractionEnabled = NO;
+                        self.row4image2.userInteractionEnabled = NO;
+                        self.row4image3.userInteractionEnabled = NO;
+                        self.row4image4.userInteractionEnabled = NO;
+                        self.row4image5.userInteractionEnabled = NO;
+                        
+                        self.image1OutsideTableView.hidden = NO;
+                        self.image2OutsideTableView.hidden = NO;
+                        self.image3OutsideTableView.hidden = NO;
+                        self.image4OutsideTableView.hidden = NO;
+                        self.image5OutsideTableView.hidden = NO;
+                        self.row4HidingView.hidden = NO;
+                        self.row4HidingView.alpha = 0.3;
+                        self.row5HidingView.hidden = YES;
+                        self.row5HidingView.alpha = 0.0;
+                        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                        formatter.locale = [NSLocale currentLocale];
+                        self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:4]];
+                        CGFloat delta = 0;
+                        CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                        CGFloat rowHeight = self.row5view.frame.size.height * 1.2;
+                        if (scrollHeight > rowHeight) delta = self.row5view.frame.size.height / 2;
+                        [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row5view.frame.origin.y - delta) animated:YES];
+                        break;
+                    }
+                    case 5: {
+                        self.row5image1.userInteractionEnabled = NO;
+                        self.row5image2.userInteractionEnabled = NO;
+                        self.row5image3.userInteractionEnabled = NO;
+                        self.row5image4.userInteractionEnabled = NO;
+                        self.row5image5.userInteractionEnabled = NO;
+                        
+                        self.image1OutsideTableView.hidden = NO;
+                        self.image2OutsideTableView.hidden = NO;
+                        self.image3OutsideTableView.hidden = NO;
+                        self.image4OutsideTableView.hidden = NO;
+                        self.image5OutsideTableView.hidden = NO;
+                        self.row5HidingView.hidden = NO;
+                        self.row5HidingView.alpha = 0.3;
+                        self.row6HidingView.hidden = YES;
+                        self.row6HidingView.alpha = 0.0;
+                        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                        formatter.locale = [NSLocale currentLocale];
+                        self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:5]];
+                        CGFloat delta = 0;
+                        CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                        CGFloat rowHeight = self.row6view.frame.size.height * 1.2;
+                        if (scrollHeight > rowHeight) delta = self.row6view.frame.size.height / 2;
+                        [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row6view.frame.origin.y - delta) animated:YES];
+                        break;
+                    }
+                    case 6: {
+                        self.row6image1.userInteractionEnabled = NO;
+                        self.row6image2.userInteractionEnabled = NO;
+                        self.row6image3.userInteractionEnabled = NO;
+                        self.row6image4.userInteractionEnabled = NO;
+                        self.row6image5.userInteractionEnabled = NO;
+                        
+                        self.image1OutsideTableView.hidden = NO;
+                        self.image2OutsideTableView.hidden = NO;
+                        self.image3OutsideTableView.hidden = NO;
+                        self.image4OutsideTableView.hidden = NO;
+                        self.image5OutsideTableView.hidden = NO;
+                        self.row6HidingView.hidden = NO;
+                        self.row6HidingView.alpha = 0.3;
+                        self.row7HidingView.hidden = YES;
+                        self.row7HidingView.alpha = 0.0;
+                        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                        formatter.locale = [NSLocale currentLocale];
+                        self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:6]];
+                        CGFloat delta = 0;
+                        CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                        CGFloat rowHeight = self.row7view.frame.size.height * 1.2;
+                        if (scrollHeight > rowHeight) delta = self.row7view.frame.size.height / 2;
+                        [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row7view.frame.origin.y - delta) animated:YES];
+                        break;
+                    }
+                    case 7: {
+                        self.row7image1.userInteractionEnabled = NO;
+                        self.row7image2.userInteractionEnabled = NO;
+                        self.row7image3.userInteractionEnabled = NO;
+                        self.row7image4.userInteractionEnabled = NO;
+                        self.row7image5.userInteractionEnabled = NO;
+                        
+                        self.image1OutsideTableView.hidden = NO;
+                        self.image2OutsideTableView.hidden = NO;
+                        self.image3OutsideTableView.hidden = NO;
+                        self.image4OutsideTableView.hidden = NO;
+                        self.image5OutsideTableView.hidden = NO;
+                        self.row7HidingView.hidden = NO;
+                        self.row7HidingView.alpha = 0.3;
+                        self.row8HidingView.hidden = YES;
+                        self.row8HidingView.alpha = 0.0;
+                        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                        formatter.locale = [NSLocale currentLocale];
+                        self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:7]];
+                        CGFloat delta = 0;
+                        CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                        CGFloat rowHeight = self.row8view.frame.size.height * 1.2;
+                        if (scrollHeight > rowHeight) delta = self.row8view.frame.size.height / 2;
+                        [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row8view.frame.origin.y - delta) animated:YES];
+                        break;
+                    }
+                    case 8: {
+                        self.row8image1.userInteractionEnabled = NO;
+                        self.row8image2.userInteractionEnabled = NO;
+                        self.row8image3.userInteractionEnabled = NO;
+                        self.row8image4.userInteractionEnabled = NO;
+                        self.row8image5.userInteractionEnabled = NO;
+                        
+                        self.image1OutsideTableView.hidden = NO;
+                        self.image2OutsideTableView.hidden = NO;
+                        self.image3OutsideTableView.hidden = NO;
+                        self.image4OutsideTableView.hidden = NO;
+                        self.image5OutsideTableView.hidden = NO;
+                        self.row8HidingView.hidden = NO;
+                        self.row8HidingView.alpha = 0.3;
+                        self.row9HidingView.hidden = YES;
+                        self.row9HidingView.alpha = 0.0;
+                        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                        formatter.locale = [NSLocale currentLocale];
+                        self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:8]];
+                        CGFloat delta = 0;
+                        CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                        CGFloat rowHeight = self.row9view.frame.size.height * 1.2;
+                        if (scrollHeight > rowHeight) delta = self.row9view.frame.size.height / 2;
+                        [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row9view.frame.origin.y - delta) animated:YES];
+                        break;
+                    }
+                    case 9: {
+                        self.row9image1.userInteractionEnabled = NO;
+                        self.row9image2.userInteractionEnabled = NO;
+                        self.row9image3.userInteractionEnabled = NO;
+                        self.row9image4.userInteractionEnabled = NO;
+                        self.row9image5.userInteractionEnabled = NO;
+                        
+                        self.image1OutsideTableView.hidden = NO;
+                        self.image2OutsideTableView.hidden = NO;
+                        self.image3OutsideTableView.hidden = NO;
+                        self.image4OutsideTableView.hidden = NO;
+                        self.image5OutsideTableView.hidden = NO;
+                        self.row9HidingView.hidden = NO;
+                        self.row9HidingView.alpha = 0.3;
+                        self.row10HidingView.hidden = YES;
+                        self.row10HidingView.alpha = 0.0;
+                        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                        formatter.locale = [NSLocale currentLocale];
+                        self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:9]];
+                        CGFloat delta = 0;
+                        CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                        CGFloat rowHeight = self.row10view.frame.size.height * 1.2;
+                        if (scrollHeight > rowHeight) delta = self.row10view.frame.size.height / 2;
+                        [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row10view.frame.origin.y - delta) animated:YES];
+                        
+                        break;
+                    }
+                        
+                    case 10: {
+                        NSLog(@"GAME OVER");
+                        self.startAgainButtonTitle.text = NSLocalizedString(@"gameLoosed", @"");
+
+                        [UIView animateWithDuration:0.5
+                                              delay:0
+                                            options:0
+                                         animations:^{
+#ifdef KidsCipherBoys
+                                             self.safeImage.image = [UIImage imageNamed:@"Boy_Main_page_safe_close"];
+#else
+                                             self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
+#endif
+                                         } completion:^(BOOL finished) {
+                                             [mainDelegate.gameWrongResult play];
+                                             
+                                             [UIView animateWithDuration:.5
+                                                                   delay:0
+                                                                 options:0
+                                                              animations:^{
+                                                                  self.startAgainButton.alpha = 1.0;
+                                                                  self.startAgainButtonTitle.alpha = 1.0;
+                                                                  
+                                                                  
+                                                              } completion:^(BOOL finished) {
+                                                                  
+                                                                  
+                                                              }];
+                                             
+                                         }];
+#ifdef KidsCipherBoys
+                        self.frame1combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
+                        self.frame2combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
+                        self.frame3combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
+                        self.frame4combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
+#else
+                        self.frame1combination.imageView.image = [UIImage imageNamed:@"button_lock"];
+                        self.frame2combination.imageView.image = [UIImage imageNamed:@"button_lock"];
+                        self.frame3combination.imageView.image = [UIImage imageNamed:@"button_lock"];
+                        self.frame4combination.imageView.image = [UIImage imageNamed:@"button_lock"];
+#endif
+                        self.row10image1.userInteractionEnabled = NO;
+                        self.row10image2.userInteractionEnabled = NO;
+                        self.row10image3.userInteractionEnabled = NO;
+                        self.row10image4.userInteractionEnabled = NO;
+                        self.row10image5.userInteractionEnabled = NO;
+                        
+                        self.image1OutsideTableView.hidden = NO;
+                        self.image2OutsideTableView.hidden = NO;
+                        self.image3OutsideTableView.hidden = NO;
+                        self.image4OutsideTableView.hidden = NO;
+                        self.image5OutsideTableView.hidden = NO;
+                        self.row10HidingView.hidden = NO;
+                        self.row10HidingView.alpha = 0.3;
+                        NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
+                        formatter.locale = [NSLocale currentLocale];
+                        self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:9]];
+                        CGFloat delta = 0;
+                        CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
+                        CGFloat rowHeight = self.row10view.frame.size.height * 1.2;
+                        if (scrollHeight > rowHeight) delta = self.row10view.frame.size.height / 2;
+                        [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row10view.frame.origin.y - delta) animated:YES];
+
+                        
+                        [mainDelegate.gameTimer invalidate];
+                        //self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
+                        //self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
+                        //[mainDelegate setRandomCombinationForCurrentGame];
+                        [mainDelegate setAllRowFilledForGameSuccess];
+                        activeRow.game.activeRowNumber = [NSNumber numberWithInteger:9];
+                        [mainDelegate saveContext];
+                        [self updateAllViews];
+
+                        //mainDelegate.gameTimer = nil;
+                        mainDelegate.gameTimerSeconds = 0;
+                        self.frame1combination.hidden = YES;
+                        self.frame2combination.hidden = YES;
+                        self.frame3combination.hidden = YES;
+                        self.frame4combination.hidden = YES;
+                        
+
+                        break;
+                    }
+                    default:
+                        break;
                 }
             }
             activeRow = [mainDelegate getActiveRow];
 
-            //NSLog(@"activeRowNumber->%@ activeRow->%@",activeRow.game.activeRowNumber,activeRow);
              frameToReturnMainImage1 = CGPointFromString(activeRow.game.mainDraggedImage1startingPoint);
+            NSLog(@"activeRowNumber->%@ frameToReturnMainImage1->%@",activeRow.game.activeRowNumber,activeRow.game.mainDraggedImage1startingPoint);
+
             self.image1OutsideTableView.frame = CGRectMake(frameToReturnMainImage1.x,
                                                            frameToReturnMainImage1.y,
                                                            self.image1OutsideTableView.frame.size.width,
@@ -1267,291 +2093,13 @@
             self.image5OutsideTableView.alpha = 0.0;
 
             
-            switch (activeRow.game.activeRowNumber.unsignedIntegerValue) {
-                case 1: {
-                    // 1 row finished
-                    self.row1image1.userInteractionEnabled = NO;
-                    self.row1image2.userInteractionEnabled = NO;
-                    self.row1image3.userInteractionEnabled = NO;
-                    self.row1image4.userInteractionEnabled = NO;
-                    self.row1image5.userInteractionEnabled = NO;
-                    
-                    self.image1OutsideTableView.hidden = NO;
-                    self.image2OutsideTableView.hidden = NO;
-                    self.image3OutsideTableView.hidden = NO;
-                    self.image4OutsideTableView.hidden = NO;
-                    self.image5OutsideTableView.hidden = NO;
-                    self.row1HidingView.hidden = NO;
-                    self.row1HidingView.alpha = 0.3;
-                    self.row2HidingView.hidden = YES;
-                    self.row2HidingView.alpha = 0.0;
-                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                    formatter.locale = [NSLocale currentLocale];
-                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:1]];
-                    //[self.gamePlayScrollView scrollRectToVisible:self.row2view.frame animated:YES];
-                    CGFloat delta = 0;
-                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
-                    CGFloat rowHeight = self.row2view.frame.size.height * 1.2;
-                    if (scrollHeight > rowHeight) delta = self.row2view.frame.size.height / 1.5;
-                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row2view.frame.origin.y - delta) animated:YES];
-                    break;
-                }
-                case 2: {
-                    self.row2image1.userInteractionEnabled = NO;
-                    self.row2image2.userInteractionEnabled = NO;
-                    self.row2image3.userInteractionEnabled = NO;
-                    self.row2image4.userInteractionEnabled = NO;
-                    self.row2image5.userInteractionEnabled = NO;
-                    
-                    self.image1OutsideTableView.hidden = NO;
-                    self.image2OutsideTableView.hidden = NO;
-                    self.image3OutsideTableView.hidden = NO;
-                    self.image4OutsideTableView.hidden = NO;
-                    self.image5OutsideTableView.hidden = NO;
-                    self.row2HidingView.hidden = NO;
-                    self.row2HidingView.alpha = 0.3;
-                    self.row3HidingView.hidden = YES;
-                    self.row3HidingView.alpha = 0.0;
-                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                    formatter.locale = [NSLocale currentLocale];
-                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:2]];
-                    CGFloat delta = 0;
-                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
-                    CGFloat rowHeight = self.row3view.frame.size.height * 1.2;
-                    if (scrollHeight > rowHeight) delta = self.row3view.frame.size.height / 20;
-                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row3view.frame.origin.y - delta) animated:YES];
-                    break;
-                }
-                case 3: {
-                    self.row3image1.userInteractionEnabled = NO;
-                    self.row3image2.userInteractionEnabled = NO;
-                    self.row3image3.userInteractionEnabled = NO;
-                    self.row3image4.userInteractionEnabled = NO;
-                    self.row3image5.userInteractionEnabled = NO;
-                    
-                    self.image1OutsideTableView.hidden = NO;
-                    self.image2OutsideTableView.hidden = NO;
-                    self.image3OutsideTableView.hidden = NO;
-                    self.image4OutsideTableView.hidden = NO;
-                    self.image5OutsideTableView.hidden = NO;
-                    self.row3HidingView.hidden = NO;
-                    self.row3HidingView.alpha = 0.3;
-                    self.row4HidingView.hidden = YES;
-                    self.row4HidingView.alpha = 0.0;
-                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                    formatter.locale = [NSLocale currentLocale];
-                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:3]];
-                    CGFloat delta = 0;
-                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
-                    CGFloat rowHeight = self.row4view.frame.size.height * 1.2;
-                    if (scrollHeight > rowHeight) delta = self.row4view.frame.size.height / 2;
-                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row4view.frame.origin.y - delta) animated:YES];
-                    break;
-                }
-                case 4: {
-                    self.row4image1.userInteractionEnabled = NO;
-                    self.row4image2.userInteractionEnabled = NO;
-                    self.row4image3.userInteractionEnabled = NO;
-                    self.row4image4.userInteractionEnabled = NO;
-                    self.row4image5.userInteractionEnabled = NO;
-                    
-                    self.image1OutsideTableView.hidden = NO;
-                    self.image2OutsideTableView.hidden = NO;
-                    self.image3OutsideTableView.hidden = NO;
-                    self.image4OutsideTableView.hidden = NO;
-                    self.image5OutsideTableView.hidden = NO;
-                    self.row4HidingView.hidden = NO;
-                    self.row4HidingView.alpha = 0.3;
-                    self.row5HidingView.hidden = YES;
-                    self.row5HidingView.alpha = 0.0;
-                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                    formatter.locale = [NSLocale currentLocale];
-                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:4]];
-                    CGFloat delta = 0;
-                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
-                    CGFloat rowHeight = self.row5view.frame.size.height * 1.2;
-                    if (scrollHeight > rowHeight) delta = self.row5view.frame.size.height / 2;
-                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row5view.frame.origin.y - delta) animated:YES];
-                    break;
-                }
-                case 5: {
-                    self.row5image1.userInteractionEnabled = NO;
-                    self.row5image2.userInteractionEnabled = NO;
-                    self.row5image3.userInteractionEnabled = NO;
-                    self.row5image4.userInteractionEnabled = NO;
-                    self.row5image5.userInteractionEnabled = NO;
-                    
-                    self.image1OutsideTableView.hidden = NO;
-                    self.image2OutsideTableView.hidden = NO;
-                    self.image3OutsideTableView.hidden = NO;
-                    self.image4OutsideTableView.hidden = NO;
-                    self.image5OutsideTableView.hidden = NO;
-                    self.row5HidingView.hidden = NO;
-                    self.row5HidingView.alpha = 0.3;
-                    self.row6HidingView.hidden = YES;
-                    self.row6HidingView.alpha = 0.0;
-                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                    formatter.locale = [NSLocale currentLocale];
-                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:5]];
-                    CGFloat delta = 0;
-                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
-                    CGFloat rowHeight = self.row6view.frame.size.height * 1.2;
-                    if (scrollHeight > rowHeight) delta = self.row6view.frame.size.height / 2;
-                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row6view.frame.origin.y - delta) animated:YES];
-                    break;
-                }
-                case 6: {
-                    self.row6image1.userInteractionEnabled = NO;
-                    self.row6image2.userInteractionEnabled = NO;
-                    self.row6image3.userInteractionEnabled = NO;
-                    self.row6image4.userInteractionEnabled = NO;
-                    self.row6image5.userInteractionEnabled = NO;
-                    
-                    self.image1OutsideTableView.hidden = NO;
-                    self.image2OutsideTableView.hidden = NO;
-                    self.image3OutsideTableView.hidden = NO;
-                    self.image4OutsideTableView.hidden = NO;
-                    self.image5OutsideTableView.hidden = NO;
-                    self.row6HidingView.hidden = NO;
-                    self.row6HidingView.alpha = 0.3;
-                    self.row7HidingView.hidden = YES;
-                    self.row7HidingView.alpha = 0.0;
-                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                    formatter.locale = [NSLocale currentLocale];
-                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:6]];
-                    CGFloat delta = 0;
-                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
-                    CGFloat rowHeight = self.row7view.frame.size.height * 1.2;
-                    if (scrollHeight > rowHeight) delta = self.row7view.frame.size.height / 2;
-                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row7view.frame.origin.y - delta) animated:YES];
-                    break;
-                }
-                case 7: {
-                    self.row7image1.userInteractionEnabled = NO;
-                    self.row7image2.userInteractionEnabled = NO;
-                    self.row7image3.userInteractionEnabled = NO;
-                    self.row7image4.userInteractionEnabled = NO;
-                    self.row7image5.userInteractionEnabled = NO;
-                    
-                    self.image1OutsideTableView.hidden = NO;
-                    self.image2OutsideTableView.hidden = NO;
-                    self.image3OutsideTableView.hidden = NO;
-                    self.image4OutsideTableView.hidden = NO;
-                    self.image5OutsideTableView.hidden = NO;
-                    self.row7HidingView.hidden = NO;
-                    self.row7HidingView.alpha = 0.3;
-                    self.row8HidingView.hidden = YES;
-                    self.row8HidingView.alpha = 0.0;
-                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                    formatter.locale = [NSLocale currentLocale];
-                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:7]];
-                    CGFloat delta = 0;
-                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
-                    CGFloat rowHeight = self.row8view.frame.size.height * 1.2;
-                    if (scrollHeight > rowHeight) delta = self.row8view.frame.size.height / 2;
-                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row8view.frame.origin.y - delta) animated:YES];
-                    break;
-                }
-                case 8: {
-                    self.row8image1.userInteractionEnabled = NO;
-                    self.row8image2.userInteractionEnabled = NO;
-                    self.row8image3.userInteractionEnabled = NO;
-                    self.row8image4.userInteractionEnabled = NO;
-                    self.row8image5.userInteractionEnabled = NO;
-                    
-                    self.image1OutsideTableView.hidden = NO;
-                    self.image2OutsideTableView.hidden = NO;
-                    self.image3OutsideTableView.hidden = NO;
-                    self.image4OutsideTableView.hidden = NO;
-                    self.image5OutsideTableView.hidden = NO;
-                    self.row8HidingView.hidden = NO;
-                    self.row8HidingView.alpha = 0.3;
-                    self.row9HidingView.hidden = YES;
-                    self.row9HidingView.alpha = 0.0;
-                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                    formatter.locale = [NSLocale currentLocale];
-                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:8]];
-                    CGFloat delta = 0;
-                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
-                    CGFloat rowHeight = self.row9view.frame.size.height * 1.2;
-                    if (scrollHeight > rowHeight) delta = self.row9view.frame.size.height / 2;
-                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row9view.frame.origin.y - delta) animated:YES];
-                    break;
-                }
-                case 9: {
-                    self.row9image1.userInteractionEnabled = NO;
-                    self.row9image2.userInteractionEnabled = NO;
-                    self.row9image3.userInteractionEnabled = NO;
-                    self.row9image4.userInteractionEnabled = NO;
-                    self.row9image5.userInteractionEnabled = NO;
-                    
-                    self.image1OutsideTableView.hidden = NO;
-                    self.image2OutsideTableView.hidden = NO;
-                    self.image3OutsideTableView.hidden = NO;
-                    self.image4OutsideTableView.hidden = NO;
-                    self.image5OutsideTableView.hidden = NO;
-                    self.row9HidingView.hidden = NO;
-                    self.row9HidingView.alpha = 0.3;
-                    self.row10HidingView.hidden = YES;
-                    self.row10HidingView.alpha = 0.0;
-                    NSNumberFormatter *formatter = [[NSNumberFormatter alloc] init];
-                    formatter.locale = [NSLocale currentLocale];
-                    self.attemptsNumber.text = [formatter stringFromNumber:[NSNumber numberWithInt:9]];
-                    CGFloat delta = 0;
-                    CGFloat scrollHeight = self.gamePlayScrollView.frame.size.height;
-                    CGFloat rowHeight = self.row10view.frame.size.height * 1.2;
-                    if (scrollHeight > rowHeight) delta = self.row10view.frame.size.height / 2;
-                    [self.gamePlayScrollView setContentOffset:CGPointMake(0, self.row10view.frame.origin.y - delta) animated:YES];
-                    break;
-                }
-                    
-                case 10: {
-                    NSLog(@"GAME OVER");
-                    [UIView animateWithDuration:0.5
-                                          delay:0
-                                        options:0
-                                     animations:^{
-#ifdef KidsCipherBoys
-                                         self.safeImage.image = [UIImage imageNamed:@"Boy_Main_page_safe_close"];
-#else
-                                         self.safeImage.image = [UIImage imageNamed:@"Main_page_fon_safe"];
-#endif
-                                     } completion:^(BOOL finished) {
-                                         [mainDelegate.gameWrongResult play];
-                                     }];
-#ifdef KidsCipherBoys
-                    self.frame1combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
-                    self.frame2combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
-                    self.frame3combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
-                    self.frame4combination.imageView.image = [UIImage imageNamed:@"Boy_button_lock"];
-#else
-                    self.frame1combination.imageView.image = [UIImage imageNamed:@"button_lock"];
-                    self.frame2combination.imageView.image = [UIImage imageNamed:@"button_lock"];
-                    self.frame3combination.imageView.image = [UIImage imageNamed:@"button_lock"];
-                    self.frame4combination.imageView.image = [UIImage imageNamed:@"button_lock"];
-#endif
-                    
-
-                    [mainDelegate.gameTimer invalidate];
-                    self.beginTrainingButtonTitle.text = NSLocalizedString(@"beginTrainingButtonTitle", @"");
-                    self.beginGameButtonTitle.text = NSLocalizedString(@"beginGameButtonTitle", @"");
-                    [mainDelegate setRandomCombinationForCurrentGame];
-                    [self updateAllViews];
-                    mainDelegate.gameTimer = nil;
-                    mainDelegate.gameTimerSeconds = 0;
-                    break;
-                }
-                    
-                    
-                default:
-                    break;
-            }
             
         });
         
         sleep(2);
         dispatch_async(dispatch_get_main_queue(), ^(void) {
             mainDelegate.isNewRowProcessing = NO;
+
             self.image1OutsideTableView.frame = CGRectMake(frameToReturnMainImage1.x,
                                                            frameToReturnMainImage1.y,
                                                            self.image1OutsideTableView.frame.size.width,
@@ -1937,6 +2485,18 @@ static CGRect swapWidthAndHeight(CGRect rect)
     [self setMainPageScrollBackground:nil];
     [self setSafeImage:nil];
     [self setMainPageGameBackground:nil];
+    [self setRow1CheckImage1:nil];
+    [self setRow1CheckImage2:nil];
+    [self setRow1CheckImage3:nil];
+    [self setRow1CheckImage4:nil];
+    [self setIntroFinger:nil];
+    [self setIntroDescription:nil];
+    [self setIntroCloseButton:nil];
+    [self setBeginGameButton:nil];
+    [self setBeginTragingButton:nil];
+    [self setInformationButton:nil];
+    [self setStartAgainButton:nil];
+    [self setStartAgainButtonTitle:nil];
     [super viewDidUnload];
 }
 @end

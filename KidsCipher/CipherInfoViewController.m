@@ -37,6 +37,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *musicSwitchTitle;
 @property (weak, nonatomic) IBOutlet UILabel *levelTitle;
 @property (weak, nonatomic) IBOutlet UILabel *changeToGirlTitle;
+@property (weak, nonatomic) IBOutlet UISwitch *switchMusic;
 
 @end
 
@@ -116,6 +117,7 @@
     [self setMusicSwitchTitle:nil];
     [self setLevelTitle:nil];
     [self setChangeToGirlTitle:nil];
+    [self setSwitchMusic:nil];
     [super viewDidUnload];
 }
 -(void)viewDidAppear:(BOOL)animated
@@ -183,7 +185,10 @@
         default:
             break;
     }
-
+    
+    NSNumber *music = [[NSUserDefaults standardUserDefaults] valueForKey:@"music"];
+    if (music && music.boolValue == NO) self.switchMusic.on = NO;
+    else self.switchMusic.on = YES;
 }
 #pragma mark - own actions
 - (IBAction)changeMyPhoto:(id)sender {
@@ -268,10 +273,15 @@
     if ([mainDelegate.audioPlayerMainFoneMusic isPlaying]) {
         [mainDelegate.audioPlayerMainFoneMusic stop];
         mainDelegate.isBackgroundMusicPlaying = NO;
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:NO] forKey:@"music"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+
     }
     else {
         [mainDelegate.audioPlayerMainFoneMusic play];
         mainDelegate.isBackgroundMusicPlaying = YES;
+        [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithBool:YES] forKey:@"music"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
 
     }
 }
@@ -310,6 +320,11 @@
     if (photoData) {
         UIImage *image = [UIImage imageWithData:photoData];
         cell.photo.image = image;
+        [[cell.photo layer] setBorderColor:[self.myName.textColor CGColor]];
+        [[cell.photo layer] setBorderWidth:1.75];
+        [[cell.photo layer] setCornerRadius:5];
+        [[cell.photo layer] setMasksToBounds:YES];
+
     } else {
         UIImage *image = nil;
 #ifdef KidsCipherBoys

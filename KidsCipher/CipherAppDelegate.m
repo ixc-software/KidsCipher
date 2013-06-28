@@ -516,29 +516,45 @@ static unsigned char base64EncodeLookup[65] =
     if (error && receivedResult && receivedResult.length > 0) NSLog(@"failed to decode answer:%@ with error:%@", [NSString stringWithUTF8String:[receivedResult bytes]],[error localizedDescription]);
     NSArray *scores = [finalResult valueForKey:@"scores"];
     if (scores && scores.count > 0) {
+        NSManagedObjectContext *child = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        child.parentContext = self.managedObjectContext;
+        child.undoManager = nil;
+        
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"GameScore" inManagedObjectContext:self.managedObjectContext];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"GameScore" inManagedObjectContext:child];
         [fetchRequest setEntity:entity];
         NSSortDescriptor *sort = [[NSSortDescriptor alloc] initWithKey:@"date" ascending:NO];
         fetchRequest.sortDescriptors = [NSArray arrayWithObject:sort];
-        NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:&error];
+        NSArray *fetchedObjects = [child executeFetchRequest:fetchRequest error:&error];
         if (fetchedObjects == nil) NSLog(@"Failed to executeFetchRequest to data store: %@ in function:%@", [error localizedDescription],NSStringFromSelector(_cmd));
         [fetchedObjects enumerateObjectsUsingBlock:^(GameScore *previousScore, NSUInteger idx, BOOL *stop) {
-            [self.managedObjectContext deleteObject:previousScore];
+            [child deleteObject:previousScore];
         }];
-        [self saveContext];
+        [child performBlockAndWait:^{
+            NSError *childError = nil;
+            [child save:&childError];
+            if (childError)  NSLog(@"%@:%@ Child Error Received: %@", [self class], NSStringFromSelector(_cmd),
+                                   [childError localizedDescription]);
+            [self.managedObjectContext performBlockAndWait:^{
+                NSError *parentError = nil;
+                [self.managedObjectContext save:&parentError];
+                if (parentError)  NSLog(@"%@:%@ Parent Error Received: %@", [self class], NSStringFromSelector(_cmd),
+                                       [childError localizedDescription]);
+
+            }];
+        }];
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateFormat = @"yyyyMMddHHmmssSSS";
 
         [scores enumerateObjectsUsingBlock:^(NSDictionary *row, NSUInteger idx, BOOL *stop) {
             NSString *guid = [row valueForKey:@"guid"];
             NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-            NSEntityDescription *entity = [NSEntityDescription entityForName:@"GameScore" inManagedObjectContext:self.managedObjectContext];
+            NSEntityDescription *entity = [NSEntityDescription entityForName:@"GameScore" inManagedObjectContext:child];
             [fetchRequest setEntity:entity];
             fetchRequest.predicate = [NSPredicate predicateWithFormat:@"guid == %@",guid];
-            NSArray *fetchedObjects = [self.managedObjectContext executeFetchRequest:fetchRequest error:NULL];
+            NSArray *fetchedObjects = [child executeFetchRequest:fetchRequest error:NULL];
             if (fetchedObjects.count == 0) {
-                GameScore *newScore = (GameScore *)[NSEntityDescription insertNewObjectForEntityForName:@"GameScore" inManagedObjectContext:self.managedObjectContext];
+                GameScore *newScore = (GameScore *)[NSEntityDescription insertNewObjectForEntityForName:@"GameScore" inManagedObjectContext:child];
                 NSNumber *attempts = [row valueForKey:@"attempts"];
                 NSString *date = [row valueForKey:@"date"];
                 NSNumber *difficultLevel = [row valueForKey:@"difficultLevel"];
@@ -558,7 +574,19 @@ static unsigned char base64EncodeLookup[65] =
                 newScore.name = name;
             }
         }];
-        [self saveContext];
+        [child performBlockAndWait:^{
+            NSError *childError = nil;
+            [child save:&childError];
+            if (childError)  NSLog(@"%@:%@ Child Error Received: %@", [self class], NSStringFromSelector(_cmd),
+                                   [childError localizedDescription]);
+            [self.managedObjectContext performBlockAndWait:^{
+                NSError *parentError = nil;
+                [self.managedObjectContext save:&parentError];
+                if (parentError)  NSLog(@"%@:%@ Parent Error Received: %@", [self class], NSStringFromSelector(_cmd),
+                                        [childError localizedDescription]);
+                
+            }];
+        }];
     }
     return finalResult;
     
@@ -760,9 +788,15 @@ static unsigned char base64EncodeLookup[65] =
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^(void) {
         
         NSMutableDictionary *prepeareForJSONRequest = [[NSMutableDictionary alloc] init];
-        GamesHistory *history = (GamesHistory *)[self.managedObjectContext existingObjectWithID:gamescoreID error:NULL];
-        if (!history) return;
-        
+        NSManagedObjectContext *child = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSPrivateQueueConcurrencyType];
+        child.parentContext = self.managedObjectContext;
+        child.undoManager = nil;
+        GamesHistory *history = (GamesHistory *)[child existingObjectWithID:gamescoreID error:NULL];
+
+        if (!history) {
+            NSLog(@"HISTORY NOT EXIST");
+            return;
+        }
         
         NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
         formatter.dateFormat = @"yyyyMMddHHmmssSSS";
@@ -802,7 +836,7 @@ static unsigned char base64EncodeLookup[65] =
         [prepeareForJSONRequest setValue:[NSNumber numberWithBool:YES] forKey:@"isGameScoreyNeed"];
         NSDictionary *receivedObject = nil;
         idx = 0;
-        //NSLog(@"sentObject:%@",prepeareForJSONRequest);
+        NSLog(@"new score sentObject:%@",prepeareForJSONRequest);
         
         while (!receivedObject) {
             receivedObject = [self getJSONAnswerForFunction:@"newGamescore" withJSONRequest:prepeareForJSONRequest forServer:self.firstServer];
@@ -1035,6 +1069,19 @@ static BOOL is_encrypted () {
     }
 }
 
+-(void)setAllRowFilledForGameSuccess;
+{
+    self.game = (Game *)[self.managedObjectContext existingObjectWithID:self.game.objectID error:NULL];
+    //self.game.activeRowNumber = [NSNumber numberWithInteger:0];
+    self.game.isGameStarted = [NSNumber numberWithBool:NO];
+
+    NSOrderedSet *allRows = self.game.rows;
+        [ allRows enumerateObjectsUsingBlock:^(Row *row, NSUInteger idx, BOOL *stop) {
+            row.isFilled = [NSNumber numberWithBool:YES];
+        }];
+    [self saveContext];
+}
+
 -(void) setRandomCombinationForCurrentGame;
 {
     NSNumber *number1 = [NSNumber numberWithInt:arc4random() % 5+1];
@@ -1075,6 +1122,9 @@ static BOOL is_encrypted () {
         }
         self.game.combination4color = number4;
     }
+    
+    
+    
     self.game = (Game *)[self.managedObjectContext existingObjectWithID:self.game.objectID error:NULL];
     self.game.activeRowNumber = [NSNumber numberWithInteger:0];
     self.game.isGameStarted = [NSNumber numberWithBool:NO];
@@ -1084,6 +1134,7 @@ static BOOL is_encrypted () {
             Row *newRow = (Row *)[NSEntityDescription insertNewObjectForEntityForName:@"Row" inManagedObjectContext:self.managedObjectContext];
             newRow.isFilled = [NSNumber numberWithBool:NO];
             newRow.game = self.game;
+            NSLog(@"for row->%lu CREATED",(unsigned long)i);
         }
     } else {
         [ allRows enumerateObjectsUsingBlock:^(Row *row, NSUInteger idx, BOOL *stop) {
@@ -1098,6 +1149,7 @@ static BOOL is_encrypted () {
 
         }];
     }
+    
     [self saveContext];
     
 }
@@ -1173,8 +1225,13 @@ static BOOL is_encrypted () {
     [_audioPlayerMainFoneMusic prepareToPlay];
     if ([self isJailbroken3] || [self isJailbroken4]) NSAssert(0!=0,@"guys stop hacking.... contact us for legal work.");
 
-    [_audioPlayerMainFoneMusic play];
-    self.isBackgroundMusicPlaying = YES;
+    NSNumber *music = [[NSUserDefaults standardUserDefaults] valueForKey:@"music"];
+    if (music && music.boolValue == NO) {
+        
+    } else {
+        [_audioPlayerMainFoneMusic play];
+        self.isBackgroundMusicPlaying = YES;
+    }
 //#warning  temporary disabled
     NSURL*fileSuccess = [NSURL URLWithString:[[NSBundle mainBundle] pathForResource:@"kidscipher_game_success" ofType:@"m4a"]];
     self.gameSuccessResult = [[AVAudioPlayer alloc] initWithContentsOfURL:fileSuccess error:&error];
@@ -1191,6 +1248,7 @@ static BOOL is_encrypted () {
 
     
     self.game = (Game *)[NSEntityDescription insertNewObjectForEntityForName:@"Game" inManagedObjectContext:self.managedObjectContext];
+    
     [self saveContext];
     [self setRandomCombinationForCurrentGame];
     _isMessageConfirmed = YES;
@@ -1252,7 +1310,7 @@ static BOOL is_encrypted () {
     if (managedObjectContext != nil) {
         if ([managedObjectContext hasChanges] && ![managedObjectContext save:&error]) {
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
-            abort();
+            //abort();
         }
     }
 }
@@ -1263,7 +1321,7 @@ static BOOL is_encrypted () {
     if (_managedObjectContext != nil) return _managedObjectContext;
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
     if (coordinator != nil) {
-        _managedObjectContext = [[NSManagedObjectContext alloc] init];
+        _managedObjectContext = [[NSManagedObjectContext alloc] initWithConcurrencyType:NSMainQueueConcurrencyType];
         [_managedObjectContext setPersistentStoreCoordinator:coordinator];
     }
     return _managedObjectContext;
@@ -1293,9 +1351,9 @@ static BOOL is_encrypted () {
     //NSDictionary *options = [NSDictionary dictionaryWithDictionary:pragmaOptions];
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSBinaryStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
-        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
+        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSBinaryStoreType configuration:nil URL:storeURL options:nil error:&error])
         {
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();
@@ -1344,6 +1402,13 @@ static BOOL is_encrypted () {
     if (!activeRow.game.mainDraggedImage4identifier) activeRow.game.mainDraggedImage4identifier = vc.image4OutsideTableView.uniqueIdentifier;
     if (!activeRow.game.mainDraggedImage5identifier) activeRow.game.mainDraggedImage5identifier = vc.image5OutsideTableView.uniqueIdentifier;
 
+    if (!activeRow.game.beginGameButtonFrame) activeRow.game.beginGameButtonFrame = NSStringFromCGRect(vc.beginGameButton.frame);
+    if (!activeRow.game.beginGameButtonTitleFrame) activeRow.game.beginGameButtonTitleFrame = NSStringFromCGRect(vc.beginGameButtonTitle.frame);
+    if (!activeRow.game.beginTragingButtonFrame) activeRow.game.beginTragingButtonFrame = NSStringFromCGRect(vc.beginTragingButton.frame);
+    if (!activeRow.game.beginTrainingButtonTitleFrame) activeRow.game.beginTrainingButtonTitleFrame = NSStringFromCGRect(vc.beginTrainingButtonTitle.frame);
+
+    
+    
     switch (activeRowNumber.intValue) {
         case 0:
             activeRow.frame = NSStringFromCGRect(vc.row1view.frame);
