@@ -18,7 +18,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Boy_Main_page_fon_notebook_iphone.png" id="j1J-yi-Bk2">
-                                <rect key="frame" x="127" y="13" width="173" height="106"/>
+                                <rect key="frame" x="121" y="18" width="184" height="111.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Boy_Main_page_safe_close.png" id="oUY-FI-b9g">
@@ -94,10 +94,10 @@
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="cqP-2X-Nnd" userLabel="Photo">
-                                <rect key="frame" x="144" y="26" width="29" height="37"/>
+                                <rect key="frame" x="144" y="29" width="29" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="Boy_button_avatar_boy_small.png">
+                                <state key="normal" image="Boy_button_avatar_no_photo.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -109,10 +109,10 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="weZ-Q5-vaV">
-                                <rect key="frame" x="144" y="65" width="141" height="19"/>
+                                <rect key="frame" x="138" y="65.5" width="153" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="Boy_button_time.png">
+                                <state key="normal" image="Boy_button_time_iphone.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -121,18 +121,18 @@
                                 </state>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Количество попыток:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OGA-Wi-JG4">
-                                <rect key="frame" x="150" y="65" width="114" height="18"/>
+                                <rect key="frame" x="150" y="68" width="114" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VL0-ye-UDa">
-                                <rect key="frame" x="144" y="85" width="141" height="19"/>
+                                <rect key="frame" x="138" y="89" width="153" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="Boy_button_time.png">
+                                <state key="normal" image="Boy_button_time_iphone.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -141,7 +141,7 @@
                                 </state>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Петя" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="oak-bh-lqo">
-                                <rect key="frame" x="181" y="26" width="66" height="37"/>
+                                <rect key="frame" x="181" y="29" width="66" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="13"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -149,52 +149,52 @@
                                 <color key="shadowColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xgP-WY-ASi">
-                                <rect key="frame" x="254" y="66" width="39" height="18"/>
+                                <rect key="frame" x="254" y="68" width="39" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Время:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qb4-r8-IFu">
-                                <rect key="frame" x="150" y="85" width="36" height="18"/>
+                                <rect key="frame" x="150" y="92" width="36" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="минуты" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="xoz-Hk-4iO">
-                                <rect key="frame" x="205" y="85" width="42" height="18"/>
+                                <rect key="frame" x="205" y="92" width="42" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="сек" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Tmm-qU-CVD">
-                                <rect key="frame" x="265" y="85" width="24" height="18"/>
+                                <rect key="frame" x="265" y="92" width="24" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hhV-ap-PDk">
-                                <rect key="frame" x="241" y="85" width="27" height="18"/>
+                                <rect key="frame" x="241" y="92" width="27" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WwO-64-ivU">
-                                <rect key="frame" x="180" y="85" width="27" height="18"/>
+                                <rect key="frame" x="180" y="92" width="27" height="18"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="11"/>
-                                <color key="textColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
                             </label>
                             <imageView hidden="YES" contentMode="scaleAspectFit" image="Boy_Mbutton_car_blue_active.png" id="Qyx-eb-6EY" customClass="AVImageView">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -1978,10 +1978,10 @@
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="T5c-td-2ZW" userLabel="informationButton">
-                                <rect key="frame" x="248" y="26" width="37" height="37"/>
+                                <rect key="frame" x="254" y="29" width="35" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="Boy_button_info.png">
+                                <state key="normal" image="Boy_button_info_iphone.png">
                                     <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -2574,6 +2574,7 @@
         <image name="Boy_active_field_game_iphone.png" width="545" height="202"/>
         <image name="Boy_button_avatar_boy.png" width="209" height="266"/>
         <image name="Boy_button_avatar_boy_small.png" width="103" height="129"/>
+        <image name="Boy_button_avatar_no_photo.png" width="214" height="270"/>
         <image name="Boy_button_back_in_ game.png" width="313" height="292"/>
         <image name="Boy_button_begin_game.png" width="507" height="156"/>
         <image name="Boy_button_box_field_game.png" width="53" height="53"/>
@@ -2585,13 +2586,13 @@
         <image name="Boy_button_effort_cup.png" width="153" height="150"/>
         <image name="Boy_button_fon_V_iphone.png" width="642" height="958"/>
         <image name="Boy_button_fon_all_records_iphone_no_cup.png" width="298" height="210"/>
-        <image name="Boy_button_info.png" width="158" height="161"/>
+        <image name="Boy_button_info_iphone.png" width="65" height="70"/>
         <image name="Boy_button_level_star_blue.png" width="50" height="47"/>
         <image name="Boy_button_lock.png" width="180" height="179"/>
         <image name="Boy_button_no_car.png" width="180" height="179"/>
         <image name="Boy_button_olive.png" width="178" height="132"/>
-        <image name="Boy_button_time.png" width="629" height="83"/>
         <image name="Boy_button_time_clock.png" width="74" height="75"/>
+        <image name="Boy_button_time_iphone.png" width="284" height="31"/>
         <image name="Boy_button_training.png" width="507" height="156"/>
         <image name="Boy_button_your_name.png" width="379" height="94"/>
         <image name="Boy_lock_field_game_iphone.png" width="545" height="202"/>
@@ -2628,6 +2629,9 @@
         <class className="CipherInfoViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewController.h"/>
             <relationships>
+                <relationship kind="action" name="changeToBoyStart:"/>
+                <relationship kind="action" name="musicChangeStart:"/>
+                <relationship kind="action" name="returnToGameStart:"/>
                 <relationship kind="outlet" name="changeToBoyTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="changeToGirlTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="difficultLevelLabel" candidateClass="UILabel"/>
@@ -2653,6 +2657,12 @@
         <class className="CipherViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherViewController.h"/>
             <relationships>
+                <relationship kind="action" name="changePhoto:"/>
+                <relationship kind="action" name="closeIntro:"/>
+                <relationship kind="action" name="returnToMenu:"/>
+                <relationship kind="action" name="showInformationView:"/>
+                <relationship kind="action" name="startGame:"/>
+                <relationship kind="action" name="startTraining:"/>
                 <relationship kind="outlet" name="attemptsNumber" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="attemptsTitle" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="beginGameButton" candidateClass="UIButton"/>

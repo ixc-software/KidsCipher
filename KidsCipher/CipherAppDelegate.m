@@ -1351,9 +1351,9 @@ static BOOL is_encrypted () {
     //NSDictionary *options = [NSDictionary dictionaryWithDictionary:pragmaOptions];
     NSError *error = nil;
     _persistentStoreCoordinator = [[NSPersistentStoreCoordinator alloc] initWithManagedObjectModel:mom];
-    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSBinaryStoreType configuration:nil URL:storeURL options:nil error:&error]) {
+    if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error]) {
         [[NSFileManager defaultManager] removeItemAtURL:storeURL error:nil];
-        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSBinaryStoreType configuration:nil URL:storeURL options:nil error:&error])
+        if (![_persistentStoreCoordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:storeURL options:nil error:&error])
         {
             NSLog(@"Unresolved error %@, %@", error, [error userInfo]);
             abort();

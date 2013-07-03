@@ -34,7 +34,6 @@
 		FA145AEC17707093005ACA7F /* Boy_button_avatar-frame.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145A8F17707093005ACA7F /* Boy_button_avatar-frame.png */; };
 		FA145AED17707093005ACA7F /* Boy_button_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145A9017707093005ACA7F /* Boy_button_avatar.png */; };
 		FA145AEE17707093005ACA7F /* Boy_button_avatar_frame_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145A9117707093005ACA7F /* Boy_button_avatar_frame_photo.png */; };
-		FA145AEF17707093005ACA7F /* Boy_button_avatar_no_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145A9217707093005ACA7F /* Boy_button_avatar_no_photo.png */; };
 		FA145AF017707093005ACA7F /* Boy_button_begin_game.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145A9317707093005ACA7F /* Boy_button_begin_game.png */; };
 		FA145AF117707093005ACA7F /* Boy_button_begin_new_game.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145A9417707093005ACA7F /* Boy_button_begin_new_game.png */; };
 		FA145AF217707093005ACA7F /* Boy_button_car-violet_active.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145A9517707093005ACA7F /* Boy_button_car-violet_active.png */; };
@@ -57,10 +56,8 @@
 		FA145B0317707093005ACA7F /* Boy_button_car_yellow_active.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145AA617707093005ACA7F /* Boy_button_car_yellow_active.png */; };
 		FA145B0417707093005ACA7F /* Boy_button_car_yellow_game_active.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145AA717707093005ACA7F /* Boy_button_car_yellow_game_active.png */; };
 		FA145B0517707093005ACA7F /* Boy_button_car_yellow_no_active.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145AA817707093005ACA7F /* Boy_button_car_yellow_no_active.png */; };
-		FA145B0617707093005ACA7F /* Boy_button_info.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145AA917707093005ACA7F /* Boy_button_info.png */; };
 		FA145B0717707093005ACA7F /* Boy_button_lock.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145AAA17707093005ACA7F /* Boy_button_lock.png */; };
 		FA145B0817707093005ACA7F /* Boy_button_no_car.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145AAB17707093005ACA7F /* Boy_button_no_car.png */; };
-		FA145B0917707093005ACA7F /* Boy_button_time.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145AAC17707093005ACA7F /* Boy_button_time.png */; };
 		FA145B0A17707093005ACA7F /* Boy_button_training.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145AAD17707093005ACA7F /* Boy_button_training.png */; };
 		FA145B0C17707093005ACA7F /* Boy_button_training_lock_car.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145AAF17707093005ACA7F /* Boy_button_training_lock_car.png */; };
 		FA145B0D17707093005ACA7F /* Boy_Main_page_fon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145AB017707093005ACA7F /* Boy_Main_page_fon.png */; };
@@ -125,6 +122,12 @@
 		FA1CB7B017798DD0004C0F45 /* pointer-finger-hi.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7AE17798DD0004C0F45 /* pointer-finger-hi.png */; };
 		FA1CB7B3177B78F6004C0F45 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CB7B2177B78F6004C0F45 /* Game.m */; };
 		FA1CB7B4177B78F6004C0F45 /* Game.m in Sources */ = {isa = PBXBuildFile; fileRef = FA1CB7B2177B78F6004C0F45 /* Game.m */; };
+		FA1CB7CE1784B39D004C0F45 /* Boy_button_avatar_no_photo_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7CD1784B39D004C0F45 /* Boy_button_avatar_no_photo_iphone.png */; };
+		FA1CB7D01784B3C7004C0F45 /* Boy_button_info_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7CF1784B3C7004C0F45 /* Boy_button_info_iphone.png */; };
+		FA1CB7D21784B426004C0F45 /* Boy_button_time_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7D11784B426004C0F45 /* Boy_button_time_iphone.png */; };
+		FA1CB7D41784B583004C0F45 /* Boy_button_avatar_no_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7D31784B583004C0F45 /* Boy_button_avatar_no_photo.png */; };
+		FA1CB7D61784B5A0004C0F45 /* Boy_button_info.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7D51784B59F004C0F45 /* Boy_button_info.png */; };
+		FA1CB7D81784B5B9004C0F45 /* Boy_button_time.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB7D71784B5B9004C0F45 /* Boy_button_time.png */; };
 		FA3B31A4175E41F50061AE68 /* button_back_in_ game.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3B31A3175E41F50061AE68 /* button_back_in_ game.png */; };
 		FA3B31A6175E426E0061AE68 /* button_your_name.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3B31A5175E426E0061AE68 /* button_your_name.png */; };
 		FA3B31A9175E44150061AE68 /* button_records_my.png in Resources */ = {isa = PBXBuildFile; fileRef = FA3B31A7175E44150061AE68 /* button_records_my.png */; };
@@ -276,7 +279,6 @@
 		FA145A8F17707093005ACA7F /* Boy_button_avatar-frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Boy_button_avatar-frame.png"; sourceTree = "<group>"; };
 		FA145A9017707093005ACA7F /* Boy_button_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_avatar.png; sourceTree = "<group>"; };
 		FA145A9117707093005ACA7F /* Boy_button_avatar_frame_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_avatar_frame_photo.png; sourceTree = "<group>"; };
-		FA145A9217707093005ACA7F /* Boy_button_avatar_no_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_avatar_no_photo.png; sourceTree = "<group>"; };
 		FA145A9317707093005ACA7F /* Boy_button_begin_game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_begin_game.png; sourceTree = "<group>"; };
 		FA145A9417707093005ACA7F /* Boy_button_begin_new_game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_begin_new_game.png; sourceTree = "<group>"; };
 		FA145A9517707093005ACA7F /* Boy_button_car-violet_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Boy_button_car-violet_active.png"; sourceTree = "<group>"; };
@@ -299,10 +301,8 @@
 		FA145AA617707093005ACA7F /* Boy_button_car_yellow_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_car_yellow_active.png; sourceTree = "<group>"; };
 		FA145AA717707093005ACA7F /* Boy_button_car_yellow_game_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_car_yellow_game_active.png; sourceTree = "<group>"; };
 		FA145AA817707093005ACA7F /* Boy_button_car_yellow_no_active.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_car_yellow_no_active.png; sourceTree = "<group>"; };
-		FA145AA917707093005ACA7F /* Boy_button_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_info.png; sourceTree = "<group>"; };
 		FA145AAA17707093005ACA7F /* Boy_button_lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_lock.png; sourceTree = "<group>"; };
 		FA145AAB17707093005ACA7F /* Boy_button_no_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_no_car.png; sourceTree = "<group>"; };
-		FA145AAC17707093005ACA7F /* Boy_button_time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_time.png; sourceTree = "<group>"; };
 		FA145AAD17707093005ACA7F /* Boy_button_training.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_training.png; sourceTree = "<group>"; };
 		FA145AAF17707093005ACA7F /* Boy_button_training_lock_car.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_training_lock_car.png; sourceTree = "<group>"; };
 		FA145AB017707093005ACA7F /* Boy_Main_page_fon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_Main_page_fon.png; sourceTree = "<group>"; };
@@ -362,6 +362,12 @@
 		FA1CB7AE17798DD0004C0F45 /* pointer-finger-hi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "pointer-finger-hi.png"; path = "PicsBoys/pointer-finger-hi.png"; sourceTree = "<group>"; };
 		FA1CB7B1177B78F6004C0F45 /* Game.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Game.h; sourceTree = "<group>"; };
 		FA1CB7B2177B78F6004C0F45 /* Game.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Game.m; sourceTree = "<group>"; };
+		FA1CB7CD1784B39D004C0F45 /* Boy_button_avatar_no_photo_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_avatar_no_photo_iphone.png; sourceTree = "<group>"; };
+		FA1CB7CF1784B3C7004C0F45 /* Boy_button_info_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_info_iphone.png; sourceTree = "<group>"; };
+		FA1CB7D11784B426004C0F45 /* Boy_button_time_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_time_iphone.png; sourceTree = "<group>"; };
+		FA1CB7D31784B583004C0F45 /* Boy_button_avatar_no_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_avatar_no_photo.png; sourceTree = "<group>"; };
+		FA1CB7D51784B59F004C0F45 /* Boy_button_info.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_info.png; sourceTree = "<group>"; };
+		FA1CB7D71784B5B9004C0F45 /* Boy_button_time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_time.png; sourceTree = "<group>"; };
 		FA3B31A3175E41F50061AE68 /* button_back_in_ game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_back_in_ game.png"; sourceTree = "<group>"; };
 		FA3B31A5175E426E0061AE68 /* button_your_name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_your_name.png; sourceTree = "<group>"; };
 		FA3B31A7175E44150061AE68 /* button_records_my.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_records_my.png; sourceTree = "<group>"; };
@@ -527,6 +533,12 @@
 		FA145A6017707093005ACA7F /* PicsBoys */ = {
 			isa = PBXGroup;
 			children = (
+				FA1CB7D71784B5B9004C0F45 /* Boy_button_time.png */,
+				FA1CB7D51784B59F004C0F45 /* Boy_button_info.png */,
+				FA1CB7D31784B583004C0F45 /* Boy_button_avatar_no_photo.png */,
+				FA1CB7D11784B426004C0F45 /* Boy_button_time_iphone.png */,
+				FA1CB7CF1784B3C7004C0F45 /* Boy_button_info_iphone.png */,
+				FA1CB7CD1784B39D004C0F45 /* Boy_button_avatar_no_photo_iphone.png */,
 				FA1CB79C17782226004C0F45 /* check.png */,
 				FA1CB78717746045004C0F45 /* Boy_button_fon_V_iphone.png */,
 				FA1CB78517745E41004C0F45 /* Boy_Main_page_fon_notebook_iphone.png */,
@@ -557,7 +569,6 @@
 				FA145A9017707093005ACA7F /* Boy_button_avatar.png */,
 				FA1CB7A717791804004C0F45 /* Close_Box_Red.png */,
 				FA145A9117707093005ACA7F /* Boy_button_avatar_frame_photo.png */,
-				FA145A9217707093005ACA7F /* Boy_button_avatar_no_photo.png */,
 				FA145A9317707093005ACA7F /* Boy_button_begin_game.png */,
 				FA145A9417707093005ACA7F /* Boy_button_begin_new_game.png */,
 				FA145A9517707093005ACA7F /* Boy_button_car-violet_active.png */,
@@ -580,10 +591,8 @@
 				FA145AA617707093005ACA7F /* Boy_button_car_yellow_active.png */,
 				FA145AA717707093005ACA7F /* Boy_button_car_yellow_game_active.png */,
 				FA145AA817707093005ACA7F /* Boy_button_car_yellow_no_active.png */,
-				FA145AA917707093005ACA7F /* Boy_button_info.png */,
 				FA145AAA17707093005ACA7F /* Boy_button_lock.png */,
 				FA145AAB17707093005ACA7F /* Boy_button_no_car.png */,
-				FA145AAC17707093005ACA7F /* Boy_button_time.png */,
 				FA145AAD17707093005ACA7F /* Boy_button_training.png */,
 				FA145AAF17707093005ACA7F /* Boy_button_training_lock_car.png */,
 				FA145AB017707093005ACA7F /* Boy_Main_page_fon.png */,
@@ -1016,7 +1025,6 @@
 				FA145AEC17707093005ACA7F /* Boy_button_avatar-frame.png in Resources */,
 				FA145AED17707093005ACA7F /* Boy_button_avatar.png in Resources */,
 				FA145AEE17707093005ACA7F /* Boy_button_avatar_frame_photo.png in Resources */,
-				FA145AEF17707093005ACA7F /* Boy_button_avatar_no_photo.png in Resources */,
 				FA145AF017707093005ACA7F /* Boy_button_begin_game.png in Resources */,
 				FA145AF117707093005ACA7F /* Boy_button_begin_new_game.png in Resources */,
 				FA145AF217707093005ACA7F /* Boy_button_car-violet_active.png in Resources */,
@@ -1039,10 +1047,8 @@
 				FA145B0317707093005ACA7F /* Boy_button_car_yellow_active.png in Resources */,
 				FA145B0417707093005ACA7F /* Boy_button_car_yellow_game_active.png in Resources */,
 				FA145B0517707093005ACA7F /* Boy_button_car_yellow_no_active.png in Resources */,
-				FA145B0617707093005ACA7F /* Boy_button_info.png in Resources */,
 				FA145B0717707093005ACA7F /* Boy_button_lock.png in Resources */,
 				FA145B0817707093005ACA7F /* Boy_button_no_car.png in Resources */,
-				FA145B0917707093005ACA7F /* Boy_button_time.png in Resources */,
 				FA145B0A17707093005ACA7F /* Boy_button_training.png in Resources */,
 				FA145B0C17707093005ACA7F /* Boy_button_training_lock_car.png in Resources */,
 				FA145B0D17707093005ACA7F /* Boy_Main_page_fon.png in Resources */,
@@ -1088,6 +1094,12 @@
 				FA1CB7A6177915C0004C0F45 /* tapFinger.png in Resources */,
 				FA1CB7A917791804004C0F45 /* Close_Box_Red.png in Resources */,
 				FA1CB7B017798DD0004C0F45 /* pointer-finger-hi.png in Resources */,
+				FA1CB7CE1784B39D004C0F45 /* Boy_button_avatar_no_photo_iphone.png in Resources */,
+				FA1CB7D01784B3C7004C0F45 /* Boy_button_info_iphone.png in Resources */,
+				FA1CB7D21784B426004C0F45 /* Boy_button_time_iphone.png in Resources */,
+				FA1CB7D41784B583004C0F45 /* Boy_button_avatar_no_photo.png in Resources */,
+				FA1CB7D61784B5A0004C0F45 /* Boy_button_info.png in Resources */,
+				FA1CB7D81784B5B9004C0F45 /* Boy_button_time.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
