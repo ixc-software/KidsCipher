@@ -14,11 +14,6 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>Ipad_logo144_144 _girl_4_144x144.png</string>
-				<string>Ipad_logo144_144 _girl_72x72.png</string>
-				<string>Ipad_logo144_144 _girl_4_72x72.png</string>
-				<string>Ipad_logo144_144 _girl_4_114x114.png</string>
-				<string>Ipad_logo144_144 _girl_4_57x57.png</string>
 				<string>Ipad_logo1024_1024 _girl_57x57.png</string>
 				<string>Ipad_logo1024_1024 _girl_114x114.png</string>
 				<string>Ipad_logo1024_1024 _girl_72x72.png</string>

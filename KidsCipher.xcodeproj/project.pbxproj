@@ -195,6 +195,14 @@
 		FADBE8FA1732369F00E3DA8D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */; };
 		FADBE8FB1732369F00E3DA8D /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FADBE8F81732369F00E3DA8D /* Model.xcdatamodeld */; };
 		FADBE90417323B5800E3DA8D /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FADBE8F61732367500E3DA8D /* CoreData.framework */; };
+		FADC07BB178C1922005499B5 /* Ipad_logo1024_1024 _girl_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = FADC07BA178C1922005499B5 /* Ipad_logo1024_1024 _girl_57x57.png */; };
+		FADC07BD178C1926005499B5 /* Ipad_logo1024_1024 _girl_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FADC07BC178C1926005499B5 /* Ipad_logo1024_1024 _girl_114x114.png */; };
+		FADC07BF178C192B005499B5 /* Ipad_logo1024_1024 _girl_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = FADC07BE178C192B005499B5 /* Ipad_logo1024_1024 _girl_72x72.png */; };
+		FADC07C1178C192F005499B5 /* Ipad_logo1024_1024 _girl_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = FADC07C0178C192F005499B5 /* Ipad_logo1024_1024 _girl_144x144.png */; };
+		FADC07C3178C19D8005499B5 /* Ipad_logo1024_1024_boy_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = FADC07C2178C19D8005499B5 /* Ipad_logo1024_1024_boy_57x57.png */; };
+		FADC07C5178C19DB005499B5 /* Ipad_logo1024_1024_boy_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FADC07C4178C19DB005499B5 /* Ipad_logo1024_1024_boy_114x114.png */; };
+		FADC07C7178C19E0005499B5 /* Ipad_logo1024_1024_boy_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = FADC07C6178C19E0005499B5 /* Ipad_logo1024_1024_boy_72x72.png */; };
+		FADC07C9178C19E3005499B5 /* Ipad_logo1024_1024_boy_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = FADC07C8178C19E3005499B5 /* Ipad_logo1024_1024_boy_144x144.png */; };
 		FAE403F3173618DE002F59C6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F2173618DE002F59C6 /* AddressBook.framework */; };
 		FAE403F4173618F3002F59C6 /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F2173618DE002F59C6 /* AddressBook.framework */; };
 		FAE403F6173618FA002F59C6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F5173618FA002F59C6 /* Security.framework */; };
@@ -219,14 +227,6 @@
 		FAE54F361733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F341733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 */; };
 		FAE54F381733DBFD00595565 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE54F371733DBFD00595565 /* AVFoundation.framework */; };
 		FAE54F391733DC0600595565 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE54F371733DBFD00595565 /* AVFoundation.framework */; };
-		FAE54FB21736018A00595565 /* Ipad_logo1024_1024 _girl_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE54FB11736018A00595565 /* Ipad_logo1024_1024 _girl_57x57.png */; };
-		FAE54FB41736019100595565 /* Ipad_logo1024_1024 _girl_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE54FB31736019100595565 /* Ipad_logo1024_1024 _girl_114x114.png */; };
-		FAE54FB61736019700595565 /* Ipad_logo1024_1024 _girl_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE54FB51736019700595565 /* Ipad_logo1024_1024 _girl_72x72.png */; };
-		FAE54FB81736019E00595565 /* Ipad_logo1024_1024 _girl_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE54FB71736019E00595565 /* Ipad_logo1024_1024 _girl_144x144.png */; };
-		FAE54FBA173601A800595565 /* Ipad_logo1024_1024_boy_144x144.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE54FB9173601A800595565 /* Ipad_logo1024_1024_boy_144x144.png */; };
-		FAE54FBC173601AD00595565 /* Ipad_logo1024_1024_boy_72x72.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE54FBB173601AD00595565 /* Ipad_logo1024_1024_boy_72x72.png */; };
-		FAE54FBE173601B700595565 /* Ipad_logo1024_1024_boy_114x114.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE54FBD173601B700595565 /* Ipad_logo1024_1024_boy_114x114.png */; };
-		FAE54FC0173601BB00595565 /* Ipad_logo1024_1024_boy_57x57.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE54FBF173601BB00595565 /* Ipad_logo1024_1024_boy_57x57.png */; };
 		FAE6F3C7177082060078D0FC /* active_field_game_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE6F3C6177082060078D0FC /* active_field_game_iphone.png */; };
 		FAE6F3C9177082350078D0FC /* lock_field_game_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = FAE6F3C8177082350078D0FC /* lock_field_game_iphone.png */; };
 		FAF3438A172FC3E900C282D5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAA369B172E4D7A00C55968 /* main.m */; };
@@ -451,6 +451,14 @@
 		FABCB8A5173397F300907198 /* Row.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Row.m; sourceTree = "<group>"; };
 		FADBE8F61732367500E3DA8D /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		FADBE8F91732369F00E3DA8D /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		FADC07BA178C1922005499B5 /* Ipad_logo1024_1024 _girl_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo1024_1024 _girl_57x57.png"; sourceTree = "<group>"; };
+		FADC07BC178C1926005499B5 /* Ipad_logo1024_1024 _girl_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo1024_1024 _girl_114x114.png"; sourceTree = "<group>"; };
+		FADC07BE178C192B005499B5 /* Ipad_logo1024_1024 _girl_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo1024_1024 _girl_72x72.png"; sourceTree = "<group>"; };
+		FADC07C0178C192F005499B5 /* Ipad_logo1024_1024 _girl_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo1024_1024 _girl_144x144.png"; sourceTree = "<group>"; };
+		FADC07C2178C19D8005499B5 /* Ipad_logo1024_1024_boy_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo1024_1024_boy_57x57.png; sourceTree = "<group>"; };
+		FADC07C4178C19DB005499B5 /* Ipad_logo1024_1024_boy_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo1024_1024_boy_114x114.png; sourceTree = "<group>"; };
+		FADC07C6178C19E0005499B5 /* Ipad_logo1024_1024_boy_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo1024_1024_boy_72x72.png; sourceTree = "<group>"; };
+		FADC07C8178C19E3005499B5 /* Ipad_logo1024_1024_boy_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo1024_1024_boy_144x144.png; sourceTree = "<group>"; };
 		FAE403F2173618DE002F59C6 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		FAE403F5173618FA002F59C6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FAE403F817361910002F59C6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -465,14 +473,6 @@
 		FAE54F371733DBFD00595565 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		FAE54FAF1735FF6500595565 /* Ipad_logo1024_1024 _girl.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Ipad_logo1024_1024 _girl.png"; sourceTree = "<group>"; };
 		FAE54FB01735FF7100595565 /* Ipad_logo1024_1024_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ipad_logo1024_1024_boy.png; sourceTree = "<group>"; };
-		FAE54FB11736018A00595565 /* Ipad_logo1024_1024 _girl_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo1024_1024 _girl_57x57.png"; path = "../../Ipad_logo1024_1024 _girl_57x57.png"; sourceTree = "<group>"; };
-		FAE54FB31736019100595565 /* Ipad_logo1024_1024 _girl_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo1024_1024 _girl_114x114.png"; path = "../../Ipad_logo1024_1024 _girl_114x114.png"; sourceTree = "<group>"; };
-		FAE54FB51736019700595565 /* Ipad_logo1024_1024 _girl_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo1024_1024 _girl_72x72.png"; path = "../../Ipad_logo1024_1024 _girl_72x72.png"; sourceTree = "<group>"; };
-		FAE54FB71736019E00595565 /* Ipad_logo1024_1024 _girl_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ipad_logo1024_1024 _girl_144x144.png"; path = "../../Ipad_logo1024_1024 _girl_144x144.png"; sourceTree = "<group>"; };
-		FAE54FB9173601A800595565 /* Ipad_logo1024_1024_boy_144x144.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo1024_1024_boy_144x144.png; path = ../../Ipad_logo1024_1024_boy_144x144.png; sourceTree = "<group>"; };
-		FAE54FBB173601AD00595565 /* Ipad_logo1024_1024_boy_72x72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo1024_1024_boy_72x72.png; path = ../../Ipad_logo1024_1024_boy_72x72.png; sourceTree = "<group>"; };
-		FAE54FBD173601B700595565 /* Ipad_logo1024_1024_boy_114x114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo1024_1024_boy_114x114.png; path = ../../Ipad_logo1024_1024_boy_114x114.png; sourceTree = "<group>"; };
-		FAE54FBF173601BB00595565 /* Ipad_logo1024_1024_boy_57x57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Ipad_logo1024_1024_boy_57x57.png; path = ../../Ipad_logo1024_1024_boy_57x57.png; sourceTree = "<group>"; };
 		FAE6F3C6177082060078D0FC /* active_field_game_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = active_field_game_iphone.png; sourceTree = "<group>"; };
 		FAE6F3C8177082350078D0FC /* lock_field_game_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock_field_game_iphone.png; sourceTree = "<group>"; };
 		FAF343AE172FC3E900C282D5 /* KidsCipherB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsCipherB.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -614,6 +614,14 @@
 		FAAA3683172E4D7A00C55968 = {
 			isa = PBXGroup;
 			children = (
+				FADC07C8178C19E3005499B5 /* Ipad_logo1024_1024_boy_144x144.png */,
+				FADC07C6178C19E0005499B5 /* Ipad_logo1024_1024_boy_72x72.png */,
+				FADC07C4178C19DB005499B5 /* Ipad_logo1024_1024_boy_114x114.png */,
+				FADC07C2178C19D8005499B5 /* Ipad_logo1024_1024_boy_57x57.png */,
+				FADC07C0178C192F005499B5 /* Ipad_logo1024_1024 _girl_144x144.png */,
+				FADC07BE178C192B005499B5 /* Ipad_logo1024_1024 _girl_72x72.png */,
+				FADC07BC178C1926005499B5 /* Ipad_logo1024_1024 _girl_114x114.png */,
+				FADC07BA178C1922005499B5 /* Ipad_logo1024_1024 _girl_57x57.png */,
 				FA145A5E1770702D005ACA7F /* Default-568h@2x.png */,
 				FAAA3695172E4D7A00C55968 /* KidsCipher */,
 				FAAA368E172E4D7A00C55968 /* Frameworks */,
@@ -761,14 +769,6 @@
 				FA614ED8174FFA190040E33D /* button_box_field_game.png */,
 				FA0C256A174E793A00C942BC /* button_info.png */,
 				FA0C256E174E847E00C942BC /* lock_field_game.png */,
-				FAE54FBF173601BB00595565 /* Ipad_logo1024_1024_boy_57x57.png */,
-				FAE54FBD173601B700595565 /* Ipad_logo1024_1024_boy_114x114.png */,
-				FAE54FBB173601AD00595565 /* Ipad_logo1024_1024_boy_72x72.png */,
-				FAE54FB9173601A800595565 /* Ipad_logo1024_1024_boy_144x144.png */,
-				FAE54FB71736019E00595565 /* Ipad_logo1024_1024 _girl_144x144.png */,
-				FAE54FB51736019700595565 /* Ipad_logo1024_1024 _girl_72x72.png */,
-				FAE54FB31736019100595565 /* Ipad_logo1024_1024 _girl_114x114.png */,
-				FAE54FB11736018A00595565 /* Ipad_logo1024_1024 _girl_57x57.png */,
 				FAE54FB01735FF7100595565 /* Ipad_logo1024_1024_boy.png */,
 				FAE54FAF1735FF6500595565 /* Ipad_logo1024_1024 _girl.png */,
 				FA4580FA172EE41800180886 /* ava.png */,
@@ -914,10 +914,6 @@
 				FAE54F301733DA7600595565 /* kidscipher_fix_image_inside_row.m4a in Resources */,
 				FAE54F321733DA7600595565 /* kidscipher_start_drag.m4a in Resources */,
 				FAE54F351733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 in Resources */,
-				FAE54FB21736018A00595565 /* Ipad_logo1024_1024 _girl_57x57.png in Resources */,
-				FAE54FB41736019100595565 /* Ipad_logo1024_1024 _girl_114x114.png in Resources */,
-				FAE54FB61736019700595565 /* Ipad_logo1024_1024 _girl_72x72.png in Resources */,
-				FAE54FB81736019E00595565 /* Ipad_logo1024_1024 _girl_144x144.png in Resources */,
 				FA9267EF17361CC60029ACB5 /* webcob.p12 in Resources */,
 				FA0C255B174E77D200C942BC /* button_flower_game.png in Resources */,
 				FA0C2560174E78F900C942BC /* button_flower_blue_active.png in Resources */,
@@ -984,6 +980,10 @@
 				FA1CB7A5177915C0004C0F45 /* tapFinger.png in Resources */,
 				FA1CB7A817791804004C0F45 /* Close_Box_Red.png in Resources */,
 				FA1CB7AF17798DD0004C0F45 /* pointer-finger-hi.png in Resources */,
+				FADC07BB178C1922005499B5 /* Ipad_logo1024_1024 _girl_57x57.png in Resources */,
+				FADC07BD178C1926005499B5 /* Ipad_logo1024_1024 _girl_114x114.png in Resources */,
+				FADC07BF178C192B005499B5 /* Ipad_logo1024_1024 _girl_72x72.png in Resources */,
+				FADC07C1178C192F005499B5 /* Ipad_logo1024_1024 _girl_144x144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1011,10 +1011,6 @@
 				FAE54F311733DA7600595565 /* kidscipher_fix_image_inside_row.m4a in Resources */,
 				FAE54F331733DA7600595565 /* kidscipher_start_drag.m4a in Resources */,
 				FAE54F361733DAEC00595565 /* kidscipher_phone_music_vmeste_veselo_shagat.mp3 in Resources */,
-				FAE54FBA173601A800595565 /* Ipad_logo1024_1024_boy_144x144.png in Resources */,
-				FAE54FBC173601AD00595565 /* Ipad_logo1024_1024_boy_72x72.png in Resources */,
-				FAE54FBE173601B700595565 /* Ipad_logo1024_1024_boy_114x114.png in Resources */,
-				FAE54FC0173601BB00595565 /* Ipad_logo1024_1024_boy_57x57.png in Resources */,
 				FA9267F017361CC60029ACB5 /* webcob.p12 in Resources */,
 				FA0C255C174E77D200C942BC /* button_flower_game.png in Resources */,
 				FA3B31C4175E745E0061AE68 /* MainStoryboard_Boys_iPad.storyboard in Resources */,
@@ -1100,6 +1096,10 @@
 				FA1CB7D41784B583004C0F45 /* Boy_button_avatar_no_photo.png in Resources */,
 				FA1CB7D61784B5A0004C0F45 /* Boy_button_info.png in Resources */,
 				FA1CB7D81784B5B9004C0F45 /* Boy_button_time.png in Resources */,
+				FADC07C3178C19D8005499B5 /* Ipad_logo1024_1024_boy_57x57.png in Resources */,
+				FADC07C5178C19DB005499B5 /* Ipad_logo1024_1024_boy_114x114.png in Resources */,
+				FADC07C7178C19E0005499B5 /* Ipad_logo1024_1024_boy_72x72.png in Resources */,
+				FADC07C9178C19E3005499B5 /* Ipad_logo1024_1024_boy_144x144.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1254,8 +1254,8 @@
 		FAAA36B3172E4D7A00C55968 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
@@ -1275,8 +1275,8 @@
 		FAAA36B4172E4D7A00C55968 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
@@ -1296,8 +1296,8 @@
 		FAF343AC172FC3E900C282D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;
@@ -1317,8 +1317,8 @@
 		FAF343AD172FC3E900C282D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;

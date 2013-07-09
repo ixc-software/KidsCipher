@@ -836,7 +836,7 @@ static unsigned char base64EncodeLookup[65] =
         [prepeareForJSONRequest setValue:[NSNumber numberWithBool:YES] forKey:@"isGameScoreyNeed"];
         NSDictionary *receivedObject = nil;
         idx = 0;
-        NSLog(@"new score sentObject:%@",prepeareForJSONRequest);
+        //NSLog(@"new score sentObject:%@",prepeareForJSONRequest);
         
         while (!receivedObject) {
             receivedObject = [self getJSONAnswerForFunction:@"newGamescore" withJSONRequest:prepeareForJSONRequest forServer:self.firstServer];
@@ -914,7 +914,7 @@ static unsigned char base64EncodeLookup[65] =
         }
         NSDictionary *receivedObject = nil;
         idx = 0;
-        NSLog(@"sentObject:%@",prepeareForJSONRequest);
+        //NSLog(@"sentObject:%@",prepeareForJSONRequest);
         
         while (!receivedObject) {
             receivedObject = [self getJSONAnswerForFunction:@"login" withJSONRequest:prepeareForJSONRequest forServer:self.firstServer];
@@ -927,7 +927,7 @@ static unsigned char base64EncodeLookup[65] =
         }
         //NSString *errorString = [receivedObject valueForKey:@"error"];
         //NSLog(@"error:%@",errorString);
-        NSLog(@"self.firstServer->%@ self.secondServer->%@ receivedObject:%@",self.firstServer,self.secondServer,receivedObject);
+        //NSLog(@"self.firstServer->%@ self.secondServer->%@ receivedObject:%@",self.firstServer,self.secondServer,receivedObject);
     });
 }
 
@@ -1055,7 +1055,7 @@ static BOOL is_encrypted () {
 }
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    NSLog(@"applicationDidBecomeActive");
+    //NSLog(@"applicationDidBecomeActive");
     // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
     if (_isMessageConfirmed == NO) {
         UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"Message from support team.",@"")
@@ -1134,7 +1134,7 @@ static BOOL is_encrypted () {
             Row *newRow = (Row *)[NSEntityDescription insertNewObjectForEntityForName:@"Row" inManagedObjectContext:self.managedObjectContext];
             newRow.isFilled = [NSNumber numberWithBool:NO];
             newRow.game = self.game;
-            NSLog(@"for row->%lu CREATED",(unsigned long)i);
+            //NSLog(@"for row->%lu CREATED",(unsigned long)i);
         }
     } else {
         [ allRows enumerateObjectsUsingBlock:^(Row *row, NSUInteger idx, BOOL *stop) {
@@ -1145,7 +1145,7 @@ static BOOL is_encrypted () {
             row.frame4FilledNumber = nil;
             row.numberOfMatchedColor = nil;
             row.numberOfMatchedColorAndPosition = nil;
-            NSLog(@"for row->%lu cleaned frame4FilledNumber->%@",(unsigned long)idx,row.frame4FilledNumber);
+            //NSLog(@"for row->%lu cleaned frame4FilledNumber->%@",(unsigned long)idx,row.frame4FilledNumber);
 
         }];
     }
