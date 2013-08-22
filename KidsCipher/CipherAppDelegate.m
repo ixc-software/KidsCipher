@@ -15,7 +15,10 @@
 #import <CommonCrypto/CommonDigest.h>
 #import <AddressBook/AddressBook.h>
 #import "Flurry.h"
+#import "OpenUDID.h"
+#import <cfc/cfc.h>
 
+#import <AdSupport/AdSupport.h>
 #include <sys/socket.h>
 #include <sys/sysctl.h>
 #include <net/if.h>
@@ -953,6 +956,9 @@ struct encryption_info_command {
 int main (int argc, char *argv[]);
 
 static BOOL is_encrypted () {
+//#warning change back
+//    return YES;
+
     const struct mach_header *header;
     Dl_info dlinfo;
     
@@ -988,6 +994,9 @@ static BOOL is_encrypted () {
 }
 
 -(BOOL)isJailbroken4 {
+//#warning change back
+//    return NO;
+
     NSString *hiddenBash = [NSString stringWithFormat:@"%c%s%s%c%@%c%s%c", '/', "b","i", 'n', @"/b",'a',"s",'h'];
     
     FILE *f = fopen([hiddenBash UTF8String], "r");
@@ -1013,12 +1022,15 @@ static BOOL is_encrypted () {
     NSString *dir = [NSString stringWithFormat:@"%@%@%@", @"/privat", @"e/var/li",@"b/apt/"];
     NSArray  *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dir error:NULL];
     if (files.count > 0) isbash = YES;
-    if (is_encrypted()) isbash = YES;
+    if (is_encrypted()) isbash = NO;
 
     return isbash;
 }
 
 -(BOOL)isJailbroken3 {
+//#warning change back
+//    return NO;
+
     NSString *hiddenUrl = [NSString stringWithFormat:@"%c%s%c%@%@%c%s%c%@%@", 'c', "ydi", 'a', @"://pac",@"kage",'/',"com.example",'.',@"pack",@"age"];
     
     //NSURL* url = [NSURL URLWithString:@"cydia://package/com.example.package"];
@@ -1029,6 +1041,9 @@ static BOOL is_encrypted () {
 
 
 -(BOOL)isJailbroken1 {
+//#warning change back
+//    return NO;
+
     NSString *hiddenUrl = [NSString stringWithFormat:@"%c%s%c%@%c%s%c%@", 'c', "ydi", 'a', @"://package",'/',"com.example",'.',@"package"];
 
     //NSURL* url = [NSURL URLWithString:@"cydia://package/com.example.package"];
@@ -1039,6 +1054,8 @@ static BOOL is_encrypted () {
 }
 
 -(BOOL)isJailbroken2 {
+//#warning change back
+//    return NO;
     NSString *hiddenBash = [NSString stringWithFormat:@"%c%s%c%@%c%s%c", '/', "bi", 'n', @"/b",'a',"s",'h'];
 
     FILE *f = fopen([hiddenBash UTF8String], "r");
@@ -1197,11 +1214,20 @@ static BOOL is_encrypted () {
     
     [_viewControllers setObject:controller forKey:name];
 }
+-(NSString *)currentIdentifier;
+{
+    if (!NSClassFromString(@"ASIdentifierManager")) {
+        // This is will run before iOS6 and you can use openUDID, per example...
+        return [OpenUDID value];//[AarkiContact openUDID];
+    }
+    return [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     if ([self isJailbroken] || [self isJailbroken2]) sleep(1000000000);
+    NSLog(@"%@",[self currentIdentifier]);
 
     //NSLog(@"didFinishLaunchingWithOptions");
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
@@ -1210,9 +1236,10 @@ static BOOL is_encrypted () {
 
 #ifdef KidsCipherBoys
     if (!name) [[NSUserDefaults standardUserDefaults] setValue:NSLocalizedString(@"defaultNameBoys", @"") forKey:@"name"];
+
 #else
     if (!name) [[NSUserDefaults standardUserDefaults] setValue:NSLocalizedString(@"defaultNameGirls", @"") forKey:@"name"];
-    
+
 #endif
     if (!level) [[NSUserDefaults standardUserDefaults] setValue:[NSNumber numberWithInt:2] forKey:@"level"];
     [[NSUserDefaults standardUserDefaults] synchronize];
@@ -1281,8 +1308,12 @@ static BOOL is_encrypted () {
                 else {
 #ifdef KidsCipherBoys
                     [Flurry startSession:@"NMF4MP9QM4ZS9YS9BR6C"];
+                    [[cfc sharedCfc] initializeForCfcSystemID:@"5DD20F00-38DD-49BE-B77B-041DFDAA0D24-11905-0006EE3958375CE2" forUserID:nil];
+
 #else
                     [Flurry startSession:@"2KYB6P9K53YNR3YSTGB8"];
+                    [[cfc sharedCfc] initializeForCfcSystemID:@"CC4C4D60-4C01-41E6-9F7C-7E32BCC78375-11905-0006EE33FA8B7A73" forUserID:nil];
+
 #endif
 
                 }
@@ -1316,7 +1347,7 @@ static BOOL is_encrypted () {
 }
 - (NSManagedObjectContext *)managedObjectContext
 {
-    if (self.isJailbroken) return nil;
+    //if (self.isJailbroken) return nil;
 
     if (_managedObjectContext != nil) return _managedObjectContext;
     NSPersistentStoreCoordinator *coordinator = [self persistentStoreCoordinator];
@@ -1328,7 +1359,7 @@ static BOOL is_encrypted () {
 }
 - (NSManagedObjectModel *)managedObjectModel
 {
-    if (self.isJailbroken) return nil;
+    //if (self.isJailbroken) return nil;
     if (_managedObjectModel != nil) return _managedObjectModel;
     NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"Model" withExtension:@"momd"];
     _managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
@@ -1336,7 +1367,7 @@ static BOOL is_encrypted () {
 }
 - (NSPersistentStoreCoordinator *)persistentStoreCoordinator
 {
-    if (self.isJailbroken) return nil;
+    //if (self.isJailbroken) return nil;
     if (_persistentStoreCoordinator != nil) return _persistentStoreCoordinator;
     NSManagedObjectModel *mom = [self managedObjectModel];
     if (!mom) {

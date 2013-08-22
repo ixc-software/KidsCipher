@@ -169,8 +169,12 @@
 		FA841EAC1761234800BBEE90 /* button_fon_all_records_G_02.png in Resources */ = {isa = PBXBuildFile; fileRef = FA841EAB1761234800BBEE90 /* button_fon_all_records_G_02.png */; };
 		FA841EAE1761235F00BBEE90 /* button_fon_all_records_V_02.png in Resources */ = {isa = PBXBuildFile; fileRef = FA841EAD1761235F00BBEE90 /* button_fon_all_records_V_02.png */; };
 		FA841EB01761242F00BBEE90 /* button_cup_fon.png in Resources */ = {isa = PBXBuildFile; fileRef = FA841EAF1761242F00BBEE90 /* button_cup_fon.png */; };
+		FA87B63617907EE8004E08D5 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87B63517907EE8004E08D5 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA87B63717907EE8004E08D5 /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = FA87B63517907EE8004E08D5 /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		FA87B63917907F23004E08D5 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA87B63817907F23004E08D5 /* AdSupport.framework */; };
 		FA9267EF17361CC60029ACB5 /* webcob.p12 in Resources */ = {isa = PBXBuildFile; fileRef = FA9267EE17361CC60029ACB5 /* webcob.p12 */; };
 		FA9267F017361CC60029ACB5 /* webcob.p12 in Resources */ = {isa = PBXBuildFile; fileRef = FA9267EE17361CC60029ACB5 /* webcob.p12 */; };
+		FAA0A4D517932C15008169F3 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA87B63817907F23004E08D5 /* AdSupport.framework */; };
 		FAAA3690172E4D7A00C55968 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA368F172E4D7A00C55968 /* UIKit.framework */; };
 		FAAA3692172E4D7A00C55968 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA3691172E4D7A00C55968 /* Foundation.framework */; };
 		FAAA3694172E4D7A00C55968 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAAA3693172E4D7A00C55968 /* CoreGraphics.framework */; };
@@ -209,6 +213,10 @@
 		FAE403F717361901002F59C6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F5173618FA002F59C6 /* Security.framework */; };
 		FAE403F917361910002F59C6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F817361910002F59C6 /* AudioToolbox.framework */; };
 		FAE403FA17361918002F59C6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F817361910002F59C6 /* AudioToolbox.framework */; };
+		FAE468061797BE36006BB11D /* cfc.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAE468041797BE36006BB11D /* cfc.bundle */; };
+		FAE468071797BE36006BB11D /* cfc.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAE468041797BE36006BB11D /* cfc.bundle */; };
+		FAE468081797BE36006BB11D /* cfc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE468051797BE36006BB11D /* cfc.framework */; };
+		FAE468091797BE36006BB11D /* cfc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE468051797BE36006BB11D /* cfc.framework */; };
 		FAE54F261733DA7600595565 /* kidscipher_game_zero_result.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */; };
 		FAE54F271733DA7600595565 /* kidscipher_game_zero_result.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */; };
 		FAE54F281733DA7600595565 /* kidscipher_game_success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F201733DA7600595565 /* kidscipher_game_success.m4a */; };
@@ -419,6 +427,9 @@
 		FA841EAB1761234800BBEE90 /* button_fon_all_records_G_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_fon_all_records_G_02.png; sourceTree = "<group>"; };
 		FA841EAD1761235F00BBEE90 /* button_fon_all_records_V_02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_fon_all_records_V_02.png; sourceTree = "<group>"; };
 		FA841EAF1761242F00BBEE90 /* button_cup_fon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_cup_fon.png; sourceTree = "<group>"; };
+		FA87B63417907EE8004E08D5 /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		FA87B63517907EE8004E08D5 /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		FA87B63817907F23004E08D5 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		FA9267EE17361CC60029ACB5 /* webcob.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = webcob.p12; sourceTree = "<group>"; };
 		FAAA368C172E4D7A00C55968 /* KidsCipher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KidsCipher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAA368F172E4D7A00C55968 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
@@ -462,6 +473,8 @@
 		FAE403F2173618DE002F59C6 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		FAE403F5173618FA002F59C6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FAE403F817361910002F59C6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		FAE468041797BE36006BB11D /* cfc.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = cfc.bundle; sourceTree = "<group>"; };
+		FAE468051797BE36006BB11D /* cfc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = cfc.framework; sourceTree = "<group>"; };
 		FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_zero_result.m4a; sourceTree = "<group>"; };
 		FAE54F201733DA7600595565 /* kidscipher_game_success.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_success.m4a; sourceTree = "<group>"; };
 		FAE54F211733DA7600595565 /* kidscipher_game_wrong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_wrong.m4a; sourceTree = "<group>"; };
@@ -486,6 +499,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAA0A4D517932C15008169F3 /* AdSupport.framework in Frameworks */,
 				FA145A3F176F4A8E005ACA7F /* SystemConfiguration.framework in Frameworks */,
 				FAE403F917361910002F59C6 /* AudioToolbox.framework in Frameworks */,
 				FAE403F717361901002F59C6 /* Security.framework in Frameworks */,
@@ -497,6 +511,7 @@
 				FAAA3692172E4D7A00C55968 /* Foundation.framework in Frameworks */,
 				FAAA3694172E4D7A00C55968 /* CoreGraphics.framework in Frameworks */,
 				FA145A3C176F488D005ACA7F /* libFlurry.a in Frameworks */,
+				FAE468081797BE36006BB11D /* cfc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +519,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA87B63917907F23004E08D5 /* AdSupport.framework in Frameworks */,
 				FA145B1B17707900005ACA7F /* SystemConfiguration.framework in Frameworks */,
 				FAE403FA17361918002F59C6 /* AudioToolbox.framework in Frameworks */,
 				FAE403F6173618FA002F59C6 /* Security.framework in Frameworks */,
@@ -515,6 +531,7 @@
 				FAF34393172FC3E900C282D5 /* Foundation.framework in Frameworks */,
 				FAF34394172FC3E900C282D5 /* CoreGraphics.framework in Frameworks */,
 				FA145A3D176F488D005ACA7F /* libFlurry.a in Frameworks */,
+				FAE468091797BE36006BB11D /* cfc.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,9 +631,12 @@
 		FAAA3683172E4D7A00C55968 = {
 			isa = PBXGroup;
 			children = (
+				FA87B63817907F23004E08D5 /* AdSupport.framework */,
 				FADC07C8178C19E3005499B5 /* Ipad_logo1024_1024_boy_144x144.png */,
 				FADC07C6178C19E0005499B5 /* Ipad_logo1024_1024_boy_72x72.png */,
 				FADC07C4178C19DB005499B5 /* Ipad_logo1024_1024_boy_114x114.png */,
+				FAE468041797BE36006BB11D /* cfc.bundle */,
+				FAE468051797BE36006BB11D /* cfc.framework */,
 				FADC07C2178C19D8005499B5 /* Ipad_logo1024_1024_boy_57x57.png */,
 				FADC07C0178C192F005499B5 /* Ipad_logo1024_1024 _girl_144x144.png */,
 				FADC07BE178C192B005499B5 /* Ipad_logo1024_1024 _girl_72x72.png */,
@@ -661,6 +681,8 @@
 			isa = PBXGroup;
 			children = (
 				FA145A36176F443A005ACA7F /* kidscipher_promo.rtf */,
+				FA87B63417907EE8004E08D5 /* OpenUDID.h */,
+				FA87B63517907EE8004E08D5 /* OpenUDID.m */,
 				FAAA369E172E4D7A00C55968 /* CipherAppDelegate.h */,
 				FAAA369F172E4D7A00C55968 /* CipherAppDelegate.m */,
 				FAAA36A7172E4D7A00C55968 /* MainStoryboard_iPhone.storyboard */,
@@ -984,6 +1006,7 @@
 				FADC07BD178C1926005499B5 /* Ipad_logo1024_1024 _girl_114x114.png in Resources */,
 				FADC07BF178C192B005499B5 /* Ipad_logo1024_1024 _girl_72x72.png in Resources */,
 				FADC07C1178C192F005499B5 /* Ipad_logo1024_1024 _girl_144x144.png in Resources */,
+				FAE468061797BE36006BB11D /* cfc.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1100,6 +1123,7 @@
 				FADC07C5178C19DB005499B5 /* Ipad_logo1024_1024_boy_114x114.png in Resources */,
 				FADC07C7178C19E0005499B5 /* Ipad_logo1024_1024_boy_72x72.png in Resources */,
 				FADC07C9178C19E3005499B5 /* Ipad_logo1024_1024_boy_144x144.png in Resources */,
+				FAE468071797BE36006BB11D /* cfc.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1122,6 +1146,7 @@
 				FA841E561760935C00BBEE90 /* GameScore.m in Sources */,
 				FA1CB7AC17792288004C0F45 /* AVLabel.m in Sources */,
 				FA1CB7B3177B78F6004C0F45 /* Game.m in Sources */,
+				FA87B63617907EE8004E08D5 /* OpenUDID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1141,6 +1166,7 @@
 				FA841E571760935C00BBEE90 /* GameScore.m in Sources */,
 				FA1CB7AD17792288004C0F45 /* AVLabel.m in Sources */,
 				FA1CB7B4177B78F6004C0F45 /* Game.m in Sources */,
+				FA87B63717907EE8004E08D5 /* OpenUDID.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1254,8 +1280,12 @@
 		FAAA36B3172E4D7A00C55968 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
@@ -1264,6 +1294,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Flurry\"",
+					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1275,8 +1306,12 @@
 		FAAA36B4172E4D7A00C55968 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
@@ -1285,6 +1320,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Flurry\"",
+					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -1296,8 +1332,12 @@
 		FAF343AC172FC3E900C282D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;
@@ -1306,6 +1346,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Flurry\"",
+					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = KidsCipherB;
 				PROVISIONING_PROFILE = "";
@@ -1317,8 +1358,12 @@
 		FAF343AD172FC3E900C282D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Distribution";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;
@@ -1327,6 +1372,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Flurry\"",
+					"\"$(SRCROOT)\"",
 				);
 				PRODUCT_NAME = KidsCipherB;
 				PROVISIONING_PROFILE = "";
