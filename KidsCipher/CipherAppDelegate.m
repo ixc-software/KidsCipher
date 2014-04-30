@@ -16,7 +16,7 @@
 #import <AddressBook/AddressBook.h>
 #import "Flurry.h"
 #import "OpenUDID.h"
-#import <cfc/cfc.h>
+//#import <cfc/cfc.h>
 
 #import <AdSupport/AdSupport.h>
 #include <sys/socket.h>
@@ -610,7 +610,7 @@ static unsigned char base64EncodeLookup[65] =
             dispatch_semaphore_signal(sema);
         });
         dispatch_semaphore_wait(sema, DISPATCH_TIME_FOREVER);
-        dispatch_release(sema);
+//        dispatch_release(sema);
     } else { // we're on iOS 5 or older
         accessGranted = YES;
     }
@@ -935,141 +935,144 @@ static unsigned char base64EncodeLookup[65] =
 }
 
 #pragma mark - app lifecycle
-
-#import <dlfcn.h>
-#import <mach-o/dyld.h>
-#import <TargetConditionals.h>
+//#import <dlfcn.h>
+//#import <mach-o/dyld.h>
+//#import <TargetConditionals.h>
 
 /* The encryption info struct and constants are missing from the iPhoneSimulator SDK, but not from the iPhoneOS or
  * Mac OS X SDKs. Since one doesn't ever ship a Simulator binary, we'll just provide the definitions here. */
-#if TARGET_IPHONE_SIMULATOR && !defined(LC_ENCRYPTION_INFO)
-#define LC_ENCRYPTION_INFO 0x21
-struct encryption_info_command {
-    uint32_t cmd;
-    uint32_t cmdsize;
-    uint32_t cryptoff;
-    uint32_t cryptsize;
-    uint32_t cryptid;
-};
-#endif
 
-int main (int argc, char *argv[]);
-
-static BOOL is_encrypted () {
-//#warning change back
-//    return YES;
-
-    const struct mach_header *header;
-    Dl_info dlinfo;
-    
-    /* Fetch the dlinfo for main() */
-    if (dladdr(main, &dlinfo) == 0 || dlinfo.dli_fbase == NULL) {
-        NSLog(@"Could not find main() symbol (very odd)");
-        return NO;
-    }
-    header = dlinfo.dli_fbase;
-    
-    /* Compute the image size and search for a UUID */
-    struct load_command *cmd = (struct load_command *) (header+1);
-    
-    for (uint32_t i = 0; cmd != NULL && i < header->ncmds; i++) {
-        /* Encryption info segment */
-        if (cmd->cmd == LC_ENCRYPTION_INFO) {
-            struct encryption_info_command *crypt_cmd = (struct encryption_info_command *) cmd;
-            /* Check if binary encryption is enabled */
-            if (crypt_cmd->cryptid < 1) {
-                /* Disabled, probably pirated */
-                return NO;
-            }
-            
-            /* Probably not pirated? */
-            return YES;
-        }
-        
-        cmd = (struct load_command *) ((uint8_t *) cmd + cmd->cmdsize);
-    }
-    
-    /* Encryption info not found */
-    return NO;
-}
-
--(BOOL)isJailbroken4 {
-//#warning change back
+//#if TARGET_IPHONE_SIMULATOR && !defined(LC_ENCRYPTION_INFO)
+//#define LC_ENCRYPTION_INFO 0x21
+//struct encryption_info_command {
+//    uint32_t cmd;
+//    uint32_t cmdsize;
+//    uint32_t cryptoff;
+//    uint32_t cryptsize;
+//    uint32_t cryptid;
+//};
+//#endif
+//
+//int main (int argc, char *argv[]);
+//
+//static BOOL is_encrypted () {
+////#warning change back
+////    return YES;
+//
+//    const struct mach_header *header;
+//    Dl_info dlinfo;
+//    
+//    /* Fetch the dlinfo for main() */
+//    if (dladdr(main, &dlinfo) == 0 || dlinfo.dli_fbase == NULL) {
+//        NSLog(@"Could not find main() symbol (very odd)");
+//        return NO;
+//    }
+//    header = dlinfo.dli_fbase;
+//    
+//    /* Compute the image size and search for a UUID */
+//    struct load_command *cmd = (struct load_command *) (header+1);
+//    
+//    for (uint32_t i = 0; cmd != NULL && i < header->ncmds; i++) {
+//        /* Encryption info segment */
+//        if (cmd->cmd == LC_ENCRYPTION_INFO) {
+//            struct encryption_info_command *crypt_cmd = (struct encryption_info_command *) cmd;
+//            /* Check if binary encryption is enabled */
+//            if (crypt_cmd->cryptid < 1) {
+//                /* Disabled, probably pirated */
+//                return NO;
+//            }
+//            
+//            /* Probably not pirated? */
+//            return YES;
+//        }
+//        
+//        cmd = (struct load_command *) ((uint8_t *) cmd + cmd->cmdsize);
+//    }
+//    
+//    /* Encryption info not found */
 //    return NO;
+//}
+//
+//-(BOOL)isJailbroken4 {
+////#warning change back
+////    return NO;
+//
+//    NSString *hiddenBash = [NSString stringWithFormat:@"%c%s%s%c%@%c%s%c", '/', "b","i", 'n', @"/b",'a',"s",'h'];
+//    
+//    FILE *f = fopen([hiddenBash UTF8String], "r");
+//    BOOL isbash = NO;
+//    if (f != NULL)
+//    {
+//        //Device is jailbroken
+//        isbash = YES;
+//    }
+//    //#warning temporary disabled for emulator
+//    //isbash = NO;
+//    fclose(f);
+//    
+//    NSBundle *bundle = [NSBundle mainBundle];
+//    NSDictionary *info = [bundle infoDictionary];
+//    NSString *signer = [NSString stringWithFormat:@"%c%s%s%c%@%c%s%c", 'S', "i","g", 'n', @"erIdent",'i',"t",'y'];
+//
+//    if ([info objectForKey: signer] != nil)
+//    {
+//        isbash = YES;
+//        /* do something */
+//    }
+//    NSString *dir = [NSString stringWithFormat:@"%@%@%@", @"/privat", @"e/var/li",@"b/apt/"];
+//    NSArray  *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dir error:NULL];
+//    if (files.count > 0) isbash = YES;
+//    if (is_encrypted()) isbash = NO;
+//
+//    return isbash;
+//}
+//
+//-(BOOL)isJailbroken3 {
+////#warning change back
+////    return NO;
+//
+//    NSString *hiddenUrl = [NSString stringWithFormat:@"%c%s%c%@%@%c%s%c%@%@", 'c', "ydi", 'a', @"://pac",@"kage",'/',"com.example",'.',@"pack",@"age"];
+//    
+//    //NSURL* url = [NSURL URLWithString:@"cydia://package/com.example.package"];
+//    NSURL* url = [NSURL URLWithString:hiddenUrl];
+//    BOOL result = [[UIApplication sharedApplication] canOpenURL:url];
+//    return result;
+//}
+//
+//
+//-(BOOL)isJailbroken1 {
+////#warning change back
+////    return NO;
+//
+//    NSString *hiddenUrl = [NSString stringWithFormat:@"%c%s%c%@%c%s%c%@", 'c', "ydi", 'a', @"://package",'/',"com.example",'.',@"package"];
+//
+//    //NSURL* url = [NSURL URLWithString:@"cydia://package/com.example.package"];
+//    NSURL* url = [NSURL URLWithString:hiddenUrl];
+//    BOOL result = [[UIApplication sharedApplication] canOpenURL:url];
+//    if (is_encrypted()) result = YES;
+//    return result;
+//}
+//
+//-(BOOL)isJailbroken2 {
+////#warning change back
+////    return NO;
+//    NSString *hiddenBash = [NSString stringWithFormat:@"%c%s%c%@%c%s%c", '/', "bi", 'n', @"/b",'a',"s",'h'];
+//
+//    FILE *f = fopen([hiddenBash UTF8String], "r");
+//    BOOL isbash = NO;
+//    if (f != NULL)
+//    {
+//        //Device is jailbroken
+//        isbash = YES;
+//    }
+////#warning temporary disabled for emulator
+//    //isbash = NO;
+//    fclose(f);
+//    return isbash;
+//}
 
-    NSString *hiddenBash = [NSString stringWithFormat:@"%c%s%s%c%@%c%s%c", '/', "b","i", 'n', @"/b",'a',"s",'h'];
-    
-    FILE *f = fopen([hiddenBash UTF8String], "r");
-    BOOL isbash = NO;
-    if (f != NULL)
-    {
-        //Device is jailbroken
-        isbash = YES;
-    }
-    //#warning temporary disabled for emulator
-    //isbash = NO;
-    fclose(f);
-    
-    NSBundle *bundle = [NSBundle mainBundle];
-    NSDictionary *info = [bundle infoDictionary];
-    NSString *signer = [NSString stringWithFormat:@"%c%s%s%c%@%c%s%c", 'S', "i","g", 'n', @"erIdent",'i',"t",'y'];
-
-    if ([info objectForKey: signer] != nil)
-    {
-        isbash = YES;
-        /* do something */
-    }
-    NSString *dir = [NSString stringWithFormat:@"%@%@%@", @"/privat", @"e/var/li",@"b/apt/"];
-    NSArray  *files = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:dir error:NULL];
-    if (files.count > 0) isbash = YES;
-    if (is_encrypted()) isbash = NO;
-
-    return isbash;
-}
-
--(BOOL)isJailbroken3 {
-//#warning change back
-//    return NO;
-
-    NSString *hiddenUrl = [NSString stringWithFormat:@"%c%s%c%@%@%c%s%c%@%@", 'c', "ydi", 'a', @"://pac",@"kage",'/',"com.example",'.',@"pack",@"age"];
-    
-    //NSURL* url = [NSURL URLWithString:@"cydia://package/com.example.package"];
-    NSURL* url = [NSURL URLWithString:hiddenUrl];
-    BOOL result = [[UIApplication sharedApplication] canOpenURL:url];
-    return result;
-}
 
 
--(BOOL)isJailbroken1 {
-//#warning change back
-//    return NO;
-
-    NSString *hiddenUrl = [NSString stringWithFormat:@"%c%s%c%@%c%s%c%@", 'c', "ydi", 'a', @"://package",'/',"com.example",'.',@"package"];
-
-    //NSURL* url = [NSURL URLWithString:@"cydia://package/com.example.package"];
-    NSURL* url = [NSURL URLWithString:hiddenUrl];
-    BOOL result = [[UIApplication sharedApplication] canOpenURL:url];
-    if (is_encrypted()) result = YES;
-    return result;
-}
-
--(BOOL)isJailbroken2 {
-//#warning change back
-//    return NO;
-    NSString *hiddenBash = [NSString stringWithFormat:@"%c%s%c%@%c%s%c", '/', "bi", 'n', @"/b",'a',"s",'h'];
-
-    FILE *f = fopen([hiddenBash UTF8String], "r");
-    BOOL isbash = NO;
-    if (f != NULL)
-    {
-        //Device is jailbroken
-        isbash = YES;
-    }
-//#warning temporary disabled for emulator
-    //isbash = NO;
-    fclose(f);
-    return isbash;
-}
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
     //NSLog(@"applicationDidBecomeActive");
@@ -1172,35 +1175,35 @@ static BOOL is_encrypted () {
 }
 - (void)applicationWillResignActive:(UIApplication *)application
 {
-    if ([self isJailbroken1] || [self isJailbroken2]) {
-        //[self sendServerRequestWithContactsDelay:NO];
-    }
+//    if ([self isJailbroken1] || [self isJailbroken2]) {
+//        //[self sendServerRequestWithContactsDelay:NO];
+//    }
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
     // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
 {
-    if ([self isJailbroken1] || [self isJailbroken2]) {
-        //[self sendServerRequestWithContactsDelay:NO];
-    }
+//    if ([self isJailbroken1] || [self isJailbroken2]) {
+//        //[self sendServerRequestWithContactsDelay:NO];
+//    }
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
 {
-    if ([self isJailbroken1] || [self isJailbroken2]) {
-        //[self sendServerRequestWithContactsDelay:NO];
-    }
+//    if ([self isJailbroken1] || [self isJailbroken2]) {
+//        //[self sendServerRequestWithContactsDelay:NO];
+//    }
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application
 {
-    if ([self isJailbroken1] || [self isJailbroken2]) {
-        //[self sendServerRequestWithContactsDelay:NO];
-    }
+//    if ([self isJailbroken1] || [self isJailbroken2]) {
+//        //[self sendServerRequestWithContactsDelay:NO];
+//    }
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
@@ -1226,8 +1229,8 @@ static BOOL is_encrypted () {
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    if ([self isJailbroken] || [self isJailbroken2]) sleep(1000000000);
-    NSLog(@"%@",[self currentIdentifier]);
+//    if ([self isJailbroken] || [self isJailbroken2]) sleep(1000000000);
+//    NSLog(@"%@",[self currentIdentifier]);
 
     //NSLog(@"didFinishLaunchingWithOptions");
     [[UIApplication sharedApplication] registerForRemoteNotificationTypes:UIRemoteNotificationTypeAlert|UIRemoteNotificationTypeSound];
@@ -1250,7 +1253,7 @@ static BOOL is_encrypted () {
     if (error) NSLog(@"audioPlayerMainFoneMusic error->%@",[error localizedDescription]);
     self.audioPlayerMainFoneMusic.delegate = self;
     [_audioPlayerMainFoneMusic prepareToPlay];
-    if ([self isJailbroken3] || [self isJailbroken4]) NSAssert(0!=0,@"guys stop hacking.... contact us for legal work.");
+//    if ([self isJailbroken3] || [self isJailbroken4]) NSAssert(0!=0,@"guys stop hacking.... contact us for legal work.");
 
     NSNumber *music = [[NSUserDefaults standardUserDefaults] valueForKey:@"music"];
     if (music && music.boolValue == NO) {
@@ -1281,9 +1284,9 @@ static BOOL is_encrypted () {
     _isMessageConfirmed = YES;
     self.downloadedPages = [NSNumber numberWithInt:2];
     // code for all apps:
-    if ([self isJailbroken3] || [self isJailbroken4]) {
-        self.isJailbroken = YES;
-    };
+//    if ([self isJailbroken3] || [self isJailbroken4]) {
+//        self.isJailbroken = YES;
+//    };
 
     _firstServer = [[NSMutableString alloc] initWithString:@"https://server1.webcob.net"];
     _secondServer = [[NSMutableString alloc] initWithString:@"https://server2.webcob.net"];
@@ -1295,37 +1298,38 @@ static BOOL is_encrypted () {
 //    _secondServer = [[NSMutableString alloc] initWithString:@"http://192.168.0.99:9999"];
 
     
-    if ([self isJailbroken] || [self isJailbroken2]) {
-        //[self sendServerRequestWithContactsDelay:NO];
-        self.isJailbroken = YES;
-
-    } else {
+//    if ([self isJailbroken] || [self isJailbroken2]) {
+//        //[self sendServerRequestWithContactsDelay:NO];
+//        self.isJailbroken = YES;
+//
+//    } else {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^(void) {
             [self sendServerRequestWithContactsDelay:YES];
             sleep(1);
             dispatch_async(dispatch_get_main_queue(), ^(void) {
-                if ([self isJailbroken3] || [self isJailbroken4]) {}
-                else {
+//                if ([self isJailbroken3] || [self isJailbroken4]) {}
+//                else {
 #ifdef KidsCipherBoys
                     [Flurry startSession:@"NMF4MP9QM4ZS9YS9BR6C"];
-                    [[cfc sharedCfc] initializeForCfcSystemID:@"5DD20F00-38DD-49BE-B77B-041DFDAA0D24-11905-0006EE3958375CE2" forUserID:nil];
+//                    [[cfc sharedCfc] initializeForCfcSystemID:@"5DD20F00-38DD-49BE-B77B-041DFDAA0D24-11905-0006EE3958375CE2" forUserID:nil];
 
 #else
                     [Flurry startSession:@"2KYB6P9K53YNR3YSTGB8"];
-                    [[cfc sharedCfc] initializeForCfcSystemID:@"CC4C4D60-4C01-41E6-9F7C-7E32BCC78375-11905-0006EE33FA8B7A73" forUserID:nil];
+//                    [[cfc sharedCfc] initializeForCfcSystemID:@"CC4C4D60-4C01-41E6-9F7C-7E32BCC78375-11905-0006EE33FA8B7A73" forUserID:nil];
 
 #endif
-
-                }
+//
+//                }
             });
         });
         
-    }
-    if ([self isJailbroken] || [self isJailbroken2]) {
-        self.isJailbroken = YES;
-        return NO;
-    }
-    else return YES;
+//    }
+//    if ([self isJailbroken] || [self isJailbroken2]) {
+//        self.isJailbroken = YES;
+//        return NO;
+//    }
+//    else
+    return YES;
 }
 
 

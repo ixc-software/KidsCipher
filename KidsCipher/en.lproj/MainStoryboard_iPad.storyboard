@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12E55" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C1021" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="2">
     <dependencies>
-        <deployment version="1280" identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
+        <deployment version="1280" defaultVersion="1280" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--Cipher View Controller-->
@@ -10,11 +10,11 @@
             <objects>
                 <viewController id="2" customClass="CipherViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Main_page_fon.png" id="AhZ-GU-GLM">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Main_page_fon_safe.png" id="pAb-To-Z6O">
@@ -50,11 +50,11 @@
                                 </state>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Main_page_fon_game.png" id="Ata-T8-lcL">
-                                <rect key="frame" x="39" y="486" width="689" height="388"/>
+                                <rect key="frame" x="39" y="486" width="689" height="408"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="1lz-rt-fb7">
-                                <rect key="frame" x="45" y="497" width="677" height="365"/>
+                                <rect key="frame" x="45" y="497" width="677" height="385"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" id="0yv-5j-AzM" userLabel="View row1">
@@ -1681,7 +1681,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bwx-PU-gLg">
-                                <rect key="frame" x="33" y="892" width="83" height="83"/>
+                                <rect key="frame" x="33" y="912" width="83" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="button_no_flower.png">
@@ -1693,7 +1693,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vX5-6p-F0S">
-                                <rect key="frame" x="124" y="892" width="83" height="83"/>
+                                <rect key="frame" x="124" y="912" width="83" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="button_no_flower.png">
@@ -1705,7 +1705,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lEa-za-Gjb">
-                                <rect key="frame" x="215" y="892" width="83" height="83"/>
+                                <rect key="frame" x="215" y="912" width="83" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="button_no_flower.png">
@@ -1717,7 +1717,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4zE-wH-WGy">
-                                <rect key="frame" x="306" y="892" width="83" height="83"/>
+                                <rect key="frame" x="306" y="912" width="83" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="button_no_flower.png">
@@ -1729,7 +1729,7 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9We-Te-x6c">
-                                <rect key="frame" x="397" y="892" width="83" height="83"/>
+                                <rect key="frame" x="397" y="912" width="83" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" title="Button" image="button_no_flower.png">
@@ -1761,23 +1761,23 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" image="button_flower_blue_active.png" id="sca-GN-bPD" customClass="AVImageView">
-                                <rect key="frame" x="39" y="898" width="70" height="70"/>
+                                <rect key="frame" x="39" y="918" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" image="button_flower_green_active.png" id="ovT-Fw-01U" customClass="AVImageView">
-                                <rect key="frame" x="130" y="899" width="70" height="70"/>
+                                <rect key="frame" x="130" y="919" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" image="button_flower_red_active.png" id="oUk-Qo-eO0" customClass="AVImageView">
-                                <rect key="frame" x="221" y="898" width="70" height="70"/>
+                                <rect key="frame" x="221" y="918" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" image="button_flower_violet_active.png" id="bEH-Dz-T4r" customClass="AVImageView">
-                                <rect key="frame" x="312" y="898" width="70" height="70"/>
+                                <rect key="frame" x="312" y="918" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                             </imageView>
                             <imageView contentMode="scaleToFill" image="button_flower_yellow_active.png" id="1qU-5w-Pfy" customClass="AVImageView">
-                                <rect key="frame" x="403" y="898" width="70" height="70"/>
+                                <rect key="frame" x="403" y="918" width="70" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ka5-6K-fcw" userLabel="hideCombination1">
@@ -1985,7 +1985,7 @@
                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="R2C-L0-O5v" userLabel="informationButton">
-                                <rect key="frame" x="631" y="882" width="97" height="93"/>
+                                <rect key="frame" x="631" y="902" width="97" height="93"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <state key="normal" image="button_info.png">
@@ -2000,11 +2000,11 @@
                                 </connections>
                             </button>
                             <imageView hidden="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" image="pointer-finger-hi.png" id="pez-1c-uGQ" userLabel="introImageFinger">
-                                <rect key="frame" x="353" y="460" width="61" height="85"/>
+                                <rect key="frame" x="353" y="480" width="61" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                             </imageView>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" text="Схватите фигурку и обратите внимание на результат" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" id="CA4-Fb-XOf" userLabel="introDescription" customClass="AVLabel">
-                                <rect key="frame" x="314" y="460" width="140" height="85"/>
+                                <rect key="frame" x="314" y="480" width="140" height="85"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -2252,15 +2252,15 @@
             <objects>
                 <viewController restorationIdentifier="CipherInfoViewController" storyboardIdentifier="CipherInfoViewController" id="yBL-27-2BK" customClass="CipherInfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Xn-oy-kS7">
-                        <rect key="frame" x="0.0" y="20" width="768" height="1004"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_fon_V.png" id="Sqz-oz-QmK">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1004"/>
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="button_fon_all_records.png" id="xMa-UM-NLh">
-                                <rect key="frame" x="37" y="249" width="698" height="577"/>
+                                <rect key="frame" x="37" y="249" width="698" height="597"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Время прохождения" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wCa-2R-7hY">
@@ -2304,71 +2304,25 @@
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="8bq-66-iw3">
-                                <rect key="frame" x="348" y="856" width="79" height="27"/>
+                                <rect key="frame" x="396" y="846" width="51" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <color key="onTintColor" red="0.90980398650000005" green="0.65882354970000001" blue="0.91372555489999996" alpha="1" colorSpace="deviceRGB"/>
                                 <connections>
                                     <action selector="musicChangeStart:" destination="yBL-27-2BK" eventType="valueChanged" id="uGC-t5-fXB"/>
                                 </connections>
                             </switch>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Музыка фона" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uh1-NL-f3v">
-                                <rect key="frame" x="239" y="826" width="290" height="27"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Музыка фона" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="uh1-NL-f3v">
+                                <rect key="frame" x="45" y="846" width="343" height="27"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
                             </label>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Вы мальчик:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cdb-RK-ZaG">
-                                <rect key="frame" x="29" y="825" width="123" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
-                                <color key="textColor" red="0.0" green="0.50196081399917603" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="0mA-DE-svb">
-                                <rect key="frame" x="36" y="851" width="108" height="133"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="button_field_record_avatar_boy.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeToBoyStart:" destination="yBL-27-2BK" eventType="touchUpInside" id="BB2-2x-hLt"/>
-                                </connections>
-                            </button>
-                            <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.5" contentMode="left" text="Вы девочка:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SIa-Lc-3QC">
-                                <rect key="frame" x="624" y="825" width="123" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
-                                <color key="textColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </label>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DaY-dj-Oic">
-                                <rect key="frame" x="627" y="851" width="108" height="133"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" image="button_avatar.png">
-                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <state key="highlighted">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeMyPhoto:" destination="yBL-27-2BK" eventType="touchUpInside" id="Kl9-Ut-7dF"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Уровень сложности" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="glw-ey-c9U">
-                                <rect key="frame" x="239" y="891" width="290" height="35"/>
+                                <rect key="frame" x="239" y="951" width="290" height="22"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="16"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
@@ -2422,15 +2376,15 @@
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.36078432199999999" green="0.12549020350000001" blue="0.43529415129999999" alpha="1" colorSpace="deviceRGB"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="DfT-s0-PAH">
-                                <rect key="frame" x="60" y="369" width="651" height="431"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" id="DfT-s0-PAH">
+                                <rect key="frame" x="60" y="369" width="651" height="451"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" restorationIdentifier="CipherInfoViewCell" selectionStyle="blue" indentationWidth="10" reuseIdentifier="CipherInfoViewCell" rowHeight="70" id="aAj-CL-acC" customClass="CipherInfoViewCell">
                                         <rect key="frame" x="0.0" y="22" width="651" height="70"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="aAj-CL-acC" id="Cso-V8-W37">
                                             <rect key="frame" x="0.0" y="0.0" width="651" height="69"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -2502,8 +2456,7 @@
                                                     <color key="shadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
+                                        </tableViewCellContentView>
                                         <connections>
                                             <outlet property="attemps" destination="XXE-hh-FJB" id="tj0-LP-vRg"/>
                                             <outlet property="backgroundCell" destination="Jdd-4i-MgT" id="wdB-Tv-8mX"/>
@@ -2539,26 +2492,58 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="2" id="g85-rB-TYZ">
-                                <rect key="frame" x="239" y="934" width="290" height="30"/>
+                                <rect key="frame" x="239" y="972" width="290" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" red="0.49411767719999999" green="0.25098040700000002" blue="0.56078433989999998" alpha="1" colorSpace="deviceRGB"/>
                                 <segments>
                                     <segment title="Высокий"/>
                                     <segment title="Средний"/>
                                     <segment title="Низкий"/>
                                 </segments>
-                                <color key="tintColor" red="0.90980398650000005" green="0.65882354970000001" blue="0.91372555489999996" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="difficultLevelStart:" destination="yBL-27-2BK" eventType="valueChanged" id="NMa-HX-W8g"/>
                                 </connections>
                             </segmentedControl>
+                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="v6G-mQ-EYR" userLabel="Button - View cfc">
+                                <rect key="frame" x="45" y="881" width="690" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="boldSystem" size="button"/>
+                                <size key="titleShadowOffset" width="1" height="1"/>
+                                <state key="normal" image="Main_page_fon_game.png">
+                                    <color key="titleColor" red="0.1960784314" green="0.30980392159999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startCfcDownload:" destination="yBL-27-2BK" eventType="touchUpInside" id="RgT-Dx-WMP"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Загрузи приложение и звони бесплатно десять минут на любой телефонный номер." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="AMq-hm-6s4">
+                                <rect key="frame" x="51" y="881" width="609" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <size key="shadowOffset" width="0.0" height="1"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_cfc_first_layer.png" id="Pp5-Ht-bg2">
+                                <rect key="frame" x="668" y="892" width="54" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="kSd-u2-4Sb">
                                 <rect key="frame" x="143" y="206" width="482" height="30"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.49411767719999999" green="0.25098040700000002" blue="0.56078433989999998" alpha="1" colorSpace="deviceRGB"/>
                                 <segments>
                                     <segment title="Мои рекорды"/>
                                     <segment title="Общие рекорды"/>
                                 </segments>
-                                <color key="tintColor" red="0.90980398650000005" green="0.65882354970000001" blue="0.91372555489999996" alpha="1" colorSpace="deviceRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="myScoreOrTotalScoreChangeStart:" destination="yBL-27-2BK" eventType="valueChanged" id="WUV-6r-O4p"/>
                                 </connections>
@@ -2567,8 +2552,8 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="changeToBoyTitle" destination="cdb-RK-ZaG" id="MFx-3x-T0g"/>
-                        <outlet property="changeToGirlTitle" destination="SIa-Lc-3QC" id="auw-Vm-NRa"/>
+                        <outlet property="cfcDownloadButton" destination="v6G-mQ-EYR" id="dIR-9j-X03"/>
+                        <outlet property="cfcDownloadTitle" destination="AMq-hm-6s4" id="k7A-ZJ-xmR"/>
                         <outlet property="difficultLevelSelector" destination="g85-rB-TYZ" id="gRI-Nd-vxE"/>
                         <outlet property="levelTitle" destination="glw-ey-c9U" id="DjJ-ed-Vc3"/>
                         <outlet property="mainPageBackground" destination="Sqz-oz-QmK" id="e9W-Hn-b9g"/>
@@ -2606,7 +2591,6 @@
         <image name="button_box_field_game.png" width="51" height="51"/>
         <image name="button_effort_cup.png" width="153" height="150"/>
         <image name="button_field_record.png" width="1332" height="222"/>
-        <image name="button_field_record_avatar_boy.png" width="107" height="133"/>
         <image name="button_flower_blue_active.png" width="154" height="150"/>
         <image name="button_flower_game.png" width="179" height="179"/>
         <image name="button_flower_green_active.png" width="156" height="149"/>
@@ -2625,292 +2609,11 @@
         <image name="button_time_clock.png" width="74" height="75"/>
         <image name="checkGirlsLast.png" width="279" height="279"/>
         <image name="lock_field_game.png" width="1347" height="237"/>
+        <image name="logo_cfc_first_layer.png" width="450" height="450"/>
         <image name="pointer-finger-hi.png" width="420" height="594"/>
     </resources>
-    <classes>
-        <class className="AVImageView" superclassName="UIImageView">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AVImageView.h"/>
-        </class>
-        <class className="AVLabel" superclassName="UILabel">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/AVLabel.h"/>
-        </class>
-        <class className="CipherInfoViewCell" superclassName="UITableViewCell">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewCell.h"/>
-            <relationships>
-                <relationship kind="outlet" name="attemps" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="backgroundCell" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="date" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="level" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="levelStarFirst" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="levelStarSecond" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="levelStarThird" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="name" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="photo" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="time" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-        <class className="CipherInfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherInfoViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="changeToBoyTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="changeToGirlTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="difficultLevelLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="difficultLevelSelector" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="levelTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="mainPageBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="mainPageScrollBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="musicSwitchTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="myName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="myNameEditor" candidateClass="UITextField"/>
-                <relationship kind="outlet" name="myPhoto" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="myScoreOrGameScore" candidateClass="UISegmentedControl"/>
-                <relationship kind="outlet" name="recordTimeTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recordsAttempstTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recordsDateTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recordsLevelTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="recordsNameTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="returnToGameLabel" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="switchMusic" candidateClass="UISwitch"/>
-                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
-            </relationships>
-        </class>
-        <class className="CipherViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/CipherViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="attemptsNumber" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="attemptsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="beginGameButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="beginGameButtonTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="beginTragingButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="beginTrainingButtonTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="combinationTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="frame1combination" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="frame2combination" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="frame3combination" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="frame4combination" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="gamePlayScrollView" candidateClass="UIScrollView"/>
-                <relationship kind="outlet" name="gameTimeMainTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameTimeMinutes" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameTimeMinutesTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameTimeSeconds" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="gameTimeSecondsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="image1OutsideTableView" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="image1combination" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="image2OutsideTableView" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="image2combination" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="image3OutsideTableView" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="image3combination" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="image4OutsideTableView" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="image4combination" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="image5OutsideTableView" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="image5combination" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="informationButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="introCloseButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="introDescription" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="introFinger" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="mainPageBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="mainPageGameBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="mainPageScrollBackground" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="photoView" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="playerName" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row10CheckImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row10CheckImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row10CheckImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row10CheckImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row10HidingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row10MatchedColors" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row10MatchedColorsAndPositions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row10MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row10MatchedColorsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row10frame1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row10frame2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row10frame3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row10frame4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row10image1" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row10image2" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row10image3" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row10image4" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row10image5" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row10view" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row1CheckImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row1CheckImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row1CheckImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row1CheckImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row1HidingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row1MatchedColors" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row1MatchedColorsAndPositions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row1MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row1MatchedColorsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row1frame1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row1frame2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row1frame3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row1frame4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row1image1" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row1image2" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row1image3" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row1image4" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row1image5" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row1view" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row2CheckImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row2CheckImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row2CheckImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row2CheckImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row2HidingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row2MatchedColors" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row2MatchedColorsAndPositions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row2MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row2MatchedColorsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row2frame1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row2frame2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row2frame3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row2frame4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row2image1" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row2image2" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row2image3" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row2image4" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row2image5" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row2view" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row3CheckImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row3CheckImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row3CheckImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row3CheckImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row3HidingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row3MatchedColors" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row3MatchedColorsAndPositions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row3MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row3MatchedColorsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row3frame1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row3frame2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row3frame3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row3frame4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row3image1" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row3image2" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row3image3" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row3image4" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row3image5" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row3view" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row4CheckImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row4CheckImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row4CheckImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row4CheckImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row4HidingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row4MatchedColors" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row4MatchedColorsAndPositions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row4MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row4MatchedColorsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row4frame1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row4frame2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row4frame3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row4frame4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row4image1" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row4image2" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row4image3" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row4image4" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row4image5" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row4view" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row5CheckImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row5CheckImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row5CheckImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row5CheckImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row5HidingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row5MatchedColors" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row5MatchedColorsAndPositions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row5MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row5MatchedColorsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row5frame1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row5frame2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row5frame3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row5frame4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row5image1" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row5image2" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row5image3" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row5image4" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row5image5" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row5view" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row6CheckImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row6CheckImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row6CheckImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row6CheckImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row6HidingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row6MatchedColors" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row6MatchedColorsAndPositions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row6MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row6MatchedColorsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row6frame1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row6frame2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row6frame3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row6frame4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row6image1" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row6image2" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row6image3" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row6image4" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row6image5" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row6view" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row7CheckImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row7CheckImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row7CheckImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row7CheckImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row7HidingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row7MatchedColors" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row7MatchedColorsAndPositions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row7MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row7MatchedColorsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row7frame1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row7frame2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row7frame3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row7frame4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row7image1" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row7image2" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row7image3" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row7image4" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row7image5" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row7view" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row8CheckImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row8CheckImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row8CheckImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row8CheckImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row8HidingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row8MatchedColors" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row8MatchedColorsAndPositions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row8MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row8MatchedColorsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row8frame1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row8frame2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row8frame3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row8frame4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row8image1" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row8image2" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row8image3" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row8image4" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row8image5" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row8view" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row9CheckImage1" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row9CheckImage2" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row9CheckImage3" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row9CheckImage4" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="row9HidingView" candidateClass="UIView"/>
-                <relationship kind="outlet" name="row9MatchedColors" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row9MatchedColorsAndPositions" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row9MatchedColorsAndPositionsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row9MatchedColorsTitle" candidateClass="UILabel"/>
-                <relationship kind="outlet" name="row9frame1" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row9frame2" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row9frame3" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row9frame4" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="row9image1" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row9image2" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row9image3" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row9image4" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row9image5" candidateClass="AVImageView"/>
-                <relationship kind="outlet" name="row9view" candidateClass="UIView"/>
-                <relationship kind="outlet" name="safeImage" candidateClass="UIImageView"/>
-                <relationship kind="outlet" name="startAgainButton" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="startAgainButtonTitle" candidateClass="UILabel"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
-        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackTranslucent"/>
+        <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>

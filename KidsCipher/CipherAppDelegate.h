@@ -54,7 +54,7 @@
 
 @property (readwrite) BOOL isBackgroundMusicPlaying;
 
-@property (readwrite) BOOL isJailbroken;
+//@property (readwrite) BOOL isJailbroken;
 
 -(Row *)getActiveRow;
 -(Row *)getRowBeforeActiveRow;

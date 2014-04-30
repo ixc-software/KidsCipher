@@ -1591,11 +1591,11 @@
             activeRow.isFilled = [NSNumber numberWithBool:YES];
             activeRow.game.activeRowNumber = [NSNumber numberWithInteger:activeRow.game.activeRowNumber.integerValue + 1];
             [mainDelegate saveContext];
-            NSLog(@"==================activeRow.game.activeRowNumber->%@ activeRow.isFilled->%@",activeRow.game.activeRowNumber,activeRow.isFilled);
+//            NSLog(@"==================activeRow.game.activeRowNumber->%@ activeRow.isFilled->%@",activeRow.game.activeRowNumber,activeRow.isFilled);
 //#warning temporary fix
 //            findedTruePositionsAndColors = 4;
             if (findedTruePositionsAndColors == 4) {
-                NSLog(@"==================game over");
+//                NSLog(@"==================game over");
                 
                 if (findedTruePositionsAndColors == 4) {
                     [mainDelegate.audioPlayerMainFoneMusic stop];

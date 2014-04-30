@@ -38,6 +38,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *levelTitle;
 @property (weak, nonatomic) IBOutlet UILabel *changeToGirlTitle;
 @property (weak, nonatomic) IBOutlet UISwitch *switchMusic;
+@property (weak, nonatomic) IBOutlet UILabel *cfcDownloadTitle;
+@property (weak, nonatomic) IBOutlet UIButton *cfcDownloadButton;
 
 @end
 
@@ -61,7 +63,12 @@
     self.returnToGameLabel.text = NSLocalizedString(@"returnToGameLabel", @"");
     self.myName.text = NSLocalizedString(@"myName", @"");
     self.myNameEditor.placeholder = NSLocalizedString(@"myNameEditor", @"");
+    self.returnToGameLabel.text = NSLocalizedString(@"returnToGameLabel", @"");
+    self.cfcDownloadTitle.text = NSLocalizedString(@"cfcDownloadTitle", @"");
 
+    
+    
+    
     [self.myScoreOrGameScore setTitle:NSLocalizedString(@"myScoreOrGameScore0", @"") forSegmentAtIndex:0];
     [self.myScoreOrGameScore setTitle:NSLocalizedString(@"myScoreOrGameScore1", @"") forSegmentAtIndex:1];
 
@@ -288,6 +295,10 @@
 
 - (IBAction)changeToBoyStart:(id)sender {
 //#warning finish
+
+}
+- (IBAction)startCfcDownload:(id)sender {
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"http://taps.io/kidscipher"]];
 
 }
 - (IBAction)returnToGameStart:(id)sender {

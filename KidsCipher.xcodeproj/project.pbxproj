@@ -23,8 +23,6 @@
 		FA1402421757E29C00AA6500 /* Main_page_fon_game_gorizont.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1402411757E29C00AA6500 /* Main_page_fon_game_gorizont.png */; };
 		FA145A37176F443A005ACA7F /* kidscipher_promo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA145A36176F443A005ACA7F /* kidscipher_promo.rtf */; };
 		FA145A38176F443A005ACA7F /* kidscipher_promo.rtf in Resources */ = {isa = PBXBuildFile; fileRef = FA145A36176F443A005ACA7F /* kidscipher_promo.rtf */; };
-		FA145A3C176F488D005ACA7F /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA145A3B176F488D005ACA7F /* libFlurry.a */; };
-		FA145A3D176F488D005ACA7F /* libFlurry.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA145A3B176F488D005ACA7F /* libFlurry.a */; };
 		FA145A3F176F4A8E005ACA7F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA145A3E176F4A8E005ACA7F /* SystemConfiguration.framework */; };
 		FA145A5917706C91005ACA7F /* Main_page_fon_iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145A5817706C91005ACA7F /* Main_page_fon_iphone.png */; };
 		FA145A5B17706CEC005ACA7F /* Main_page_fon_game_iphone-1.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145A5A17706CEC005ACA7F /* Main_page_fon_game_iphone-1.png */; };
@@ -73,6 +71,14 @@
 		FA145B1717707093005ACA7F /* Boy_Main_page_fon_gorizont.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145ABA17707093005ACA7F /* Boy_Main_page_fon_gorizont.png */; };
 		FA145B1A17707093005ACA7F /* Boy_no_active_field_game.png in Resources */ = {isa = PBXBuildFile; fileRef = FA145ABD17707093005ACA7F /* Boy_no_active_field_game.png */; };
 		FA145B1B17707900005ACA7F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA145A3E176F4A8E005ACA7F /* SystemConfiguration.framework */; };
+		FA1467991911134F00DD5BF8 /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1467941911134F00DD5BF8 /* libFlurry_4.3.2.a */; };
+		FA14679A1911134F00DD5BF8 /* libFlurry_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1467941911134F00DD5BF8 /* libFlurry_4.3.2.a */; };
+		FA14679B1911134F00DD5BF8 /* libFlurryAds_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1467981911134F00DD5BF8 /* libFlurryAds_4.3.2.a */; };
+		FA14679C1911134F00DD5BF8 /* libFlurryAds_4.3.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1467981911134F00DD5BF8 /* libFlurryAds_4.3.2.a */; };
+		FA14679E1911166500DD5BF8 /* logo_CFC_voice_round_corner.png in Resources */ = {isa = PBXBuildFile; fileRef = FA14679D1911166500DD5BF8 /* logo_CFC_voice_round_corner.png */; };
+		FA14679F1911166500DD5BF8 /* logo_CFC_voice_round_corner.png in Resources */ = {isa = PBXBuildFile; fileRef = FA14679D1911166500DD5BF8 /* logo_CFC_voice_round_corner.png */; };
+		FA1467A11911260600DD5BF8 /* logo_cfc_first_layer.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1467A01911260600DD5BF8 /* logo_cfc_first_layer.png */; };
+		FA1467A21911260600DD5BF8 /* logo_cfc_first_layer.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1467A01911260600DD5BF8 /* logo_cfc_first_layer.png */; };
 		FA1CB75317742A14004C0F45 /* Boy_button_back_in_ game.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB75217742A14004C0F45 /* Boy_button_back_in_ game.png */; };
 		FA1CB75517742AD8004C0F45 /* Boy_button_your_name.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB75417742AD8004C0F45 /* Boy_button_your_name.png */; };
 		FA1CB75717742BAA004C0F45 /* Boy_button_avatar_boy.png in Resources */ = {isa = PBXBuildFile; fileRef = FA1CB75617742BAA004C0F45 /* Boy_button_avatar_boy.png */; };
@@ -213,10 +219,6 @@
 		FAE403F717361901002F59C6 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F5173618FA002F59C6 /* Security.framework */; };
 		FAE403F917361910002F59C6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F817361910002F59C6 /* AudioToolbox.framework */; };
 		FAE403FA17361918002F59C6 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE403F817361910002F59C6 /* AudioToolbox.framework */; };
-		FAE468061797BE36006BB11D /* cfc.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAE468041797BE36006BB11D /* cfc.bundle */; };
-		FAE468071797BE36006BB11D /* cfc.bundle in Resources */ = {isa = PBXBuildFile; fileRef = FAE468041797BE36006BB11D /* cfc.bundle */; };
-		FAE468081797BE36006BB11D /* cfc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE468051797BE36006BB11D /* cfc.framework */; };
-		FAE468091797BE36006BB11D /* cfc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAE468051797BE36006BB11D /* cfc.framework */; };
 		FAE54F261733DA7600595565 /* kidscipher_game_zero_result.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */; };
 		FAE54F271733DA7600595565 /* kidscipher_game_zero_result.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */; };
 		FAE54F281733DA7600595565 /* kidscipher_game_success.m4a in Resources */ = {isa = PBXBuildFile; fileRef = FAE54F201733DA7600595565 /* kidscipher_game_success.m4a */; };
@@ -276,8 +278,6 @@
 		FA14023B1757525E00AA6500 /* Main_page_fon_gorizont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main_page_fon_gorizont.png; sourceTree = "<group>"; };
 		FA1402411757E29C00AA6500 /* Main_page_fon_game_gorizont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main_page_fon_game_gorizont.png; sourceTree = "<group>"; };
 		FA145A36176F443A005ACA7F /* kidscipher_promo.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = kidscipher_promo.rtf; sourceTree = "<group>"; };
-		FA145A3A176F488D005ACA7F /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
-		FA145A3B176F488D005ACA7F /* libFlurry.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry.a; sourceTree = "<group>"; };
 		FA145A3E176F4A8E005ACA7F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		FA145A5817706C91005ACA7F /* Main_page_fon_iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Main_page_fon_iphone.png; sourceTree = "<group>"; };
 		FA145A5A17706CEC005ACA7F /* Main_page_fon_game_iphone-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Main_page_fon_game_iphone-1.png"; sourceTree = "<group>"; };
@@ -325,6 +325,13 @@
 		FA145AB917707093005ACA7F /* Boy_lock_field_game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_lock_field_game.png; sourceTree = "<group>"; };
 		FA145ABA17707093005ACA7F /* Boy_Main_page_fon_gorizont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_Main_page_fon_gorizont.png; sourceTree = "<group>"; };
 		FA145ABD17707093005ACA7F /* Boy_no_active_field_game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_no_active_field_game.png; sourceTree = "<group>"; };
+		FA1467931911134F00DD5BF8 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		FA1467941911134F00DD5BF8 /* libFlurry_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.3.2.a; sourceTree = "<group>"; };
+		FA1467961911134F00DD5BF8 /* FlurryAdDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAdDelegate.h; sourceTree = "<group>"; };
+		FA1467971911134F00DD5BF8 /* FlurryAds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlurryAds.h; sourceTree = "<group>"; };
+		FA1467981911134F00DD5BF8 /* libFlurryAds_4.3.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurryAds_4.3.2.a; sourceTree = "<group>"; };
+		FA14679D1911166500DD5BF8 /* logo_CFC_voice_round_corner.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_CFC_voice_round_corner.png; sourceTree = "<group>"; };
+		FA1467A01911260600DD5BF8 /* logo_cfc_first_layer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_cfc_first_layer.png; sourceTree = "<group>"; };
 		FA1CB75217742A14004C0F45 /* Boy_button_back_in_ game.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Boy_button_back_in_ game.png"; sourceTree = "<group>"; };
 		FA1CB75417742AD8004C0F45 /* Boy_button_your_name.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_your_name.png; sourceTree = "<group>"; };
 		FA1CB75617742BAA004C0F45 /* Boy_button_avatar_boy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Boy_button_avatar_boy.png; sourceTree = "<group>"; };
@@ -473,8 +480,6 @@
 		FAE403F2173618DE002F59C6 /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
 		FAE403F5173618FA002F59C6 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		FAE403F817361910002F59C6 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
-		FAE468041797BE36006BB11D /* cfc.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = cfc.bundle; sourceTree = "<group>"; };
-		FAE468051797BE36006BB11D /* cfc.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = cfc.framework; sourceTree = "<group>"; };
 		FAE54F1F1733DA7600595565 /* kidscipher_game_zero_result.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_zero_result.m4a; sourceTree = "<group>"; };
 		FAE54F201733DA7600595565 /* kidscipher_game_success.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_success.m4a; sourceTree = "<group>"; };
 		FAE54F211733DA7600595565 /* kidscipher_game_wrong.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = kidscipher_game_wrong.m4a; sourceTree = "<group>"; };
@@ -501,6 +506,7 @@
 			files = (
 				FAA0A4D517932C15008169F3 /* AdSupport.framework in Frameworks */,
 				FA145A3F176F4A8E005ACA7F /* SystemConfiguration.framework in Frameworks */,
+				FA14679B1911134F00DD5BF8 /* libFlurryAds_4.3.2.a in Frameworks */,
 				FAE403F917361910002F59C6 /* AudioToolbox.framework in Frameworks */,
 				FAE403F717361901002F59C6 /* Security.framework in Frameworks */,
 				FAE403F3173618DE002F59C6 /* AddressBook.framework in Frameworks */,
@@ -510,8 +516,7 @@
 				FAAA3690172E4D7A00C55968 /* UIKit.framework in Frameworks */,
 				FAAA3692172E4D7A00C55968 /* Foundation.framework in Frameworks */,
 				FAAA3694172E4D7A00C55968 /* CoreGraphics.framework in Frameworks */,
-				FA145A3C176F488D005ACA7F /* libFlurry.a in Frameworks */,
-				FAE468081797BE36006BB11D /* cfc.framework in Frameworks */,
+				FA1467991911134F00DD5BF8 /* libFlurry_4.3.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -521,6 +526,7 @@
 			files = (
 				FA87B63917907F23004E08D5 /* AdSupport.framework in Frameworks */,
 				FA145B1B17707900005ACA7F /* SystemConfiguration.framework in Frameworks */,
+				FA14679C1911134F00DD5BF8 /* libFlurryAds_4.3.2.a in Frameworks */,
 				FAE403FA17361918002F59C6 /* AudioToolbox.framework in Frameworks */,
 				FAE403F6173618FA002F59C6 /* Security.framework in Frameworks */,
 				FAE403F4173618F3002F59C6 /* AddressBook.framework in Frameworks */,
@@ -530,23 +536,13 @@
 				FAF34392172FC3E900C282D5 /* UIKit.framework in Frameworks */,
 				FAF34393172FC3E900C282D5 /* Foundation.framework in Frameworks */,
 				FAF34394172FC3E900C282D5 /* CoreGraphics.framework in Frameworks */,
-				FA145A3D176F488D005ACA7F /* libFlurry.a in Frameworks */,
-				FAE468091797BE36006BB11D /* cfc.framework in Frameworks */,
+				FA14679A1911134F00DD5BF8 /* libFlurry_4.3.2.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA145A39176F488D005ACA7F /* Flurry */ = {
-			isa = PBXGroup;
-			children = (
-				FA145A3A176F488D005ACA7F /* Flurry.h */,
-				FA145A3B176F488D005ACA7F /* libFlurry.a */,
-			);
-			path = Flurry;
-			sourceTree = "<group>";
-		};
 		FA145A6017707093005ACA7F /* PicsBoys */ = {
 			isa = PBXGroup;
 			children = (
@@ -628,6 +624,25 @@
 			path = PicsBoys;
 			sourceTree = "<group>";
 		};
+		FA1467921911134F00DD5BF8 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				FA1467931911134F00DD5BF8 /* Flurry.h */,
+				FA1467941911134F00DD5BF8 /* libFlurry_4.3.2.a */,
+			);
+			path = Flurry;
+			sourceTree = "<group>";
+		};
+		FA1467951911134F00DD5BF8 /* FlurryAds */ = {
+			isa = PBXGroup;
+			children = (
+				FA1467961911134F00DD5BF8 /* FlurryAdDelegate.h */,
+				FA1467971911134F00DD5BF8 /* FlurryAds.h */,
+				FA1467981911134F00DD5BF8 /* libFlurryAds_4.3.2.a */,
+			);
+			path = FlurryAds;
+			sourceTree = "<group>";
+		};
 		FAAA3683172E4D7A00C55968 = {
 			isa = PBXGroup;
 			children = (
@@ -635,8 +650,6 @@
 				FADC07C8178C19E3005499B5 /* Ipad_logo1024_1024_boy_144x144.png */,
 				FADC07C6178C19E0005499B5 /* Ipad_logo1024_1024_boy_72x72.png */,
 				FADC07C4178C19DB005499B5 /* Ipad_logo1024_1024_boy_114x114.png */,
-				FAE468041797BE36006BB11D /* cfc.bundle */,
-				FAE468051797BE36006BB11D /* cfc.framework */,
 				FADC07C2178C19D8005499B5 /* Ipad_logo1024_1024_boy_57x57.png */,
 				FADC07C0178C192F005499B5 /* Ipad_logo1024_1024 _girl_144x144.png */,
 				FADC07BE178C192B005499B5 /* Ipad_logo1024_1024 _girl_72x72.png */,
@@ -661,8 +674,9 @@
 		FAAA368E172E4D7A00C55968 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				FA1467921911134F00DD5BF8 /* Flurry */,
+				FA1467951911134F00DD5BF8 /* FlurryAds */,
 				FA145A3E176F4A8E005ACA7F /* SystemConfiguration.framework */,
-				FA145A39176F488D005ACA7F /* Flurry */,
 				FAE403F817361910002F59C6 /* AudioToolbox.framework */,
 				FAE403F5173618FA002F59C6 /* Security.framework */,
 				FAE403F2173618DE002F59C6 /* AddressBook.framework */,
@@ -727,6 +741,8 @@
 		FAAA36BE172E53C700C55968 /* Pics */ = {
 			isa = PBXGroup;
 			children = (
+				FA1467A01911260600DD5BF8 /* logo_cfc_first_layer.png */,
+				FA14679D1911166500DD5BF8 /* logo_CFC_voice_round_corner.png */,
 				FA145A6017707093005ACA7F /* PicsBoys */,
 				FA145A5C17706D1C005ACA7F /* Main_page_fon_notebook_iphone.png */,
 				FA1CB7A217782B24004C0F45 /* checkGirlsLast.png */,
@@ -983,6 +999,7 @@
 				FA841EB01761242F00BBEE90 /* button_cup_fon.png in Resources */,
 				FA145A37176F443A005ACA7F /* kidscipher_promo.rtf in Resources */,
 				FA145A5917706C91005ACA7F /* Main_page_fon_iphone.png in Resources */,
+				FA1467A11911260600DD5BF8 /* logo_cfc_first_layer.png in Resources */,
 				FA145A5B17706CEC005ACA7F /* Main_page_fon_game_iphone-1.png in Resources */,
 				FA145A5D17706D1C005ACA7F /* Main_page_fon_notebook_iphone.png in Resources */,
 				FA145A5F1770702D005ACA7F /* Default-568h@2x.png in Resources */,
@@ -1001,12 +1018,12 @@
 				FA1CB7A317782B24004C0F45 /* checkGirlsLast.png in Resources */,
 				FA1CB7A5177915C0004C0F45 /* tapFinger.png in Resources */,
 				FA1CB7A817791804004C0F45 /* Close_Box_Red.png in Resources */,
+				FA14679E1911166500DD5BF8 /* logo_CFC_voice_round_corner.png in Resources */,
 				FA1CB7AF17798DD0004C0F45 /* pointer-finger-hi.png in Resources */,
 				FADC07BB178C1922005499B5 /* Ipad_logo1024_1024 _girl_57x57.png in Resources */,
 				FADC07BD178C1926005499B5 /* Ipad_logo1024_1024 _girl_114x114.png in Resources */,
 				FADC07BF178C192B005499B5 /* Ipad_logo1024_1024 _girl_72x72.png in Resources */,
 				FADC07C1178C192F005499B5 /* Ipad_logo1024_1024 _girl_144x144.png in Resources */,
-				FAE468061797BE36006BB11D /* cfc.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1105,6 +1122,7 @@
 				FA1CB77E17744AF2004C0F45 /* button_fon_all_records_V_02-2.png in Resources */,
 				FA1CB7821774522A004C0F45 /* Boy_Main_page_fon_game_iphone.png in Resources */,
 				FA1CB78417745A4D004C0F45 /* Boy_Main_page_fon_iphone.png in Resources */,
+				FA1467A21911260600DD5BF8 /* logo_cfc_first_layer.png in Resources */,
 				FA1CB78617745E42004C0F45 /* Boy_Main_page_fon_notebook_iphone.png in Resources */,
 				FA1CB78817746046004C0F45 /* Boy_button_fon_V_iphone.png in Resources */,
 				FA1CB799177486EB004C0F45 /* Boy_button_fon_all_records.png in Resources */,
@@ -1118,12 +1136,12 @@
 				FA1CB7D21784B426004C0F45 /* Boy_button_time_iphone.png in Resources */,
 				FA1CB7D41784B583004C0F45 /* Boy_button_avatar_no_photo.png in Resources */,
 				FA1CB7D61784B5A0004C0F45 /* Boy_button_info.png in Resources */,
+				FA14679F1911166500DD5BF8 /* logo_CFC_voice_round_corner.png in Resources */,
 				FA1CB7D81784B5B9004C0F45 /* Boy_button_time.png in Resources */,
 				FADC07C3178C19D8005499B5 /* Ipad_logo1024_1024_boy_57x57.png in Resources */,
 				FADC07C5178C19DB005499B5 /* Ipad_logo1024_1024_boy_114x114.png in Resources */,
 				FADC07C7178C19E0005499B5 /* Ipad_logo1024_1024_boy_72x72.png in Resources */,
 				FADC07C9178C19E3005499B5 /* Ipad_logo1024_1024_boy_144x144.png in Resources */,
-				FAE468071797BE36006BB11D /* cfc.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1280,25 +1298,28 @@
 		FAAA36B3172E4D7A00C55968 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Oleksii Vynogradov (U82YL8CR4U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oleksii Vynogradov (U82YL8CR4U)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
 				INFOPLIST_FILE = "KidsCipher/KidsCipher-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Flurry\"",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)/Flurry",
+					"$(PROJECT_DIR)/FlurryAds",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "7FF66A2C-D6E4-4557-A376-9327170C562D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7FF66A2C-D6E4-4557-A376-9327170C562D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1306,25 +1327,28 @@
 		FAAA36B4172E4D7A00C55968 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Oleksii Vynogradov (U82YL8CR4U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oleksii Vynogradov (U82YL8CR4U)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherGirls;
 				INFOPLIST_FILE = "KidsCipher/KidsCipher-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Flurry\"",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)/Flurry",
+					"$(PROJECT_DIR)/FlurryAds",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "7FF66A2C-D6E4-4557-A376-9327170C562D";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "7FF66A2C-D6E4-4557-A376-9327170C562D";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -1332,25 +1356,28 @@
 		FAF343AC172FC3E900C282D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Oleksii Vynogradov (U82YL8CR4U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oleksii Vynogradov (U82YL8CR4U)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;
 				INFOPLIST_FILE = "KidsCipher copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Flurry\"",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)/Flurry",
+					"$(PROJECT_DIR)/FlurryAds",
 				);
 				PRODUCT_NAME = KidsCipherB;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "8336436E-8D0E-4E6E-875E-526A6203EF13";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8336436E-8D0E-4E6E-875E-526A6203EF13";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1358,25 +1385,28 @@
 		FAF343AD172FC3E900C282D5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Oleksii Vynogradov (U82YL8CR4U)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Oleksii Vynogradov (U82YL8CR4U)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KidsCipher/KidsCipher-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = KidsCipherBoys;
 				INFOPLIST_FILE = "KidsCipher copy-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)/Flurry\"",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"$(PROJECT_DIR)/Flurry",
+					"$(PROJECT_DIR)/FlurryAds",
 				);
 				PRODUCT_NAME = KidsCipherB;
-				PROVISIONING_PROFILE = "";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "";
+				PROVISIONING_PROFILE = "8336436E-8D0E-4E6E-875E-526A6203EF13";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "8336436E-8D0E-4E6E-875E-526A6203EF13";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
